@@ -1,0 +1,76 @@
+{
+  "title": "Voice Control Basics",
+  "description": "Learn how to talk naturally to AI and get started with voice-first workflows",
+  "icon": "Mic",
+  "sections": [
+    {
+      "heading": "Why Voice Changes Everything",
+      "content": [
+        "Typing is slow. Your brain thinks faster than your fingers can move. When you talk to AI, you unlock a more natural way to work. You can explain complex ideas while walking, driving, or doing other tasks. Voice lets you multitask in ways typing never could.",
+        "Research backs this up: A Stanford University study found that speech is **3x faster** than typing on mobile devices (150 words per minute vs 40 WPM), with a **20% lower error rate**. You can dictate a 500-word email in 3 minutes. Typing that same email might take 12-15 minutes."
+      ]
+    },
+    {
+      "heading": "How to Talk to AI",
+      "examples": [
+        {
+          "type": "do",
+          "title": "✅ DO: Talk naturally, like you're explaining to a colleague",
+          "example": "Hey, I need to write an email to my team about next week's meeting. Make it friendly but professional. Include the agenda items we discussed yesterday."
+        },
+        {
+          "type": "dont",
+          "title": "❌ DON'T: Talk like a robot or use formal commands",
+          "example": "Computer. Compose electronic mail. Subject: Meeting. Body: Formal greeting..."
+        }
+      ]
+    },
+    {
+      "heading": "Built-In Voice Features",
+      "intro": "Most AI tools now have voice built right in. You don't need special software to get started:",
+      "tools": [
+        {
+          "name": "ChatGPT Advanced Voice",
+          "description": "Natural conversation mode. Just tap the headphone icon and start talking. Works on mobile and desktop."
+        },
+        {
+          "name": "Claude Voice",
+          "description": "Voice input available in the mobile app. Great for on-the-go conversations and quick questions."
+        },
+        {
+          "name": "Perplexity Assistant",
+          "description": "Voice search and conversation. Perfect for research while multitasking."
+        },
+        {
+          "name": "Google Gemini Voice",
+          "description": "Integrated with Google services. Use voice to search, create, and manage tasks."
+        }
+      ]
+    },
+    {
+      "heading": "Your First Voice Task",
+      "callout": {
+        "title": "Try This Right Now (5 minutes):",
+        "steps": [
+          "Open ChatGPT on your phone",
+          "Tap the headphone icon to start voice mode",
+          "Say: 'I need to write a quick update email to my team about our project status. Keep it brief and positive.'",
+          "Listen to the AI's response, then say: 'Make it more casual' or 'Add a bullet list'",
+          "Copy the result and send it!"
+        ],
+        "footer": "That's it. You just created something in 2 minutes that would have taken 10-15 minutes to type."
+      }
+    },
+    {
+      "heading": "The Science Behind Voice Efficiency",
+      "content": [
+        "Multiple studies confirm that voice input dramatically outperforms typing:",
+        "**Speed:** Average speaking speed is 150-180 words per minute, while average typing speed is only 38-40 WPM. Professional typists reach 65-75 WPM - still slower than casual speech.",
+        "**Multitasking:** Research shows hands-free communication tools increase productivity by 8.5% and employee satisfaction by 3.5%.",
+        "**Cognitive Load:** Voice typing reduces mental overhead by enabling natural thought expression, reducing mental fatigue compared to translating thoughts into finger movements.",
+        "**Accuracy:** Modern speech recognition (2016 onwards) achieves 20-63% lower error rates than mobile typing, depending on language.",
+        "Sources: Stanford University (2016), Vonage Research, SpeakOneAI cognitive load studies"
+      ]
+    }
+  ]
+}

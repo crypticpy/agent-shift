@@ -1,0 +1,134 @@
+{
+  "title": "AI Writing Prompts for AI",
+  "description": "Let AI agents communicate with each other for better results",
+  "icon": "MessageSquare",
+  "sections": [
+    {
+      "heading": "Why Let AI Talk to AI?",
+      "content": [
+        "Here's a secret: AI is often better at writing prompts for other AI than humans are. AI knows exactly what format, structure, and details another AI needs to do its best work.",
+        "Think about it - when you write a prompt, you're guessing what the AI needs. But when AI writes a prompt for another AI, it knows exactly what to include. It's like having a translator who speaks both languages fluently."
+      ]
+    },
+    {
+      "heading": "The Problem with Human Prompts",
+      "content": [
+        "We humans write prompts based on how we think. We use our words, our structure, our assumptions. But AI doesn't think like us. It needs specific formats, clear instructions, and detailed context.",
+        "Example: You might write: 'Make a website about my survey results.' But the AI needs to know: What data format? What style? What features? What audience? How many pages? What colors? You'd need to write 10 paragraphs to cover everything.",
+        "An AI writing that same prompt would automatically include all those details in the exact format the next AI expects."
+      ]
+    },
+    {
+      "heading": "How AI-to-AI Works",
+      "steps": [
+        {
+          "step": "1. You Give High-Level Instructions",
+          "description": "Tell the first AI what you want in simple terms. 'I need a website that shows my survey data with interactive charts.'",
+          "example": "Your input: 'Create a website for my community survey results. Make it interactive and professional.'"
+        },
+        {
+          "step": "2. First AI Creates Detailed Prompt",
+          "description": "The first AI expands your simple request into a detailed, structured prompt with all the technical details the next AI needs.",
+          "example": "AI output: 'Build a responsive web application using React and Tailwind CSS. Include: (1) Hero section with survey title and date, (2) Interactive dashboard with 5 chart types: bar, line, pie, scatter, and heatmap, (3) Data table with sorting and filtering, (4) Mobile-responsive design with breakpoints at 768px and 1024px, (5) Color scheme: primary #3B82F6, secondary #8B5CF6, (6) Export functionality for PDF and CSV...'"
+        },
+        {
+          "step": "3. Second AI Executes Perfectly",
+          "description": "The second AI receives a perfect prompt and produces exactly what you wanted, often on the first try.",
+          "example": "Result: A complete, professional website that matches your vision without multiple revision rounds."
+        }
+      ]
+    },
+    {
+      "heading": "Real Example: Survey to Website",
+      "example": {
+        "scenario": "You have survey results and need an interactive website",
+        "humanPrompt": {
+          "what": "Your attempt: 'Build a website for my survey data'",
+          "result": "The AI asks 20 clarifying questions or builds something generic that needs heavy revision"
+        },
+        "aiPrompt": {
+          "step1": "You tell ChatGPT: 'I have survey results with 500 responses across 10 questions. I need an interactive website to share the results. Write a detailed prompt for a web development AI.'",
+          "step2": "ChatGPT creates: 'Develop a responsive web application for survey data visualization with the following specifications: [includes 15 paragraphs of detailed requirements covering data structure, UI components, interactivity, styling, accessibility, performance, and deployment]'",
+          "step3": "You give that prompt to Manus, which builds exactly what you need on the first try"
+        },
+        "timeSaved": "You saved 2-3 hours of back-and-forth revisions"
+      }
+    },
+    {
+      "heading": "When to Use AI-to-AI",
+      "useCases": [
+        {
+          "scenario": "Complex Technical Tasks",
+          "description": "When you need to give instructions to a specialized AI (coding, design, data analysis) but don't know the technical details.",
+          "example": "Use ChatGPT to write a prompt for Cursor (coding AI) that includes all the technical specs, libraries, and structure needed."
+        },
+        {
+          "scenario": "Multi-Step Workflows",
+          "description": "When chaining multiple agents together. Let each AI prepare the perfect handoff for the next one.",
+          "example": "Research AI creates a prompt for Writing AI, which creates a prompt for Design AI, which creates a prompt for Presentation AI."
+        },
+        {
+          "scenario": "Specialized Domains",
+          "description": "When you need expert-level output but aren't an expert yourself.",
+          "example": "Tell ChatGPT your goal, have it write a prompt for a legal AI, medical AI, or scientific AI with all the proper terminology and structure."
+        },
+        {
+          "scenario": "First-Time-Right Results",
+          "description": "When you can't afford multiple revision rounds and need it right the first time.",
+          "example": "Important presentation, client deliverable, or time-sensitive project."
+        }
+      ]
+    },
+    {
+      "heading": "The Prompt-Writing Prompt",
+      "template": {
+        "title": "Use this template to have AI write prompts for other AI:",
+        "prompt": "I need to [describe your goal]. I'm going to use [name of the AI tool] to do this. Please write a detailed, comprehensive prompt for [that AI tool] that includes all the technical specifications, requirements, and context needed to achieve [your goal] perfectly on the first try. Include specific details about format, style, structure, and any technical requirements.",
+        "example": "I need to create an interactive data dashboard. I'm going to use Manus to build it. Please write a detailed, comprehensive prompt for Manus that includes all the technical specifications, requirements, and context needed to create a professional data dashboard perfectly on the first try. Include specific details about layout, components, data visualization types, interactivity, styling, and responsive design."
+      }
+    },
+    {
+      "heading": "Advanced Technique: Chain of Prompts",
+      "content": [
+        "For really complex projects, you can create a chain where each AI writes a prompt for the next AI in the sequence.",
+        "Example workflow: You → ChatGPT (writes research prompt) → Perplexity (researches, writes analysis prompt) → Claude (analyzes, writes writing prompt) → ChatGPT (writes, creates design prompt) → Midjourney (creates visuals, writes presentation prompt) → Beautiful.ai (creates final presentation)",
+        "You only wrote one simple prompt at the start. The AIs handled all the detailed communication between each step."
+      ]
+    },
+    {
+      "heading": "Try It Now",
+      "callout": {
+        "title": "AI-to-AI Exercise (15 minutes):",
+        "steps": [
+          "Think of something you need to create (report, website, presentation, analysis)",
+          "Open ChatGPT and say: 'I need to [your goal]. I'm going to use [specific AI tool] to do it. Write a detailed prompt for that tool that includes everything it needs to do this perfectly.'",
+          "Review the prompt ChatGPT creates - notice how detailed and specific it is",
+          "Copy that prompt and give it to the target AI tool",
+          "Compare the result to what you would have gotten with your own prompt"
+        ],
+        "footer": "You'll probably get a better result with less back-and-forth. That's because AI speaks AI's language better than we do."
+      }
+    },
+    {
+      "heading": "Pro Tips",
+      "tips": [
+        {
+          "tip": "Always specify the target AI tool",
+          "why": "Different AI tools have different strengths and formats. ChatGPT will write a better prompt if it knows whether you're targeting Manus, Cursor, Claude, or Midjourney."
+        },
+        {
+          "tip": "Include your constraints",
+          "why": "Tell the prompt-writing AI about deadlines, budget, technical limitations, or audience requirements. It will factor those into the prompt it creates."
+        },
+        {
+          "tip": "Ask for examples",
+          "why": "Have the prompt-writing AI include example inputs/outputs in the prompt it creates. This helps the target AI understand exactly what you want."
+        },
+        {
+          "tip": "Iterate on the prompt itself",
+          "why": "If the target AI's output isn't quite right, go back to the prompt-writing AI and say 'The result was X but I wanted Y. Revise the prompt to fix this.' Don't revise the prompt yourself."
+        }
+      ]
+    }
+  ]
+}

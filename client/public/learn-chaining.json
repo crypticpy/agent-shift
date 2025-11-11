@@ -1,0 +1,154 @@
+{
+  "title": "Agent Chaining & Cascading",
+  "description": "Using one agent's output as input for another to accomplish complex tasks",
+  "icon": "Link2",
+  "sections": [
+    {
+      "heading": "What is Agent Chaining?",
+      "content": [
+        "Agent chaining is when you use the output from one AI agent as the input for another AI agent. It's like an assembly line where each agent does one specific job really well, then passes the work to the next agent.",
+        "Think about making a sandwich. You don't do everything at once. First, someone gets the bread. Then someone adds meat. Then someone adds vegetables. Then someone cuts it. Each person (or agent) does one thing well, and together they create something better than any single person could make alone."
+      ]
+    },
+    {
+      "heading": "Why Chain Agents?",
+      "benefits": [
+        {
+          "title": "Better Quality",
+          "description": "Each agent specializes in one task. A research agent is better at research than a writing agent. A writing agent is better at writing than a design agent. Use each for what it does best."
+        },
+        {
+          "title": "Less Revision",
+          "description": "When you try to do everything in one prompt, you often get mediocre results and spend hours revising. Chaining produces better first drafts because each step is optimized."
+        },
+        {
+          "title": "Reproducible Workflows",
+          "description": "Once you build a chain that works, you can use it again and again. It becomes a repeatable process, not a one-time effort."
+        }
+      ]
+    },
+    {
+      "heading": "Simple Example: Survey to Website",
+      "example": {
+        "scenario": "You have survey results and need an interactive website to share them",
+        "steps": [
+          {
+            "agent": "Agent 1: Data Analysis (Claude or ChatGPT)",
+            "task": "Analyze the survey data and identify key insights, trends, and important findings",
+            "output": "A structured summary of findings with specific data points and visualizations needed"
+          },
+          {
+            "agent": "Agent 2: Content Writing (ChatGPT or Claude)",
+            "task": "Take the analysis and write clear, engaging content for the website",
+            "output": "Polished copy including headlines, descriptions, and data narratives"
+          },
+          {
+            "agent": "Agent 3: Web Development (Manus)",
+            "task": "Build an interactive website using the content and data",
+            "output": "A complete, deployed website with charts, tables, and responsive design"
+          }
+        ],
+        "result": "A professional website created in 30 minutes that would have taken days to build manually",
+        "timeSaved": "Saved 15-20 hours compared to doing it all yourself"
+      }
+    },
+    {
+      "heading": "How to Chain Agents",
+      "steps": [
+        "Identify what you need to create (the final output)",
+        "Break it down into distinct steps that different agents do well",
+        "Start with the first agent and get its output",
+        "Copy that output and give it to the next agent with instructions",
+        "Repeat until you reach the final output",
+        "Save the chain as a workflow you can reuse"
+      ]
+    },
+    {
+      "heading": "Common Chaining Patterns",
+      "patterns": [
+        {
+          "name": "Research → Write → Design",
+          "use": "Creating reports, presentations, or documents",
+          "agents": "Perplexity → ChatGPT → Manus/Canva"
+        },
+        {
+          "name": "Analyze → Summarize → Visualize",
+          "use": "Making sense of data and sharing insights",
+          "agents": "Claude → ChatGPT → Manus"
+        },
+        {
+          "name": "Transcribe → Summarize → Action Items",
+          "use": "Processing meeting recordings",
+          "agents": "Otter.ai → ChatGPT → Notion/Asana"
+        },
+        {
+          "name": "Ideate → Refine → Execute",
+          "use": "Going from concept to finished product",
+          "agents": "ChatGPT → Claude → Manus/Cursor"
+        }
+      ]
+    },
+    {
+      "heading": "Real Example: Community Feedback Report",
+      "example": {
+        "scenario": "You collected 200 community feedback forms and need to create a report for leadership",
+        "steps": [
+          {
+            "agent": "Step 1: Claude",
+            "task": "Upload all feedback forms and ask: 'Analyze this community feedback. Identify the top 5 themes, key concerns, and actionable recommendations.'",
+            "output": "Structured analysis with themes, quotes, and recommendations"
+          },
+          {
+            "agent": "Step 2: ChatGPT",
+            "task": "Give it the analysis and say: 'Write an executive summary and detailed report based on this analysis. Make it professional and action-oriented.'",
+            "output": "Polished report with executive summary, findings, and recommendations"
+          },
+          {
+            "agent": "Step 3: Manus",
+            "task": "Give it the report and say: 'Create an interactive web dashboard showing this community feedback analysis with charts and key findings.'",
+            "output": "Interactive website with visualizations and downloadable report"
+          }
+        ],
+        "result": "A comprehensive, professional report with interactive dashboard completed in 45 minutes",
+        "timeSaved": "Saved 20-30 hours of manual analysis, writing, and design work"
+      }
+    },
+    {
+      "heading": "Tips for Effective Chaining",
+      "tips": [
+        {
+          "tip": "Be explicit about handoffs",
+          "why": "When passing output to the next agent, tell it exactly what you want it to do with that input. Don't assume it will figure it out."
+        },
+        {
+          "tip": "Keep outputs structured",
+          "why": "Ask each agent to format its output in a way that's easy for the next agent to use (bullet points, tables, clear sections)."
+        },
+        {
+          "tip": "Review between steps",
+          "why": "Check each agent's output before passing it to the next one. If something is off, fix it before it compounds."
+        },
+        {
+          "tip": "Document your chains",
+          "why": "Write down the sequence that works. Next time you need to do something similar, you'll have a proven workflow to follow."
+        }
+      ]
+    },
+    {
+      "heading": "Try It Now",
+      "callout": {
+        "title": "Your First Chain (20 minutes):",
+        "steps": [
+          "Pick something you need to create this week (report, presentation, website, analysis)",
+          "Write down 3 steps: What needs to happen first? Second? Third?",
+          "Identify which AI agent is best for each step",
+          "Start with step 1: Give the first agent clear instructions",
+          "Take its output and give it to the second agent with instructions",
+          "Take that output and give it to the third agent",
+          "Review the final result - it should be 80-90% done"
+        ],
+        "footer": "You just created something in 20 minutes that would have taken hours or days. That's the power of chaining."
+      }
+    }
+  ]
+}

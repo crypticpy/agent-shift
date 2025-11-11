@@ -1,0 +1,224 @@
+{
+  "categories": [
+    {
+      "id": "long-horizon",
+      "name": "Long-Horizon & Research Agents",
+      "description": "AI agents capable of working for hours to days on complex research and analysis tasks",
+      "icon": "\ud83d\udd2c",
+      "tools": [
+        {
+          "name": "Kosmos",
+          "company": "Edison Scientific",
+          "description": "AI scientist that runs for hours delivering work that would take humans months",
+          "capabilities": [
+            "Literature search and mapping",
+            "Hypothesis generation",
+            "Data analysis",
+            "Experiment planning"
+          ],
+          "pricing": "Not disclosed",
+          "link": "https://edisonscientific.com",
+          "category": "Research"
+        },
+        {
+          "name": "OpenAI Deep Research",
+          "company": "OpenAI",
+          "description": "Reasoning-powered agent that synthesizes large amounts of online information",
+          "capabilities": [
+            "Multi-step research",
+            "Content synthesis",
+            "Information discovery"
+          ],
+          "pricing": "API-based",
+          "link": "https://openai.com/index/introducing-deep-research/",
+          "category": "Research"
+        },
+        {
+          "name": "Claude Computer Use",
+          "company": "Anthropic",
+          "description": "AI that uses computers like humans - looking at screens, moving cursor, clicking",
+          "capabilities": [
+            "Screen viewing",
+            "Cursor control",
+            "Automation",
+            "Complex workflows"
+          ],
+          "pricing": "API-based",
+          "link": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+          "category": "Automation"
+        }
+      ]
+    },
+    {
+      "id": "productivity-browser",
+      "name": "Productivity & Browser Agents",
+      "description": "AI-powered browsers and productivity tools for shopping, booking, and web automation",
+      "icon": "\ud83c\udf10",
+      "tools": [
+        {
+          "name": "ChatGPT Atlas",
+          "company": "OpenAI",
+          "description": "Browser with ChatGPT built in for agentic shopping and web tasks",
+          "capabilities": [
+            "Shopping automation",
+            "Price comparison",
+            "Booking",
+            "Instant answers"
+          ],
+          "pricing": "ChatGPT subscription",
+          "link": "https://chatgpt.com/atlas/",
+          "category": "Browser"
+        },
+        {
+          "name": "Perplexity Comet",
+          "company": "Perplexity AI",
+          "description": "AI browser that works for you with personal assistant capabilities",
+          "capabilities": [
+            "Tab organization",
+            "Shopping",
+            "Email drafting",
+            "Study planning",
+            "Website building"
+          ],
+          "pricing": "Free",
+          "link": "https://www.perplexity.ai/comet/",
+          "category": "Browser"
+        }
+      ]
+    },
+    {
+      "id": "voice",
+      "name": "Voice-Integrated AI Tools",
+      "description": "Voice transcription and AI tools pushing toward voice-first productivity",
+      "icon": "\ud83c\udfa4",
+      "tools": [
+        {
+          "name": "Superwhisper",
+          "company": "Superwhisper",
+          "description": "AI voice-to-text for macOS/iOS - write 3x faster without lifting a finger",
+          "capabilities": [
+            "Voice transcription",
+            "Custom vocabulary",
+            "Offline-first",
+            "100+ languages",
+            "File transcription"
+          ],
+          "pricing": "Free / Pro .49/mo",
+          "link": "https://superwhisper.com/",
+          "category": "Voice"
+        },
+        {
+          "name": "Wispr Flow",
+          "company": "Wispr AI",
+          "description": "Voice-to-text AI that is 4x faster than typing with auto-editing",
+          "capabilities": [
+            "AI auto-edits",
+            "Personal dictionary",
+            "Snippet library",
+            "Context-aware tones",
+            "100+ languages"
+          ],
+          "pricing": "Free / Pro 2/mo",
+          "link": "https://wisprflow.ai/",
+          "category": "Voice"
+        }
+      ]
+    },
+    {
+      "id": "coding",
+      "name": "Coding & Development Agents",
+      "description": "AI agents for code generation, full-stack development, and IDE integration",
+      "icon": "\ud83d\udcbb",
+      "tools": [
+        {
+          "name": "Cursor",
+          "company": "Anysphere",
+          "description": "AI-powered code editor - the best way to code with AI",
+          "capabilities": [
+            "AI code writing",
+            "Code editing",
+            "Advanced reasoning",
+            "Mobile agent"
+          ],
+          "pricing": "Subscription-based",
+          "link": "https://cursor.com/",
+          "category": "Coding"
+        },
+        {
+          "name": "Windsurf",
+          "company": "Codeium",
+          "description": "First AI-native IDE that keeps developers in flow",
+          "capabilities": [
+            "Multi-file editing",
+            "Superior context awareness",
+            "Autonomous coding"
+          ],
+          "pricing": "Multiple tiers",
+          "link": "https://windsurf.com/",
+          "category": "Coding"
+        },
+        {
+          "name": "Factory Droids",
+          "company": "Factory.ai",
+          "description": "Agent-native software development platform",
+          "capabilities": [
+            "Automate coding/testing/deployment",
+            "IDE integration",
+            "Background agents",
+            "Enterprise security"
+          ],
+          "pricing": "Free / Pro 0/mo / Max 00/mo",
+          "link": "https://factory.ai/",
+          "category": "Coding"
+        },
+        {
+          "name": "Replit Agent",
+          "company": "Replit",
+          "description": "Autonomous AI coding agent that builds apps from ideas",
+          "capabilities": [
+            "Build apps from description",
+            "Figma import",
+            "Self-testing",
+            "No-code needed"
+          ],
+          "pricing": "Usage-based",
+          "link": "https://replit.com/products/agent",
+          "category": "Coding"
+        },
+        {
+          "name": "Bolt.new",
+          "company": "StackBlitz",
+          "description": "AI-powered full-stack web development in browser",
+          "capabilities": [
+            "Full-stack development",
+            "Browser-based",
+            "Figma import",
+            "Deploy apps"
+          ],
+          "pricing": "Free tier available",
+          "link": "https://bolt.new/",
+          "category": "Coding"
+        },
+        {
+          "name": "v0 by Vercel",
+          "company": "Vercel",
+          "description": "Collaborative AI assistant for web development",
+          "capabilities": [
+            "Design and iterate apps",
+            "Full-stack development",
+            "AI agent creation"
+          ],
+          "pricing": "Multiple tiers",
+          "link": "https://v0.app/",
+          "category": "Coding"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total_tools": 80,
+    "total_categories": 16,
+    "free_tools": 25,
+    "paid_tools": 55
+  }
+}

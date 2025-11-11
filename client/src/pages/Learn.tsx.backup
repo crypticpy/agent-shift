@@ -1,0 +1,580 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import { 
+  Mic, 
+  Link2, 
+  Zap, 
+  ArrowRight,
+  MessageSquare,
+  FileText,
+  CheckCircle2,
+  Sparkles,
+  Clock,
+  Users,
+  Briefcase,
+  Home as HomeIcon
+} from "lucide-react";
+
+export default function Learn() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Hero */}
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Learn the Concepts
+            </h1>
+            <p className="text-xl opacity-95">
+              Simple explanations of how AI agents work and how to use them effectively
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-5xl mx-auto space-y-12">
+          
+          {/* Concept 1: Voice Control Basics */}
+          <Card className="border-2 border-blue-200 shadow-lg">
+            <CardHeader>
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mic className="h-6 w-6 text-blue-600" />
+                </div>
+                <div>
+                  <CardTitle className="text-3xl mb-2">Voice Control Basics</CardTitle>
+                  <CardDescription className="text-base">
+                    How to talk naturally to AI and why it's better than typing
+                  </CardDescription>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-4">The Simple Truth</h3>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  You already know how to use voice control. You do it every day when you talk to people. 
+                  The only difference is that now you're talking to a computer that actually understands you.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-lg border-2 border-slate-200">
+                  <h4 className="font-semibold text-lg mb-3 text-slate-900">What You Can Do</h4>
+                  <ul className="space-y-3">
+                    <li className="flex gap-3 items-start">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-700">Talk while walking, driving, or doing chores</span>
+                    </li>
+                    <li className="flex gap-3 items-start">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-700">Start multiple tasks in just a few minutes</span>
+                    </li>
+                    <li className="flex gap-3 items-start">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-700">Never worry about spelling or typing speed</span>
+                    </li>
+                    <li className="flex gap-3 items-start">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-700">Work hands-free while multitasking</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-100 to-purple-100 p-6 rounded-lg border-2 border-blue-300">
+                  <h4 className="font-semibold text-lg mb-3 text-blue-900">Real Example</h4>
+                  <div className="space-y-3 text-slate-700">
+                    <p className="text-sm">
+                      <span className="font-medium">Morning routine:</span> While making coffee, you say:
+                    </p>
+                    <div className="bg-white p-3 rounded text-sm italic border-l-4 border-blue-600">
+                      "Check my calendar for today and send me a summary of my meetings with who I'm meeting and what we're discussing."
+                    </div>
+                    <p className="text-sm">
+                      By the time your coffee is ready, you have a complete day overview in your inbox.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-yellow-50 border-l-4 border-yellow-600 p-5 rounded">
+                <p className="text-yellow-900 font-medium mb-2">💡 Pro Tip:</p>
+                <p className="text-yellow-800">
+                  The best time to use voice is when you're doing something else. Walking between meetings? 
+                  Commuting? Making dinner? That's when voice control shines.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Concept 2: Agent Chaining */}
+          <Card className="border-2 border-purple-200 shadow-lg">
+            <CardHeader>
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Link2 className="h-6 w-6 text-purple-600" />
+                </div>
+                <div>
+                  <CardTitle className="text-3xl mb-2">Agent Chaining (Cascading)</CardTitle>
+                  <CardDescription className="text-base">
+                    Using one agent's output as input for the next agent
+                  </CardDescription>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-4">Think of It Like a Factory Line</h3>
+                <p className="text-lg text-slate-700 leading-relaxed mb-4">
+                  In a factory, one worker does their job, then passes it to the next worker. Each person adds their 
+                  special skill. By the end, you have a finished product.
+                </p>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  Agent chaining works the same way. One AI agent does its job, then hands the result to the next agent. 
+                  Each agent is good at something different.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg border-2 border-purple-200">
+                <h4 className="font-semibold text-xl mb-4 text-purple-900">Simple Example: Creating a Presentation</h4>
+                <div className="space-y-4">
+                  <div className="flex gap-4 items-start">
+                    <div className="h-10 w-10 bg-purple-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                      1
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-medium text-lg mb-1">Agent 1: Research Agent</p>
+                      <p className="text-slate-600 mb-2">Finds information about your topic</p>
+                      <div className="bg-slate-50 p-3 rounded text-sm">
+                        <span className="font-medium">Output:</span> 10 pages of research notes
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center">
+                    <ArrowRight className="h-6 w-6 text-purple-600" />
+                  </div>
+
+                  <div className="flex gap-4 items-start">
+                    <div className="h-10 w-10 bg-purple-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                      2
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-medium text-lg mb-1">Agent 2: Writing Agent</p>
+                      <p className="text-slate-600 mb-2">Takes the research and writes a summary</p>
+                      <div className="bg-slate-50 p-3 rounded text-sm">
+                        <span className="font-medium">Output:</span> 2-page executive summary
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center">
+                    <ArrowRight className="h-6 w-6 text-purple-600" />
+                  </div>
+
+                  <div className="flex gap-4 items-start">
+                    <div className="h-10 w-10 bg-purple-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                      3
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-medium text-lg mb-1">Agent 3: Design Agent</p>
+                      <p className="text-slate-600 mb-2">Turns the summary into slides</p>
+                      <div className="bg-green-50 p-3 rounded text-sm border-2 border-green-300">
+                        <span className="font-medium">Final Result:</span> Beautiful 10-slide presentation
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-green-50 border-l-4 border-green-600 p-5 rounded">
+                <p className="text-green-900 font-medium mb-2">⏱️ Time Comparison:</p>
+                <div className="space-y-2 text-green-800">
+                  <p><span className="font-medium">Doing it yourself:</span> 6-8 hours</p>
+                  <p><span className="font-medium">With agent chaining:</span> 30 minutes (mostly just reviewing)</p>
+                  <p className="font-bold text-lg mt-2">You saved 7+ hours!</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Concept 3: AI Writing Prompts for AI */}
+          <Card className="border-2 border-green-200 shadow-lg">
+            <CardHeader>
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Zap className="h-6 w-6 text-green-600" />
+                </div>
+                <div>
+                  <CardTitle className="text-3xl mb-2">AI Writing Prompts for AI</CardTitle>
+                  <CardDescription className="text-base">
+                    Let AI agents talk to each other - you just connect them
+                  </CardDescription>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-4">Here's a Secret</h3>
+                <p className="text-lg text-slate-700 leading-relaxed mb-4">
+                  AI is often better at writing instructions for other AI than humans are. Why? Because AI knows 
+                  exactly what other AI needs to hear.
+                </p>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  So instead of you writing perfect prompts, you can have one AI create the prompt for the next AI. 
+                  You just guide the process.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg border-2 border-green-200">
+                <h4 className="font-semibold text-xl mb-4 text-green-900">Real Example: Creating Marketing Content</h4>
+                
+                <div className="space-y-4">
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <p className="font-medium mb-2">You say to Agent 1:</p>
+                    <div className="bg-white p-3 rounded border-l-4 border-green-600 italic">
+                      "I need social media posts about our new product. It's a time-tracking app for small businesses. 
+                      Create a prompt that another AI can use to write engaging posts."
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center">
+                    <ArrowRight className="h-6 w-6 text-green-600" />
+                  </div>
+
+                  <div className="bg-green-50 p-4 rounded-lg border-2 border-green-300">
+                    <p className="font-medium mb-2">Agent 1 creates this detailed prompt:</p>
+                    <div className="bg-white p-3 rounded text-sm">
+                      "You are a social media expert for small businesses. Write 5 engaging posts about a time-tracking 
+                      app. Each post should: 1) Address a specific pain point, 2) Show how the app solves it, 3) Include 
+                      a call-to-action, 4) Use casual, friendly language, 5) Be under 280 characters. Focus on benefits 
+                      like saving time, reducing stress, and improving billing accuracy."
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center">
+                    <ArrowRight className="h-6 w-6 text-green-600" />
+                  </div>
+
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <p className="font-medium mb-2">You copy that prompt and give it to Agent 2</p>
+                    <p className="text-sm text-slate-600">Agent 2 now has perfect instructions and creates amazing posts</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-lg mb-3">Why This Works So Well</h4>
+                <div className="space-y-3">
+                  <div className="flex gap-3 items-start">
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-medium">You don't need to be a prompt expert</p>
+                      <p className="text-sm text-slate-600">The first AI does the hard work of creating perfect instructions</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Better results</p>
+                      <p className="text-sm text-slate-600">AI-written prompts are often more detailed and specific</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-medium">You stay in control</p>
+                      <p className="text-sm text-slate-600">You review the prompt before using it, and you can adjust it</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-yellow-50 border-l-4 border-yellow-600 p-5 rounded">
+                <p className="text-yellow-900 font-medium mb-2">💡 Your New Role:</p>
+                <p className="text-yellow-800">
+                  You're not writing prompts anymore. You're the project manager connecting the right AI agents together. 
+                  You guide the work, you don't do the work.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Concept 4: The Walking to Your Car Example */}
+          <Card className="border-2 border-orange-200 shadow-lg">
+            <CardHeader>
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="h-6 w-6 text-orange-600" />
+                </div>
+                <div>
+                  <CardTitle className="text-3xl mb-2">The Walking to Your Car Example</CardTitle>
+                  <CardDescription className="text-base">
+                    How to start 20-40 hours of work in just 5 minutes
+                  </CardDescription>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="bg-orange-50 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-4">The Scenario</h3>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  It's 11:55am. You're walking from your desk to your car for lunch. It takes 5 minutes. 
+                  In those 5 minutes, you're going to start three major projects using just your voice.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                {/* Task 1 */}
+                <div className="bg-white p-6 rounded-lg border-2 border-blue-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="h-8 w-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                      1
+                    </div>
+                    <h4 className="font-semibold text-lg">Vacation Research (1 minute)</h4>
+                  </div>
+                  <div className="bg-blue-50 p-4 rounded mb-3">
+                    <p className="text-sm text-slate-600 mb-2">You say into your phone:</p>
+                    <p className="italic">
+                      "Research family-friendly vacation spots in Italy. I need hotels under $200/night, kid activities, 
+                      and travel tips. Create a detailed guide I can share with my wife."
+                    </p>
+                  </div>
+                  <p className="text-sm text-slate-600">
+                    <span className="font-medium">Agent working:</span> Research agent starts gathering information
+                  </p>
+                </div>
+
+                {/* Task 2 */}
+                <div className="bg-white p-6 rounded-lg border-2 border-purple-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="h-8 w-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">
+                      2
+                    </div>
+                    <h4 className="font-semibold text-lg">Work Project Research (2 minutes)</h4>
+                  </div>
+                  <div className="bg-purple-50 p-4 rounded mb-3">
+                    <p className="text-sm text-slate-600 mb-2">You say:</p>
+                    <p className="italic">
+                      "I need a report on electric vehicle adoption in our state. Include current numbers, trends, 
+                      challenges, and recommendations. Make it professional but easy to understand. About 5 pages."
+                    </p>
+                  </div>
+                  <p className="text-sm text-slate-600">
+                    <span className="font-medium">Agent working:</span> Research and writing agent starts the report
+                  </p>
+                </div>
+
+                {/* Task 3 */}
+                <div className="bg-white p-6 rounded-lg border-2 border-green-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="h-8 w-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">
+                      3
+                    </div>
+                    <h4 className="font-semibold text-lg">Website Mockups (2 minutes)</h4>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded mb-3">
+                    <p className="text-sm text-slate-600 mb-2">You say:</p>
+                    <p className="italic">
+                      "Create three different homepage designs for a community health clinic. Modern, welcoming, 
+                      easy to navigate. Include sections for services, appointments, and contact info."
+                    </p>
+                  </div>
+                  <p className="text-sm text-slate-600">
+                    <span className="font-medium">Agent working:</span> Design agent starts creating mockups
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white p-6 rounded-lg">
+                <h4 className="font-semibold text-xl mb-4">What Happens Next</h4>
+                <div className="space-y-3">
+                  <div className="flex gap-3 items-start">
+                    <Clock className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                    <p>You go to lunch for an hour</p>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <Sparkles className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                    <p>All three AI agents work on their tasks</p>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                    <p>When you return, you have 20-40 hours of completed work waiting for you</p>
+                  </div>
+                  <div className="flex gap-3 items-start">
+                    <FileText className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                    <p>You spend 30 minutes reviewing and making small adjustments</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-green-50 border-l-4 border-green-600 p-5 rounded">
+                <p className="text-green-900 font-bold text-xl mb-3">The Math:</p>
+                <div className="space-y-2 text-green-800">
+                  <p>• Your time invested: 5 minutes talking + 30 minutes reviewing = <span className="font-bold">35 minutes</span></p>
+                  <p>• Work completed: <span className="font-bold">20-40 hours</span></p>
+                  <p>• Time saved: <span className="font-bold">19+ hours</span></p>
+                  <p className="text-lg font-bold mt-3">That's a full work week done in 35 minutes!</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Concept 5: Work + Home Applications */}
+          <Card className="border-2 border-pink-200 shadow-lg">
+            <CardHeader>
+              <div className="flex items-start gap-4">
+                <div className="h-12 w-12 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Users className="h-6 w-6 text-pink-600" />
+                </div>
+                <div>
+                  <CardTitle className="text-3xl mb-2">Work + Home Applications</CardTitle>
+                  <CardDescription className="text-base">
+                    AI agents help with everything in your life, not just work
+                  </CardDescription>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Work Examples */}
+                <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Briefcase className="h-6 w-6 text-blue-600" />
+                    <h4 className="font-semibold text-xl text-blue-900">Work Tasks</h4>
+                  </div>
+                  <ul className="space-y-3 text-slate-700">
+                    <li className="flex gap-2 items-start">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>Write reports and presentations</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>Respond to routine emails</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>Analyze data and create charts</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>Schedule meetings and send reminders</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>Research topics and summarize findings</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>Create training materials</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>Draft policies and procedures</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Home Examples */}
+                <div className="bg-green-50 p-6 rounded-lg border-2 border-green-200">
+                  <div className="flex items-center gap-3 mb-4">
+                    <HomeIcon className="h-6 w-6 text-green-600" />
+                    <h4 className="font-semibold text-xl text-green-900">Personal Tasks</h4>
+                  </div>
+                  <ul className="space-y-3 text-slate-700">
+                    <li className="flex gap-2 items-start">
+                      <span className="text-green-600 font-bold">•</span>
+                      <span>Plan vacations and trips</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-green-600 font-bold">•</span>
+                      <span>Research purchases (cars, appliances, etc.)</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-green-600 font-bold">•</span>
+                      <span>Create meal plans and shopping lists</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-green-600 font-bold">•</span>
+                      <span>Write letters and thank-you notes</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-green-600 font-bold">•</span>
+                      <span>Plan parties and events</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-green-600 font-bold">•</span>
+                      <span>Help kids with homework</span>
+                    </li>
+                    <li className="flex gap-2 items-start">
+                      <span className="text-green-600 font-bold">•</span>
+                      <span>Organize home projects</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-lg mb-3">Real Story: A Busy Parent</h4>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Sarah is a program manager with two kids. Here's her Tuesday morning:
+                </p>
+                <div className="space-y-3 text-sm">
+                  <div className="bg-white p-3 rounded border-l-4 border-purple-600">
+                    <p className="font-medium mb-1">7:00 AM - Making breakfast</p>
+                    <p className="text-slate-600">Uses voice to ask AI: "Create a fun birthday party plan for my daughter's 8th birthday. 
+                    Theme: unicorns. Budget: $300. Include games, food ideas, and decoration list."</p>
+                  </div>
+                  <div className="bg-white p-3 rounded border-l-4 border-purple-600">
+                    <p className="font-medium mb-1">7:30 AM - Driving to work</p>
+                    <p className="text-slate-600">Uses voice to ask AI: "Draft an email to my team about next week's project deadline. 
+                    Remind them about the three deliverables and offer to help if anyone needs it."</p>
+                  </div>
+                  <div className="bg-white p-3 rounded border-l-4 border-purple-600">
+                    <p className="font-medium mb-1">8:00 AM - Arrives at work</p>
+                    <p className="text-slate-600">Both tasks are done. She reviews them, makes tiny tweaks, and sends them. 
+                    Total time spent: 5 minutes reviewing.</p>
+                  </div>
+                </div>
+                <p className="text-slate-700 mt-4 font-medium">
+                  Sarah saved 2 hours of work before her first meeting even started.
+                </p>
+              </div>
+
+              <div className="bg-blue-50 border-l-4 border-blue-600 p-5 rounded">
+                <p className="text-blue-900 font-medium mb-2">🎯 The Big Picture:</p>
+                <p className="text-blue-800">
+                  AI agents don't just help at work. They give you back time in every part of your life. 
+                  Time with family. Time for hobbies. Time to actually think instead of just doing busy work.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Next Steps */}
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
+            <h3 className="text-2xl font-bold mb-4">Ready to Put This Into Practice?</h3>
+            <p className="text-lg mb-6 opacity-95">
+              Now that you understand the concepts, let's look at specific workflows you can use today
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/workflows">
+                <Button size="lg" variant="secondary" className="text-lg px-8">
+                  See Workflow Recipes
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/calculator">
+                <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 hover:bg-white/20 text-white border-white">
+                  Calculate Your Savings
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

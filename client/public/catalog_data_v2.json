@@ -1,0 +1,4459 @@
+{
+  "metadata": {
+    "title": "Comprehensive Agentic AI Tools Catalog",
+    "subtitle": "A Strategic Guide for Government Decision-Makers",
+    "version": "2.0",
+    "last_updated": "November 2025",
+    "total_tools": 190,
+    "total_categories": 18,
+    "research_sources": 150
+  },
+  "statistics": {
+    "by_government_relevance": {
+      "Critical": 6,
+      "High": 8,
+      "Moderate": 4
+    },
+    "by_adoption_maturity": {
+      "Emerging": 8,
+      "Moderate": 10
+    },
+    "by_pricing_model": {
+      "Free/Open Source": 25,
+      "Subscription": 85,
+      "Enterprise": 70,
+      "Custom": 30
+    },
+    "by_compliance": {
+      "FedRAMP": 35,
+      "HIPAA": 28,
+      "CJIS": 18,
+      "SOC 2": 95,
+      "ISO 27001": 60
+    }
+  },
+  "insights": [
+    {
+      "title": "Rapid Market Growth",
+      "description": "The AI agent market reached $7.92 billion in 2025, with government adoption accelerating across all sectors."
+    },
+    {
+      "title": "Security & Compliance Priority",
+      "description": "95 tools now offer SOC 2 compliance, with 35 achieving FedRAMP authorization for government use."
+    },
+    {
+      "title": "Shift to Autonomy",
+      "description": "AI agents are evolving from simple assistants to autonomous systems capable of complex decision-making and multi-step workflows."
+    },
+    {
+      "title": "Government-Specific Solutions Emerging",
+      "description": "Major vendors are developing government-specific versions with enhanced security, compliance, and citizen service features."
+    },
+    {
+      "title": "Open Source Gaining Traction",
+      "description": "Government agencies increasingly favor open-source frameworks for customization, security auditing, and avoiding vendor lock-in."
+    },
+    {
+      "title": "Healthcare AI Adoption Accelerating",
+      "description": "2 in 3 physicians now using health AI tools, representing a 78% increase from 2023."
+    }
+  ],
+  "categories": [
+    {
+      "id": "gov_public_sector",
+      "name": "Government & Public Sector",
+      "description": "AI agents specifically designed for government operations and public services",
+      "icon": "building-2",
+      "government_relevance": "Critical",
+      "adoption_maturity": "Emerging",
+      "subcategories": [
+        "Citizen Services",
+        "Policy Analysis",
+        "Regulatory Compliance",
+        "Records Management"
+      ],
+      "tools": [
+        {
+          "name": "Microsoft Copilot for Government",
+          "description": "Enterprise AI assistant for government workflows with enhanced security",
+          "capabilities": [
+            "Document automation",
+            "Meeting assistance",
+            "Data analysis",
+            "Workflow optimization"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.microsoft.com/government",
+          "compliance": [
+            "FedRAMP",
+            "CJIS",
+            "ITAR"
+          ],
+          "use_cases": [
+            "Policy drafting",
+            "Citizen inquiry response",
+            "Administrative automation"
+          ],
+          "government_fit": "Excellent - Built specifically for government with compliance certifications"
+        },
+        {
+          "name": "Salesforce Government Cloud",
+          "description": "CRM and service delivery platform with AI-powered case management",
+          "capabilities": [
+            "CRM",
+            "Case management",
+            "Einstein AI",
+            "Workflow automation"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.salesforce.com/solutions/industries/government/",
+          "compliance": [
+            "FedRAMP",
+            "CJIS"
+          ],
+          "use_cases": [
+            "311 services",
+            "Permit tracking",
+            "Constituent management"
+          ],
+          "government_fit": "Excellent - Widely adopted with comprehensive compliance"
+        },
+        {
+          "name": "ServiceNow Government",
+          "description": "Digital workflow platform with AI automation for IT and citizen services",
+          "capabilities": [
+            "IT service management",
+            "HR automation",
+            "Citizen services",
+            "AI insights"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.servicenow.com/solutions/industry/government.html",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "IT service desk",
+            "HR case management",
+            "Citizen request tracking"
+          ],
+          "government_fit": "Excellent - Strong government presence with service management"
+        },
+        {
+          "name": "Tyler Technologies AI",
+          "description": "Government software with AI automation for courts, public safety, and tax",
+          "capabilities": [
+            "Court management",
+            "Tax administration",
+            "Public safety",
+            "Document automation"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.tylertech.com",
+          "compliance": [
+            "CJIS",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Court case management",
+            "Tax collection",
+            "Permit processing"
+          ],
+          "government_fit": "Excellent - Dominant in government software with deep expertise"
+        },
+        {
+          "name": "Supervity AI",
+          "description": "Citizen services automation for case management and document verification",
+          "capabilities": [
+            "Citizen support",
+            "Case management",
+            "Document verification",
+            "Workflow automation"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.supervity.ai/ai-agents-for-government",
+          "compliance": [
+            "SOC 2",
+            "GDPR"
+          ],
+          "use_cases": [
+            "Permit processing",
+            "License applications",
+            "Public records requests"
+          ],
+          "government_fit": "Good - Focus on citizen-facing services with automation"
+        },
+        {
+          "name": "Flowable AI Agents",
+          "description": "Intelligent automation for public sector workflow and citizen services",
+          "capabilities": [
+            "Workflow automation",
+            "Case management",
+            "Process optimization",
+            "Multi-channel"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.flowable.com",
+          "compliance": [
+            "ISO 27001",
+            "GDPR"
+          ],
+          "use_cases": [
+            "Service request management",
+            "Compliance workflows",
+            "Multi-agency coordination"
+          ],
+          "government_fit": "Good - Proven in public sector with workflow capabilities"
+        },
+        {
+          "name": "Abt Global Agentic AI",
+          "description": "Citizen-centered AI for faster, simpler government interactions",
+          "capabilities": [
+            "Citizen services",
+            "Personalization",
+            "Multi-channel support",
+            "Accessibility"
+          ],
+          "pricing": "Custom",
+          "website": "https://www.abtglobal.com",
+          "compliance": [
+            "FedRAMP",
+            "Section 508"
+          ],
+          "use_cases": [
+            "Benefits enrollment",
+            "Service navigation",
+            "Multi-language support"
+          ],
+          "government_fit": "Excellent - Strong focus on accessibility and citizen experience"
+        },
+        {
+          "name": "Granicus AI",
+          "description": "Government experience platform with AI for citizen engagement and communication",
+          "capabilities": [
+            "Citizen engagement",
+            "Communications",
+            "Website management",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://granicus.com",
+          "compliance": [
+            "SOC 2",
+            "WCAG 2.1"
+          ],
+          "use_cases": [
+            "Government websites",
+            "Citizen notifications",
+            "Public meetings"
+          ],
+          "government_fit": "Good - Specialized in government digital experience"
+        },
+        {
+          "name": "OpenGov",
+          "description": "Cloud software for public sector budgeting, planning, and reporting with AI",
+          "capabilities": [
+            "Budget management",
+            "Financial planning",
+            "Reporting",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://opengov.com",
+          "compliance": [
+            "SOC 2",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Budget preparation",
+            "Financial reporting",
+            "Performance tracking"
+          ],
+          "government_fit": "Good - Modern approach to government financial management"
+        },
+        {
+          "name": "CivicPlus",
+          "description": "Civic engagement platform with AI for government websites and citizen services",
+          "capabilities": [
+            "Website management",
+            "Citizen engagement",
+            "Payments",
+            "Permitting"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.civicplus.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Government websites",
+            "Online payments",
+            "Permit applications"
+          ],
+          "government_fit": "Good - Comprehensive civic engagement platform"
+        },
+        {
+          "name": "Accela",
+          "description": "Cloud solutions for government with AI-powered permitting and licensing",
+          "capabilities": [
+            "Permitting",
+            "Licensing",
+            "Code enforcement",
+            "Land management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.accela.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Building permits",
+            "Business licenses",
+            "Code enforcement"
+          ],
+          "government_fit": "Good - Specialized in regulatory and permitting processes"
+        },
+        {
+          "name": "CityGrows",
+          "description": "Workflow automation for government processes with no-code AI agents",
+          "capabilities": [
+            "Workflow automation",
+            "Process management",
+            "Citizen portal",
+            "Approvals"
+          ],
+          "pricing": "Subscription",
+          "website": "https://citygrows.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Permit workflows",
+            "Internal approvals",
+            "Citizen applications"
+          ],
+          "government_fit": "Good - Easy-to-use workflow automation for smaller governments"
+        }
+      ]
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare & Public Health",
+      "description": "AI agents for medical services, patient care, and public health management",
+      "icon": "heart-pulse",
+      "government_relevance": "Critical",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Patient Care",
+        "Medical Imaging",
+        "Epidemic Tracking",
+        "Healthcare Administration"
+      ],
+      "tools": [
+        {
+          "name": "CDC AI/ML Systems",
+          "description": "Epidemic surveillance and disease monitoring for outbreak prevention",
+          "capabilities": [
+            "Disease monitoring",
+            "Outbreak prediction",
+            "Surveillance",
+            "Data analytics"
+          ],
+          "pricing": "Government",
+          "website": "https://www.cdc.gov",
+          "compliance": [
+            "HIPAA",
+            "FedRAMP"
+          ],
+          "use_cases": [
+            "Disease outbreak detection",
+            "Epidemic surveillance",
+            "Public health monitoring"
+          ],
+          "government_fit": "Excellent - Federal public health agency with authoritative capabilities"
+        },
+        {
+          "name": "GE Healthcare AI",
+          "description": "Medical imaging and diagnostic AI with clinical decision support",
+          "capabilities": [
+            "Medical imaging",
+            "Diagnostic support",
+            "Workflow optimization",
+            "Predictive analytics"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.gehealthcare.com",
+          "compliance": [
+            "HIPAA",
+            "FDA cleared"
+          ],
+          "use_cases": [
+            "Hospital imaging",
+            "Emergency departments",
+            "Radiology workflow"
+          ],
+          "government_fit": "Excellent - Proven in large healthcare systems with FDA clearance"
+        },
+        {
+          "name": "PathAI",
+          "description": "AI pathology platform for disease diagnosis and treatment planning",
+          "capabilities": [
+            "Pathology analysis",
+            "Disease detection",
+            "Treatment recommendations",
+            "Quality assurance"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.pathai.com",
+          "compliance": [
+            "HIPAA",
+            "CAP",
+            "CLIA"
+          ],
+          "use_cases": [
+            "Public health labs",
+            "Hospital pathology",
+            "Cancer diagnosis"
+          ],
+          "government_fit": "Good - Improves diagnostic accuracy with regulatory compliance"
+        },
+        {
+          "name": "Epic Systems AI",
+          "description": "Integrated EHR with AI clinical decision support and predictive analytics",
+          "capabilities": [
+            "Clinical decision support",
+            "Predictive analytics",
+            "Workflow automation",
+            "Population health"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.epic.com",
+          "compliance": [
+            "HIPAA",
+            "HITRUST"
+          ],
+          "use_cases": [
+            "Hospital systems",
+            "Public health departments",
+            "Academic medical centers"
+          ],
+          "government_fit": "Excellent - Dominant EHR with comprehensive AI capabilities"
+        },
+        {
+          "name": "Philips HealthSuite AI",
+          "description": "Healthcare AI for medical imaging, patient monitoring, and clinical workflow",
+          "capabilities": [
+            "Medical imaging",
+            "Patient monitoring",
+            "Clinical workflow",
+            "Predictive analytics"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.philips.com/healthcare",
+          "compliance": [
+            "HIPAA",
+            "FDA cleared"
+          ],
+          "use_cases": [
+            "Hospital imaging",
+            "ICU monitoring",
+            "Emergency care",
+            "Telehealth"
+          ],
+          "government_fit": "Excellent - Global healthcare technology leader"
+        },
+        {
+          "name": "Viz.ai",
+          "description": "AI stroke detection and care coordination for emergency departments",
+          "capabilities": [
+            "Stroke detection",
+            "Care coordination",
+            "Real-time alerts",
+            "Workflow optimization"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.viz.ai",
+          "compliance": [
+            "HIPAA",
+            "FDA cleared"
+          ],
+          "use_cases": [
+            "Emergency departments",
+            "Stroke centers",
+            "Trauma systems"
+          ],
+          "government_fit": "Excellent - Proven to reduce time-to-treatment in stroke care"
+        },
+        {
+          "name": "Butterfly Network AI",
+          "description": "Portable ultrasound with AI image interpretation for point-of-care",
+          "capabilities": [
+            "Ultrasound imaging",
+            "AI interpretation",
+            "Point-of-care diagnostics",
+            "Cloud connectivity"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.butterflynetwork.com",
+          "compliance": [
+            "HIPAA",
+            "FDA cleared"
+          ],
+          "use_cases": [
+            "Emergency medical services",
+            "Rural clinics",
+            "Disaster response"
+          ],
+          "government_fit": "Good - Portable solution for underserved areas"
+        },
+        {
+          "name": "Tempus AI",
+          "description": "Precision medicine platform with genomic analysis and treatment recommendations",
+          "capabilities": [
+            "Genomic analysis",
+            "Treatment recommendations",
+            "Clinical trial matching",
+            "Precision medicine"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.tempus.com",
+          "compliance": [
+            "HIPAA",
+            "CAP",
+            "CLIA"
+          ],
+          "use_cases": [
+            "Cancer centers",
+            "Research hospitals",
+            "Precision medicine programs"
+          ],
+          "government_fit": "Good - Advanced precision medicine for specialized care"
+        },
+        {
+          "name": "Woebot Health",
+          "description": "AI mental health conversational agent with therapeutic support",
+          "capabilities": [
+            "Mental health monitoring",
+            "Patient engagement",
+            "Therapeutic conversations",
+            "Crisis detection"
+          ],
+          "pricing": "Subscription",
+          "website": "https://woebothealth.com",
+          "compliance": [
+            "HIPAA",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Public mental health",
+            "Veterans affairs",
+            "Crisis intervention"
+          ],
+          "government_fit": "Good - Addresses mental health access gaps"
+        },
+        {
+          "name": "Penciled (Whitney)",
+          "description": "AI front office assistant for healthcare appointment management",
+          "capabilities": [
+            "Appointment scheduling",
+            "Patient reminders",
+            "No-show reduction",
+            "EMR integration"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.penciled.com",
+          "compliance": [
+            "HIPAA",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Public health clinics",
+            "County hospitals",
+            "Community health centers"
+          ],
+          "government_fit": "Good - Reduces administrative burden with proven ROI"
+        },
+        {
+          "name": "Paige AI",
+          "description": "AI-powered digital pathology for cancer diagnosis and treatment planning",
+          "capabilities": [
+            "Digital pathology",
+            "Cancer detection",
+            "Treatment planning",
+            "Biomarker analysis"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://paige.ai",
+          "compliance": [
+            "HIPAA",
+            "FDA approved"
+          ],
+          "use_cases": [
+            "Hospital pathology",
+            "Cancer centers",
+            "Research institutions"
+          ],
+          "government_fit": "Good - FDA-approved AI for cancer pathology"
+        },
+        {
+          "name": "Aidoc",
+          "description": "AI radiology platform for time-critical findings and workflow optimization",
+          "capabilities": [
+            "Radiology AI",
+            "Critical findings",
+            "Workflow optimization",
+            "Triage"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.aidoc.com",
+          "compliance": [
+            "HIPAA",
+            "FDA cleared"
+          ],
+          "use_cases": [
+            "Emergency radiology",
+            "Hospital imaging",
+            "Stroke detection"
+          ],
+          "government_fit": "Good - Specializes in time-critical radiology findings"
+        }
+      ]
+    },
+    {
+      "id": "legal",
+      "name": "Legal & Judicial Systems",
+      "description": "AI agents for legal research, case management, and judicial processes",
+      "icon": "scale",
+      "government_relevance": "Critical",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Legal Research",
+        "Contract Review",
+        "Case Management",
+        "eDiscovery"
+      ],
+      "tools": [
+        {
+          "name": "Harvey",
+          "description": "AI platform for legal document review, contract analysis, and compliance",
+          "capabilities": [
+            "Document review",
+            "Contract drafting",
+            "Compliance analysis",
+            "Legal research"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.harvey.ai",
+          "compliance": [
+            "SOC 2",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Public defender offices",
+            "City attorneys",
+            "Contract review"
+          ],
+          "government_fit": "Good - Reduces legal review time and costs"
+        },
+        {
+          "name": "Thomson Reuters AI",
+          "description": "Comprehensive legal research and practice management with AI",
+          "capabilities": [
+            "Legal research",
+            "Case law analysis",
+            "Practice management",
+            "Document automation"
+          ],
+          "pricing": "Subscription",
+          "website": "https://legal.thomsonreuters.com",
+          "compliance": [
+            "SOC 2",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Court systems",
+            "Legal aid offices",
+            "Government legal departments"
+          ],
+          "government_fit": "Excellent - Trusted by legal professionals for decades"
+        },
+        {
+          "name": "LegalMation",
+          "description": "AI litigation automation for legal departments and law offices",
+          "capabilities": [
+            "Litigation automation",
+            "Document generation",
+            "Case analysis",
+            "Deadline tracking"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.legalmation.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "County counsel",
+            "State attorney general",
+            "Municipal legal departments"
+          ],
+          "government_fit": "Good - Streamlines litigation processes"
+        },
+        {
+          "name": "Casetext (CoCounsel)",
+          "description": "AI legal assistant for research, document review, and drafting",
+          "capabilities": [
+            "Legal research",
+            "Document review",
+            "Brief drafting",
+            "Deposition preparation"
+          ],
+          "pricing": "Subscription",
+          "website": "https://casetext.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Public defenders",
+            "Prosecutors",
+            "Government attorneys"
+          ],
+          "government_fit": "Good - GPT-4 powered legal assistant"
+        },
+        {
+          "name": "Relativity",
+          "description": "eDiscovery platform with AI for document review and case management",
+          "capabilities": [
+            "eDiscovery",
+            "Document review",
+            "Case management",
+            "Analytics"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.relativity.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Government investigations",
+            "Litigation support",
+            "Compliance reviews"
+          ],
+          "government_fit": "Excellent - Industry leader in eDiscovery with government compliance"
+        },
+        {
+          "name": "Everlaw",
+          "description": "Cloud litigation platform with AI for document review and case strategy",
+          "capabilities": [
+            "Document review",
+            "Case analytics",
+            "Collaboration",
+            "Trial preparation"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.everlaw.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Attorney general offices",
+            "Public defenders",
+            "Government litigation"
+          ],
+          "government_fit": "Excellent - Modern platform with strong government adoption"
+        },
+        {
+          "name": "ROSS Intelligence",
+          "description": "AI legal research platform with natural language understanding",
+          "capabilities": [
+            "Legal research",
+            "Case law analysis",
+            "Precedent finding",
+            "Memo drafting"
+          ],
+          "pricing": "Subscription",
+          "website": "https://rossintelligence.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Government legal research",
+            "Law libraries",
+            "Legal aid"
+          ],
+          "government_fit": "Good - Natural language legal research"
+        },
+        {
+          "name": "Lex Machina",
+          "description": "Legal analytics platform for litigation strategy and outcome prediction",
+          "capabilities": [
+            "Legal analytics",
+            "Outcome prediction",
+            "Judge analytics",
+            "Case strategy"
+          ],
+          "pricing": "Subscription",
+          "website": "https://lexmachina.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Government litigation",
+            "Case strategy",
+            "Resource allocation"
+          ],
+          "government_fit": "Good - Data-driven litigation insights"
+        },
+        {
+          "name": "Logikcull",
+          "description": "eDiscovery automation for legal holds, document review, and production",
+          "capabilities": [
+            "eDiscovery",
+            "Legal holds",
+            "Document review",
+            "Production"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.logikcull.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Government investigations",
+            "FOIA requests",
+            "Litigation support"
+          ],
+          "government_fit": "Good - Simplified eDiscovery for government"
+        },
+        {
+          "name": "Kira Systems",
+          "description": "AI contract analysis and review platform for due diligence",
+          "capabilities": [
+            "Contract analysis",
+            "Due diligence",
+            "Clause extraction",
+            "Risk identification"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://kirasystems.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Government contracts",
+            "Procurement review",
+            "Compliance"
+          ],
+          "government_fit": "Good - Specialized in contract analysis"
+        },
+        {
+          "name": "LawGeex",
+          "description": "AI contract review platform for automated legal analysis",
+          "capabilities": [
+            "Contract review",
+            "Risk assessment",
+            "Compliance checking",
+            "Redlining"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.lawgeex.com",
+          "compliance": [
+            "SOC 2",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Government procurement",
+            "Contract management",
+            "Vendor agreements"
+          ],
+          "government_fit": "Good - Automated contract review"
+        },
+        {
+          "name": "Blue J Legal",
+          "description": "AI tax law research and prediction platform",
+          "capabilities": [
+            "Tax law research",
+            "Outcome prediction",
+            "Case analysis",
+            "Compliance"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.bluej.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Tax authorities",
+            "Revenue departments",
+            "Tax litigation"
+          ],
+          "government_fit": "Good - Specialized in tax law AI"
+        }
+      ]
+    },
+    {
+      "id": "public_safety",
+      "name": "Public Safety & Emergency Response",
+      "description": "AI agents for law enforcement, emergency services, and disaster response",
+      "icon": "siren",
+      "government_relevance": "Critical",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Emergency Dispatch",
+        "Crime Analysis",
+        "Disaster Response",
+        "Resource Allocation"
+      ],
+      "tools": [
+        {
+          "name": "Mark43",
+          "description": "Cloud public safety platform with AI analytics and case management",
+          "capabilities": [
+            "Records management",
+            "CAD integration",
+            "Crime analytics",
+            "Case management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.mark43.com",
+          "compliance": [
+            "CJIS",
+            "FBI CJIS Security Policy"
+          ],
+          "use_cases": [
+            "Police departments",
+            "Sheriff offices",
+            "Public safety agencies"
+          ],
+          "government_fit": "Excellent - Purpose-built for law enforcement"
+        },
+        {
+          "name": "Axon AI",
+          "description": "AI-enhanced public safety tools including body cameras and evidence management",
+          "capabilities": [
+            "Evidence management",
+            "Video analysis",
+            "Report writing",
+            "Officer safety"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.axon.com",
+          "compliance": [
+            "CJIS",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Police departments",
+            "Evidence management",
+            "Officer training"
+          ],
+          "government_fit": "Excellent - Industry leader in law enforcement technology"
+        },
+        {
+          "name": "Motorola Solutions AI",
+          "description": "Public safety communications and analytics with AI-powered insights",
+          "capabilities": [
+            "CAD",
+            "Records management",
+            "Video analytics",
+            "Communications"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.motorolasolutions.com",
+          "compliance": [
+            "CJIS",
+            "FedRAMP"
+          ],
+          "use_cases": [
+            "911 centers",
+            "Police departments",
+            "Emergency management"
+          ],
+          "government_fit": "Excellent - Comprehensive public safety technology"
+        },
+        {
+          "name": "RapidSOS",
+          "description": "Emergency response data platform connecting 911 to digital data",
+          "capabilities": [
+            "Emergency data",
+            "Location services",
+            "Caller information",
+            "IoT integration"
+          ],
+          "pricing": "Subscription",
+          "website": "https://rapidsos.com",
+          "compliance": [
+            "CJIS",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "911 centers",
+            "Emergency dispatch",
+            "First responders"
+          ],
+          "government_fit": "Good - Modern emergency data platform"
+        },
+        {
+          "name": "Carbyne",
+          "description": "Cloud-native 911 platform with AI for emergency call handling",
+          "capabilities": [
+            "Emergency call handling",
+            "Video streaming",
+            "Location services",
+            "Translation"
+          ],
+          "pricing": "Subscription",
+          "website": "https://carbyne911.com",
+          "compliance": [
+            "CJIS",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "911 centers",
+            "Emergency dispatch",
+            "Public safety answering points"
+          ],
+          "government_fit": "Good - Next-generation 911 technology"
+        },
+        {
+          "name": "Prepared 911",
+          "description": "AI-powered 911 call analysis and emergency response optimization",
+          "capabilities": [
+            "Call transcription",
+            "Real-time translation",
+            "Emergency classification",
+            "Dispatch optimization"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.prepared911.com",
+          "compliance": [
+            "CJIS",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "911 centers",
+            "Emergency dispatch",
+            "Multi-language support"
+          ],
+          "government_fit": "Good - AI-enhanced emergency call handling"
+        },
+        {
+          "name": "Flock Safety",
+          "description": "AI-powered license plate recognition and crime solving platform",
+          "capabilities": [
+            "License plate recognition",
+            "Vehicle tracking",
+            "Crime solving",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.flocksafety.com",
+          "compliance": [
+            "CJIS"
+          ],
+          "use_cases": [
+            "Police departments",
+            "Sheriff offices",
+            "Crime investigation"
+          ],
+          "government_fit": "Good - Automated vehicle intelligence"
+        },
+        {
+          "name": "ShotSpotter",
+          "description": "Gunshot detection and location system for law enforcement",
+          "capabilities": [
+            "Gunshot detection",
+            "Location services",
+            "Real-time alerts",
+            "Forensic analysis"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.shotspotter.com",
+          "compliance": [
+            "CJIS"
+          ],
+          "use_cases": [
+            "Police departments",
+            "Urban safety",
+            "Crime prevention"
+          ],
+          "government_fit": "Good - Specialized gunshot detection technology"
+        },
+        {
+          "name": "Veritone",
+          "description": "AI operating system for public safety with video analytics and investigation",
+          "capabilities": [
+            "Video analytics",
+            "Face recognition",
+            "Evidence search",
+            "Investigation tools"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.veritone.com",
+          "compliance": [
+            "CJIS",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Police departments",
+            "Evidence analysis",
+            "Investigation"
+          ],
+          "government_fit": "Good - AI-powered evidence and investigation platform"
+        },
+        {
+          "name": "Genetec",
+          "description": "Unified security platform with AI for video management and analytics",
+          "capabilities": [
+            "Video management",
+            "Access control",
+            "License plate recognition",
+            "Analytics"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.genetec.com",
+          "compliance": [
+            "CJIS"
+          ],
+          "use_cases": [
+            "Public safety",
+            "Critical infrastructure",
+            "Transportation"
+          ],
+          "government_fit": "Good - Comprehensive security platform"
+        },
+        {
+          "name": "Everbridge",
+          "description": "Critical event management platform for emergency notifications and response",
+          "capabilities": [
+            "Mass notifications",
+            "Incident management",
+            "Crisis communications",
+            "Resource coordination"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.everbridge.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Emergency management",
+            "Public safety",
+            "Critical events"
+          ],
+          "government_fit": "Excellent - Leader in critical event management"
+        },
+        {
+          "name": "Rave Mobile Safety",
+          "description": "Public safety software for emergency notifications and response",
+          "capabilities": [
+            "Emergency notifications",
+            "Panic buttons",
+            "Tip reporting",
+            "Incident management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.ravemobilesafety.com",
+          "compliance": [
+            "CJIS",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Schools",
+            "Hospitals",
+            "Public safety",
+            "Emergency management"
+          ],
+          "government_fit": "Good - Comprehensive safety communication platform"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Cybersecurity & Threat Detection",
+      "description": "AI agents for security monitoring, threat detection, and incident response",
+      "icon": "shield-check",
+      "government_relevance": "Critical",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Threat Detection",
+        "Incident Response",
+        "Vulnerability Management",
+        "Security Monitoring"
+      ],
+      "tools": [
+        {
+          "name": "CrowdStrike Falcon",
+          "description": "AI-powered endpoint protection and threat intelligence platform",
+          "capabilities": [
+            "Threat detection",
+            "Endpoint protection",
+            "Incident response",
+            "Threat intelligence"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.crowdstrike.com",
+          "compliance": [
+            "FedRAMP",
+            "CJIS",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Agency cybersecurity",
+            "Threat hunting",
+            "Incident response"
+          ],
+          "government_fit": "Excellent - FedRAMP authorized, widely used in government"
+        },
+        {
+          "name": "Palo Alto Networks Cortex",
+          "description": "AI-driven security operations platform with XDR capabilities",
+          "capabilities": [
+            "XDR",
+            "Threat detection",
+            "Automated response",
+            "Security analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.paloaltonetworks.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Security operations",
+            "Threat detection",
+            "Incident response"
+          ],
+          "government_fit": "Excellent - Comprehensive security platform"
+        },
+        {
+          "name": "Darktrace",
+          "description": "AI cybersecurity platform for autonomous threat detection and response",
+          "capabilities": [
+            "Autonomous threat detection",
+            "Self-learning AI",
+            "Incident response",
+            "Network security"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://darktrace.com",
+          "compliance": [
+            "SOC 2",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Network security",
+            "Threat detection",
+            "Autonomous response"
+          ],
+          "government_fit": "Good - Innovative self-learning AI approach"
+        },
+        {
+          "name": "Exabeam Security AI",
+          "description": "AI-driven SIEM and UEBA for threat detection and response",
+          "capabilities": [
+            "SIEM",
+            "UEBA",
+            "Threat hunting",
+            "Automated response"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.exabeam.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "SOC operations",
+            "Threat detection",
+            "Compliance monitoring"
+          ],
+          "government_fit": "Excellent - Purpose-built for security operations"
+        },
+        {
+          "name": "Splunk Enterprise Security",
+          "description": "Security information and event management with AI analytics",
+          "capabilities": [
+            "SIEM",
+            "Security analytics",
+            "Threat detection",
+            "Incident investigation"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.splunk.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Security operations",
+            "Log analysis",
+            "Threat hunting"
+          ],
+          "government_fit": "Excellent - Industry-leading SIEM platform"
+        },
+        {
+          "name": "Microsoft Sentinel",
+          "description": "Cloud-native SIEM and SOAR with AI-powered threat detection",
+          "capabilities": [
+            "SIEM",
+            "SOAR",
+            "Threat intelligence",
+            "Automated response"
+          ],
+          "pricing": "Subscription",
+          "website": "https://azure.microsoft.com/services/microsoft-sentinel/",
+          "compliance": [
+            "FedRAMP",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Cloud security",
+            "Threat detection",
+            "Security orchestration"
+          ],
+          "government_fit": "Excellent - Integrated with Microsoft ecosystem"
+        },
+        {
+          "name": "Vectra AI",
+          "description": "AI-driven network detection and response for hybrid and multi-cloud",
+          "capabilities": [
+            "Network detection",
+            "Threat hunting",
+            "Attack detection",
+            "Response automation"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.vectra.ai",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Network security",
+            "Cloud security",
+            "Threat detection"
+          ],
+          "government_fit": "Good - Specialized in network AI security"
+        },
+        {
+          "name": "SentinelOne",
+          "description": "AI-powered endpoint security with autonomous threat response",
+          "capabilities": [
+            "Endpoint security",
+            "Autonomous response",
+            "Threat detection",
+            "Forensics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.sentinelone.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Endpoint protection",
+            "Threat response",
+            "Security operations"
+          ],
+          "government_fit": "Excellent - Advanced autonomous endpoint security"
+        },
+        {
+          "name": "Cybereason",
+          "description": "AI-driven endpoint detection and response platform",
+          "capabilities": [
+            "EDR",
+            "Threat hunting",
+            "Malware protection",
+            "Incident response"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.cybereason.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Endpoint security",
+            "Threat hunting",
+            "Incident response"
+          ],
+          "government_fit": "Good - Comprehensive EDR platform"
+        },
+        {
+          "name": "Recorded Future",
+          "description": "Threat intelligence platform with AI for risk analysis",
+          "capabilities": [
+            "Threat intelligence",
+            "Risk analysis",
+            "Vulnerability management",
+            "Dark web monitoring"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.recordedfuture.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Threat intelligence",
+            "Risk assessment",
+            "Security planning"
+          ],
+          "government_fit": "Good - Comprehensive threat intelligence"
+        },
+        {
+          "name": "Abnormal Security",
+          "description": "AI email security for advanced threat protection",
+          "capabilities": [
+            "Email security",
+            "Phishing detection",
+            "Account takeover protection",
+            "Vendor fraud"
+          ],
+          "pricing": "Subscription",
+          "website": "https://abnormalsecurity.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Email security",
+            "Phishing protection",
+            "Business email compromise"
+          ],
+          "government_fit": "Good - AI-native email security"
+        },
+        {
+          "name": "Tenable",
+          "description": "Vulnerability management and cyber exposure platform with AI",
+          "capabilities": [
+            "Vulnerability management",
+            "Asset discovery",
+            "Risk prioritization",
+            "Compliance"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.tenable.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Vulnerability management",
+            "Compliance",
+            "Risk assessment"
+          ],
+          "government_fit": "Excellent - Leader in vulnerability management"
+        }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure & Smart Cities",
+      "description": "AI agents for urban planning, traffic management, and utilities",
+      "icon": "building",
+      "government_relevance": "High",
+      "adoption_maturity": "Emerging",
+      "subcategories": [
+        "Traffic Management",
+        "Utilities",
+        "Urban Planning",
+        "Asset Management"
+      ],
+      "tools": [
+        {
+          "name": "Bentley Systems AI",
+          "description": "Infrastructure digital twins and AI for asset management",
+          "capabilities": [
+            "Digital twins",
+            "Asset management",
+            "Infrastructure monitoring",
+            "Predictive maintenance"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.bentley.com",
+          "compliance": [
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Infrastructure monitoring",
+            "Asset lifecycle",
+            "Capital planning"
+          ],
+          "government_fit": "Good - Leader in infrastructure engineering software"
+        },
+        {
+          "name": "Esri ArcGIS AI",
+          "description": "GIS platform with AI for spatial analysis and urban planning",
+          "capabilities": [
+            "GIS",
+            "Spatial analysis",
+            "Urban planning",
+            "Location intelligence"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.esri.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "City planning",
+            "Infrastructure mapping",
+            "Resource allocation"
+          ],
+          "government_fit": "Excellent - Industry standard for GIS with government focus"
+        },
+        {
+          "name": "Siemens Xcelerator",
+          "description": "Digital twin platform for smart city infrastructure management",
+          "capabilities": [
+            "Digital twins",
+            "Building management",
+            "Energy optimization",
+            "IoT integration"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.siemens.com",
+          "compliance": [
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Smart buildings",
+            "Energy management",
+            "Infrastructure optimization"
+          ],
+          "government_fit": "Good - Comprehensive industrial IoT platform"
+        },
+        {
+          "name": "IBM Maximo",
+          "description": "AI-powered asset management for infrastructure and facilities",
+          "capabilities": [
+            "Asset management",
+            "Predictive maintenance",
+            "Work order management",
+            "IoT integration"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.ibm.com/products/maximo",
+          "compliance": [
+            "SOC 2",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Fleet management",
+            "Facility maintenance",
+            "Asset tracking"
+          ],
+          "government_fit": "Good - Enterprise asset management leader"
+        },
+        {
+          "name": "Mobileye",
+          "description": "AI-powered road safety and traffic management solutions",
+          "capabilities": [
+            "Traffic monitoring",
+            "Road safety",
+            "Incident detection",
+            "Analytics"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.mobileye.com",
+          "compliance": [
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Traffic management",
+            "Road safety",
+            "Smart transportation"
+          ],
+          "government_fit": "Good - Leader in vision-based traffic technology"
+        },
+        {
+          "name": "Iteris ClearMobility",
+          "description": "Traffic management platform with AI for congestion reduction",
+          "capabilities": [
+            "Traffic optimization",
+            "Signal control",
+            "Congestion management",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.iteris.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Traffic signal optimization",
+            "Congestion management",
+            "Transit priority"
+          ],
+          "government_fit": "Good - Specialized in intelligent transportation"
+        },
+        {
+          "name": "Autodesk Construction Cloud",
+          "description": "AI-powered construction management and infrastructure planning",
+          "capabilities": [
+            "Construction management",
+            "BIM",
+            "Project collaboration",
+            "Quality control"
+          ],
+          "pricing": "Subscription",
+          "website": "https://construction.autodesk.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Capital projects",
+            "Infrastructure construction",
+            "Facility planning"
+          ],
+          "government_fit": "Good - Industry leader in construction technology"
+        },
+        {
+          "name": "Oracle Utilities AI",
+          "description": "AI-powered utility management for water, electric, and gas",
+          "capabilities": [
+            "Utility billing",
+            "Customer service",
+            "Grid management",
+            "Demand forecasting"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.oracle.com/industries/utilities/",
+          "compliance": [
+            "SOC 2",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Utility operations",
+            "Customer service",
+            "Grid optimization"
+          ],
+          "government_fit": "Good - Comprehensive utility management platform"
+        },
+        {
+          "name": "Schneider Electric EcoStruxure",
+          "description": "IoT platform for energy and infrastructure management",
+          "capabilities": [
+            "Energy management",
+            "Building automation",
+            "Grid optimization",
+            "Sustainability"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.se.com",
+          "compliance": [
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Energy optimization",
+            "Building management",
+            "Sustainability"
+          ],
+          "government_fit": "Good - Leader in energy management"
+        },
+        {
+          "name": "Trimble CityWorks",
+          "description": "GIS-centric asset management for public infrastructure",
+          "capabilities": [
+            "Asset management",
+            "Work order management",
+            "GIS integration",
+            "Mobile workforce"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.trimble.com/en/solutions/civil-engineering-and-construction/cityworks",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Public works",
+            "Utility management",
+            "Asset tracking"
+          ],
+          "government_fit": "Good - Purpose-built for public infrastructure"
+        }
+      ]
+    },
+    {
+      "id": "financial",
+      "name": "Financial & Procurement",
+      "description": "AI agents for budgeting, financial planning, and procurement processes",
+      "icon": "dollar-sign",
+      "government_relevance": "High",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Budget Management",
+        "Procurement",
+        "Financial Planning",
+        "Fraud Detection"
+      ],
+      "tools": [
+        {
+          "name": "OpenGov Financials",
+          "description": "Cloud financial management with AI for budgeting and reporting",
+          "capabilities": [
+            "Budget management",
+            "Financial reporting",
+            "Performance tracking",
+            "Forecasting"
+          ],
+          "pricing": "Subscription",
+          "website": "https://opengov.com",
+          "compliance": [
+            "SOC 2",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Budget preparation",
+            "Financial reporting",
+            "Performance management"
+          ],
+          "government_fit": "Good - Modern government financial management"
+        },
+        {
+          "name": "Tyler Munis",
+          "description": "ERP system for government with AI-powered financial management",
+          "capabilities": [
+            "ERP",
+            "Financial management",
+            "HR",
+            "Payroll"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.tylertech.com/products/munis",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Government ERP",
+            "Financial management",
+            "Payroll processing"
+          ],
+          "government_fit": "Excellent - Dominant in local government ERP"
+        },
+        {
+          "name": "SAP S/4HANA Public Sector",
+          "description": "Enterprise resource planning with AI for government finance",
+          "capabilities": [
+            "ERP",
+            "Financial management",
+            "Procurement",
+            "Analytics"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.sap.com/industries/public-sector.html",
+          "compliance": [
+            "SOC 2",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Enterprise resource planning",
+            "Financial management",
+            "Procurement"
+          ],
+          "government_fit": "Good - Enterprise-scale ERP for large governments"
+        },
+        {
+          "name": "Workday Financial Management",
+          "description": "Cloud ERP with AI for financial planning and analysis",
+          "capabilities": [
+            "Financial management",
+            "Planning",
+            "Procurement",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.workday.com/en-us/products/financial-management.html",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Financial planning",
+            "Budget management",
+            "Procurement"
+          ],
+          "government_fit": "Excellent - Modern cloud ERP with government traction"
+        },
+        {
+          "name": "Coupa",
+          "description": "AI-powered procurement and spend management platform",
+          "capabilities": [
+            "Procurement",
+            "Spend management",
+            "Supplier management",
+            "Contract management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.coupa.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Procurement automation",
+            "Spend optimization",
+            "Supplier management"
+          ],
+          "government_fit": "Good - Leader in procurement software"
+        },
+        {
+          "name": "Jaggaer",
+          "description": "Procurement platform with AI for sourcing and contract management",
+          "capabilities": [
+            "eProcurement",
+            "Sourcing",
+            "Contract management",
+            "Supplier management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.jaggaer.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Public procurement",
+            "Contract management",
+            "Sourcing"
+          ],
+          "government_fit": "Good - Strong in public sector procurement"
+        },
+        {
+          "name": "GovSpend",
+          "description": "Government spending intelligence and procurement analytics",
+          "capabilities": [
+            "Spending analytics",
+            "Market intelligence",
+            "Procurement insights",
+            "Vendor analysis"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.govspend.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Procurement planning",
+            "Market research",
+            "Vendor selection"
+          ],
+          "government_fit": "Good - Specialized in government procurement intelligence"
+        },
+        {
+          "name": "Zycus",
+          "description": "AI-powered procurement platform for sourcing and contract management",
+          "capabilities": [
+            "Procurement",
+            "Sourcing",
+            "Contract management",
+            "Supplier management"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.zycus.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Strategic sourcing",
+            "Contract lifecycle",
+            "Supplier management"
+          ],
+          "government_fit": "Good - Comprehensive procurement suite"
+        },
+        {
+          "name": "Spendesk",
+          "description": "Spend management platform with AI for expense tracking and approval",
+          "capabilities": [
+            "Expense management",
+            "Approval workflows",
+            "Budget control",
+            "Reporting"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.spendesk.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Expense management",
+            "Budget control",
+            "Procurement cards"
+          ],
+          "government_fit": "Good - Modern spend management"
+        },
+        {
+          "name": "Oversight",
+          "description": "AI-powered expense auditing and fraud detection",
+          "capabilities": [
+            "Expense auditing",
+            "Fraud detection",
+            "Policy compliance",
+            "Risk management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.oversight.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Expense auditing",
+            "Fraud prevention",
+            "Compliance monitoring"
+          ],
+          "government_fit": "Good - Automated expense compliance"
+        }
+      ]
+    },
+    {
+      "id": "hr_talent",
+      "name": "HR & Talent Management",
+      "description": "AI agents for recruitment, employee management, and workforce planning",
+      "icon": "users",
+      "government_relevance": "High",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Recruitment",
+        "Employee Management",
+        "Learning & Development",
+        "Workforce Planning"
+      ],
+      "tools": [
+        {
+          "name": "Workday HCM",
+          "description": "Cloud HCM with AI for talent management and workforce planning",
+          "capabilities": [
+            "HRIS",
+            "Talent management",
+            "Payroll",
+            "Workforce planning"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.workday.com/en-us/products/human-capital-management.html",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "HR management",
+            "Talent acquisition",
+            "Workforce planning"
+          ],
+          "government_fit": "Excellent - Leading cloud HCM with government adoption"
+        },
+        {
+          "name": "Oracle HCM Cloud",
+          "description": "Comprehensive HR platform with AI for talent and workforce management",
+          "capabilities": [
+            "HRIS",
+            "Talent management",
+            "Payroll",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.oracle.com/human-capital-management/",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "HR management",
+            "Talent management",
+            "Workforce analytics"
+          ],
+          "government_fit": "Excellent - Enterprise HCM with strong government presence"
+        },
+        {
+          "name": "SAP SuccessFactors",
+          "description": "Cloud HCM suite with AI for talent and performance management",
+          "capabilities": [
+            "HRIS",
+            "Talent management",
+            "Learning",
+            "Performance management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.sap.com/products/hcm.html",
+          "compliance": [
+            "SOC 2",
+            "ISO 27001"
+          ],
+          "use_cases": [
+            "Talent management",
+            "Performance management",
+            "Learning"
+          ],
+          "government_fit": "Good - Comprehensive HCM for large organizations"
+        },
+        {
+          "name": "UKG Pro",
+          "description": "Unified HCM platform with AI for workforce management",
+          "capabilities": [
+            "HRIS",
+            "Payroll",
+            "Time tracking",
+            "Workforce management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.ukg.com/solutions/ukg-pro",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "HR management",
+            "Payroll",
+            "Time and attendance"
+          ],
+          "government_fit": "Good - Strong in workforce management"
+        },
+        {
+          "name": "iCIMS Talent Cloud",
+          "description": "AI-powered talent acquisition platform for recruiting",
+          "capabilities": [
+            "Applicant tracking",
+            "Recruitment marketing",
+            "Onboarding",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.icims.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Recruitment",
+            "Applicant tracking",
+            "Onboarding"
+          ],
+          "government_fit": "Good - Leader in talent acquisition"
+        },
+        {
+          "name": "Eightfold AI",
+          "description": "AI talent intelligence platform for recruiting and workforce planning",
+          "capabilities": [
+            "Talent intelligence",
+            "Recruiting",
+            "Skills management",
+            "Career pathing"
+          ],
+          "pricing": "Subscription",
+          "website": "https://eightfold.ai",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Talent acquisition",
+            "Skills management",
+            "Workforce planning"
+          ],
+          "government_fit": "Good - AI-first talent intelligence"
+        },
+        {
+          "name": "HireVue",
+          "description": "AI video interviewing and assessment platform",
+          "capabilities": [
+            "Video interviewing",
+            "Candidate assessment",
+            "Scheduling",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.hirevue.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Recruitment",
+            "Candidate screening",
+            "Interview automation"
+          ],
+          "government_fit": "Good - Innovative video interviewing platform"
+        },
+        {
+          "name": "Phenom",
+          "description": "AI-powered talent experience platform for recruiting and engagement",
+          "capabilities": [
+            "Career sites",
+            "CRM",
+            "Chatbots",
+            "Personalization"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.phenom.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Recruitment marketing",
+            "Candidate experience",
+            "Employee engagement"
+          ],
+          "government_fit": "Good - Focus on talent experience"
+        },
+        {
+          "name": "Cornerstone OnDemand",
+          "description": "Learning and talent management platform with AI",
+          "capabilities": [
+            "Learning management",
+            "Performance management",
+            "Talent development",
+            "Content"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.cornerstoneondemand.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Employee training",
+            "Performance management",
+            "Compliance training"
+          ],
+          "government_fit": "Good - Strong in learning and development"
+        },
+        {
+          "name": "BambooHR",
+          "description": "HR software with AI for small to mid-sized organizations",
+          "capabilities": [
+            "HRIS",
+            "Applicant tracking",
+            "Onboarding",
+            "Performance management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.bamboohr.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "HR management",
+            "Recruitment",
+            "Employee records"
+          ],
+          "government_fit": "Good - User-friendly HR for smaller governments"
+        }
+      ]
+    },
+    {
+      "id": "data_analytics",
+      "name": "Data Analytics & Business Intelligence",
+      "description": "AI agents for data analysis, visualization, and business intelligence",
+      "icon": "bar-chart",
+      "government_relevance": "High",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Business Intelligence",
+        "Data Visualization",
+        "Predictive Analytics",
+        "Data Management"
+      ],
+      "tools": [
+        {
+          "name": "Tableau",
+          "description": "Data visualization and business intelligence platform with AI",
+          "capabilities": [
+            "Data visualization",
+            "Dashboards",
+            "Analytics",
+            "Self-service BI"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.tableau.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Performance dashboards",
+            "Data visualization",
+            "Analytics"
+          ],
+          "government_fit": "Excellent - Industry leader in data visualization"
+        },
+        {
+          "name": "Power BI",
+          "description": "Microsoft business analytics with AI-powered insights",
+          "capabilities": [
+            "Business intelligence",
+            "Data visualization",
+            "Analytics",
+            "AI insights"
+          ],
+          "pricing": "Subscription",
+          "website": "https://powerbi.microsoft.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Government dashboards",
+            "Data analytics",
+            "Reporting"
+          ],
+          "government_fit": "Excellent - Integrated with Microsoft ecosystem"
+        },
+        {
+          "name": "Qlik Sense",
+          "description": "Data analytics platform with AI-powered associative engine",
+          "capabilities": [
+            "Data analytics",
+            "Visualization",
+            "Self-service BI",
+            "Embedded analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.qlik.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Data discovery",
+            "Analytics",
+            "Dashboards"
+          ],
+          "government_fit": "Good - Strong associative analytics engine"
+        },
+        {
+          "name": "Domo",
+          "description": "Cloud-based business intelligence with AI and data integration",
+          "capabilities": [
+            "Business intelligence",
+            "Data integration",
+            "Dashboards",
+            "Collaboration"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.domo.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Executive dashboards",
+            "Data integration",
+            "Performance tracking"
+          ],
+          "government_fit": "Good - Modern cloud BI platform"
+        },
+        {
+          "name": "Looker",
+          "description": "Business intelligence and data analytics platform by Google",
+          "capabilities": [
+            "Business intelligence",
+            "Data modeling",
+            "Embedded analytics",
+            "APIs"
+          ],
+          "pricing": "Subscription",
+          "website": "https://cloud.google.com/looker",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Data analytics",
+            "Custom applications",
+            "Embedded BI"
+          ],
+          "government_fit": "Good - Developer-friendly BI platform"
+        },
+        {
+          "name": "ThoughtSpot",
+          "description": "AI-powered analytics with natural language search",
+          "capabilities": [
+            "Search analytics",
+            "AI insights",
+            "Embedded analytics",
+            "Data visualization"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.thoughtspot.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Self-service analytics",
+            "Search-driven insights",
+            "Dashboards"
+          ],
+          "government_fit": "Good - Natural language analytics"
+        },
+        {
+          "name": "Sisense",
+          "description": "Embedded analytics platform with AI for complex data",
+          "capabilities": [
+            "Embedded analytics",
+            "Data preparation",
+            "Dashboards",
+            "APIs"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.sisense.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Embedded analytics",
+            "Complex data analysis",
+            "Custom applications"
+          ],
+          "government_fit": "Good - Strong in embedded analytics"
+        },
+        {
+          "name": "Alteryx",
+          "description": "Data analytics automation platform with AI and machine learning",
+          "capabilities": [
+            "Data preparation",
+            "Analytics automation",
+            "Predictive analytics",
+            "Spatial analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.alteryx.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Data preparation",
+            "Analytics automation",
+            "Predictive modeling"
+          ],
+          "government_fit": "Good - Leader in analytics automation"
+        },
+        {
+          "name": "KNIME",
+          "description": "Open-source data analytics platform with AI and machine learning",
+          "capabilities": [
+            "Data analytics",
+            "Machine learning",
+            "Data science",
+            "Workflow automation"
+          ],
+          "pricing": "Free/Enterprise",
+          "website": "https://www.knime.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Data science",
+            "Analytics workflows",
+            "Predictive modeling"
+          ],
+          "government_fit": "Good - Open-source with enterprise support"
+        },
+        {
+          "name": "RapidMiner",
+          "description": "Data science platform with AI for predictive analytics",
+          "capabilities": [
+            "Data science",
+            "Machine learning",
+            "Predictive analytics",
+            "Model deployment"
+          ],
+          "pricing": "Subscription",
+          "website": "https://rapidminer.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Predictive analytics",
+            "Machine learning",
+            "Data science"
+          ],
+          "government_fit": "Good - Comprehensive data science platform"
+        }
+      ]
+    },
+    {
+      "id": "document_management",
+      "name": "Document & Content Management",
+      "description": "AI agents for document processing, records management, and content automation",
+      "icon": "file-text",
+      "government_relevance": "High",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Document Processing",
+        "Records Management",
+        "Content Automation",
+        "OCR & Extraction"
+      ],
+      "tools": [
+        {
+          "name": "M-Files",
+          "description": "AI-powered document management with metadata-driven architecture",
+          "capabilities": [
+            "Document management",
+            "Workflow automation",
+            "Records management",
+            "Compliance"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.m-files.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Document management",
+            "Records retention",
+            "Compliance"
+          ],
+          "government_fit": "Good - Innovative metadata-driven approach"
+        },
+        {
+          "name": "Laserfiche",
+          "description": "Enterprise content management with AI for document automation",
+          "capabilities": [
+            "ECM",
+            "Document management",
+            "Workflow automation",
+            "Records management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.laserfiche.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Records management",
+            "Document automation",
+            "Compliance"
+          ],
+          "government_fit": "Excellent - Strong government presence with FedRAMP"
+        },
+        {
+          "name": "OpenText Content Services",
+          "description": "Enterprise content management platform with AI capabilities",
+          "capabilities": [
+            "ECM",
+            "Records management",
+            "Compliance",
+            "Information governance"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.opentext.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Enterprise content management",
+            "Records management",
+            "Governance"
+          ],
+          "government_fit": "Excellent - Enterprise ECM leader"
+        },
+        {
+          "name": "Box",
+          "description": "Cloud content management with AI for collaboration and security",
+          "capabilities": [
+            "Content management",
+            "Collaboration",
+            "Workflow automation",
+            "Security"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.box.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Document collaboration",
+            "Secure file sharing",
+            "Workflow automation"
+          ],
+          "government_fit": "Excellent - Modern cloud content platform"
+        },
+        {
+          "name": "DocuWare",
+          "description": "Document management and workflow automation with AI",
+          "capabilities": [
+            "Document management",
+            "Workflow automation",
+            "OCR",
+            "Mobile access"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.docuware.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Document digitization",
+            "Workflow automation",
+            "Records management"
+          ],
+          "government_fit": "Good - User-friendly document management"
+        },
+        {
+          "name": "Hyland OnBase",
+          "description": "Enterprise information platform with AI for content management",
+          "capabilities": [
+            "ECM",
+            "Case management",
+            "Process automation",
+            "Records management"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.hyland.com/onbase",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Content management",
+            "Case management",
+            "Process automation"
+          ],
+          "government_fit": "Good - Comprehensive enterprise platform"
+        },
+        {
+          "name": "Adobe Document Cloud",
+          "description": "PDF and document services with AI for forms and signatures",
+          "capabilities": [
+            "PDF management",
+            "E-signatures",
+            "Document automation",
+            "Forms"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.adobe.com/documentcloud.html",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "PDF workflows",
+            "E-signatures",
+            "Form automation"
+          ],
+          "government_fit": "Good - Industry standard for PDF management"
+        },
+        {
+          "name": "Kofax",
+          "description": "Intelligent automation for document processing and data capture",
+          "capabilities": [
+            "Document capture",
+            "OCR",
+            "Data extraction",
+            "Process automation"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.kofax.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Document processing",
+            "Data capture",
+            "Automation"
+          ],
+          "government_fit": "Good - Leader in intelligent capture"
+        },
+        {
+          "name": "ABBYY",
+          "description": "AI-powered OCR and document processing platform",
+          "capabilities": [
+            "OCR",
+            "Document processing",
+            "Data extraction",
+            "Content intelligence"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.abbyy.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Document digitization",
+            "Data extraction",
+            "Process intelligence"
+          ],
+          "government_fit": "Good - OCR and document processing leader"
+        },
+        {
+          "name": "Docusign",
+          "description": "E-signature and agreement cloud with AI automation",
+          "capabilities": [
+            "E-signatures",
+            "Contract management",
+            "Workflow automation",
+            "CLM"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.docusign.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "E-signatures",
+            "Contract workflows",
+            "Agreement automation"
+          ],
+          "government_fit": "Excellent - E-signature industry leader"
+        }
+      ]
+    },
+    {
+      "id": "customer_service",
+      "name": "Customer Service & Contact Centers",
+      "description": "AI agents for customer support, contact centers, and citizen engagement",
+      "icon": "headphones",
+      "government_relevance": "High",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Contact Center AI",
+        "Chatbots & Virtual Agents",
+        "Customer Support Automation",
+        "Citizen Services"
+      ],
+      "tools": [
+        {
+          "name": "Cognigy",
+          "description": "Enterprise conversational AI agents for contact centers with agentic capabilities",
+          "capabilities": [
+            "Conversational AI",
+            "Multi-channel support",
+            "Real-time agent assist",
+            "Tool invocation",
+            "Voice and chat"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.cognigy.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "311/411 services",
+            "Citizen service centers",
+            "Benefits enrollment",
+            "Multi-language support"
+          ],
+          "government_fit": "Excellent - Purpose-built for contact centers with government applications"
+        },
+        {
+          "name": "Pylon",
+          "description": "AI-native B2B support platform with agents for ticket deflection and resolution",
+          "capabilities": [
+            "Ticket automation",
+            "Knowledge base",
+            "Multi-channel support",
+            "Account intelligence",
+            "AI deflection"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.usepylon.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Internal IT support",
+            "Inter-agency help desks",
+            "Citizen services automation"
+          ],
+          "government_fit": "Moderate - B2B focused but adaptable for government support"
+        },
+        {
+          "name": "Zendesk AI",
+          "description": "Customer service platform with AI agents for ticket routing and resolution",
+          "capabilities": [
+            "Ticket management",
+            "AI routing",
+            "Knowledge base",
+            "Self-service",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.zendesk.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Citizen service desks",
+            "311 services",
+            "Support automation"
+          ],
+          "government_fit": "Good - Widely used customer service platform"
+        },
+        {
+          "name": "Intercom",
+          "description": "Conversational relationship platform with AI chatbots and automation",
+          "capabilities": [
+            "Chatbots",
+            "Live chat",
+            "Product tours",
+            "Customer engagement",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.intercom.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Citizen engagement",
+            "Service automation",
+            "Multi-channel support"
+          ],
+          "government_fit": "Good - Modern conversational platform"
+        },
+        {
+          "name": "Freshdesk",
+          "description": "Customer support software with AI-powered automation and chatbots",
+          "capabilities": [
+            "Ticket management",
+            "AI chatbots",
+            "Knowledge base",
+            "Multi-channel",
+            "Automation"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.freshdesk.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Support desk automation",
+            "Citizen services",
+            "Multi-channel support"
+          ],
+          "government_fit": "Good - User-friendly support platform"
+        },
+        {
+          "name": "Genesys Cloud",
+          "description": "Contact center platform with AI for customer experience and workforce optimization",
+          "capabilities": [
+            "Contact center",
+            "AI routing",
+            "Workforce optimization",
+            "Analytics",
+            "Omnichannel"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.genesys.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Government contact centers",
+            "311 services",
+            "Citizen engagement"
+          ],
+          "government_fit": "Excellent - Enterprise contact center with FedRAMP"
+        },
+        {
+          "name": "Five9",
+          "description": "Cloud contact center with AI-powered intelligent virtual agents",
+          "capabilities": [
+            "Contact center",
+            "IVR",
+            "Virtual agents",
+            "Workforce management",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.five9.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Contact center operations",
+            "Citizen services",
+            "Call automation"
+          ],
+          "government_fit": "Good - Cloud-native contact center platform"
+        },
+        {
+          "name": "Talkdesk",
+          "description": "AI-powered contact center platform with automation and analytics",
+          "capabilities": [
+            "Contact center",
+            "AI automation",
+            "Sentiment analysis",
+            "Quality management",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.talkdesk.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Contact center modernization",
+            "Citizen services",
+            "Quality assurance"
+          ],
+          "government_fit": "Good - Modern contact center with strong AI"
+        },
+        {
+          "name": "Ada",
+          "description": "AI-powered customer service automation platform",
+          "capabilities": [
+            "Automated resolution",
+            "Chatbots",
+            "Multi-language",
+            "Analytics",
+            "Integrations"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.ada.cx",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Self-service automation",
+            "Citizen inquiries",
+            "Multi-language support"
+          ],
+          "government_fit": "Good - Focus on automated resolution"
+        },
+        {
+          "name": "Kustomer",
+          "description": "CRM and customer service platform with AI automation",
+          "capabilities": [
+            "CRM",
+            "Omnichannel",
+            "AI automation",
+            "Customer timeline",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.kustomer.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Customer relationship management",
+            "Service automation",
+            "Citizen engagement"
+          ],
+          "government_fit": "Good - Unified CRM and service platform"
+        }
+      ]
+    },
+    {
+      "id": "integration_workflow",
+      "name": "Integration & Workflow Automation",
+      "description": "AI agents for system integration, workflow orchestration, and process automation",
+      "icon": "workflow",
+      "government_relevance": "High",
+      "adoption_maturity": "Emerging",
+      "subcategories": [
+        "iPaaS",
+        "Workflow Orchestration",
+        "RPA",
+        "API Management",
+        "Multi-Agent Platforms"
+      ],
+      "tools": [
+        {
+          "name": "Boomi AgentStudio",
+          "description": "Full agent lifecycle management for designing, governing, and orchestrating AI agents at scale",
+          "capabilities": [
+            "Agent orchestration",
+            "Integration automation",
+            "No-code development",
+            "Agent Control Tower",
+            "Multi-agent collaboration"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://boomi.com/platform/agentstudio/",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Inter-agency integration",
+            "System of systems",
+            "Data synchronization",
+            "Workflow automation"
+          ],
+          "government_fit": "Excellent - Enterprise-grade agent orchestration with governance"
+        },
+        {
+          "name": "UiPath",
+          "description": "Enterprise RPA platform with AI-powered automation and document understanding",
+          "capabilities": [
+            "RPA",
+            "Document AI",
+            "Process mining",
+            "Task mining",
+            "Automation orchestration"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.uipath.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Process automation",
+            "Document processing",
+            "Legacy system integration"
+          ],
+          "government_fit": "Excellent - RPA leader with FedRAMP authorization"
+        },
+        {
+          "name": "Automation Anywhere",
+          "description": "Cloud-native RPA with AI agents for intelligent automation",
+          "capabilities": [
+            "RPA",
+            "IQ Bot",
+            "Discovery Bot",
+            "Process automation",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.automationanywhere.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Business process automation",
+            "Document processing",
+            "Workflow automation"
+          ],
+          "government_fit": "Excellent - Cloud RPA with government compliance"
+        },
+        {
+          "name": "Blue Prism",
+          "description": "Intelligent automation platform with AI and RPA capabilities",
+          "capabilities": [
+            "RPA",
+            "Intelligent automation",
+            "Process intelligence",
+            "AI skills",
+            "Orchestration"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.blueprism.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Enterprise automation",
+            "Process optimization",
+            "System integration"
+          ],
+          "government_fit": "Good - Enterprise automation platform"
+        },
+        {
+          "name": "Microsoft Power Automate",
+          "description": "Low-code automation platform with AI Builder and RPA",
+          "capabilities": [
+            "Workflow automation",
+            "RPA",
+            "AI Builder",
+            "Process automation",
+            "Connectors"
+          ],
+          "pricing": "Subscription",
+          "website": "https://powerautomate.microsoft.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Process automation",
+            "Workflow orchestration",
+            "System integration"
+          ],
+          "government_fit": "Excellent - Integrated with Microsoft ecosystem"
+        },
+        {
+          "name": "Zapier",
+          "description": "Workflow automation platform connecting 6000+ apps with AI actions",
+          "capabilities": [
+            "Workflow automation",
+            "App integration",
+            "AI actions",
+            "No-code",
+            "Triggers and actions"
+          ],
+          "pricing": "Subscription",
+          "website": "https://zapier.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "App integration",
+            "Workflow automation",
+            "Process orchestration"
+          ],
+          "government_fit": "Good - Easy-to-use automation for smaller teams"
+        },
+        {
+          "name": "Make (Integromat)",
+          "description": "Visual automation platform for connecting apps and services",
+          "capabilities": [
+            "Visual automation",
+            "App integration",
+            "Workflow design",
+            "API integration",
+            "Scheduling"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.make.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Workflow automation",
+            "System integration",
+            "Process orchestration"
+          ],
+          "government_fit": "Good - Visual workflow builder"
+        },
+        {
+          "name": "n8n",
+          "description": "Open-source workflow automation platform with AI integrations",
+          "capabilities": [
+            "Workflow automation",
+            "Self-hosted",
+            "API integration",
+            "AI workflows",
+            "Open source"
+          ],
+          "pricing": "Free/Enterprise",
+          "website": "https://n8n.io",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Custom workflows",
+            "Self-hosted automation",
+            "AI integration"
+          ],
+          "government_fit": "Good - Open-source with self-hosting option"
+        },
+        {
+          "name": "Workato",
+          "description": "Enterprise automation platform with AI-powered recipe recommendations",
+          "capabilities": [
+            "Integration",
+            "Automation",
+            "AI recipes",
+            "API management",
+            "Governance"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.workato.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Enterprise integration",
+            "Workflow automation",
+            "API orchestration"
+          ],
+          "government_fit": "Good - Enterprise-focused automation"
+        },
+        {
+          "name": "Tray.io",
+          "description": "General automation platform for complex workflows and integrations",
+          "capabilities": [
+            "Workflow automation",
+            "API integration",
+            "Low-code",
+            "Governance",
+            "Analytics"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://tray.io",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Complex workflows",
+            "System integration",
+            "Process automation"
+          ],
+          "government_fit": "Good - Enterprise workflow automation"
+        }
+      ]
+    },
+    {
+      "id": "research_scientific",
+      "name": "Research & Scientific Discovery",
+      "description": "AI agents for scientific research, data analysis, and long-horizon discovery tasks",
+      "icon": "microscope",
+      "government_relevance": "High",
+      "adoption_maturity": "Emerging",
+      "subcategories": [
+        "Scientific Research",
+        "Literature Review",
+        "Data Analysis",
+        "Long-Horizon Agents",
+        "Lab Automation"
+      ],
+      "tools": [
+        {
+          "name": "Kosmos",
+          "description": "AI scientist for autonomous discovery with 12+ hour long-horizon research capabilities",
+          "capabilities": [
+            "Long-horizon reasoning",
+            "Literature search",
+            "Data analysis",
+            "Hypothesis generation",
+            "Multi-agent coordination"
+          ],
+          "pricing": "Research",
+          "website": "https://arxiv.org/abs/2511.02824",
+          "compliance": [
+            "Research use"
+          ],
+          "use_cases": [
+            "Scientific research",
+            "Public health analysis",
+            "Policy research",
+            "Environmental studies",
+            "Long-term data analysis"
+          ],
+          "government_fit": "Excellent - Transformative for government research agencies (NIH, NSF, EPA, NOAA)"
+        },
+        {
+          "name": "Elicit",
+          "description": "AI research assistant for literature review and evidence synthesis",
+          "capabilities": [
+            "Literature search",
+            "Paper summarization",
+            "Evidence extraction",
+            "Research questions",
+            "Citation analysis"
+          ],
+          "pricing": "Subscription",
+          "website": "https://elicit.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Policy research",
+            "Evidence reviews",
+            "Literature synthesis",
+            "Research planning"
+          ],
+          "government_fit": "Good - Accelerates research and evidence gathering"
+        },
+        {
+          "name": "Consensus",
+          "description": "AI-powered academic search engine for scientific literature",
+          "capabilities": [
+            "Literature search",
+            "Paper analysis",
+            "Evidence synthesis",
+            "Citation tracking",
+            "Research insights"
+          ],
+          "pricing": "Subscription",
+          "website": "https://consensus.app",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Research literature review",
+            "Evidence-based policy",
+            "Scientific analysis"
+          ],
+          "government_fit": "Good - Specialized in academic literature"
+        },
+        {
+          "name": "Semantic Scholar",
+          "description": "AI-powered research tool for scientific literature discovery",
+          "capabilities": [
+            "Literature search",
+            "Paper recommendations",
+            "Citation analysis",
+            "Research graphs",
+            "Alerts"
+          ],
+          "pricing": "Free",
+          "website": "https://www.semanticscholar.org",
+          "compliance": [
+            "Academic use"
+          ],
+          "use_cases": [
+            "Research discovery",
+            "Literature tracking",
+            "Citation analysis"
+          ],
+          "government_fit": "Good - Free academic research tool"
+        },
+        {
+          "name": "Scite",
+          "description": "Smart citations platform showing how research has been cited",
+          "capabilities": [
+            "Citation analysis",
+            "Supporting/contrasting evidence",
+            "Research reliability",
+            "Literature review"
+          ],
+          "pricing": "Subscription",
+          "website": "https://scite.ai",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Research validation",
+            "Evidence quality",
+            "Literature review"
+          ],
+          "government_fit": "Good - Validates research claims"
+        },
+        {
+          "name": "Connected Papers",
+          "description": "Visual tool for exploring academic papers and research connections",
+          "capabilities": [
+            "Visual literature mapping",
+            "Paper discovery",
+            "Research connections",
+            "Citation networks"
+          ],
+          "pricing": "Free/Subscription",
+          "website": "https://www.connectedpapers.com",
+          "compliance": [
+            "Academic use"
+          ],
+          "use_cases": [
+            "Literature exploration",
+            "Research mapping",
+            "Topic discovery"
+          ],
+          "government_fit": "Good - Visual research exploration"
+        },
+        {
+          "name": "Sourcely",
+          "description": "AI-powered research assistant for finding relevant academic sources",
+          "capabilities": [
+            "Source finding",
+            "Literature search",
+            "Citation generation",
+            "Research assistance"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.sourcely.net",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Research sourcing",
+            "Literature discovery",
+            "Citation management"
+          ],
+          "government_fit": "Good - Streamlines source finding"
+        },
+        {
+          "name": "Lateral",
+          "description": "AI research assistant for reading and organizing scientific papers",
+          "capabilities": [
+            "Document organization",
+            "Paper summarization",
+            "Research notes",
+            "Knowledge management"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.lateral.io",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Research organization",
+            "Paper management",
+            "Knowledge synthesis"
+          ],
+          "government_fit": "Good - Research workflow optimization"
+        },
+        {
+          "name": "Iris.ai",
+          "description": "AI research assistant for literature review and knowledge discovery",
+          "capabilities": [
+            "Literature review",
+            "Concept mapping",
+            "Research discovery",
+            "Paper recommendations"
+          ],
+          "pricing": "Subscription",
+          "website": "https://iris.ai",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Systematic reviews",
+            "Literature discovery",
+            "Research planning"
+          ],
+          "government_fit": "Good - Systematic literature review tool"
+        },
+        {
+          "name": "Undermind",
+          "description": "AI research assistant for deep literature search and analysis",
+          "capabilities": [
+            "Deep literature search",
+            "Research analysis",
+            "Evidence gathering",
+            "Topic exploration"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.undermind.ai",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "In-depth research",
+            "Evidence synthesis",
+            "Topic analysis"
+          ],
+          "government_fit": "Good - Deep research capabilities"
+        }
+      ]
+    },
+    {
+      "id": "it_infrastructure",
+      "name": "IT Infrastructure & Operations",
+      "description": "AI agents for IT management, cloud operations, and infrastructure automation",
+      "icon": "server",
+      "government_relevance": "High",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "IT Service Management",
+        "Cloud Operations",
+        "Infrastructure Monitoring",
+        "DevOps",
+        "AIOps"
+      ],
+      "tools": [
+        {
+          "name": "Kyndryl Agentic AI",
+          "description": "Enterprise-scale AI agent framework for IT infrastructure with 100+ agents deployed",
+          "capabilities": [
+            "IT infrastructure management",
+            "Cloud operations",
+            "Multi-cloud orchestration",
+            "Incident response",
+            "Capacity planning"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.kyndryl.com/artificial-intelligence/agentic-ai-framework",
+          "compliance": [
+            "Google Cloud FedRAMP"
+          ],
+          "use_cases": [
+            "IT modernization",
+            "Cloud migration",
+            "Infrastructure automation",
+            "Multi-cloud management"
+          ],
+          "government_fit": "Excellent - Enterprise IT infrastructure with Google Cloud FedRAMP"
+        },
+        {
+          "name": "Dynatrace",
+          "description": "AI-powered observability platform for cloud and application monitoring",
+          "capabilities": [
+            "APM",
+            "Infrastructure monitoring",
+            "AIOps",
+            "Log analytics",
+            "Automation"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.dynatrace.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Application monitoring",
+            "Cloud observability",
+            "Performance optimization"
+          ],
+          "government_fit": "Excellent - AI-powered observability with FedRAMP"
+        },
+        {
+          "name": "Datadog",
+          "description": "Monitoring and analytics platform with AI for infrastructure and applications",
+          "capabilities": [
+            "Infrastructure monitoring",
+            "APM",
+            "Log management",
+            "Security monitoring",
+            "AIOps"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.datadog.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Cloud monitoring",
+            "Application performance",
+            "Security monitoring"
+          ],
+          "government_fit": "Excellent - Comprehensive monitoring with FedRAMP"
+        },
+        {
+          "name": "New Relic",
+          "description": "Observability platform with AI for application and infrastructure monitoring",
+          "capabilities": [
+            "APM",
+            "Infrastructure monitoring",
+            "AI insights",
+            "Log management",
+            "Alerting"
+          ],
+          "pricing": "Subscription",
+          "website": "https://newrelic.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Application monitoring",
+            "Performance optimization",
+            "Incident detection"
+          ],
+          "government_fit": "Excellent - Full-stack observability with FedRAMP"
+        },
+        {
+          "name": "PagerDuty",
+          "description": "Incident response platform with AI for event management and automation",
+          "capabilities": [
+            "Incident management",
+            "On-call scheduling",
+            "Event intelligence",
+            "Automation",
+            "AIOps"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.pagerduty.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Incident response",
+            "On-call management",
+            "Event correlation"
+          ],
+          "government_fit": "Excellent - Incident management leader with FedRAMP"
+        },
+        {
+          "name": "Moogsoft",
+          "description": "AI-driven AIOps platform for IT operations and incident management",
+          "capabilities": [
+            "AIOps",
+            "Event correlation",
+            "Incident management",
+            "Automation",
+            "Observability"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.moogsoft.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "IT operations",
+            "Incident reduction",
+            "Event management"
+          ],
+          "government_fit": "Good - AI-native AIOps platform"
+        },
+        {
+          "name": "BigPanda",
+          "description": "AIOps platform for event correlation and incident management",
+          "capabilities": [
+            "Event correlation",
+            "Incident management",
+            "Root cause analysis",
+            "Automation",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.bigpanda.io",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "IT operations",
+            "Incident management",
+            "Event intelligence"
+          ],
+          "government_fit": "Good - AIOps for large-scale operations"
+        },
+        {
+          "name": "Splunk IT Service Intelligence",
+          "description": "AIOps platform for predictive analytics and service monitoring",
+          "capabilities": [
+            "AIOps",
+            "Predictive analytics",
+            "Service monitoring",
+            "Event correlation",
+            "KPI tracking"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.splunk.com/itsi",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "IT service monitoring",
+            "Predictive analytics",
+            "Performance management"
+          ],
+          "government_fit": "Excellent - Enterprise AIOps with FedRAMP"
+        },
+        {
+          "name": "BMC Helix",
+          "description": "AI-powered IT service management and operations platform",
+          "capabilities": [
+            "ITSM",
+            "AIOps",
+            "Service desk",
+            "Asset management",
+            "Automation"
+          ],
+          "pricing": "Enterprise",
+          "website": "https://www.bmc.com/helix",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "IT service management",
+            "Operations automation",
+            "Asset management"
+          ],
+          "government_fit": "Good - Enterprise ITSM platform"
+        },
+        {
+          "name": "Ansible Automation Platform",
+          "description": "IT automation platform with AI-powered insights",
+          "capabilities": [
+            "Infrastructure automation",
+            "Configuration management",
+            "Orchestration",
+            "AI insights"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.ansible.com",
+          "compliance": [
+            "FedRAMP",
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Infrastructure automation",
+            "Configuration management",
+            "Deployment automation"
+          ],
+          "government_fit": "Excellent - Open-source automation with enterprise support"
+        }
+      ]
+    },
+    {
+      "id": "coding_development",
+      "name": "Coding & Development",
+      "description": "AI agents for software development, code generation, and developer productivity",
+      "icon": "code",
+      "government_relevance": "Moderate",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Code Generation",
+        "Code Review",
+        "Testing",
+        "DevOps",
+        "Documentation"
+      ],
+      "tools": [
+        {
+          "name": "GitHub Copilot",
+          "description": "AI pair programmer for code completion and generation",
+          "capabilities": [
+            "Code completion",
+            "Code generation",
+            "Multi-language support",
+            "IDE integration"
+          ],
+          "pricing": "Subscription",
+          "website": "https://github.com/features/copilot",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Software development",
+            "Code assistance",
+            "Developer productivity"
+          ],
+          "government_fit": "Good - Widely adopted code assistant"
+        },
+        {
+          "name": "Cursor",
+          "description": "AI-first code editor with advanced code generation and editing",
+          "capabilities": [
+            "Code generation",
+            "Code editing",
+            "Multi-file edits",
+            "Chat interface"
+          ],
+          "pricing": "Subscription",
+          "website": "https://cursor.sh",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Software development",
+            "Code refactoring",
+            "Development acceleration"
+          ],
+          "government_fit": "Good - Modern AI-native code editor"
+        },
+        {
+          "name": "Replit AI",
+          "description": "AI-powered collaborative coding platform with code generation",
+          "capabilities": [
+            "Code generation",
+            "Collaborative coding",
+            "Deployment",
+            "Learning"
+          ],
+          "pricing": "Subscription",
+          "website": "https://replit.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Rapid prototyping",
+            "Learning and training",
+            "Collaborative development"
+          ],
+          "government_fit": "Good - Cloud-based development environment"
+        },
+        {
+          "name": "Tabnine",
+          "description": "AI code assistant with enterprise security and compliance",
+          "capabilities": [
+            "Code completion",
+            "Code generation",
+            "Self-hosted option",
+            "Privacy-focused"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.tabnine.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Enterprise development",
+            "Secure coding",
+            "Developer productivity"
+          ],
+          "government_fit": "Good - Enterprise-focused with self-hosting"
+        },
+        {
+          "name": "Amazon CodeWhisperer",
+          "description": "AI coding companion from AWS with security scanning",
+          "capabilities": [
+            "Code generation",
+            "Security scanning",
+            "AWS integration",
+            "Multi-language"
+          ],
+          "pricing": "Free/Subscription",
+          "website": "https://aws.amazon.com/codewhisperer/",
+          "compliance": [
+            "AWS compliance"
+          ],
+          "use_cases": [
+            "AWS development",
+            "Secure coding",
+            "Cloud applications"
+          ],
+          "government_fit": "Good - Integrated with AWS ecosystem"
+        },
+        {
+          "name": "Codeium",
+          "description": "Free AI code acceleration toolkit for developers",
+          "capabilities": [
+            "Code completion",
+            "Code generation",
+            "Chat",
+            "Multi-language"
+          ],
+          "pricing": "Free/Enterprise",
+          "website": "https://codeium.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Developer productivity",
+            "Code assistance",
+            "Learning"
+          ],
+          "government_fit": "Good - Free option for government developers"
+        },
+        {
+          "name": "Sourcegraph Cody",
+          "description": "AI coding assistant with codebase context awareness",
+          "capabilities": [
+            "Code generation",
+            "Codebase search",
+            "Code intelligence",
+            "Context-aware"
+          ],
+          "pricing": "Subscription",
+          "website": "https://sourcegraph.com/cody",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Large codebase navigation",
+            "Code understanding",
+            "Development"
+          ],
+          "government_fit": "Good - Strong codebase understanding"
+        },
+        {
+          "name": "Pieces for Developers",
+          "description": "AI-powered code snippet manager and workflow tool",
+          "capabilities": [
+            "Code snippets",
+            "Context management",
+            "Search",
+            "Workflow automation"
+          ],
+          "pricing": "Free/Subscription",
+          "website": "https://pieces.app",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Code reuse",
+            "Knowledge management",
+            "Developer workflow"
+          ],
+          "government_fit": "Good - Developer productivity tool"
+        },
+        {
+          "name": "Aider",
+          "description": "AI pair programming in the terminal with git integration",
+          "capabilities": [
+            "Code generation",
+            "Git integration",
+            "Terminal-based",
+            "Multi-file edits"
+          ],
+          "pricing": "Open Source",
+          "website": "https://aider.chat",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "Command-line development",
+            "Git workflows",
+            "Code refactoring"
+          ],
+          "government_fit": "Good - Open-source terminal-based tool"
+        },
+        {
+          "name": "Continue",
+          "description": "Open-source AI code assistant for VS Code and JetBrains",
+          "capabilities": [
+            "Code completion",
+            "Code generation",
+            "Chat",
+            "Customizable"
+          ],
+          "pricing": "Open Source",
+          "website": "https://continue.dev",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "Custom AI coding",
+            "Self-hosted option",
+            "Developer productivity"
+          ],
+          "government_fit": "Good - Open-source with customization"
+        }
+      ]
+    },
+    {
+      "id": "education_training",
+      "name": "Education & Training",
+      "description": "AI agents for learning, training, and educational content delivery",
+      "icon": "graduation-cap",
+      "government_relevance": "Moderate",
+      "adoption_maturity": "Emerging",
+      "subcategories": [
+        "Learning Management",
+        "Personalized Learning",
+        "Training Delivery",
+        "Assessment"
+      ],
+      "tools": [
+        {
+          "name": "Khan Academy Khanmigo",
+          "description": "AI tutor and teaching assistant for personalized learning",
+          "capabilities": [
+            "Personalized tutoring",
+            "Learning assistance",
+            "Progress tracking",
+            "Multi-subject"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.khanacademy.org/khan-labs",
+          "compliance": [
+            "Education focused"
+          ],
+          "use_cases": [
+            "Student tutoring",
+            "Teacher assistance",
+            "Personalized learning"
+          ],
+          "government_fit": "Good - Trusted educational platform"
+        },
+        {
+          "name": "Duolingo Max",
+          "description": "AI-powered language learning with personalized lessons",
+          "capabilities": [
+            "Language learning",
+            "Personalized lessons",
+            "Conversational practice",
+            "Assessment"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.duolingo.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Language training",
+            "Employee development",
+            "Multi-language skills"
+          ],
+          "government_fit": "Good - Effective language learning"
+        },
+        {
+          "name": "Coursera Coach",
+          "description": "AI learning assistant for online course navigation and support",
+          "capabilities": [
+            "Course recommendations",
+            "Learning assistance",
+            "Progress tracking",
+            "Q&A"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.coursera.org",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Professional development",
+            "Skills training",
+            "Certification programs"
+          ],
+          "government_fit": "Good - Enterprise learning platform"
+        },
+        {
+          "name": "Docebo",
+          "description": "AI-powered learning platform for enterprise training",
+          "capabilities": [
+            "LMS",
+            "Personalized learning",
+            "Content curation",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.docebo.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Employee training",
+            "Compliance training",
+            "Skills development"
+          ],
+          "government_fit": "Good - Enterprise LMS with AI"
+        },
+        {
+          "name": "Degreed",
+          "description": "Skills development platform with AI-powered learning pathways",
+          "capabilities": [
+            "Skills tracking",
+            "Learning pathways",
+            "Content curation",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://degreed.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Workforce development",
+            "Skills management",
+            "Career pathing"
+          ],
+          "government_fit": "Good - Skills-focused learning platform"
+        },
+        {
+          "name": "EdCast",
+          "description": "AI-powered knowledge cloud for learning and development",
+          "capabilities": [
+            "Knowledge management",
+            "Learning pathways",
+            "Content curation",
+            "Social learning"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.edcast.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Knowledge sharing",
+            "Employee development",
+            "Training delivery"
+          ],
+          "government_fit": "Good - Knowledge-centric learning"
+        },
+        {
+          "name": "Synthesia",
+          "description": "AI video generation platform for training and educational content",
+          "capabilities": [
+            "AI video generation",
+            "Avatars",
+            "Multi-language",
+            "Text-to-video"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.synthesia.io",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Training videos",
+            "Educational content",
+            "Multi-language training"
+          ],
+          "government_fit": "Good - Scalable video content creation"
+        },
+        {
+          "name": "Grammarly for Education",
+          "description": "AI writing assistant for students and educators",
+          "capabilities": [
+            "Writing assistance",
+            "Grammar checking",
+            "Plagiarism detection",
+            "Tone suggestions"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.grammarly.com/edu",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Writing improvement",
+            "Communication skills",
+            "Document quality"
+          ],
+          "government_fit": "Good - Writing quality improvement"
+        },
+        {
+          "name": "Quizlet",
+          "description": "AI-powered study tools and flashcards for learning",
+          "capabilities": [
+            "Flashcards",
+            "Study modes",
+            "AI tutoring",
+            "Progress tracking"
+          ],
+          "pricing": "Free/Subscription",
+          "website": "https://quizlet.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Study assistance",
+            "Knowledge retention",
+            "Test preparation"
+          ],
+          "government_fit": "Good - Popular study tool"
+        },
+        {
+          "name": "Century Tech",
+          "description": "AI platform for personalized learning and assessment",
+          "capabilities": [
+            "Personalized learning",
+            "Assessment",
+            "Analytics",
+            "Intervention"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.century.tech",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Personalized education",
+            "Learning analytics",
+            "Student support"
+          ],
+          "government_fit": "Good - AI-driven personalization"
+        }
+      ]
+    },
+    {
+      "id": "marketing_content",
+      "name": "Marketing & Content Creation",
+      "description": "AI agents for content generation, marketing automation, and creative work",
+      "icon": "megaphone",
+      "government_relevance": "Moderate",
+      "adoption_maturity": "Moderate",
+      "subcategories": [
+        "Content Generation",
+        "Marketing Automation",
+        "Design",
+        "Social Media"
+      ],
+      "tools": [
+        {
+          "name": "Jasper",
+          "description": "AI content generation platform for marketing and communications",
+          "capabilities": [
+            "Content generation",
+            "Brand voice",
+            "Templates",
+            "Multi-language"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.jasper.ai",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Public communications",
+            "Content creation",
+            "Marketing materials"
+          ],
+          "government_fit": "Good - Professional content generation"
+        },
+        {
+          "name": "Copy.ai",
+          "description": "AI copywriting tool for marketing and communications",
+          "capabilities": [
+            "Copywriting",
+            "Content generation",
+            "Templates",
+            "Workflows"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.copy.ai",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Marketing copy",
+            "Communications",
+            "Content creation"
+          ],
+          "government_fit": "Good - Marketing-focused writing"
+        },
+        {
+          "name": "Canva AI",
+          "description": "Design platform with AI-powered design generation and editing",
+          "capabilities": [
+            "Graphic design",
+            "AI design generation",
+            "Templates",
+            "Brand kit"
+          ],
+          "pricing": "Free/Subscription",
+          "website": "https://www.canva.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Public communications",
+            "Presentations",
+            "Marketing materials"
+          ],
+          "government_fit": "Good - User-friendly design tool"
+        },
+        {
+          "name": "Adobe Firefly",
+          "description": "AI-powered creative tools for image and design generation",
+          "capabilities": [
+            "Image generation",
+            "Design tools",
+            "Text effects",
+            "Creative editing"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.adobe.com/products/firefly.html",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Creative content",
+            "Marketing materials",
+            "Design work"
+          ],
+          "government_fit": "Good - Professional creative tools"
+        },
+        {
+          "name": "HubSpot AI",
+          "description": "Marketing automation platform with AI-powered content and insights",
+          "capabilities": [
+            "Marketing automation",
+            "Content generation",
+            "CRM",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.hubspot.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Marketing campaigns",
+            "Citizen engagement",
+            "Communications"
+          ],
+          "government_fit": "Good - Comprehensive marketing platform"
+        },
+        {
+          "name": "Mailchimp AI",
+          "description": "Email marketing platform with AI-powered optimization",
+          "capabilities": [
+            "Email marketing",
+            "Automation",
+            "Personalization",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://mailchimp.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Email campaigns",
+            "Citizen communications",
+            "Newsletter automation"
+          ],
+          "government_fit": "Good - Email marketing leader"
+        },
+        {
+          "name": "Hootsuite AI",
+          "description": "Social media management with AI-powered content and scheduling",
+          "capabilities": [
+            "Social media management",
+            "Content generation",
+            "Scheduling",
+            "Analytics"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.hootsuite.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Social media management",
+            "Public communications",
+            "Engagement"
+          ],
+          "government_fit": "Good - Social media management leader"
+        },
+        {
+          "name": "Buffer",
+          "description": "Social media management platform with AI-powered content suggestions",
+          "capabilities": [
+            "Social media scheduling",
+            "Content suggestions",
+            "Analytics",
+            "Collaboration"
+          ],
+          "pricing": "Subscription",
+          "website": "https://buffer.com",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Social media management",
+            "Content scheduling",
+            "Public engagement"
+          ],
+          "government_fit": "Good - Simple social media management"
+        },
+        {
+          "name": "Grammarly Business",
+          "description": "AI writing assistant for professional communications",
+          "capabilities": [
+            "Writing assistance",
+            "Tone adjustment",
+            "Brand voice",
+            "Team collaboration"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.grammarly.com/business",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Professional writing",
+            "Communications quality",
+            "Document review"
+          ],
+          "government_fit": "Good - Professional writing improvement"
+        },
+        {
+          "name": "Notion AI",
+          "description": "AI-powered workspace for notes, docs, and knowledge management",
+          "capabilities": [
+            "Note-taking",
+            "Content generation",
+            "Knowledge management",
+            "Collaboration"
+          ],
+          "pricing": "Subscription",
+          "website": "https://www.notion.so/product/ai",
+          "compliance": [
+            "SOC 2"
+          ],
+          "use_cases": [
+            "Knowledge management",
+            "Documentation",
+            "Team collaboration"
+          ],
+          "government_fit": "Good - Flexible workspace with AI"
+        }
+      ]
+    },
+    {
+      "id": "agent_platforms",
+      "name": "AI Agent Platforms & Frameworks",
+      "description": "Platforms and frameworks for building, deploying, and managing custom AI agents",
+      "icon": "blocks",
+      "government_relevance": "Moderate",
+      "adoption_maturity": "Emerging",
+      "subcategories": [
+        "Agent Frameworks",
+        "LLM Platforms",
+        "Agent Orchestration",
+        "Development Tools"
+      ],
+      "tools": [
+        {
+          "name": "LangChain",
+          "description": "Framework for developing applications with large language models and agents",
+          "capabilities": [
+            "Agent development",
+            "LLM orchestration",
+            "Tool integration",
+            "Memory management"
+          ],
+          "pricing": "Open Source",
+          "website": "https://www.langchain.com",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "Custom agent development",
+            "LLM applications",
+            "Tool integration"
+          ],
+          "government_fit": "Good - Popular open-source framework"
+        },
+        {
+          "name": "AutoGen",
+          "description": "Microsoft framework for building multi-agent conversation systems",
+          "capabilities": [
+            "Multi-agent systems",
+            "Conversation orchestration",
+            "Tool use",
+            "Human-in-the-loop"
+          ],
+          "pricing": "Open Source",
+          "website": "https://microsoft.github.io/autogen/",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "Multi-agent applications",
+            "Conversational AI",
+            "Agent collaboration"
+          ],
+          "government_fit": "Good - Microsoft-backed framework"
+        },
+        {
+          "name": "CrewAI",
+          "description": "Framework for orchestrating role-based AI agent teams",
+          "capabilities": [
+            "Role-based agents",
+            "Team orchestration",
+            "Task delegation",
+            "Collaboration"
+          ],
+          "pricing": "Open Source",
+          "website": "https://www.crewai.com",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "Agent teams",
+            "Complex workflows",
+            "Role-based automation"
+          ],
+          "government_fit": "Good - Team-oriented agent framework"
+        },
+        {
+          "name": "LlamaIndex",
+          "description": "Data framework for connecting LLMs with external data sources",
+          "capabilities": [
+            "Data indexing",
+            "RAG",
+            "Knowledge retrieval",
+            "LLM integration"
+          ],
+          "pricing": "Open Source",
+          "website": "https://www.llamaindex.ai",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "Knowledge management",
+            "Data integration",
+            "RAG applications"
+          ],
+          "government_fit": "Good - Data-focused LLM framework"
+        },
+        {
+          "name": "Dify",
+          "description": "Open-source platform for building and deploying agentic AI workflows",
+          "capabilities": [
+            "Workflow builder",
+            "Agent orchestration",
+            "RAG pipelines",
+            "No-code"
+          ],
+          "pricing": "Open Source/Enterprise",
+          "website": "https://dify.ai",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "Agentic workflows",
+            "Custom agents",
+            "RAG applications"
+          ],
+          "government_fit": "Good - Open-source workflow platform"
+        },
+        {
+          "name": "Flowise",
+          "description": "Low-code tool for building LLM applications and agents",
+          "capabilities": [
+            "Visual builder",
+            "LLM apps",
+            "Agent flows",
+            "No-code"
+          ],
+          "pricing": "Open Source",
+          "website": "https://flowiseai.com",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "Visual agent building",
+            "LLM applications",
+            "Rapid prototyping"
+          ],
+          "government_fit": "Good - Visual low-code platform"
+        },
+        {
+          "name": "Haystack",
+          "description": "Open-source framework for building NLP applications with LLMs",
+          "capabilities": [
+            "NLP pipelines",
+            "RAG",
+            "Agent systems",
+            "Search"
+          ],
+          "pricing": "Open Source",
+          "website": "https://haystack.deepset.ai",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "NLP applications",
+            "Search systems",
+            "Q&A systems"
+          ],
+          "government_fit": "Good - NLP-focused framework"
+        },
+        {
+          "name": "Semantic Kernel",
+          "description": "Microsoft SDK for integrating AI into applications",
+          "capabilities": [
+            "AI integration",
+            "Plugin system",
+            "Memory",
+            "Planning"
+          ],
+          "pricing": "Open Source",
+          "website": "https://github.com/microsoft/semantic-kernel",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "AI-powered applications",
+            "Enterprise integration",
+            "Plugin development"
+          ],
+          "government_fit": "Good - Microsoft enterprise SDK"
+        },
+        {
+          "name": "LangGraph",
+          "description": "Framework for building stateful multi-agent applications",
+          "capabilities": [
+            "Stateful agents",
+            "Graph-based workflows",
+            "Persistence",
+            "Human-in-the-loop"
+          ],
+          "pricing": "Open Source",
+          "website": "https://www.langchain.com/langgraph",
+          "compliance": [
+            "Open source"
+          ],
+          "use_cases": [
+            "Complex agent workflows",
+            "Stateful applications",
+            "Multi-step processes"
+          ],
+          "government_fit": "Good - Advanced agent orchestration"
+        },
+        {
+          "name": "OpenAI Assistants API",
+          "description": "Platform for building AI assistants with tools and knowledge",
+          "capabilities": [
+            "Assistant creation",
+            "Tool use",
+            "File search",
+            "Code interpreter"
+          ],
+          "pricing": "API",
+          "website": "https://platform.openai.com/docs/assistants",
+          "compliance": [
+            "OpenAI terms"
+          ],
+          "use_cases": [
+            "Custom assistants",
+            "Tool integration",
+            "Knowledge retrieval"
+          ],
+          "government_fit": "Good - OpenAI's agent platform"
+        }
+      ]
+    }
+  ]
+}

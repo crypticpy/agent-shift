@@ -1,0 +1,104 @@
+{
+  "title": "Advanced Voice Control",
+  "description": "Context-aware tools, stream-of-consciousness dictation, and workflows within workflows",
+  "icon": "Zap",
+  "sections": [
+    {
+      "heading": "Context-Aware Voice AI",
+      "content": [
+        "The next level of voice control is context-aware AI. These tools know what application you're using and adapt your words to fit that tool perfectly. You can literally just stream your thoughts, and the AI figures out what you mean.",
+        "Imagine this: You're in your email app. You start talking about sending a message to your team. The voice AI knows you're in email, so it automatically formats your words as an email draft - subject line, greeting, body, signature. You didn't have to say 'create email' or give any commands. It just knew."
+      ]
+    },
+    {
+      "heading": "Stream-of-Consciousness Dictation",
+      "content": [
+        "This is where voice gets really powerful. You don't have to think about structure or format. Just talk. The AI handles the rest.",
+        "Example: You're walking to your car and you say: 'Okay so I need to follow up with Sarah about the budget meeting, remind the team about Friday's deadline, and also check in with IT about that server issue we had last week.'",
+        "The context-aware voice AI understands you're listing tasks. It creates three separate items, formats them properly, and adds them to your task manager. You didn't say 'create task' three times. You just talked naturally."
+      ]
+    },
+    {
+      "heading": "Workflows Within Workflows",
+      "content": [
+        "Advanced voice tools let you build custom workflows that trigger automatically based on what you say. This is like having workflows inside your workflows.",
+        "For example: You can set up a voice command like 'Start my morning routine' that automatically opens your calendar, reads your top 3 priorities, checks your email for urgent messages, and creates a summary document. All from one spoken phrase."
+      ]
+    },
+    {
+      "heading": "Mac Voice Tools",
+      "tools": [
+        {
+          "name": "Superwhisper",
+          "description": "Context-aware dictation for Mac. Knows which app you're in and adapts your speech accordingly. Works offline for privacy.",
+          "features": ["Context awareness", "Offline mode", "Custom commands", "Multi-language support"]
+        },
+        {
+          "name": "Wispr Flow",
+          "description": "AI-powered voice assistant for Mac that understands context and can execute complex workflows. Integrates with all your Mac apps.",
+          "features": ["App integration", "Workflow automation", "Natural language processing", "Privacy-focused"]
+        },
+        {
+          "name": "MacWhisper",
+          "description": "Professional-grade transcription and voice control. Great for long-form dictation and meeting notes.",
+          "features": ["High accuracy", "Speaker identification", "Export options", "Batch processing"]
+        }
+      ]
+    },
+    {
+      "heading": "Windows Voice Tools",
+      "tools": [
+        {
+          "name": "Jarvis Assistant",
+          "description": "AI voice assistant for Windows with context awareness and automation capabilities. Can control Windows apps and execute commands.",
+          "features": ["Windows integration", "Voice commands", "Task automation", "Customizable"]
+        },
+        {
+          "name": "Windows Voice Access",
+          "description": "Built into Windows 11. Control your PC entirely by voice. Navigate, click, type, and more without touching keyboard or mouse.",
+          "features": ["Native Windows support", "Hands-free control", "Accessibility features", "Free"]
+        },
+        {
+          "name": "Dragon Professional",
+          "description": "Industry-standard voice recognition for Windows. Extremely accurate, customizable, and powerful for professional use.",
+          "features": ["99% accuracy", "Custom vocabularies", "Command creation", "Professional-grade"]
+        }
+      ]
+    },
+    {
+      "heading": "Cross-Platform Tools",
+      "tools": [
+        {
+          "name": "Otter.ai",
+          "description": "Real-time transcription and meeting notes. Works on Mac, Windows, iOS, Android, and web. Great for capturing conversations.",
+          "features": ["Real-time transcription", "Meeting summaries", "Speaker identification", "Cloud sync"]
+        },
+        {
+          "name": "Vibe",
+          "description": "AI voice assistant that works across devices. Context-aware and can integrate with multiple apps and services.",
+          "features": ["Multi-platform", "App integrations", "Smart responses", "Team collaboration"]
+        },
+        {
+          "name": "Jamie AI",
+          "description": "Meeting assistant that joins your calls and takes notes. Works with Zoom, Teams, Google Meet, and more.",
+          "features": ["Auto-join meetings", "Action items", "Summaries", "Privacy-first"]
+        }
+      ]
+    },
+    {
+      "heading": "Getting Started with Advanced Voice",
+      "callout": {
+        "title": "Try This Workflow (10 minutes):",
+        "steps": [
+          "Pick one advanced voice tool for your platform (Mac or Windows)",
+          "Install it and go through the quick setup",
+          "Open your email app or task manager",
+          "Start dictating naturally: 'I need to send three emails today. First one to John about the project update, second to the finance team about budget approval, and third to Sarah thanking her for yesterday's presentation.'",
+          "Watch as the tool understands context and creates three separate email drafts or tasks",
+          "Refine with voice: 'Make the one to Sarah more casual' or 'Add a deadline to the finance email'"
+        ],
+        "footer": "You just created three pieces of work in under 2 minutes using only your voice. That's the power of context-aware AI."
+      }
+    }
+  ]
+}
