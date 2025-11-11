@@ -49,8 +49,8 @@
       "examples": [
         {
           "role": "Program Manager",
-          "before": "Spends 20 hours/week on reports, data analysis, and status updates. Has ideas for program improvements but no time to implement them.",
-          "after": "Agents handle reports and analysis. Program manager spends time talking to participants, identifying needs, and implementing 3-4 improvement initiatives per month instead of 1-2 per year.",
+          "before": "Spends significant time on reports, data analysis, and status updates. Has ideas for program improvements but no time to implement them.",
+          "after": "Agents handle reports and analysis, saving 2-5 hours per week ([Federal Reserve research](https://www.stlouisfed.org/on-the-economy/2025/feb/impact-generative-ai-work-productivity) shows average 2.2 hours/week saved). Program manager spends time talking to participants, identifying needs, and implementing 3-4 improvement initiatives per month instead of 1-2 per year.",
           "impact": "Programs improve faster. Participants get better service. Manager is energized instead of burned out."
         },
         {
@@ -68,33 +68,34 @@
         {
           "role": "Grant Writer",
           "before": "Writes 2-3 grant proposals per month. Each takes 40-60 hours. Limited capacity means turning down opportunities.",
-          "after": "Agents research funders, draft proposals, and format applications. Grant writer focuses on strategy, relationships, and high-value customization. Can handle 8-10 proposals per month.",
+          "after": "Agents research funders, draft proposals, and format applications. [Research shows](https://www.science.org/doi/10.1126/science.adh2586) AI reduces professional writing time by 40% with 18% higher quality (Noy & Zhang, 2023). Grant writer focuses on strategy, relationships, and high-value customization. Can handle 4-5 proposals per month (40-60% increase).",
           "impact": "More funding secured. Better funder relationships. Organization can pursue more opportunities."
         }
       ]
     },
     {
       "heading": "Home Applications",
+      "intro": "*Time estimates below are based on user reports and industry analysis. While peer-reviewed research on personal productivity is limited, the principles from workplace AI research (25-40% time reduction) apply to similar tasks at home.*",
       "examples": [
         {
           "scenario": "Family Calendar Management",
           "description": "Voice agent manages family schedules, sends reminders, coordinates carpools, and handles appointment scheduling. You just talk to it while cooking dinner or driving.",
-          "timeSaved": "5-7 hours per week"
+          "timeSaved": "Est. 3-5 hours per week (based on typical scheduling activities)"
         },
         {
           "scenario": "Meal Planning & Shopping",
           "description": "Agent creates weekly meal plans based on your preferences and dietary needs, generates shopping lists, and can even order groceries. You review and approve in 5 minutes.",
-          "timeSaved": "3-4 hours per week"
+          "timeSaved": "Est. 2-3 hours per week (meal research and list creation)"
         },
         {
           "scenario": "Home Maintenance",
           "description": "Agent tracks when maintenance is due (HVAC filters, lawn care, car service), researches service providers, and schedules appointments. You just approve the recommendations.",
-          "timeSaved": "2-3 hours per month"
+          "timeSaved": "Est. 1-2 hours per month (research and scheduling)"
         },
         {
           "scenario": "Financial Management",
           "description": "Agent categorizes expenses, tracks budget, identifies savings opportunities, and prepares tax documents. You review monthly summaries instead of tracking every transaction.",
-          "timeSaved": "4-6 hours per month"
+          "timeSaved": "Est. 2-4 hours per month (manual tracking and categorization)"
         },
         {
           "scenario": "Learning & Development",

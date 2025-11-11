@@ -31,19 +31,35 @@
       "tools": [
         {
           "name": "ChatGPT Advanced Voice",
-          "description": "Natural conversation mode. Just tap the headphone icon and start talking. Works on mobile and desktop."
+          "description": "Natural conversation mode with real-time interruption handling. Works on mobile, desktop, and web. Choose from multiple voice personalities.",
+          "url": "https://chatgpt.com/",
+          "pricing": "Free: 15 min/month preview | Plus/Pro: $20/month unlimited",
+          "platforms": ["Mobile (iOS/Android)", "Desktop (Mac/Windows)", "Web"],
+          "setup": "https://help.openai.com/en/articles/8400625-voice-mode-faq"
         },
         {
           "name": "Claude Voice",
-          "description": "Voice input available in the mobile app. Great for on-the-go conversations and quick questions."
+          "description": "Voice input in mobile app powered by Claude Sonnet 4. Five voice options. English only. Great for on-the-go conversations and quick questions.",
+          "url": "https://claude.ai/",
+          "pricing": "Free: 20-30 messages | Paid: Significantly higher limits",
+          "platforms": ["Mobile only (iOS/Android)"],
+          "setup": "https://support.claude.com/en/articles/11101966-using-voice-mode-on-claude-mobile-apps"
         },
         {
           "name": "Perplexity Assistant",
-          "description": "Voice search and conversation. Perfect for research while multitasking."
+          "description": "Voice search with real-time web results and source links. Mobile apps only (not available on web). Pro subscription required for unlimited voice.",
+          "url": "https://www.perplexity.ai/",
+          "pricing": "Free: 5 voice messages trial | Pro Plan required for full features",
+          "platforms": ["Mobile only (iOS/Android)"],
+          "setup": "https://www.perplexity.ai/help-center/en/collections/11466378-perplexity-assistant"
         },
         {
-          "name": "Google Gemini Voice",
-          "description": "Integrated with Google services. Use voice to search, create, and manage tasks."
+          "name": "Google Gemini Voice (Gemini Live)",
+          "description": "Natural conversation with 10 voice options. Hands-free background mode. Integrated with Google services. Android primarily, rolling out to iOS.",
+          "url": "https://gemini.google.com/",
+          "pricing": "Free for Android | Gemini Advanced subscription for full features",
+          "platforms": ["Android", "Gemini Advanced on iOS"],
+          "setup": "https://support.google.com/gemini/answer/15274899"
         }
       ]
     },
@@ -52,8 +68,8 @@
       "callout": {
         "title": "Try This Right Now (5 minutes):",
         "steps": [
-          "Open ChatGPT on your phone",
-          "Tap the headphone icon to start voice mode",
+          "Open your AI assistant on your phone (ChatGPT, Claude, Gemini, or Perplexity)",
+          "Tap the headphone or microphone icon to start voice mode",
           "Say: 'I need to write a quick update email to my team about our project status. Keep it brief and positive.'",
           "Listen to the AI's response, then say: 'Make it more casual' or 'Add a bullet list'",
           "Copy the result and send it!"
@@ -64,12 +80,12 @@
     {
       "heading": "The Science Behind Voice Efficiency",
       "content": [
-        "Multiple studies confirm that voice input dramatically outperforms typing:",
-        "**Speed:** Average speaking speed is 150-180 words per minute, while average typing speed is only 38-40 WPM. Professional typists reach 65-75 WPM - still slower than casual speech.",
-        "**Multitasking:** Research shows hands-free communication tools increase productivity by 8.5% and employee satisfaction by 3.5%.",
-        "**Cognitive Load:** Voice typing reduces mental overhead by enabling natural thought expression, reducing mental fatigue compared to translating thoughts into finger movements.",
-        "**Accuracy:** Modern speech recognition (2016 onwards) achieves 20-63% lower error rates than mobile typing, depending on language.",
-        "Sources: Stanford University (2016), Vonage Research, SpeakOneAI cognitive load studies"
+        "Peer-reviewed research confirms that voice input dramatically outperforms typing:",
+        "**Speed:** Average speaking speed is 150-180 words per minute ([National Center for Voice and Speech](https://virtualspeech.com/blog/average-speaking-rate-words-per-minute)), while average typing speed is only 38-40 WPM. Professional typists reach 65-75 WPM—still slower than casual speech. [Stanford research](https://arxiv.org/abs/1608.07323) found voice input is 3× faster than mobile typing (Ruan et al., 2016).",
+        "**Multitasking:** Voice interfaces enable hands-free operation, allowing you to work while your hands and eyes are occupied with other activities. [Healthcare studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2815406/) show hands-free communication tools reduce communication time by 25% (Vandenkerkhof et al., 2009) and [51% of physicians report time savings](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10035815/) with voice recognition technology.",
+        "**Cognitive Load:** Voice typing reduces mental overhead by enabling natural thought expression. [Research shows](https://dl.acm.org/doi/10.1145/2207676.2208386) voice input results in 29% fewer user corrections and lower cognitive demand compared to traditional dictation (Kumar et al., CHI 2012). Speaking is less cognitively demanding than typing, as writing requires sustained attention, planning, and motor execution.",
+        "**Accuracy:** Modern speech recognition (2016 onwards) achieves [20% lower error rates](https://arxiv.org/abs/1608.07323) than mobile typing for English, and up to 63% lower for Mandarin (Stanford, Ruan et al.). These improvements stem from advances in deep learning and neural networks.",
+        "**Additional Research:** [Federal Reserve study (2024)](https://www.stlouisfed.org/on-the-economy/2025/feb/impact-generative-ai-work-productivity) found workers using generative AI save an average of 2.2 hours per week. [Harvard/BCG study (2023)](https://www.hbs.edu/faculty/Pages/item.aspx?num=64700) showed consultants using AI completed tasks 25% faster with 40% higher quality."
       ]
     }
   ]

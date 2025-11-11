@@ -72,16 +72,16 @@ export default function Compare() {
   const getMaturityBadgeColor = (maturity: string) => {
     switch (maturity) {
       case "Advanced": return "bg-green-100 text-green-800 border-green-300";
-      case "Moderate": return "bg-blue-100 text-blue-800 border-blue-300";
-      case "Emerging": return "bg-purple-100 text-purple-800 border-purple-300";
+      case "Moderate": return "bg-amber-100 text-amber-800 border-amber-300";
+      case "Emerging": return "bg-teal-100 text-teal-800 border-teal-300";
       default: return "bg-slate-100 text-slate-800 border-slate-300";
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">
+      <div className="bg-gradient-to-r from-orange-500 to-amber-500 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Link href="/catalog">
@@ -105,7 +105,7 @@ export default function Compare() {
           
           {/* Tool Selection */}
           {selectedTools.length < 3 && (
-            <Card className="mb-8">
+            <Card className="mb-8 card-lift shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
                 <CardTitle>Select Tools to Compare ({selectedTools.length}/3)</CardTitle>
               </CardHeader>
@@ -113,7 +113,7 @@ export default function Compare() {
                 <input
                   type="text"
                   placeholder="Search for tools..."
-                  className="w-full p-3 border border-slate-300 rounded-lg mb-4"
+                  className="w-full p-3 border border-slate-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -128,7 +128,7 @@ export default function Compare() {
                         className={`p-3 rounded-lg border-2 text-left transition-all ${
                           isSelected
                             ? "bg-slate-100 border-slate-300 cursor-not-allowed opacity-50"
-                            : "bg-white border-slate-200 hover:border-purple-400 hover:shadow-md"
+                            : "bg-white border-slate-200 hover:border-orange-400 hover:shadow-md hover:scale-105 transform"
                         }`}
                       >
                         <div className="font-semibold text-sm">{tool.name}</div>
@@ -147,11 +147,11 @@ export default function Compare() {
               <h3 className="text-lg font-semibold mb-3">Selected Tools:</h3>
               <div className="flex flex-wrap gap-2">
                 {selectedTools.map((tool) => (
-                  <Badge key={tool.name} className="text-sm py-2 px-3 bg-purple-100 text-purple-800">
+                  <Badge key={tool.name} className="text-sm py-2 px-3 bg-gradient-to-r from-orange-100 to-amber-100 text-orange-800 hover:shadow-md transition-all">
                     {tool.name}
                     <button
                       onClick={() => removeTool(tool.name)}
-                      className="ml-2 hover:text-purple-900"
+                      className="ml-2 hover:text-orange-900"
                     >
                       <X className="h-3 w-3" />
                     </button>
@@ -163,10 +163,10 @@ export default function Compare() {
 
           {/* Comparison Table */}
           {selectedTools.length >= 2 && (
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden card-lift hover:shadow-2xl transition-shadow duration-300">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+                  <thead className="bg-gradient-to-r from-orange-500 to-amber-500 text-white">
                     <tr>
                       <th className="p-4 text-left font-semibold">Feature</th>
                       {selectedTools.map((tool) => (
@@ -178,7 +178,7 @@ export default function Compare() {
                   </thead>
                   <tbody>
                     {/* Category */}
-                    <tr className="border-b border-slate-200">
+                    <tr className="border-b border-slate-200 hover:bg-orange-50/50 transition-colors">
                       <td className="p-4 font-semibold bg-slate-50">Category</td>
                       {selectedTools.map((tool) => (
                         <td key={tool.name} className="p-4">
@@ -188,7 +188,7 @@ export default function Compare() {
                     </tr>
 
                     {/* Description */}
-                    <tr className="border-b border-slate-200">
+                    <tr className="border-b border-slate-200 hover:bg-orange-50/50 transition-colors">
                       <td className="p-4 font-semibold bg-slate-50">Description</td>
                       {selectedTools.map((tool) => (
                         <td key={tool.name} className="p-4 text-sm text-slate-700">
@@ -198,7 +198,7 @@ export default function Compare() {
                     </tr>
 
                     {/* Government Relevance */}
-                    <tr className="border-b border-slate-200">
+                    <tr className="border-b border-slate-200 hover:bg-orange-50/50 transition-colors">
                       <td className="p-4 font-semibold bg-slate-50 flex items-center gap-2">
                         <Shield className="h-4 w-4" />
                         Government Relevance
@@ -213,7 +213,7 @@ export default function Compare() {
                     </tr>
 
                     {/* Adoption Maturity */}
-                    <tr className="border-b border-slate-200">
+                    <tr className="border-b border-slate-200 hover:bg-orange-50/50 transition-colors">
                       <td className="p-4 font-semibold bg-slate-50 flex items-center gap-2">
                         <TrendingUp className="h-4 w-4" />
                         Adoption Maturity
@@ -228,7 +228,7 @@ export default function Compare() {
                     </tr>
 
                     {/* Pricing */}
-                    <tr className="border-b border-slate-200">
+                    <tr className="border-b border-slate-200 hover:bg-orange-50/50 transition-colors">
                       <td className="p-4 font-semibold bg-slate-50 flex items-center gap-2">
                         <DollarSign className="h-4 w-4" />
                         Pricing
@@ -241,7 +241,7 @@ export default function Compare() {
                     </tr>
 
                     {/* Compliance */}
-                    <tr className="border-b border-slate-200">
+                    <tr className="border-b border-slate-200 hover:bg-orange-50/50 transition-colors">
                       <td className="p-4 font-semibold bg-slate-50">Compliance</td>
                       {selectedTools.map((tool) => (
                         <td key={tool.name} className="p-4">
@@ -261,14 +261,14 @@ export default function Compare() {
                     </tr>
 
                     {/* Capabilities */}
-                    <tr className="border-b border-slate-200">
+                    <tr className="border-b border-slate-200 hover:bg-orange-50/50 transition-colors">
                       <td className="p-4 font-semibold bg-slate-50">Key Capabilities</td>
                       {selectedTools.map((tool) => (
                         <td key={tool.name} className="p-4">
                           <ul className="space-y-1">
                             {tool.capabilities?.slice(0, 5).map((cap, idx) => (
                               <li key={idx} className="flex items-start gap-2 text-sm">
-                                <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
+                                <CheckCircle2 className="h-4 w-4 text-teal-600 flex-shrink-0 mt-0.5" />
                                 <span>{cap}</span>
                               </li>
                             ))}
@@ -278,7 +278,7 @@ export default function Compare() {
                     </tr>
 
                     {/* Use Cases */}
-                    <tr className="border-b border-slate-200">
+                    <tr className="border-b border-slate-200 hover:bg-orange-50/50 transition-colors">
                       <td className="p-4 font-semibold bg-slate-50">Use Cases</td>
                       {selectedTools.map((tool) => (
                         <td key={tool.name} className="p-4">
@@ -302,7 +302,7 @@ export default function Compare() {
                             href={tool.website}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-sm"
+                            className="text-orange-600 hover:text-orange-800 flex items-center gap-1 text-sm font-medium transition-colors"
                           >
                             Visit Website
                             <ExternalLink className="h-3 w-3" />

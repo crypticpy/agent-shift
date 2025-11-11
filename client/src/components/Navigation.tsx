@@ -35,33 +35,33 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+    <nav className="bg-background/80 backdrop-blur-lg border-b border-border sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
+            <div className="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-all group">
               {APP_LOGO && (
-                <img src={APP_LOGO} alt="Logo" className="h-8 w-8" />
+                <img src={APP_LOGO} alt="Logo" className="h-8 w-8 group-hover:scale-110 transition-transform" />
               )}
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-orange-600 via-amber-500 to-emerald-600 bg-clip-text text-transparent">
                 Agent Shift
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (
                 <Link key={item.href} href={item.href}>
                   <Button
                     variant={isActive(item.href) ? "default" : "ghost"}
-                    className={`flex items-center gap-2 ${
+                    className={`flex items-center gap-2 transition-all duration-300 ${
                       isActive(item.href)
-                        ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                        : ""
+                        ? "bg-primary text-primary-foreground shadow-lg"
+                        : "hover:bg-accent/50"
                     }`}
                   >
                     {Icon && <Icon className="h-4 w-4" />}
@@ -89,7 +89,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-slate-200">
+          <div className="lg:hidden py-4 border-t border-border backdrop-blur-xl">
             <div className="flex flex-col gap-2">
               {navItems.map((item) => {
                 const Icon = item.icon;
@@ -97,10 +97,10 @@ export default function Navigation() {
                   <Link key={item.href} href={item.href}>
                     <Button
                       variant={isActive(item.href) ? "default" : "ghost"}
-                      className={`w-full justify-start flex items-center gap-2 ${
+                      className={`w-full justify-start flex items-center gap-2 transition-all duration-300 ${
                         isActive(item.href)
-                          ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                          : ""
+                          ? "bg-primary text-primary-foreground shadow-md"
+                          : "hover:bg-accent/50"
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >

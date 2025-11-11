@@ -30,18 +30,27 @@
       "tools": [
         {
           "name": "Superwhisper",
-          "description": "Context-aware dictation for Mac. Knows which app you're in and adapts your speech accordingly. Works offline for privacy.",
-          "features": ["Context awareness", "Offline mode", "Custom commands", "Multi-language support"]
+          "description": "Context-aware dictation for Mac. Integrates with Claude 3.5 Sonnet, Claude 4.5 Sonnet, GPT-4o, and other AI models. Works offline for privacy. Custom modes with AI instructions.",
+          "features": ["Claude/GPT integration", "Offline mode", "Custom AI modes", "100+ languages"],
+          "url": "https://superwhisper.com/",
+          "pricing": "Free: 15 min/month with all pro features | Paid plans available",
+          "setup": "https://superwhisper.com/docs/get-started/introduction"
         },
         {
           "name": "Wispr Flow",
-          "description": "AI-powered voice assistant for Mac that understands context and can execute complex workflows. Integrates with all your Mac apps.",
-          "features": ["App integration", "Workflow automation", "Natural language processing", "Privacy-focused"]
+          "description": "Blazingly fast voice-to-text for Mac. Learns your writing style and adapts punctuation automatically. Works in any app. Syncs across Mac/Windows/iOS.",
+          "features": ["Works everywhere", "Learns your style", "100+ languages", "Mac/Windows/iOS"],
+          "url": "https://wisprflow.ai/",
+          "pricing": "Free: 2,000 words/week | Pro: $15/month",
+          "setup": "https://docs.wisprflow.ai/iphone/get-started"
         },
         {
           "name": "MacWhisper",
-          "description": "Professional-grade transcription and voice control. Great for long-form dictation and meeting notes.",
-          "features": ["High accuracy", "Speaker identification", "Export options", "Batch processing"]
+          "description": "Professional transcription with speaker identification. Processes everything locally on your device for privacy. Export in multiple formats (.srt, .vtt, CSV, DOCX, PDF, markdown, HTML).",
+          "features": ["Speaker identification", "Offline processing", "Multiple export formats", "One-time purchase"],
+          "url": "https://goodsnooze.gumroad.com/l/macwhisper",
+          "pricing": "One-time payment (no subscription)",
+          "setup": "https://macwhisper.helpscoutdocs.com/"
         }
       ]
     },
@@ -49,19 +58,20 @@
       "heading": "Windows Voice Tools",
       "tools": [
         {
-          "name": "Jarvis Assistant",
-          "description": "AI voice assistant for Windows with context awareness and automation capabilities. Can control Windows apps and execute commands.",
-          "features": ["Windows integration", "Voice commands", "Task automation", "Customizable"]
-        },
-        {
           "name": "Windows Voice Access",
-          "description": "Built into Windows 11. Control your PC entirely by voice. Navigate, click, type, and more without touching keyboard or mouse.",
-          "features": ["Native Windows support", "Hands-free control", "Accessibility features", "Free"]
+          "description": "Built into Windows 11. Control your PC entirely by voice. Navigate, click, type, and more without touching keyboard or mouse. Create custom voice shortcuts for workflows.",
+          "features": ["Native Windows support", "80+ commands", "Custom voice shortcuts", "100% free"],
+          "url": "https://support.microsoft.com/en-us/topic/get-started-with-voice-access-bd2aa2dc-46c2-486c-93ae-3d75f7d053a4",
+          "pricing": "FREE (built into Windows 11 22H2+)",
+          "setup": "Settings → Accessibility → Speech → Turn on Voice Access"
         },
         {
           "name": "Dragon Professional",
-          "description": "Industry-standard voice recognition for Windows. Extremely accurate, customizable, and powerful for professional use.",
-          "features": ["99% accuracy", "Custom vocabularies", "Command creation", "Professional-grade"]
+          "description": "Industry-standard professional voice recognition. 99% accuracy with custom vocabularies and commands. Optimized for Windows 11. Deep learning adaptation to your voice.",
+          "features": ["99% accuracy", "Custom vocabularies", "MyCommands Editor", "Professional-grade"],
+          "url": "https://www.nuance.com/dragon.html",
+          "pricing": "Contact Nuance for pricing",
+          "setup": "https://www.nuance.com/dragon/user-documentation.html"
         }
       ]
     },
@@ -70,18 +80,19 @@
       "tools": [
         {
           "name": "Otter.ai",
-          "description": "Real-time transcription and meeting notes. Works on Mac, Windows, iOS, Android, and web. Great for capturing conversations.",
-          "features": ["Real-time transcription", "Meeting summaries", "Speaker identification", "Cloud sync"]
-        },
-        {
-          "name": "Vibe",
-          "description": "AI voice assistant that works across devices. Context-aware and can integrate with multiple apps and services.",
-          "features": ["Multi-platform", "App integrations", "Smart responses", "Team collaboration"]
+          "description": "Real-time transcription and meeting notes. Works on Mac, Windows, iOS, Android, and web. Automatically extracts action items and integrates with Notion, Asana, and Slack.",
+          "features": ["Real-time transcription", "Meeting summaries", "Action items", "Notion/Asana integration"],
+          "url": "https://otter.ai/",
+          "pricing": "Free: 300 min/month | Pro: $8.33/month | Business: $20/month",
+          "setup": "https://help.otter.ai/hc/en-us/articles/360049722894-Otter-Quick-Start-Guide"
         },
         {
           "name": "Jamie AI",
-          "description": "Meeting assistant that joins your calls and takes notes. Works with Zoom, Teams, Google Meet, and more.",
-          "features": ["Auto-join meetings", "Action items", "Summaries", "Privacy-first"]
+          "description": "Meeting notes without a bot. Runs in background on your computer, captures audio locally. Works with Zoom, Teams, Meet, and offline meetings. GDPR-compliant (hosted in Germany).",
+          "features": ["No bot in meeting", "20+ languages", "Native Mac/Windows apps", "GDPR-compliant"],
+          "url": "https://www.meetjamie.ai/",
+          "pricing": "Free: 10 meetings/month | Standard: €24/month",
+          "setup": "https://intercom.help/meetjamie/"
         }
       ]
     },
@@ -99,6 +110,98 @@
         ],
         "footer": "You just created three pieces of work in under 2 minutes using only your voice. That's the power of context-aware AI."
       }
+    },
+    {
+      "heading": "Beyond Getting Started: Combining Voice with AI Workflows",
+      "intro": "Once you're comfortable with basic voice control, you can chain voice tools with other AI agents to create powerful workflows. Here are three proven workflows you can set up today:",
+      "workflows": [
+        {
+          "title": "Voice Coding Pipeline (Mac)",
+          "tools": "Superwhisper → Claude → Cursor",
+          "time": "5-7 minutes from idea to working code",
+          "description": "Turn spoken code ideas into working implementations without typing",
+          "setup": [
+            {
+              "step": "Configure Superwhisper",
+              "details": "In Superwhisper Settings → API Keys, add your Anthropic API key. Create a custom mode called 'Code Spec' that uses Claude 3.5 Sonnet with instructions: 'Convert this spoken code idea into a detailed technical specification with function signatures, type hints, docstrings, and examples.'"
+            },
+            {
+              "step": "How to Use",
+              "details": "Press Option+Spacebar and dictate your code idea naturally: 'I need a Python function that takes a list of dictionaries, filters them by a specific key-value pair, then sorts the results by another key. It should handle missing keys gracefully and return an empty list if no matches found.' Superwhisper sends this to Claude, which creates a detailed specification."
+            },
+            {
+              "step": "Implement in Cursor",
+              "details": "Copy the specification from Superwhisper. Open Cursor and press Cmd+K. Paste the spec and add: 'Implement this function with comprehensive error handling and unit tests.' Cursor generates the complete code."
+            }
+          ],
+          "result": "You spoke your idea while walking to your car. By the time you sit down, you have working, tested code ready to use."
+        },
+        {
+          "title": "Meeting to Action Items (Cross-Platform)",
+          "tools": "Otter.ai → Notion → Asana",
+          "time": "Automatic (5 minutes review)",
+          "timeSaved": "25-40 minutes per meeting",
+          "description": "Automatically transcribe meetings, create Notion documentation, and generate Asana tasks",
+          "setup": [
+            {
+              "step": "Connect Otter to Meetings",
+              "details": "In Otter.ai Settings → Integrations, connect your Zoom, Google Meet, or Microsoft Teams calendar. Otter's AI Meeting Agent will automatically join scheduled meetings."
+            },
+            {
+              "step": "Set Up Automation (Two Options)",
+              "details": "OPTION A (Otter Enterprise): Use native integrations to send transcripts to Notion and action items to Asana directly. OPTION B (Free/Pro): Create a free Zapier account. Make a Zap: Trigger = 'New Otter Recording', Action 1 = 'Create Notion Page' (map transcript, summary, action items), Action 2 = 'Create Asana Tasks' (from Otter action items list)."
+            },
+            {
+              "step": "How It Works",
+              "details": "During your meeting, Otter transcribes in real-time. After the meeting (2-3 minutes), Otter processes the recording, identifies action items, and automatically creates a Notion page with full transcript and summary, plus Asana tasks for each action item."
+            }
+          ],
+          "result": "Traditional process: 30-45 minutes to transcribe, summarize, and create tasks. With this workflow: 5 minutes to review and assign. You saved 25-40 minutes per meeting."
+        },
+        {
+          "title": "Long-Form Dictation to Polished Content (Mac/Windows)",
+          "tools": "Wispr Flow (or Superwhisper) → ChatGPT → Export",
+          "time": "10-15 minutes",
+          "timeSaved": "30-60 minutes compared to typing",
+          "description": "Dictate reports, emails, or documents naturally, then have AI polish and format them",
+          "setup": [
+            {
+              "step": "Install Wispr Flow",
+              "details": "Download from wisprflow.ai for Mac or Windows. Configure the activation key (default: hold Command on Mac, Ctrl on Windows). In Settings → Personal Dictionary, add any technical terms, names, or jargon specific to your work."
+            },
+            {
+              "step": "Dictate Your Content",
+              "details": "Open any text editor or ChatGPT. Hold your activation key and speak naturally: 'I'm writing a project status report. We completed the data analysis phase ahead of schedule. Three key findings emerged: First, user engagement increased 34% after the interface redesign. Second, mobile usage now represents 67% of total traffic. Third, we identified two critical bugs that need immediate attention.' Release the key when done."
+            },
+            {
+              "step": "Polish with ChatGPT",
+              "details": "If dictating directly into ChatGPT, add: 'Format this as a professional status report with sections, bullet points, and a clear executive summary.' If dictating elsewhere, copy the text to ChatGPT with the same instruction."
+            }
+          ],
+          "result": "You spoke for 3-4 minutes while doing other things. ChatGPT delivers a polished, formatted report. Total time: 10-15 minutes vs 45-60 minutes typing and formatting manually."
+        }
+      ]
+    },
+    {
+      "heading": "Tips for Voice + AI Workflows",
+      "tips": [
+        {
+          "tip": "Start with one workflow",
+          "description": "Pick the workflow most relevant to your daily work. Master it before adding another. Once it becomes habit, add a second workflow."
+        },
+        {
+          "tip": "Dictate while multitasking",
+          "description": "The power of voice is that you can work while walking, driving (safely), or doing other tasks. Your commute becomes productive time."
+        },
+        {
+          "tip": "Create custom vocabulary",
+          "description": "Add technical terms, names, and acronyms to your voice tool's dictionary. This dramatically improves accuracy for your specific domain."
+        },
+        {
+          "tip": "Review before finalizing",
+          "description": "AI-generated content is typically 80-90% perfect. Spend 2-3 minutes reviewing and refining rather than 30-60 minutes creating from scratch."
+        }
+      ]
     }
   ]
 }

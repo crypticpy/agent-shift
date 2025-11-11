@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Mic, Zap, Link2, MessageSquare, Briefcase, CheckCircle2, XCircle, Sparkles } from "lucide-react";
 import { Streamdown } from "streamdown";
+import SpeedComparison from "@/components/SpeedComparison";
 
 interface LearnContent {
   title: string;
@@ -61,13 +62,20 @@ export default function Learn() {
 
   const renderSection = (section: any, index: number) => {
     return (
-      <div key={index} className="space-y-6">
-        <div className="space-y-2">
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+      <div key={index} className="space-y-8">
+        <div className="space-y-3">
+          <h3 className="text-3xl font-bold text-foreground">
             {section.heading}
           </h3>
         </div>
-        
+
+        {/* Speed Comparison Interactive Visual */}
+        {section.heading === "Why Voice Changes Everything" && (
+          <div className="my-8">
+            <SpeedComparison />
+          </div>
+        )}
+
         {/* Regular content paragraphs */}
         {section.content && (
           <div className="space-y-4">
@@ -116,7 +124,7 @@ export default function Learn() {
         {section.examples && section.examples[0]?.role && (
           <div className="space-y-4">
             {section.examples.map((ex: any, i: number) => (
-              <Card key={i} className="border-2 hover:border-purple-200 dark:hover:border-purple-800 transition-all">
+              <Card key={i} className="card-lift border-2 hover:border-primary/30 transition-all">
                 <CardHeader>
                   <CardTitle className="text-lg">{ex.role || ex.scenario}</CardTitle>
                 </CardHeader>
@@ -124,27 +132,35 @@ export default function Learn() {
                   {ex.before && (
                     <div>
                       <p className="text-sm font-semibold text-red-600 dark:text-red-400 mb-1">Before:</p>
-                      <p className="text-sm text-muted-foreground">{ex.before}</p>
+                      <div className="text-sm text-muted-foreground">
+                        <Streamdown>{ex.before}</Streamdown>
+                      </div>
                     </div>
                   )}
                   {ex.after && (
                     <div>
-                      <p className="text-sm font-semibold text-green-600 dark:text-green-400 mb-1">After:</p>
-                      <p className="text-sm text-muted-foreground">{ex.after}</p>
+                      <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-1">After:</p>
+                      <div className="text-sm text-muted-foreground">
+                        <Streamdown>{ex.after}</Streamdown>
+                      </div>
                     </div>
                   )}
                   {ex.description && (
-                    <p className="text-sm text-muted-foreground">{ex.description}</p>
+                    <div className="text-sm text-muted-foreground">
+                      <Streamdown>{ex.description}</Streamdown>
+                    </div>
                   )}
                   {ex.impact && (
                     <div className="pt-2 border-t">
-                      <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-1">Impact:</p>
-                      <p className="text-sm text-muted-foreground">{ex.impact}</p>
+                      <p className="text-sm font-semibold text-primary mb-1">Impact:</p>
+                      <div className="text-sm text-muted-foreground">
+                        <Streamdown>{ex.impact}</Streamdown>
+                      </div>
                     </div>
                   )}
                   {ex.timeSaved && (
                     <div className="pt-2">
-                      <Badge variant="secondary" className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100">
+                      <Badge variant="secondary" className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-100">
                         ⏱️ {ex.timeSaved}
                       </Badge>
                     </div>
@@ -157,25 +173,27 @@ export default function Learn() {
 
         {/* Intro text */}
         {section.intro && (
-          <p className="text-lg text-muted-foreground leading-relaxed">{section.intro}</p>
+          <div className="text-lg text-muted-foreground leading-relaxed">
+            <Streamdown>{section.intro}</Streamdown>
+          </div>
         )}
 
         {/* Tools grid */}
         {section.tools && (
           <div className="grid md:grid-cols-2 gap-6">
             {section.tools.map((tool: any, i: number) => (
-              <Card key={i} className="border-2 hover:border-purple-200 dark:hover:border-purple-800 transition-all hover:shadow-lg hover:-translate-y-1 h-full">
+              <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all hover:shadow-lg hover:-translate-y-1 h-full">
                 <CardHeader>
                   <CardTitle className="text-lg flex items-center gap-2">
-                    <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500">
+                    <div className="p-2 rounded-lg bg-gradient-to-br from-primary to-chart-1">
                       <Zap className="h-4 w-4 text-white" />
                     </div>
                     {tool.name}
                   </CardTitle>
                   <CardDescription className="text-base leading-relaxed">{tool.description}</CardDescription>
                 </CardHeader>
-                {tool.features && (
-                  <CardContent>
+                <CardContent className="space-y-4">
+                  {tool.features && (
                     <div className="flex flex-wrap gap-2">
                       {tool.features.map((feature: string, j: number) => (
                         <Badge key={j} variant="secondary" className="text-xs">
@@ -183,8 +201,56 @@ export default function Learn() {
                         </Badge>
                       ))}
                     </div>
-                  </CardContent>
-                )}
+                  )}
+                  {tool.pricing && (
+                    <div className="pt-2 border-t">
+                      <p className="text-xs font-semibold text-muted-foreground mb-1">Pricing:</p>
+                      <p className="text-sm text-foreground">{tool.pricing}</p>
+                    </div>
+                  )}
+                  {tool.platforms && (
+                    <div className="pt-2 border-t">
+                      <p className="text-xs font-semibold text-muted-foreground mb-1">Platforms:</p>
+                      <div className="flex flex-wrap gap-1">
+                        {tool.platforms.map((platform: string, j: number) => (
+                          <Badge key={j} variant="outline" className="text-xs">
+                            {platform}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {(tool.url || tool.setup) && (
+                    <div className="flex gap-2 pt-2">
+                      {tool.url && (
+                        <a
+                          href={tool.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center gap-1 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-semibold"
+                        >
+                          Visit Website
+                          <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      )}
+                      {tool.setup && tool.setup !== tool.url && (
+                        <a
+                          href={tool.setup}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center gap-1 px-4 py-2 border-2 border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors text-sm font-semibold"
+                        >
+                          Setup Guide
+                          <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </CardContent>
               </Card>
             ))}
           </div>
@@ -192,10 +258,10 @@ export default function Learn() {
 
         {/* Steps (simple array) */}
         {section.steps && Array.isArray(section.steps) && typeof section.steps[0] === 'string' && (
-          <Card className="border-2 border-purple-200 dark:border-purple-800 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950 dark:to-blue-950">
+          <Card className="border-2 border-primary/20 dark:border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 dark:from-primary/10 dark:to-accent/10">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-primary to-chart-1">
                   <CheckCircle2 className="h-5 w-5 text-white" />
                 </div>
                 {section.stepsTitle || "Steps"}
@@ -205,7 +271,7 @@ export default function Learn() {
               <ol className="space-y-3">
                 {section.steps.map((step: string, i: number) => (
                   <li key={i} className="flex gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 text-white flex items-center justify-center text-sm font-bold">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-primary to-chart-1 text-white flex items-center justify-center text-sm font-bold">
                       {i + 1}
                     </span>
                     <span className="text-base leading-relaxed">{step}</span>
@@ -220,10 +286,10 @@ export default function Learn() {
         {section.steps && Array.isArray(section.steps) && section.steps[0]?.step && (
           <div className="space-y-4">
             {section.steps.map((step: any, i: number) => (
-              <Card key={i} className="border-2 hover:border-purple-200 dark:hover:border-purple-800 transition-all">
+              <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
                 <CardHeader>
                   <CardTitle className="text-base flex items-center gap-2">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 text-white flex items-center justify-center text-sm font-bold">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-primary to-chart-1 text-white flex items-center justify-center text-sm font-bold">
                       {i + 1}
                     </div>
                     {step.step}
@@ -242,10 +308,10 @@ export default function Learn() {
 
         {/* Callout (with title, steps, footer) */}
         {section.callout && (
-          <Card className="border-2 border-purple-200 dark:border-purple-800 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950 dark:to-blue-950">
+          <Card className="border-2 border-primary/20 dark:border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 dark:from-primary/10 dark:to-accent/10">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Sparkles className="h-5 w-5 text-purple-600" />
+                <Sparkles className="h-5 w-5 text-primary" />
                 {section.callout.title}
               </CardTitle>
             </CardHeader>
@@ -254,7 +320,7 @@ export default function Learn() {
                 <ol className="space-y-3">
                   {section.callout.steps.map((step: any, i: number) => (
                     <li key={i} className="flex gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 text-white flex items-center justify-center text-sm font-bold">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-primary to-chart-1 text-white flex items-center justify-center text-sm font-bold">
                         {i + 1}
                       </span>
                       <span className="text-base leading-relaxed">{typeof step === 'string' ? step : step.step || JSON.stringify(step)}</span>
@@ -288,7 +354,7 @@ export default function Learn() {
 
         {/* Example (with scenario, steps, result) */}
         {section.example && (
-          <Card className="border-2 border-blue-200 dark:border-blue-800">
+          <Card className="border-2 border-accent/30 dark:border-accent/40">
             <CardHeader>
               <CardTitle className="text-lg">Example: {section.example.scenario}</CardTitle>
             </CardHeader>
@@ -296,8 +362,8 @@ export default function Learn() {
               {section.example.steps && (
                 <div className="space-y-3">
                   {section.example.steps.map((step: any, i: number) => (
-                    <div key={i} className="border-l-4 border-purple-500 pl-4">
-                      <p className="font-semibold text-sm text-purple-600 dark:text-purple-400">{step.agent}</p>
+                    <div key={i} className="border-l-4 border-primary pl-4">
+                      <p className="font-semibold text-sm text-primary dark:text-primary">{step.agent}</p>
                       <p className="text-sm text-muted-foreground mt-1"><strong>Task:</strong> {step.task}</p>
                       <p className="text-sm text-muted-foreground mt-1"><strong>Output:</strong> {step.output}</p>
                     </div>
@@ -321,8 +387,10 @@ export default function Learn() {
               )}
               {section.example.result && (
                 <div className="pt-3 border-t">
-                  <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-1">Result:</p>
-                  <p className="text-sm text-muted-foreground">{section.example.result}</p>
+                  <p className="text-sm font-semibold text-primary dark:text-primary mb-1">Result:</p>
+                  <div className="text-sm text-muted-foreground">
+                    <Streamdown>{section.example.result}</Streamdown>
+                  </div>
                 </div>
               )}
               {section.example.timeSaved && (
@@ -338,9 +406,9 @@ export default function Learn() {
         {section.benefits && (
           <div className="grid md:grid-cols-2 gap-6">
             {section.benefits.map((benefit: any, i: number) => (
-              <Card key={i} className="border-2 border-purple-200 dark:border-purple-800 hover:shadow-lg hover:-translate-y-1 transition-all">
+              <Card key={i} className="border-2 border-primary/20 dark:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all">
                 <CardHeader>
-                  <div className="p-3 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 w-fit mb-3">
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-chart-1 w-fit mb-3">
                     <CheckCircle2 className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-lg">{benefit.title}</CardTitle>
@@ -355,7 +423,7 @@ export default function Learn() {
         {section.patterns && (
           <div className="grid md:grid-cols-2 gap-4">
             {section.patterns.map((pattern: any, i: number) => (
-              <Card key={i} className="border-2 hover:border-purple-200 dark:hover:border-purple-800 transition-all">
+              <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
                 <CardHeader>
                   <CardTitle className="text-base">{pattern.name}</CardTitle>
                   <CardDescription>
@@ -374,7 +442,7 @@ export default function Learn() {
         {section.useCases && (
           <div className="space-y-4">
             {section.useCases.map((useCase: any, i: number) => (
-              <Card key={i} className="border-2 hover:border-purple-200 dark:hover:border-purple-800 transition-all">
+              <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
                 <CardHeader>
                   <CardTitle className="text-lg">{useCase.scenario}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">{useCase.description}</CardDescription>
@@ -389,7 +457,7 @@ export default function Learn() {
 
         {/* Template */}
         {section.template && (
-          <Card className="border-2 border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950">
+          <Card className="border-2 border-accent/30 dark:border-accent/40 bg-accent/10 dark:bg-accent/10">
             <CardHeader>
               <CardTitle className="text-lg">{section.template.title}</CardTitle>
             </CardHeader>
@@ -407,17 +475,73 @@ export default function Learn() {
           </Card>
         )}
 
+        {/* Workflows */}
+        {section.workflows && (
+          <div className="space-y-6">
+            {section.workflows.map((workflow: any, i: number) => (
+              <Card key={i} className="border-2 border-accent/30 dark:border-accent/40 hover:shadow-lg transition-all">
+                <CardHeader>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1">
+                      <CardTitle className="text-xl mb-2">{workflow.title}</CardTitle>
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        <Badge variant="secondary" className="bg-primary/10 text-primary">
+                          {workflow.tools}
+                        </Badge>
+                        {workflow.time && (
+                          <Badge variant="outline">⏱️ {workflow.time}</Badge>
+                        )}
+                        {workflow.timeSaved && (
+                          <Badge variant="secondary" className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-100">
+                            💰 Saves: {workflow.timeSaved}
+                          </Badge>
+                        )}
+                      </div>
+                      <CardDescription className="text-base leading-relaxed">{workflow.description}</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {workflow.setup && (
+                    <div className="space-y-3">
+                      <p className="text-sm font-semibold text-primary">Setup Steps:</p>
+                      {workflow.setup.map((step: any, j: number) => (
+                        <div key={j} className="border-l-4 border-primary pl-4 py-2">
+                          <p className="font-semibold text-sm mb-1">{j + 1}. {step.step}</p>
+                          <div className="text-sm text-muted-foreground">
+                            <Streamdown>{step.details}</Streamdown>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {workflow.result && (
+                    <div className="pt-3 border-t bg-green-50/60 dark:bg-green-950/60 p-4 rounded-lg">
+                      <p className="text-sm font-semibold text-green-600 dark:text-green-400 mb-2">Result:</p>
+                      <div className="text-sm text-muted-foreground">
+                        <Streamdown>{workflow.result}</Streamdown>
+                      </div>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
+
         {/* Tips */}
         {section.tips && (
           <div className="space-y-3">
             {section.tips.map((tip: any, i: number) => (
-              <Card key={i} className="border-2 hover:border-purple-200 dark:hover:border-purple-800 transition-all">
+              <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
                 <CardHeader>
                   <CardTitle className="text-base flex items-center gap-2">
-                    <Sparkles className="h-4 w-4 text-purple-600" />
+                    <Sparkles className="h-4 w-4 text-primary" />
                     {tip.tip}
                   </CardTitle>
-                  <CardDescription className="text-base leading-relaxed">{tip.why}</CardDescription>
+                  <CardDescription className="text-base leading-relaxed">
+                    <Streamdown>{tip.description || tip.why}</Streamdown>
+                  </CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -466,7 +590,7 @@ export default function Learn() {
 
         {/* Story */}
         {section.story && (
-          <Card className="border-2 border-purple-200 dark:border-purple-800">
+          <Card className="border-2 border-primary/20 dark:border-primary/30">
             <CardHeader>
               <CardTitle className="text-lg">Real-World Example</CardTitle>
             </CardHeader>
@@ -484,7 +608,7 @@ export default function Learn() {
                 <p className="text-sm text-muted-foreground">{section.story.withAgents}</p>
               </div>
               <div className="pt-3 border-t">
-                <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-1">The Impact:</p>
+                <p className="text-sm font-semibold text-primary dark:text-primary mb-1">The Impact:</p>
                 <p className="text-sm text-muted-foreground">{section.story.impact}</p>
               </div>
             </CardContent>
@@ -504,35 +628,31 @@ export default function Learn() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading content...</p>
+      <div className="min-h-screen flex items-center justify-center gradient-mesh">
+        <div className="text-center glass rounded-2xl p-8 backdrop-blur-md">
+          <div className="animate-spin rounded-full h-12 w-12 border-4 border-primary/20 border-t-primary mx-auto mb-4"></div>
+          <p className="text-foreground font-medium">Loading content...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
-      {/* Hero Section with Enhanced Design */}
-      <div className="relative bg-gradient-to-br from-purple-600 via-blue-600 to-purple-700 text-white py-24 overflow-hidden">
+    <div className="min-h-screen bg-background">
+      {/* Hero Section - Warm Intelligence Design */}
+      <div className="relative animated-gradient text-white py-28 overflow-hidden">
         {/* Animated background grid */}
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:32px_32px]" />
-        
-        {/* Gradient orbs */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
+            <Badge className="glass backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/20 text-base font-medium">
               🎓 Stop Doing. Start Guiding.
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-100 to-blue-100 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-7xl font-bold mb-8 tracking-tight">
               Learn the Fundamentals
             </h1>
-            <p className="text-xl md:text-2xl text-purple-100 leading-relaxed">
+            <p className="text-2xl md:text-3xl text-white/90 leading-relaxed font-light">
               Master voice control, agent chaining, and the art of orchestration. Everything you need to transform from doer to guide.
             </p>
           </div>
@@ -540,16 +660,16 @@ export default function Learn() {
       </div>
 
       {/* Tabs Section */}
-      <div className="container mx-auto px-4 py-12">
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
-          <TabsList className="grid w-full grid-cols-5 h-auto p-1 bg-muted/70 border border-border">
+      <div className="container mx-auto px-4 py-16">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-10">
+          <TabsList className="grid w-full grid-cols-5 h-auto p-2 bg-card/95 backdrop-blur-sm border-2 rounded-xl shadow-lg">
             {tabConfig.map((tab) => {
               const Icon = tab.icon;
               return (
                 <TabsTrigger
                   key={tab.value}
                   value={tab.value}
-                  className="flex items-center gap-2 py-3 data-[state=active]:bg-gradient-to-br data-[state=active]:from-purple-500 data-[state=active]:to-blue-500 data-[state=active]:text-white data-[state=active]:shadow-md data-[state=active]:font-semibold transition-all"
+                  className="flex items-center gap-2 py-4 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:font-bold transition-all duration-300 rounded-lg"
                 >
                   <Icon className="h-4 w-4" />
                   <span className="hidden md:inline">{tab.label}</span>
@@ -561,18 +681,18 @@ export default function Learn() {
           {Object.entries(content).map(([key, data]) => {
             const Icon = getIcon(data.icon);
             return (
-              <TabsContent key={key} value={key} className="space-y-8">
+              <TabsContent key={key} value={key} className="space-y-10">
                 {/* Tab Header */}
-                <div className="text-center space-y-4 max-w-3xl mx-auto">
-                  <div className="inline-flex items-center justify-center p-3 rounded-full bg-gradient-to-br from-purple-500 to-blue-500">
-                    <Icon className="h-8 w-8 text-white" />
+                <div className="text-center space-y-6 max-w-3xl mx-auto">
+                  <div className="inline-flex items-center justify-center p-4 rounded-2xl bg-primary/10 border-2 border-primary/20">
+                    <Icon className="h-10 w-10 text-primary" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold">{data.title}</h2>
-                  <p className="text-xl text-muted-foreground">{data.description}</p>
+                  <h2 className="text-4xl md:text-5xl font-bold text-foreground">{data.title}</h2>
+                  <p className="text-xl text-muted-foreground leading-relaxed">{data.description}</p>
                 </div>
 
                 {/* Tab Content Sections */}
-                <div className="max-w-5xl mx-auto space-y-12">
+                <div className="max-w-5xl mx-auto space-y-16">
                   {data.sections.map((section, index) => renderSection(section, index))}
                 </div>
               </TabsContent>

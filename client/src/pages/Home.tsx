@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,6 +8,8 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Search, Building2, HeartPulse, Scale, Siren, ShieldCheck, Code, Filter, ExternalLink, CheckCircle2, AlertCircle, TrendingUp, Users, Database, Globe, GitCompare } from "lucide-react";
 import { Link } from "wouter";
 import { APP_TITLE } from "@/const";
+import { Particles } from "@/components/Particles";
+import { CardMagicDust } from "@/components/CardMagicDust";
 
 interface Tool {
   name: string;
@@ -92,10 +94,10 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-slate-600 font-medium">Loading comprehensive catalog...</p>
+      <div className="min-h-screen flex items-center justify-center gradient-mesh">
+        <div className="text-center glass rounded-2xl p-8 backdrop-blur-md">
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-primary/20 border-t-primary mx-auto mb-4"></div>
+          <p className="text-foreground font-medium">Loading comprehensive catalog...</p>
         </div>
       </div>
     );
@@ -103,10 +105,10 @@ export default function Home() {
 
   if (error || !catalogData) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-        <Card className="max-w-md">
+      <div className="min-h-screen flex items-center justify-center gradient-mesh">
+        <Card className="max-w-md shadow-2xl">
           <CardHeader>
-            <CardTitle className="text-red-600 flex items-center gap-2">
+            <CardTitle className="text-destructive flex items-center gap-2">
               <AlertCircle className="h-5 w-5" />
               Error Loading Catalog
             </CardTitle>
@@ -137,135 +139,173 @@ export default function Home() {
       case "Critical": return "bg-red-100 text-red-800 border-red-300";
       case "High": return "bg-orange-100 text-orange-800 border-orange-300";
       case "Moderate": return "bg-yellow-100 text-yellow-800 border-yellow-300";
-      default: return "bg-gray-100 text-gray-800 border-gray-300";
+      default: return "bg-muted text-muted-foreground border-border";
     }
   };
 
   const getMaturityBadgeColor = (maturity: string) => {
     switch (maturity) {
-      case "Emerging": return "bg-blue-100 text-blue-800 border-blue-300";
-      case "Moderate": return "bg-green-100 text-green-800 border-green-300";
-      case "Advanced": return "bg-purple-100 text-purple-800 border-purple-300";
-      default: return "bg-gray-100 text-gray-800 border-gray-300";
+      case "Emerging": return "bg-amber-100 text-amber-700 border-amber-300 hover:bg-amber-200 transition-colors";
+      case "Moderate": return "bg-emerald-100 text-emerald-700 border-emerald-300 hover:bg-emerald-200 transition-colors";
+      case "Advanced": return "bg-blue-100 text-blue-700 border-blue-300 hover:bg-blue-200 transition-colors";
+      default: return "bg-muted text-muted-foreground border-border";
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white">
-        <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-background">
+      {/* Hero Section - Animated Gradient Mesh */}
+      <div className="relative animated-gradient text-white overflow-hidden">
+        {/* Floating Particles */}
+        <Particles count={60} />
+
+        {/* Subtle animated overlay pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-4">{catalogData.metadata.title}</h1>
-            <p className="text-xl text-blue-100 mb-6">{catalogData.metadata.subtitle}</p>
-            <div className="flex justify-center mb-6">
+            <h1 className="text-6xl font-bold mb-6 tracking-tight">{catalogData.metadata.title}</h1>
+            <p className="text-2xl text-white/90 mb-8 font-light leading-relaxed">{catalogData.metadata.subtitle}</p>
+
+            <div className="flex justify-center mb-10">
               <Link href="/compare">
-                <Button size="lg" variant="secondary" className="bg-white text-blue-900 hover:bg-blue-50">
-                  <GitCompare className="mr-2 h-5 w-5" />
+                <Button size="lg" className="glass hover:scale-105 transition-all duration-300 shadow-2xl text-lg px-8 py-6">
+                  <GitCompare className="mr-3 h-6 w-6" />
                   Compare Tools Side-by-Side
                 </Button>
               </Link>
             </div>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <div className="flex items-center gap-2">
-                <Database className="h-5 w-5 text-blue-300" />
-                <span><strong>{catalogData.metadata.total_tools}+</strong> AI Tools</span>
+
+            {/* Statistics with modern card design */}
+            <div className="flex flex-wrap justify-center gap-8 text-base">
+              <div className="glass card-lift rounded-lg p-4">
+                <div className="text-3xl font-bold text-orange-500">{catalogData.metadata.total_tools}+</div>
+                <div className="text-sm text-slate-600">AI Tools</div>
               </div>
-              <div className="flex items-center gap-2">
-                <Globe className="h-5 w-5 text-blue-300" />
-                <span><strong>{catalogData.metadata.total_categories}</strong> Categories</span>
+              <div className="glass card-lift rounded-lg p-4">
+                <div className="text-3xl font-bold text-amber-500">{catalogData.metadata.total_categories}</div>
+                <div className="text-sm text-slate-600">Categories</div>
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="h-5 w-5 text-blue-300" />
-                <span><strong>{catalogData.metadata.research_sources}+</strong> Sources</span>
+              <div className="glass card-lift rounded-lg p-4">
+                <div className="text-3xl font-bold text-teal-500">{catalogData.metadata.research_sources}+</div>
+                <div className="text-sm text-slate-600">Sources</div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Statistics Dashboard */}
-      <div className="container mx-auto px-4 -mt-8 mb-12">
+      {/* Statistics Dashboard - Enhanced with new color scheme */}
+      <div className="container mx-auto px-4 -mt-12 mb-8 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card className="shadow-lg border-2 border-blue-200">
+          {/* Government Relevance - Coral accent */}
+          <Card className="card-lift shadow-xl border-l-4 border-l-primary bg-card/95 backdrop-blur-sm">
             <CardHeader className="pb-3">
-              <CardTitle className="text-sm font-medium text-slate-600">Government Relevance</CardTitle>
+              <CardTitle className="text-base font-semibold text-foreground flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
+                Government Relevance
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Critical</span>
-                  <Badge className="bg-red-100 text-red-800">{catalogData.statistics.by_government_relevance.Critical}</Badge>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">Critical</span>
+                  <Badge className="bg-primary/10 text-primary border-primary/20 group-hover:bg-accent transition-all">
+                    {catalogData.statistics.by_government_relevance.Critical}
+                  </Badge>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">High</span>
-                  <Badge className="bg-orange-100 text-orange-800">{catalogData.statistics.by_government_relevance.High}</Badge>
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">High</span>
+                  <Badge className="bg-orange-100 text-orange-700 border-orange-200 group-hover:bg-orange-200 transition-all">
+                    {catalogData.statistics.by_government_relevance.High}
+                  </Badge>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Moderate</span>
-                  <Badge className="bg-yellow-100 text-yellow-800">{catalogData.statistics.by_government_relevance.Moderate}</Badge>
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">Moderate</span>
+                  <Badge className="bg-yellow-100 text-yellow-700 border-yellow-200 group-hover:bg-yellow-200 transition-all">
+                    {catalogData.statistics.by_government_relevance.Moderate}
+                  </Badge>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="shadow-lg border-2 border-green-200">
+          {/* Adoption Maturity - Amber accent */}
+          <Card className="card-lift shadow-xl border-l-4 border-l-secondary bg-card/95 backdrop-blur-sm">
             <CardHeader className="pb-3">
-              <CardTitle className="text-sm font-medium text-slate-600">Adoption Maturity</CardTitle>
+              <CardTitle className="text-base font-semibold text-foreground flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-secondary animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                Adoption Maturity
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Emerging</span>
-                  <Badge className="bg-blue-100 text-blue-800">{catalogData.statistics.by_adoption_maturity.Emerging}</Badge>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">Emerging</span>
+                  <Badge className="bg-accent/10 text-accent-foreground border-accent/20 group-hover:bg-accent group-hover:text-accent-foreground transition-all">
+                    {catalogData.statistics.by_adoption_maturity.Emerging}
+                  </Badge>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Moderate</span>
-                  <Badge className="bg-green-100 text-green-800">{catalogData.statistics.by_adoption_maturity.Moderate}</Badge>
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">Moderate</span>
+                  <Badge className="bg-emerald-100 text-emerald-700 border-emerald-200 group-hover:bg-emerald-200 transition-all">
+                    {catalogData.statistics.by_adoption_maturity.Moderate}
+                  </Badge>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="shadow-lg border-2 border-purple-200">
+          {/* Pricing Models - Teal accent */}
+          <Card className="card-lift shadow-xl border-l-4 border-l-accent bg-card/95 backdrop-blur-sm">
             <CardHeader className="pb-3">
-              <CardTitle className="text-sm font-medium text-slate-600">Pricing Models</CardTitle>
+              <CardTitle className="text-base font-semibold text-foreground flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-accent animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                Pricing Models
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-xs">Open Source</span>
-                  <Badge variant="outline">{catalogData.statistics.by_pricing_model["Free/Open Source"]}</Badge>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">Open Source</span>
+                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_pricing_model["Free/Open Source"]}</Badge>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Subscription</span>
-                  <Badge variant="outline">{catalogData.statistics.by_pricing_model.Subscription}</Badge>
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">Subscription</span>
+                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_pricing_model.Subscription}</Badge>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Enterprise</span>
-                  <Badge variant="outline">{catalogData.statistics.by_pricing_model.Enterprise}</Badge>
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">Enterprise</span>
+                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_pricing_model.Enterprise}</Badge>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="shadow-lg border-2 border-indigo-200">
+          {/* Top Compliance - Chart-3 (teal) accent */}
+          <Card className="card-lift shadow-xl border-l-4 border-l-chart-3 bg-card/95 backdrop-blur-sm">
             <CardHeader className="pb-3">
-              <CardTitle className="text-sm font-medium text-slate-600">Top Compliance</CardTitle>
+              <CardTitle className="text-base font-semibold text-foreground flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-chart-3 animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+                Top Compliance
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">SOC 2</span>
-                  <Badge variant="outline">{catalogData.statistics.by_compliance["SOC 2"]}</Badge>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">SOC 2</span>
+                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_compliance["SOC 2"]}</Badge>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">FedRAMP</span>
-                  <Badge variant="outline">{catalogData.statistics.by_compliance.FedRAMP}</Badge>
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">FedRAMP</span>
+                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_compliance.FedRAMP}</Badge>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">HIPAA</span>
-                  <Badge variant="outline">{catalogData.statistics.by_compliance.HIPAA}</Badge>
+                <div className="flex justify-between items-center group">
+                  <span className="text-sm font-medium">HIPAA</span>
+                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_compliance.HIPAA}</Badge>
                 </div>
               </div>
             </CardContent>
@@ -274,46 +314,51 @@ export default function Home() {
       </div>
 
       {/* Search and Filters */}
-      <div className="container mx-auto px-4 mb-8">
-        <Card className="shadow-lg">
-          <CardContent className="pt-6">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-3 h-5 w-5 text-slate-400" />
-                <Input
-                  placeholder="Search tools by name, description, or category..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10"
-                />
+      <div className="bg-gradient-to-br from-orange-50/80 via-amber-50/60 to-teal-50/80 pt-32 pb-12 -mt-24 -mx-4 px-4 mb-8">
+        <div className="container mx-auto px-4">
+          <Card className="glass shadow-lg border-2 border-orange-200/50">
+            <CardContent className="pt-6">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-3 h-5 w-5 text-orange-600" />
+                  <Input
+                    placeholder="Search tools by name, description, or category..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="pl-10 border-orange-200/50 focus-visible:border-orange-400"
+                  />
+                </div>
+                <div className="flex gap-2">
+                  <select
+                    value={relevanceFilter}
+                    onChange={(e) => setRelevanceFilter(e.target.value)}
+                    className="px-4 py-2 border border-orange-200/50 rounded-md bg-white text-sm hover:border-orange-400 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200/50 transition-all"
+                  >
+                    <option value="all">All Relevance</option>
+                    <option value="Critical">Critical</option>
+                    <option value="High">High</option>
+                    <option value="Moderate">Moderate</option>
+                  </select>
+                </div>
               </div>
-              <div className="flex gap-2">
-                <select
-                  value={relevanceFilter}
-                  onChange={(e) => setRelevanceFilter(e.target.value)}
-                  className="px-4 py-2 border rounded-md bg-white text-sm"
-                >
-                  <option value="all">All Relevance</option>
-                  <option value="Critical">Critical</option>
-                  <option value="High">High</option>
-                  <option value="Moderate">Moderate</option>
-                </select>
-              </div>
-            </div>
-            {searchQuery && (
-              <p className="text-sm text-slate-600 mt-3">
-                Found <strong>{filteredTools.length}</strong> tools matching "{searchQuery}"
-              </p>
-            )}
-          </CardContent>
-        </Card>
+              {searchQuery && (
+                <p className="text-sm text-slate-600 mt-3">
+                  Found <strong>{filteredTools.length}</strong> tools matching "{searchQuery}"
+                </p>
+              )}
+            </CardContent>
+          </Card>
+        </div>
       </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 pb-16">
         <Tabs defaultValue="all" value={selectedCategory} onValueChange={setSelectedCategory}>
-          <TabsList className="flex flex-wrap h-auto gap-2 bg-white p-2 rounded-lg shadow-md mb-8">
-            <TabsTrigger value="all" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white">
+          <TabsList className="flex flex-wrap h-auto gap-2 bg-card p-3 rounded-xl shadow-lg mb-10 border">
+            <TabsTrigger
+              value="all"
+              className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all duration-300"
+            >
               All Categories
             </TabsTrigger>
             {catalogData.categories.map((category) => {
@@ -322,7 +367,7 @@ export default function Home() {
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="data-[state=active]:bg-blue-600 data-[state=active]:text-white flex items-center gap-2"
+                  className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all duration-300 flex items-center gap-2"
                 >
                   <IconComponent className="h-4 w-4" />
                   <span className="hidden sm:inline">{category.name}</span>
@@ -344,20 +389,25 @@ export default function Home() {
           ))}
         </Tabs>
 
-        {/* Key Insights Section */}
-        <div className="mt-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-            <TrendingUp className="h-8 w-8 text-blue-600" />
+        {/* Key Insights Section - Enhanced */}
+        <div className="mt-20">
+          <h2 className="text-4xl font-bold text-foreground mb-8 flex items-center gap-3">
+            <div className="p-3 bg-primary/10 rounded-xl">
+              <TrendingUp className="h-8 w-8 text-primary" />
+            </div>
             Key Insights & Trends
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {catalogData.insights.map((insight, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow border-l-4 border-l-blue-600">
+              <Card
+                key={index}
+                className="card-lift shadow-lg border-l-4 border-l-primary bg-gradient-to-br from-card to-card/50 group"
+              >
                 <CardHeader>
-                  <CardTitle className="text-lg">{insight.title}</CardTitle>
+                  <CardTitle className="text-lg group-hover:text-primary transition-colors">{insight.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600">{insight.description}</p>
+                  <p className="text-muted-foreground leading-relaxed">{insight.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -368,7 +418,7 @@ export default function Home() {
       {/* Tool Detail Dialog */}
       {selectedTool && (
         <Dialog open={!!selectedTool} onOpenChange={() => setSelectedTool(null)}>
-          <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+          <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto dialog-enhanced">
             <DialogHeader>
               <DialogTitle className="text-2xl">{selectedTool.name}</DialogTitle>
               <DialogDescription className="text-base">{selectedTool.description}</DialogDescription>
@@ -406,7 +456,7 @@ export default function Home() {
 
               <div>
                 <h4 className="font-semibold mb-2">Government Fit Assessment</h4>
-                <p className="text-slate-700 bg-blue-50 p-3 rounded-md border border-blue-200">
+                <p className="text-foreground bg-accent/10 p-4 rounded-lg border border-accent/20">
                   {selectedTool.government_fit}
                 </p>
               </div>
@@ -457,6 +507,110 @@ export default function Home() {
   );
 }
 
+// Enhanced Tool Card with magnetic 3D tilt and animations
+function ToolCard({ tool, index, onSelect }: { tool: Tool; index: number; onSelect: (tool: Tool) => void }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [isRevealed, setIsRevealed] = useState(false);
+  const [transform, setTransform] = useState("");
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Intersection Observer for staggered reveal
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => setIsRevealed(true), index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [index]);
+
+  // Magnetic 3D tilt effect
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -10;
+    const rotateY = ((x - centerX) / centerX) * 10;
+
+    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`);
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setTransform("");
+    setIsHovered(false);
+  };
+
+  return (
+    <div
+      ref={cardRef}
+      className={`fade-in-up ${isRevealed ? "revealed" : ""}`}
+      style={{ transitionDelay: `${index * 50}ms` }}
+    >
+      <Card
+        className="tool-card-3d animated-border shimmer card-lift shadow-lg cursor-pointer group relative overflow-hidden"
+        style={{ transform }}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {/* Magic Dust Effect */}
+        <CardMagicDust isHovered={isHovered} />
+        <CardHeader>
+          <CardTitle className="text-lg group-hover:text-primary transition-colors">{tool.name}</CardTitle>
+          <CardDescription className="line-clamp-2">{tool.description}</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          <div>
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Capabilities</span>
+            <div className="flex flex-wrap gap-1 mt-2">
+              {tool.capabilities.slice(0, 3).map((cap, i) => (
+                <Badge key={i} variant="outline" className="text-xs hover:bg-accent/10 transition-colors">{cap}</Badge>
+              ))}
+              {tool.capabilities.length > 3 && (
+                <Badge variant="outline" className="text-xs bg-muted">+{tool.capabilities.length - 3} more</Badge>
+              )}
+            </div>
+          </div>
+          <div>
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Compliance</span>
+            <div className="flex flex-wrap gap-1 mt-2">
+              {tool.compliance.slice(0, 3).map((comp, i) => (
+                <Badge key={i} className="bg-emerald-100 text-emerald-700 text-xs hover:bg-emerald-200 transition-colors">{comp}</Badge>
+              ))}
+            </div>
+          </div>
+          <div className="flex items-center justify-between pt-3 border-t">
+            <Badge className="bg-primary/10 text-primary border-primary/20">{tool.pricing}</Badge>
+            <Button size="sm" variant="outline" onClick={() => onSelect(tool)} className="group-hover:bg-accent group-hover:text-white transition-all">
+              View Details
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+
 function CategorySection({ category, onToolSelect }: { category: Category; onToolSelect: (tool: Tool) => void }) {
   const IconComponent = iconMap[category.icon] || Building2;
   const getRelevanceBadgeColor = (relevance: string) => {
@@ -464,28 +618,28 @@ function CategorySection({ category, onToolSelect }: { category: Category; onToo
       case "Critical": return "bg-red-100 text-red-800 border-red-300";
       case "High": return "bg-orange-100 text-orange-800 border-orange-300";
       case "Moderate": return "bg-yellow-100 text-yellow-800 border-yellow-300";
-      default: return "bg-gray-100 text-gray-800 border-gray-300";
+      default: return "bg-muted text-muted-foreground border-border";
     }
   };
 
   const getMaturityBadgeColor = (maturity: string) => {
     switch (maturity) {
-      case "Emerging": return "bg-blue-100 text-blue-800 border-blue-300";
-      case "Moderate": return "bg-green-100 text-green-800 border-green-300";
-      case "Advanced": return "bg-purple-100 text-purple-800 border-purple-300";
-      default: return "bg-gray-100 text-gray-800 border-gray-300";
+      case "Emerging": return "bg-amber-100 text-amber-700 border-amber-300 hover:bg-amber-200 transition-colors";
+      case "Moderate": return "bg-emerald-100 text-emerald-700 border-emerald-300 hover:bg-emerald-200 transition-colors";
+      case "Advanced": return "bg-blue-100 text-blue-700 border-blue-300 hover:bg-blue-200 transition-colors";
+      default: return "bg-muted text-muted-foreground border-border";
     }
   };
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-start gap-4">
-        <div className="bg-blue-100 p-3 rounded-lg">
-          <IconComponent className="h-8 w-8 text-blue-600" />
+    <div className="space-y-6">
+      <div className="flex items-start gap-4 p-6 bg-gradient-to-r from-card to-muted/30 rounded-2xl border shadow-sm">
+        <div className="bg-primary/10 p-4 rounded-xl group-hover:bg-accent/20 transition-colors">
+          <IconComponent className="h-8 w-8 text-primary group-hover:text-accent transition-colors" />
         </div>
         <div className="flex-1">
-          <div className="flex items-center gap-3 mb-2">
-            <h3 className="text-2xl font-bold text-slate-900">{category.name}</h3>
+          <div className="flex flex-wrap items-center gap-3 mb-3">
+            <h3 className="text-3xl font-bold text-foreground">{category.name}</h3>
             <Badge className={getRelevanceBadgeColor(category.government_relevance)}>
               {category.government_relevance} Relevance
             </Badge>
@@ -493,10 +647,10 @@ function CategorySection({ category, onToolSelect }: { category: Category; onToo
               {category.adoption_maturity}
             </Badge>
           </div>
-          <p className="text-slate-600 mb-3">{category.description}</p>
+          <p className="text-muted-foreground mb-4 leading-relaxed">{category.description}</p>
           <div className="flex flex-wrap gap-2">
             {category.subcategories.map((sub, i) => (
-              <Badge key={i} variant="outline" className="text-xs">{sub}</Badge>
+              <Badge key={i} variant="outline" className="text-xs hover:bg-muted transition-colors">{sub}</Badge>
             ))}
           </div>
         </div>
@@ -505,42 +659,10 @@ function CategorySection({ category, onToolSelect }: { category: Category; onToo
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {category.tools && category.tools.length > 0 ? (
           category.tools.map((tool, index) => (
-            <Card key={index} className="shadow-md hover:shadow-xl transition-all cursor-pointer border-2 border-transparent hover:border-blue-300">
-              <CardHeader>
-                <CardTitle className="text-lg">{tool.name}</CardTitle>
-                <CardDescription className="line-clamp-2">{tool.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div>
-                  <span className="text-xs font-semibold text-slate-600">Capabilities:</span>
-                  <div className="flex flex-wrap gap-1 mt-1">
-                    {tool.capabilities.slice(0, 3).map((cap, i) => (
-                      <Badge key={i} variant="outline" className="text-xs">{cap}</Badge>
-                    ))}
-                    {tool.capabilities.length > 3 && (
-                      <Badge variant="outline" className="text-xs">+{tool.capabilities.length - 3} more</Badge>
-                    )}
-                  </div>
-                </div>
-                <div>
-                  <span className="text-xs font-semibold text-slate-600">Compliance:</span>
-                  <div className="flex flex-wrap gap-1 mt-1">
-                    {tool.compliance.slice(0, 3).map((comp, i) => (
-                      <Badge key={i} className="bg-green-100 text-green-800 text-xs">{comp}</Badge>
-                    ))}
-                  </div>
-                </div>
-                <div className="flex items-center justify-between pt-3 border-t">
-                  <Badge>{tool.pricing}</Badge>
-                  <Button size="sm" variant="outline" onClick={() => onToolSelect(tool)}>
-                    View Details
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            <ToolCard key={index} tool={tool} index={index} onSelect={onToolSelect} />
           ))
         ) : (
-          <p className="text-slate-500 col-span-full text-center py-8">No tools available in this category yet.</p>
+          <p className="text-muted-foreground col-span-full text-center py-8">No tools available in this category yet.</p>
         )}
       </div>
     </div>

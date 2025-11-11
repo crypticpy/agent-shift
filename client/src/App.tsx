@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Navigation from "./components/Navigation";
+import { CursorGlow } from "./components/CursorGlow";
 import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Compare from "./pages/Compare";
@@ -14,10 +15,14 @@ import Workflows from "./pages/Workflows";
 import Calculator from "./pages/Calculator";
 import Resources from "./pages/Resources";
 import UseCases from "./pages/UseCases";
+import AgenticAIBusinessCase from "./pages/AgenticAIBusinessCase";
 
 function Router() {
   return (
     <>
+      {/* Cursor glow disabled - caused visual artifacts */}
+      {/* <CursorGlow /> */}
+
       <Navigation />
       <Switch>
         <Route path="/" component={Index} />
@@ -27,6 +32,7 @@ function Router() {
         <Route path="/workflows" component={Workflows} />
         <Route path="/calculator" component={Calculator} />
         <Route path="/resources" component={Resources} />
+        <Route path="/business-case" component={AgenticAIBusinessCase} />
       <Route path="/use-cases" component={UseCases} />
        <Route path={"/compare"} component={Compare} />
       <Route path={"/404"} component={NotFound} />        <Route component={NotFound} />

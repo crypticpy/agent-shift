@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { 
+import {
   ArrowRight,
   Clock,
   Users,
@@ -14,8 +14,11 @@ import {
   FileText,
   Zap
 } from "lucide-react";
+import { WatercolorDrops } from "@/components/WatercolorDrops";
+import { useParticleBurst } from "@/hooks/useParticleBurst";
 
 export default function UseCases() {
+  const handleBurst = useParticleBurst();
   const useCases = [
     {
       id: 1,
@@ -66,14 +69,14 @@ export default function UseCases() {
     {
       id: 2,
       icon: FlaskConical,
-      title: "Scientific Research Discovery",
-      subtitle: "Six Months of Research in 12 Hours",
-      difficulty: "Advanced",
+      title: "Scientific Research Discovery 🚀",
+      subtitle: "Next-Generation AI Research (November 2025)",
+      difficulty: "Cutting-Edge Preview",
       timeTraditional: "6 months of PhD/postdoc work",
       timeAI: "12 hours autonomous + 2 hours review",
       savings: "99%",
       color: "purple",
-      scenario: "A neuroscience researcher needs to understand neuronal vulnerability in aging. This requires reviewing thousands of papers, analyzing large datasets, generating hypotheses, and producing a comprehensive report with novel findings.",
+      scenario: "🔬 LONG HORIZON PREVIEW: While most use cases on this page are available today, this example showcases cutting-edge AI research capabilities emerging in late 2025. A neuroscience researcher needs to understand neuronal vulnerability in aging—traditionally requiring 6 months of literature review, dataset analysis, hypothesis generation, and validation. This represents the rapidly advancing frontier of AI-assisted scientific discovery.",
       workflow: [
         {
           step: 1,
@@ -84,7 +87,7 @@ export default function UseCases() {
         {
           step: 2,
           tool: "KOSMOS Output Review",
-          action: "KOSMOS delivers a comprehensive report with novel discoveries. In real cases, KOSMOS identified that entorhinal cortex neurons have reduced flippase expression with age, potentially triggering Alzheimer's-related neuronal death. The finding was validated in human AD datasets.",
+          action: "KOSMOS delivers a comprehensive report with AI-generated hypotheses and discoveries. In published case studies, KOSMOS analyzed single-cell RNA-seq data and discovered that entorhinal cortex neurons show age-related reduction in Atp10a flippase expression, proposing this may trigger microglial phagocytosis leading to neuronal death. This AI-generated finding was computationally validated across multiple datasets and correlated with tau pathology in human Alzheimer's tissue samples (Braak stage II).",
           duration: "1-2 hours human review"
         },
         {
@@ -100,9 +103,9 @@ export default function UseCases() {
           duration: "10 minutes"
         }
       ],
-      outcome: "KOSMOS compressed 6 months of traditional research into 12 hours of autonomous work. The researcher's actual time investment: about 3 hours total for setup, review, and refinement. The AI made novel discoveries that were validated in orthogonal datasets, demonstrating real scientific value.",
+      outcome: "KOSMOS compressed 6 months of traditional research into 12 hours of autonomous work. The researcher's actual time investment: about 3 hours total for setup, review, and refinement. The 99% time savings reflects the reduction in human hours required (3 hours vs 960+ hours traditional). The AI generates hypotheses autonomously overnight while you focus on other work or rest.",
       tools: ["KOSMOS", "ChatGPT/Claude", "Gamma"],
-      note: "KOSMOS costs $200 per run but delivers work equivalent to 6 months of a PhD scientist's time. Beta users report 79.4% accuracy on conclusions."
+      note: "⚡ ABOUT KOSMOS: Platform launched November 2025 by Edison Scientific (FutureHouse spinout), founded by Sam Rodriques, PhD (MIT, Francis Crick Institute). Published research: arXiv:2511.02824v2. Cost: $200/run (academic free tier: 650 credits). Independent scientist validation: 79.4% overall accuracy (85.5% for data analysis, 82.1% for literature review, 57.9% for interpretive synthesis—requiring human verification). This represents cutting-edge research automation. Most users will start with simpler AI research workflows and progress to advanced tools like this as the technology matures and becomes more accessible."
     },
     {
       id: 3,
@@ -317,52 +320,55 @@ export default function UseCases() {
   const getColorClasses = (color: string) => {
     const colors = {
       blue: {
-        bg: "bg-blue-50",
-        border: "border-blue-200",
-        icon: "bg-blue-100 text-blue-600",
-        badge: "bg-blue-600"
+        bg: "bg-orange-50",
+        border: "border-orange-300",
+        icon: "bg-orange-100 text-orange-600",
+        badge: "bg-orange-500"
       },
       purple: {
-        bg: "bg-purple-50",
-        border: "border-purple-200",
-        icon: "bg-purple-100 text-purple-600",
-        badge: "bg-purple-600"
+        bg: "bg-teal-50",
+        border: "border-teal-300",
+        icon: "bg-teal-100 text-teal-600",
+        badge: "bg-teal-500"
       },
       pink: {
-        bg: "bg-pink-50",
-        border: "border-pink-200",
-        icon: "bg-pink-100 text-pink-600",
-        badge: "bg-pink-600"
+        bg: "bg-orange-50",
+        border: "border-orange-300",
+        icon: "bg-orange-100 text-orange-600",
+        badge: "bg-orange-500"
       },
       green: {
-        bg: "bg-green-50",
-        border: "border-green-200",
-        icon: "bg-green-100 text-green-600",
-        badge: "bg-green-600"
+        bg: "bg-amber-50",
+        border: "border-amber-300",
+        icon: "bg-amber-100 text-amber-600",
+        badge: "bg-amber-500"
       },
       orange: {
         bg: "bg-orange-50",
-        border: "border-orange-200",
+        border: "border-orange-300",
         icon: "bg-orange-100 text-orange-600",
-        badge: "bg-orange-600"
+        badge: "bg-orange-500"
       },
       red: {
-        bg: "bg-red-50",
-        border: "border-red-200",
-        icon: "bg-red-100 text-red-600",
-        badge: "bg-red-600"
+        bg: "bg-teal-50",
+        border: "border-teal-300",
+        icon: "bg-teal-100 text-teal-600",
+        badge: "bg-teal-500"
       }
     };
     return colors[color as keyof typeof colors] || colors.blue;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50">
+    <div className="min-h-screen animated-gradient from-slate-50 via-white to-orange-50/30">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-slate-800 to-purple-900 text-white py-16">
-        <div className="container mx-auto px-4">
+      <div className="relative hero-color-cycle text-white py-16 overflow-hidden">
+        {/* Watercolor Drops - Organic Paint Diffusion */}
+        <WatercolorDrops opacity={0.3} />
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/10 glass backdrop-blur px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Sparkles className="h-4 w-4" />
               Real-World Examples
             </div>
@@ -384,7 +390,7 @@ export default function UseCases() {
             const colors = getColorClasses(useCase.color);
             
             return (
-              <Card key={useCase.id} className={`border-2 ${colors.border} shadow-lg`}>
+              <Card key={useCase.id} className={`border-2 ${colors.border} shadow-lg card-lift glass`}>
                 <CardHeader>
                   <div className="flex items-start gap-4 mb-4">
                     <div className={`h-14 w-14 ${colors.icon} rounded-lg flex items-center justify-center flex-shrink-0`}>
@@ -486,20 +492,30 @@ export default function UseCases() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center max-w-4xl mx-auto">
+        <div className="mt-16 animated-gradient bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl p-8 text-white text-center max-w-4xl mx-auto glass card-lift">
           <h3 className="text-2xl font-bold mb-4">Ready to Build Your Own Workflows?</h3>
           <p className="text-lg mb-6 opacity-95">
             Start with one simple workflow from our library, then adapt it to your needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/workflows">
-              <Button size="lg" variant="secondary" className="text-lg px-8">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="relative text-lg px-8 overflow-hidden"
+                onClick={handleBurst}
+              >
                 Browse Workflows
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link href="/catalog">
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 hover:bg-white/20 text-white border-white">
+              <Button
+                size="lg"
+                variant="outline"
+                className="relative text-lg px-8 bg-white/10 hover:bg-accent text-white border-white hover:border-accent overflow-hidden"
+                onClick={handleBurst}
+              >
                 Explore Tools
               </Button>
             </Link>

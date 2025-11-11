@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "wouter";
-import { 
-  Clock, 
-  TrendingUp, 
+import {
+  Clock,
+  TrendingUp,
   CheckCircle2,
   ArrowRight,
   Zap,
@@ -14,6 +14,10 @@ import {
   DollarSign,
   Sparkles
 } from "lucide-react";
+import { FloatingOrbs } from "@/components/FloatingOrbs";
+import { FlowingStreams } from "@/components/FlowingStreams";
+import { useParticleBurst } from "@/hooks/useParticleBurst";
+import { useComplementaryColors } from "@/hooks/useComplementaryColors";
 
 interface WorkflowStep {
   title: string;
@@ -497,33 +501,52 @@ const workflows: Workflow[] = [
 export default function Workflows() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [expandedWorkflow, setExpandedWorkflow] = useState<string | null>(null);
+  const handleBurst = useParticleBurst();
+  const { complementaryHue, complementLight, complementDark, cssVariables } = useComplementaryColors();
 
   const categories = ["all", "Beginner", "Intermediate", "Advanced"];
-  
-  const filteredWorkflows = selectedCategory === "all" 
-    ? workflows 
+
+  const filteredWorkflows = selectedCategory === "all"
+    ? workflows
     : workflows.filter(w => w.category === selectedCategory);
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case "Beginner": return "bg-green-100 text-green-700 border-green-300";
-      case "Intermediate": return "bg-blue-100 text-blue-700 border-blue-300";
-      case "Advanced": return "bg-purple-100 text-purple-700 border-purple-300";
+      case "Beginner": return "bg-accent/10 text-accent-foreground border-accent/20 hover:bg-accent/20";
+      case "Intermediate": return "bg-amber-50 text-amber-700 border-amber-300 hover:bg-amber-100";
+      case "Advanced": return "bg-primary/10 text-primary border-primary/30 hover:bg-primary/20";
       default: return "bg-slate-100 text-slate-700";
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-warm-50 via-white to-amber-50">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-        <div className="container mx-auto px-4">
+      <div className="bg-gradient-to-br from-orange-50 via-white to-amber-50 py-20 relative overflow-hidden">
+        {/* Floating Orbs - Aurora Depth Effect */}
+        <FloatingOrbs />
+
+        {/* Flowing Streams - River Flow Effect */}
+        <FlowingStreams particleCount={300} layers={4} />
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <div className="inline-block mb-4">
+              <Badge
+                className="px-4 py-2 text-sm text-white border-transparent"
+                style={{
+                  background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))`,
+                }}
+              >
+                <Sparkles className="h-4 w-4 mr-2 inline" />
+                Step-by-Step AI Workflows
+              </Badge>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-slate-900">
               Workflow Recipes
             </h1>
-            <p className="text-xl opacity-95">
-              Step-by-step guides for combining AI tools to save hours every week
+            <p className="text-xl md:text-2xl text-slate-600 leading-relaxed">
+              Actionable guides for combining AI tools to save hours every week
             </p>
           </div>
         </div>
@@ -532,138 +555,226 @@ export default function Workflows() {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           {/* Callout to Use Cases */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-lg mb-8 shadow-lg">
-            <div className="flex items-start gap-4">
-              <Sparkles className="h-8 w-8 flex-shrink-0 mt-1" />
+          <div className="glass card-lift p-8 rounded-2xl mb-12 border border-primary/20 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">
+            <div className="flex items-start gap-6">
+              <div
+                className="h-14 w-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg"
+                style={{
+                  background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.22 ${complementLight}))`,
+                }}
+              >
+                <Sparkles className="h-7 w-7 text-white" />
+              </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-2">Want to See Advanced Multi-Agent Workflows?</h3>
-                <p className="mb-4 opacity-95">
-                  Check out our Use Cases page for detailed examples of complex workflows that chain 3-5 agents together. 
+                <h3 className="text-2xl font-bold mb-3 text-slate-900">Want to See Advanced Multi-Agent Workflows?</h3>
+                <p className="mb-6 text-slate-700 text-lg leading-relaxed">
+                  Check out our Use Cases page for detailed examples of complex workflows that chain 3-5 agents together.
                   See how to turn a week of work into 30 minutes using tools like KOSMOS, Julius AI, Manus, and Beautiful.ai.
                 </p>
                 <Link href="/use-cases">
-                  <Button variant="secondary" className="bg-white text-blue-600 hover:bg-slate-100">
-                    View Advanced Use Cases →
+                  <Button
+                    className="relative text-white shadow-lg overflow-hidden border-0"
+                    style={{
+                      background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.22 ${complementLight}))`,
+                    }}
+                    onClick={handleBurst}
+                  >
+                    View Advanced Use Cases
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
             </div>
           </div>
+
           {/* Filter Tabs */}
-          <Tabs defaultValue="all" className="mb-8">
-            <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto">
-              <TabsTrigger value="all" onClick={() => setSelectedCategory("all")}>
+          <Tabs defaultValue="all" className="mb-10">
+            <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto bg-slate-100/80 backdrop-blur-sm p-1.5 rounded-xl">
+              <TabsTrigger
+                value="all"
+                onClick={() => setSelectedCategory("all")}
+                className="data-[state=active]:text-white rounded-lg"
+                style={
+                  selectedCategory === "all"
+                    ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
+                    : {}
+                }
+              >
                 All Workflows
               </TabsTrigger>
-              <TabsTrigger value="Beginner" onClick={() => setSelectedCategory("Beginner")}>
+              <TabsTrigger
+                value="Beginner"
+                onClick={() => setSelectedCategory("Beginner")}
+                className="data-[state=active]:text-white rounded-lg"
+                style={
+                  selectedCategory === "Beginner"
+                    ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
+                    : {}
+                }
+              >
                 Beginner
               </TabsTrigger>
-              <TabsTrigger value="Intermediate" onClick={() => setSelectedCategory("Intermediate")}>
+              <TabsTrigger
+                value="Intermediate"
+                onClick={() => setSelectedCategory("Intermediate")}
+                className="data-[state=active]:text-white rounded-lg"
+                style={
+                  selectedCategory === "Intermediate"
+                    ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
+                    : {}
+                }
+              >
                 Intermediate
               </TabsTrigger>
-              <TabsTrigger value="Advanced" onClick={() => setSelectedCategory("Advanced")}>
+              <TabsTrigger
+                value="Advanced"
+                onClick={() => setSelectedCategory("Advanced")}
+                className="data-[state=active]:text-white rounded-lg"
+                style={
+                  selectedCategory === "Advanced"
+                    ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
+                    : {}
+                }
+              >
                 Advanced
               </TabsTrigger>
             </TabsList>
           </Tabs>
 
           {/* Workflow Cards */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             {filteredWorkflows.map((workflow) => (
-              <Card key={workflow.id} className="border-2 hover:shadow-lg transition-all">
-                <CardHeader>
+              <Card key={workflow.id} className="border-2 border-primary/10 card-lift glass overflow-hidden">
+                <CardHeader className="pb-6">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <CardTitle className="text-2xl">{workflow.title}</CardTitle>
-                        <Badge className={`${getDifficultyColor(workflow.difficulty)} border`}>
+                      <div className="flex items-center gap-3 mb-3">
+                        <CardTitle className="text-2xl md:text-3xl text-slate-900">{workflow.title}</CardTitle>
+                        <Badge className={`${getDifficultyColor(workflow.difficulty)} border transition-colors`}>
                           {workflow.difficulty}
                         </Badge>
                       </div>
-                      <CardDescription className="text-base">
+                      <CardDescription className="text-base md:text-lg text-slate-600">
                         {workflow.description}
                       </CardDescription>
                     </div>
                   </div>
 
-                  {/* Stats */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                    <div className="bg-slate-50 p-3 rounded-lg">
-                      <div className="flex items-center gap-2 text-slate-600 text-sm mb-1">
+                  {/* Stats - Enhanced with modern design */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                    <div className="glass p-4 rounded-xl border border-slate-200 hover:border-slate-300 transition-all">
+                      <div className="flex items-center gap-2 text-slate-600 text-sm mb-2">
                         <Clock className="h-4 w-4" />
-                        <span>Manual</span>
+                        <span className="font-medium">Manual</span>
                       </div>
-                      <div className="font-semibold text-slate-900">{workflow.timeManual}</div>
+                      <div className="font-bold text-lg text-slate-900">{workflow.timeManual}</div>
                     </div>
-                    <div className="bg-blue-50 p-3 rounded-lg">
-                      <div className="flex items-center gap-2 text-blue-600 text-sm mb-1">
+                    <div className="glass p-4 rounded-xl border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all">
+                      <div className="flex items-center gap-2 text-accent text-sm mb-2">
                         <Zap className="h-4 w-4" />
-                        <span>With AI</span>
+                        <span className="font-medium">With AI</span>
                       </div>
-                      <div className="font-semibold text-blue-900">{workflow.timeAI}</div>
+                      <div className="font-bold text-lg text-accent">{workflow.timeAI}</div>
                     </div>
-                    <div className="bg-green-50 p-3 rounded-lg">
-                      <div className="flex items-center gap-2 text-green-600 text-sm mb-1">
+                    <div className="glass p-4 rounded-xl border border-accent/20 bg-accent/10 hover:bg-accent/20 transition-all">
+                      <div className="flex items-center gap-2 text-accent-foreground text-sm mb-2">
                         <TrendingUp className="h-4 w-4" />
-                        <span>Time Saved</span>
+                        <span className="font-medium">Time Saved</span>
                       </div>
-                      <div className="font-semibold text-green-900">{workflow.timeSaved}</div>
+                      <div className="font-bold text-lg text-accent-foreground">{workflow.timeSaved}</div>
                     </div>
-                    <div className="bg-purple-50 p-3 rounded-lg">
-                      <div className="flex items-center gap-2 text-purple-600 text-sm mb-1">
+                    <div className="glass p-4 rounded-xl border border-primary/30 bg-primary/5 hover:bg-primary/10 transition-all">
+                      <div className="flex items-center gap-2 text-primary text-sm mb-2">
                         <DollarSign className="h-4 w-4" />
-                        <span>ROI</span>
+                        <span className="font-medium">ROI</span>
                       </div>
-                      <div className="font-semibold text-purple-900 text-sm">{workflow.roiAnnual}</div>
+                      <div className="font-bold text-sm text-primary">{workflow.roiAnnual}</div>
                     </div>
                   </div>
                 </CardHeader>
 
                 <CardContent>
                   {expandedWorkflow === workflow.id ? (
-                    <div className="space-y-4">
-                      <h4 className="font-semibold text-lg mb-4">Step-by-Step Instructions</h4>
-                      {workflow.steps.map((step, index) => (
-                        <div key={index} className="bg-slate-50 p-5 rounded-lg border-l-4 border-orange-500">
-                          <div className="flex gap-4 items-start">
-                            <div className="h-10 w-10 bg-orange-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
-                              {index + 1}
-                            </div>
-                            <div className="flex-1">
-                              <div className="flex items-center justify-between mb-2">
-                                <h5 className="font-semibold text-lg">{step.title}</h5>
-                                <Badge variant="outline" className="flex items-center gap-1">
-                                  <Clock className="h-3 w-3" />
-                                  {step.time}
-                                </Badge>
-                              </div>
-                              <p className="text-slate-700 mb-3">{step.description}</p>
-                              <div className="flex flex-wrap gap-2">
-                                {step.tools.map((tool, toolIndex) => (
-                                  <Badge key={toolIndex} variant="secondary" className="bg-white">
-                                    {tool}
-                                  </Badge>
-                                ))}
+                    <div className="space-y-5">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div
+                          className="h-1 w-12 rounded-full"
+                          style={{
+                            background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.22 ${complementLight}))`,
+                          }}
+                        ></div>
+                        <h4 className="font-bold text-xl text-slate-900">Step-by-Step Instructions</h4>
+                      </div>
+
+                      {/* Visual Timeline */}
+                      <div className="relative">
+                        {workflow.steps.map((step, index) => (
+                          <div key={index} className="relative pb-6 last:pb-0">
+                            {/* Timeline connector */}
+                            {index < workflow.steps.length - 1 && (
+                              <div
+                                className="absolute left-5 top-12 bottom-0 w-0.5"
+                                style={{
+                                  background: `linear-gradient(to bottom, oklch(0.65 0.18 ${complementaryHue} / 0.3), oklch(0.70 0.20 ${complementLight} / 0.3))`,
+                                }}
+                              ></div>
+                            )}
+
+                            <div className="glass p-6 rounded-2xl border-l-4 border-primary hover:border-accent transition-all card-lift bg-white/50">
+                              <div className="flex gap-5 items-start">
+                                <div
+                                  className="h-12 w-12 text-white rounded-2xl flex items-center justify-center flex-shrink-0 font-bold text-lg shadow-lg"
+                                  style={{
+                                    background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.22 ${complementLight}))`,
+                                  }}
+                                >
+                                  {index + 1}
+                                </div>
+                                <div className="flex-1">
+                                  <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+                                    <h5 className="font-bold text-lg md:text-xl text-slate-900">{step.title}</h5>
+                                    <Badge variant="outline" className="flex items-center gap-1.5 border-accent/30 text-accent">
+                                      <Clock className="h-3.5 w-3.5" />
+                                      {step.time}
+                                    </Badge>
+                                  </div>
+                                  <p className="text-slate-700 mb-4 leading-relaxed">{step.description}</p>
+                                  <div className="flex flex-wrap gap-2">
+                                    {step.tools.map((tool, toolIndex) => (
+                                      <Badge
+                                        key={toolIndex}
+                                        variant="secondary"
+                                        className="bg-gradient-to-r from-slate-50 to-slate-100 hover:from-primary/10 hover:to-accent/10 border border-slate-200 transition-all"
+                                      >
+                                        {tool}
+                                      </Badge>
+                                    ))}
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      ))}
-                      <Button 
-                        variant="outline" 
+                        ))}
+                      </div>
+
+                      <Button
+                        variant="outline"
                         onClick={() => setExpandedWorkflow(null)}
-                        className="w-full"
+                        className="w-full mt-4 border-primary/30 hover:bg-primary/5"
                       >
                         Close Instructions
                       </Button>
                     </div>
                   ) : (
-                    <Button 
+                    <Button
                       onClick={() => setExpandedWorkflow(workflow.id)}
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                      className="w-full text-white shadow-lg text-base py-6 border-0"
+                      style={{
+                        background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.68 0.20 ${complementLight}), oklch(0.70 0.22 ${complementDark}))`,
+                      }}
                     >
                       View Step-by-Step Instructions
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   )}
                 </CardContent>
@@ -672,23 +783,43 @@ export default function Workflows() {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Ready to Calculate Your Savings?</h3>
-            <p className="text-lg mb-6 opacity-95">
-              See exactly how much time and money these workflows can save you
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/calculator">
-                <Button size="lg" variant="secondary" className="text-lg px-8">
-                  Use ROI Calculator
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/catalog">
-                <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 hover:bg-white/20 text-white border-white">
-                  Browse AI Tools
-                </Button>
-              </Link>
+          <div className="mt-16 rounded-2xl p-10 text-white text-center relative overflow-hidden shadow-2xl">
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.68 0.20 ${complementLight}), oklch(0.70 0.22 ${complementDark}))`,
+              }}
+            ></div>
+            <div className="relative z-10">
+              <h3 className="text-3xl md:text-4xl font-bold mb-4">Ready to Calculate Your Savings?</h3>
+              <p className="text-lg md:text-xl mb-8 opacity-95 max-w-2xl mx-auto">
+                See exactly how much time and money these workflows can save you
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/calculator">
+                  <Button
+                    size="lg"
+                    className="relative text-lg px-10 py-6 bg-white shadow-xl overflow-hidden border-0"
+                    style={{
+                      color: `oklch(0.65 0.18 ${complementaryHue})`,
+                    }}
+                    onClick={handleBurst}
+                  >
+                    Use ROI Calculator
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href="/catalog">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="relative text-lg px-10 py-6 bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 shadow-xl backdrop-blur-sm overflow-hidden"
+                    onClick={handleBurst}
+                  >
+                    Browse AI Tools
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

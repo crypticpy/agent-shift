@@ -5,14 +5,20 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link } from "wouter";
-import { 
-  Calculator as CalculatorIcon, 
-  DollarSign, 
-  Clock, 
+import {
+  Calculator as CalculatorIcon,
+  DollarSign,
+  Clock,
   TrendingUp,
   ArrowRight,
-  Sparkles
+  Sparkles,
+  Zap,
+  Trophy,
+  Briefcase,
+  Lightbulb,
+  Copy
 } from "lucide-react";
+import { useParticleBurst } from "@/hooks/useParticleBurst";
 
 interface CalculationResult {
   timeSavedPerTask: number;
@@ -24,6 +30,7 @@ interface CalculationResult {
 }
 
 export default function Calculator() {
+  const handleBurst = useParticleBurst();
   const [taskType, setTaskType] = useState<string>("");
   const [currentTime, setCurrentTime] = useState<string>("");
   const [frequency, setFrequency] = useState<string>("");
@@ -34,11 +41,11 @@ export default function Calculator() {
   const taskPresets = {
     "email-response": { name: "Email Response", manual: 15, ai: 3, savings: 80 },
     "meeting-summary": { name: "Meeting Summary", manual: 30, ai: 10, savings: 67 },
-    "research-brief": { name: "Research Brief", manual: 120, ai: 15, savings: 88 },
-    "report-writing": { name: "Report Writing", manual: 300, ai: 45, savings: 85 },
-    "presentation": { name: "Presentation Creation", manual: 240, ai: 30, savings: 88 },
+    "research-brief": { name: "Research Brief", manual: 120, ai: 30, savings: 75 },
+    "report-writing": { name: "Report Writing", manual: 300, ai: 75, savings: 75 },
+    "presentation": { name: "Presentation Creation", manual: 240, ai: 72, savings: 70 },
     "data-analysis": { name: "Data Analysis", manual: 480, ai: 120, savings: 75 },
-    "content-creation": { name: "Content Creation", manual: 90, ai: 15, savings: 83 },
+    "content-creation": { name: "Content Creation", manual: 90, ai: 30, savings: 67 },
     "custom": { name: "Custom Task", manual: 0, ai: 0, savings: 0 }
   };
 
@@ -55,8 +62,32 @@ export default function Calculator() {
       return;
     }
 
-    const manualMinutes = parseFloat(currentTime);
+    // Validate preset exists
     const preset = taskPresets[taskType as keyof typeof taskPresets];
+    if (!preset || preset.savings === undefined) {
+      console.error('Invalid task type:', taskType);
+      return;
+    }
+
+    // Validate numeric inputs
+    const manualMinutes = parseFloat(currentTime);
+    if (isNaN(manualMinutes) || manualMinutes <= 0) {
+      console.error('Invalid time value:', currentTime);
+      return;
+    }
+
+    const rate = parseFloat(hourlyRate);
+    if (isNaN(rate) || rate <= 0) {
+      console.error('Invalid hourly rate:', hourlyRate);
+      return;
+    }
+
+    const monthlyCost = parseFloat(toolCost);
+    if (isNaN(monthlyCost) || monthlyCost < 0) {
+      console.error('Invalid tool cost:', toolCost);
+      return;
+    }
+
     const savingsPercent = preset.savings / 100;
     const aiMinutes = manualMinutes * (1 - savingsPercent);
     const savedMinutes = manualMinutes - aiMinutes;
@@ -83,9 +114,7 @@ export default function Calculator() {
     const weeklySavingsMinutes = savedMinutes * tasksPerWeek;
     const weeklySavingsHours = weeklySavingsMinutes / 60;
     const annualHours = weeklySavingsHours * 52;
-    const rate = parseFloat(hourlyRate);
     const annualValue = annualHours * rate;
-    const monthlyCost = parseFloat(toolCost);
     const annualCost = monthlyCost * 12;
     const netValue = annualValue - annualCost;
     const breakEven = annualCost / (weeklySavingsHours * rate);
@@ -101,16 +130,24 @@ export default function Calculator() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-[oklch(0.98_0.02_35)] via-white to-[oklch(0.97_0.03_85)]">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-16">
+      <div className="bg-gradient-to-r from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+              <Trophy className="h-5 w-5" />
+              <span className="text-sm font-medium">ROI Calculator & Business Case Generator</span>
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              ROI Calculator
+              Build Your AI Business Case
             </h1>
-            <p className="text-xl opacity-95">
-              Calculate how much time and money you can save with AI agents
+            <p className="text-xl opacity-95 mb-3">
+              Calculate your savings and generate a management-ready business case for AI adoption
+            </p>
+            <p className="text-sm opacity-90 max-w-2xl mx-auto">
+              Use this tool to build a data-driven business case for presenting to leadership.
+              Get specific time savings, cost reductions, and productivity metrics based on industry research.
             </p>
           </div>
         </div>
@@ -118,13 +155,38 @@ export default function Calculator() {
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
+          {/* Business Case Link */}
+          <Card className="mb-8 border-2 border-blue-200 bg-gradient-to-r from-blue-50 to-indigo-50">
+            <CardContent className="py-4">
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div className="flex items-start gap-3 flex-1">
+                  <Briefcase className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-blue-900 mb-1">
+                      Need a comprehensive business case for management?
+                    </div>
+                    <div className="text-sm text-blue-700">
+                      Explore research-backed evidence with 50+ citations on ROI, strategic benefits, and implementation guidance
+                    </div>
+                  </div>
+                </div>
+                <Link href="/business-case">
+                  <Button variant="default" className="bg-blue-600 hover:bg-blue-700 text-white flex-shrink-0">
+                    View Business Case
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Calculator Form */}
-            <Card className="border-2 border-cyan-200 shadow-lg">
+            <Card className="border-2 border-[oklch(0.65_0.18_35)]/20 shadow-lg card-lift">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="h-10 w-10 bg-cyan-100 rounded-lg flex items-center justify-center">
-                    <CalculatorIcon className="h-6 w-6 text-cyan-600" />
+                  <div className="h-10 w-10 bg-gradient-to-br from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] rounded-lg flex items-center justify-center">
+                    <CalculatorIcon className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-2xl">Your Information</CardTitle>
                 </div>
@@ -207,9 +269,12 @@ export default function Calculator() {
                   </p>
                 </div>
 
-                <Button 
-                  onClick={calculateROI}
-                  className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-lg py-6"
+                <Button
+                  onClick={(e) => {
+                    handleBurst(e);
+                    calculateROI();
+                  }}
+                  className="w-full bg-gradient-to-r from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] hover:from-[oklch(0.60_0.20_35)] hover:to-[oklch(0.65_0.18_50)] text-white text-lg py-6 shadow-lg hover:shadow-xl transition-all duration-300"
                   disabled={!taskType || !currentTime || !frequency || !hourlyRate}
                 >
                   Calculate My Savings
@@ -222,35 +287,59 @@ export default function Calculator() {
             <div className="space-y-6">
               {result ? (
                 <>
-                  <Card className="border-2 border-green-300 bg-gradient-to-br from-green-50 to-emerald-50 shadow-lg">
+                  <Card className="border-2 border-[oklch(0.75_0.12_85)]/30 bg-gradient-to-br from-[oklch(0.98_0.05_85)] to-[oklch(0.96_0.06_75)] shadow-lg card-lift animate-in fade-in duration-500">
                     <CardHeader>
                       <div className="flex items-center gap-3 mb-2">
-                        <div className="h-10 w-10 bg-green-600 rounded-lg flex items-center justify-center">
+                        <div className="h-10 w-10 bg-gradient-to-br from-[oklch(0.75_0.12_85)] to-[oklch(0.70_0.14_75)] rounded-lg flex items-center justify-center">
                           <Sparkles className="h-6 w-6 text-white" />
                         </div>
-                        <CardTitle className="text-2xl text-green-900">Your Results</CardTitle>
+                        <CardTitle className="text-2xl text-[oklch(0.35_0.08_85)]">Your Results</CardTitle>
                       </div>
-                      <CardDescription className="text-green-700">
-                        Here's what AI agents can do for you
+                      <CardDescription className="text-[oklch(0.45_0.06_85)]">
+                        Your management-ready business case
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      <div className="bg-white p-5 rounded-lg border-2 border-green-200">
+                      {/* Executive Summary */}
+                      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border-2 border-blue-200">
+                        <h3 className="text-lg font-bold text-blue-900 mb-3 flex items-center gap-2">
+                          <Briefcase className="h-5 w-5" />
+                          Executive Summary: Your AI Investment Case
+                        </h3>
+                        <div className="space-y-2 text-sm text-blue-900">
+                          <p className="leading-relaxed">
+                            Based on <strong>{taskPresets[taskType as keyof typeof taskPresets]?.name}</strong> performed{" "}
+                            <strong>{result.tasksPerWeek}× weekly</strong>, implementing AI tools will deliver:
+                          </p>
+                          <ul className="space-y-1 ml-6 list-disc">
+                            <li><strong>{result.totalWeeklySavings.toFixed(1)} hours</strong> reclaimed per week</li>
+                            <li><strong>${result.dollarValue.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong> net annual value after tool costs</li>
+                            <li><strong>{(result.totalAnnualHours / 8).toFixed(0)} full workdays</strong> of productivity annually</li>
+                            <li>ROI breakeven in <strong>{result.breakEvenWeeks < 1 ? "less than 1 week" : `${result.breakEvenWeeks.toFixed(1)} weeks`}</strong></li>
+                          </ul>
+                          <p className="text-xs mt-3 pt-3 border-t border-blue-300">
+                            <em>This analysis is based on peer-reviewed research from McKinsey, Harvard Business School,
+                            and Stanford University documenting AI productivity gains across knowledge work tasks.</em>
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="bg-white p-5 rounded-lg border-2 border-[oklch(0.65_0.18_175)]/30 card-lift transition-all duration-300 hover:border-[oklch(0.65_0.18_175)]">
                         <div className="flex items-center gap-3 mb-2">
-                          <Clock className="h-5 w-5 text-green-600" />
+                          <Clock className="h-5 w-5 text-[oklch(0.65_0.18_175)]" />
                           <span className="text-sm font-medium text-slate-600">Time Saved Per Task</span>
                         </div>
-                        <div className="text-3xl font-bold text-green-900">
+                        <div className="text-3xl font-bold text-[oklch(0.35_0.12_175)] animate-in slide-in-from-bottom-2 duration-700">
                           {result.timeSavedPerTask.toFixed(0)} minutes
                         </div>
                       </div>
 
-                      <div className="bg-white p-5 rounded-lg border-2 border-blue-200">
+                      <div className="bg-white p-5 rounded-lg border-2 border-[oklch(0.75_0.12_85)]/30 card-lift transition-all duration-300 hover:border-[oklch(0.75_0.12_85)]">
                         <div className="flex items-center gap-3 mb-2">
-                          <TrendingUp className="h-5 w-5 text-blue-600" />
+                          <TrendingUp className="h-5 w-5 text-[oklch(0.75_0.12_85)]" />
                           <span className="text-sm font-medium text-slate-600">Weekly Time Savings</span>
                         </div>
-                        <div className="text-3xl font-bold text-blue-900">
+                        <div className="text-3xl font-bold text-[oklch(0.40_0.10_85)] animate-in slide-in-from-bottom-2 duration-700 delay-100">
                           {result.totalWeeklySavings.toFixed(1)} hours
                         </div>
                         <p className="text-sm text-slate-600 mt-1">
@@ -258,12 +347,12 @@ export default function Calculator() {
                         </p>
                       </div>
 
-                      <div className="bg-white p-5 rounded-lg border-2 border-purple-200">
+                      <div className="bg-white p-5 rounded-lg border-2 border-[oklch(0.65_0.18_35)]/30 card-lift transition-all duration-300 hover:border-[oklch(0.65_0.18_35)]">
                         <div className="flex items-center gap-3 mb-2">
-                          <Clock className="h-5 w-5 text-purple-600" />
+                          <Zap className="h-5 w-5 text-[oklch(0.65_0.18_35)]" />
                           <span className="text-sm font-medium text-slate-600">Annual Time Savings</span>
                         </div>
-                        <div className="text-3xl font-bold text-purple-900">
+                        <div className="text-3xl font-bold text-[oklch(0.35_0.15_35)] animate-in slide-in-from-bottom-2 duration-700 delay-200">
                           {result.totalAnnualHours.toFixed(0)} hours
                         </div>
                         <p className="text-sm text-slate-600 mt-1">
@@ -271,12 +360,12 @@ export default function Calculator() {
                         </p>
                       </div>
 
-                      <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-6 rounded-lg text-white">
+                      <div className="bg-gradient-to-r from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] p-6 rounded-lg text-white shadow-xl card-lift animate-in slide-in-from-bottom-2 duration-700 delay-300">
                         <div className="flex items-center gap-3 mb-3">
                           <DollarSign className="h-6 w-6" />
                           <span className="text-sm font-medium opacity-90">Annual Dollar Value</span>
                         </div>
-                        <div className="text-4xl font-bold mb-2">
+                        <div className="text-5xl font-bold mb-2 tracking-tight">
                           ${result.dollarValue.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         </div>
                         <p className="text-sm opacity-90">
@@ -284,12 +373,12 @@ export default function Calculator() {
                         </p>
                       </div>
 
-                      <div className="bg-cyan-50 p-5 rounded-lg border-2 border-cyan-200">
+                      <div className="bg-gradient-to-br from-[oklch(0.65_0.18_175)]/10 to-[oklch(0.65_0.18_175)]/5 p-5 rounded-lg border-2 border-[oklch(0.65_0.18_175)]/30 card-lift transition-all duration-300 hover:border-[oklch(0.65_0.18_175)]">
                         <div className="flex items-center gap-3 mb-2">
-                          <CalculatorIcon className="h-5 w-5 text-cyan-600" />
+                          <CalculatorIcon className="h-5 w-5 text-[oklch(0.65_0.18_175)]" />
                           <span className="text-sm font-medium text-slate-600">Break-Even Time</span>
                         </div>
-                        <div className="text-2xl font-bold text-cyan-900">
+                        <div className="text-2xl font-bold text-[oklch(0.35_0.12_175)] animate-in slide-in-from-bottom-2 duration-700 delay-400">
                           {result.breakEvenWeeks < 1 ? "Less than 1 week" : `${result.breakEvenWeeks.toFixed(1)} weeks`}
                         </div>
                         <p className="text-sm text-slate-600 mt-1">
@@ -299,28 +388,106 @@ export default function Calculator() {
                     </CardContent>
                   </Card>
 
-                  <Card className="border-2 border-blue-200">
+                  <Card className="border-2 border-[oklch(0.75_0.12_85)]/20 card-lift animate-in fade-in duration-500 delay-200">
                     <CardHeader>
                       <CardTitle className="text-xl">What This Means</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3 text-slate-700">
                       <p>
-                        By using AI agents for this task, you'll save <strong>{result.totalWeeklySavings.toFixed(1)} hours every week</strong>. 
+                        By using AI agents for this task, you'll save <strong className="text-[oklch(0.65_0.18_35)]">{result.totalWeeklySavings.toFixed(1)} hours every week</strong>.
                         That's time you can spend on higher-value work, strategic thinking, or just going home earlier.
                       </p>
                       <p>
-                        Over a year, that adds up to <strong>{result.totalAnnualHours.toFixed(0)} hours</strong> - 
-                        equivalent to <strong>{(result.totalAnnualHours / 8).toFixed(0)} full work days</strong> of productivity.
+                        Over a year, that adds up to <strong className="text-[oklch(0.65_0.18_35)]">{result.totalAnnualHours.toFixed(0)} hours</strong> -
+                        equivalent to <strong className="text-[oklch(0.65_0.18_35)]">{(result.totalAnnualHours / 8).toFixed(0)} full work days</strong> of productivity.
                       </p>
                       <p>
-                        The financial value of this time is <strong>${result.dollarValue.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong> per year, 
+                        The financial value of this time is <strong className="text-[oklch(0.65_0.18_35)]">${result.dollarValue.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong> per year,
                         even after paying for the AI tools.
                       </p>
                     </CardContent>
                   </Card>
+
+                  {/* Capability Expansion Section */}
+                  <Card className="border-2 border-amber-200 bg-amber-50/50 card-lift animate-in fade-in duration-500 delay-300">
+                    <CardHeader>
+                      <CardTitle className="text-xl flex items-center gap-2 text-amber-900">
+                        <Lightbulb className="h-5 w-5" />
+                        Beyond Time Savings: Expanded Capabilities
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-2 text-sm text-amber-900">
+                      <p className="mb-3">
+                        The value of AI extends beyond time savings. With AI assistance, your team can:
+                      </p>
+                      <ul className="space-y-2 ml-6 list-disc">
+                        <li><strong>Complete tasks previously requiring specialized skills</strong> - No need to hire consultants for routine analysis, design, or writing</li>
+                        <li><strong>Handle higher volumes without additional hiring</strong> - Scale your output as demand grows</li>
+                        <li><strong>Deliver higher quality outputs</strong> - Research shows AI assistance improves work quality by up to 40%</li>
+                        <li><strong>Reallocate {result.totalWeeklySavings.toFixed(1)} hours weekly to strategic work</strong> - Focus on relationship-building, creativity, and decision-making</li>
+                        <li><strong>Reduce dependency on external contractors</strong> - Bring capabilities in-house that were previously outsourced</li>
+                        <li><strong>Remove learning curve barriers</strong> - Use tools and processes without extensive training</li>
+                      </ul>
+                      <p className="text-xs mt-3 pt-3 border-t border-amber-300">
+                        <em>This represents capability expansion that's difficult to quantify in dollars but creates significant organizational value.</em>
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  {/* Copy Business Case Button */}
+                  <Button
+                    onClick={() => {
+                      // Safety checks
+                      if (!result || !taskType) {
+                        console.error('Cannot copy business case: missing data');
+                        return;
+                      }
+
+                      const preset = taskPresets[taskType as keyof typeof taskPresets];
+                      if (!preset) {
+                        console.error('Cannot copy business case: invalid task type');
+                        return;
+                      }
+
+                      const businessCase = `
+AI ADOPTION BUSINESS CASE
+
+Task: ${preset.name}
+Frequency: ${result.tasksPerWeek}× per week
+
+KEY METRICS:
+• Weekly time savings: ${result.totalWeeklySavings.toFixed(1)} hours
+• Annual time savings: ${result.totalAnnualHours.toFixed(0)} hours (${(result.totalAnnualHours / 8).toFixed(0)} workdays)
+• Net annual value: $${result.dollarValue.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")} (after tool costs)
+• ROI breakeven: ${result.breakEvenWeeks < 1 ? "Less than 1 week" : `${result.breakEvenWeeks.toFixed(1)} weeks`}
+• AI tool cost: $${toolCost}/month
+
+EXPANDED CAPABILITIES:
+• Complete tasks requiring specialized skills without hiring consultants
+• Handle increased workload without additional staffing
+• Improve output quality (research shows 40% quality improvement)
+• Reallocate ${result.totalWeeklySavings.toFixed(1)} hours/week to strategic priorities
+• Reduce external contractor dependency
+
+RESEARCH BASIS:
+This analysis is based on peer-reviewed research from McKinsey, Harvard Business School, Stanford University, and MIT documenting AI productivity gains across knowledge work.
+
+Generated by: AI Agent Portal Business Case Calculator
+                      `.trim();
+                      navigator.clipboard.writeText(businessCase);
+                    }}
+                    className="w-full bg-gradient-to-r from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] hover:from-[oklch(0.60_0.18_35)] hover:to-[oklch(0.65_0.16_50)] text-white"
+                    size="lg"
+                  >
+                    <Copy className="h-5 w-5 mr-2" />
+                    Copy Business Case Summary
+                  </Button>
+                  <p className="text-xs text-center text-slate-600 -mt-2">
+                    Formatted for emails, presentations, or proposal documents
+                  </p>
                 </>
               ) : (
-                <Card className="border-2 border-slate-200">
+                <Card className="border-2 border-slate-200 card-lift">
                   <CardContent className="py-16 text-center">
                     <CalculatorIcon className="h-16 w-16 text-slate-300 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold text-slate-700 mb-2">
@@ -341,8 +508,11 @@ export default function Calculator() {
               Example Scenarios
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Card className="border-2 border-blue-200">
+              <Card className="border-2 border-[oklch(0.65_0.18_175)]/20 card-lift hover:border-[oklch(0.65_0.18_175)]/40 transition-all duration-300">
                 <CardHeader>
+                  <div className="h-12 w-12 bg-gradient-to-br from-[oklch(0.65_0.18_175)] to-[oklch(0.60_0.20_165)] rounded-lg flex items-center justify-center mb-3">
+                    <TrendingUp className="h-6 w-6 text-white" />
+                  </div>
                   <CardTitle className="text-xl">Program Manager</CardTitle>
                   <CardDescription>Writes weekly reports</CardDescription>
                 </CardHeader>
@@ -364,7 +534,7 @@ export default function Calculator() {
                     <span className="font-medium">$60/hour</span>
                   </div>
                   <div className="border-t pt-3 mt-3">
-                    <div className="flex justify-between text-green-700 font-bold">
+                    <div className="flex justify-between text-[oklch(0.65_0.18_35)] font-bold text-base">
                       <span>Annual Savings:</span>
                       <span>$13,260</span>
                     </div>
@@ -372,8 +542,11 @@ export default function Calculator() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-purple-200">
+              <Card className="border-2 border-[oklch(0.75_0.12_85)]/20 card-lift hover:border-[oklch(0.75_0.12_85)]/40 transition-all duration-300">
                 <CardHeader>
+                  <div className="h-12 w-12 bg-gradient-to-br from-[oklch(0.75_0.12_85)] to-[oklch(0.70_0.14_75)] rounded-lg flex items-center justify-center mb-3">
+                    <Zap className="h-6 w-6 text-white" />
+                  </div>
                   <CardTitle className="text-xl">Analyst</CardTitle>
                   <CardDescription>Responds to data requests</CardDescription>
                 </CardHeader>
@@ -395,7 +568,7 @@ export default function Calculator() {
                     <span className="font-medium">$55/hour</span>
                   </div>
                   <div className="border-t pt-3 mt-3">
-                    <div className="flex justify-between text-green-700 font-bold">
+                    <div className="flex justify-between text-[oklch(0.65_0.18_35)] font-bold text-base">
                       <span>Annual Savings:</span>
                       <span>$17,160</span>
                     </div>
@@ -403,8 +576,11 @@ export default function Calculator() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-green-200">
+              <Card className="border-2 border-[oklch(0.65_0.18_35)]/20 card-lift hover:border-[oklch(0.65_0.18_35)]/40 transition-all duration-300">
                 <CardHeader>
+                  <div className="h-12 w-12 bg-gradient-to-br from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] rounded-lg flex items-center justify-center mb-3">
+                    <Sparkles className="h-6 w-6 text-white" />
+                  </div>
                   <CardTitle className="text-xl">Administrator</CardTitle>
                   <CardDescription>Handles daily emails</CardDescription>
                 </CardHeader>
@@ -426,7 +602,7 @@ export default function Calculator() {
                     <span className="font-medium">$45/hour</span>
                   </div>
                   <div className="border-t pt-3 mt-3">
-                    <div className="flex justify-between text-green-700 font-bold">
+                    <div className="flex justify-between text-[oklch(0.65_0.18_35)] font-bold text-base">
                       <span>Annual Savings:</span>
                       <span>$7,020</span>
                     </div>
@@ -437,20 +613,30 @@ export default function Calculator() {
           </div>
 
           {/* CTA */}
-          <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
+          <div className="mt-12 bg-gradient-to-r from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] rounded-xl p-8 text-white text-center shadow-2xl card-lift">
             <h3 className="text-2xl font-bold mb-4">Ready to Start Saving?</h3>
             <p className="text-lg mb-6 opacity-95">
               Check out our workflow recipes to see exactly how to implement these time savings
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/workflows">
-                <Button size="lg" variant="secondary" className="text-lg px-8">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="relative text-lg px-8 bg-white text-[oklch(0.65_0.18_35)] hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden"
+                  onClick={handleBurst}
+                >
                   View Workflows
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/catalog">
-                <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 hover:bg-white/20 text-white border-white">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="relative text-lg px-8 bg-white/10 hover:bg-white/20 text-white border-white transition-all duration-300 overflow-hidden"
+                  onClick={handleBurst}
+                >
                   Browse AI Tools
                 </Button>
               </Link>
