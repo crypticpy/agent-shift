@@ -19,6 +19,7 @@ import {
   Copy
 } from "lucide-react";
 import { useParticleBurst } from "@/hooks/useParticleBurst";
+import { MoneyParticles } from "@/components/MoneyParticles";
 
 interface CalculationResult {
   timeSavedPerTask: number;
@@ -132,10 +133,13 @@ export default function Calculator() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[oklch(0.98_0.02_35)] via-white to-[oklch(0.97_0.03_85)]">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] text-white py-16">
-        <div className="container mx-auto px-4">
+      <div className="bg-gradient-to-r from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] text-white py-16 relative overflow-hidden">
+        {/* 3D Money/Number Particles */}
+        <MoneyParticles className="z-0" spawnRate={3.0} maxParticles={60} />
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/10 glass backdrop-blur rounded-full px-4 py-2 mb-6 relative z-20">
               <Trophy className="h-5 w-5" />
               <span className="text-sm font-medium">ROI Calculator & Business Case Generator</span>
             </div>

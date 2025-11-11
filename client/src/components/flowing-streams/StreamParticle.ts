@@ -119,21 +119,23 @@ export class StreamParticle {
 
   /**
    * Wrap or respawn particle when it goes out of bounds
+   * Randomizes Y position to prevent horizontal lane locking
    */
   private checkBounds(): void {
     const margin = 50;
 
-    // If particle goes too far off screen, respawn it on the left
+    // If particle goes too far off screen, respawn with randomized Y position
+    // This prevents stable horizontal row formation
     if (this.x > this.width + margin) {
-      this.respawn(-margin, this.y);
+      this.respawn(-margin, Math.random() * this.height);
     } else if (this.x < -margin) {
-      this.respawn(this.width + margin, this.y);
+      this.respawn(this.width + margin, Math.random() * this.height);
     }
 
     if (this.y > this.height + margin) {
-      this.respawn(this.x, -margin);
+      this.respawn(Math.random() * this.width, -margin);
     } else if (this.y < -margin) {
-      this.respawn(this.x, this.height + margin);
+      this.respawn(Math.random() * this.width, this.height + margin);
     }
   }
 

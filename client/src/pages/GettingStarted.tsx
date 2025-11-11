@@ -40,27 +40,44 @@ export default function GettingStarted() {
       {/* Table of Contents */}
       <div className="container mx-auto px-4 py-12 -mt-8">
         <div className="max-w-4xl mx-auto">
-          <Card className="glass card-lift border-2 border-primary/20 shadow-xl">
-            <CardHeader>
-              <CardTitle className="text-xl font-bold text-foreground">Quick Navigation</CardTitle>
+          <Card className="glass card-lift border-2 border-primary/30 shadow-2xl overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-chart-1 to-accent"></div>
+            <CardHeader className="pb-4 pt-8">
+              <CardTitle className="text-2xl font-bold text-foreground flex items-center gap-3">
+                <span className="text-3xl">🚀</span>
+                Quick Navigation
+              </CardTitle>
+              <CardDescription className="text-base mt-2">Jump to any section below</CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <a href="#first-conversation" className="group text-primary hover:text-primary/80 transition-all hover:translate-x-1 flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5">
-                  <MessageSquare className="h-5 w-5 flex-shrink-0" />
-                  <span className="font-medium">Your First Conversation</span>
+            <CardContent className="pb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="#first-conversation" className="group relative bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 hover:border-primary hover:shadow-lg transition-all flex items-center gap-4 p-5 rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/0 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="h-12 w-12 bg-gradient-to-br from-primary to-chart-1 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                    <MessageSquare className="h-6 w-6 text-white" />
+                  </div>
+                  <span className="font-semibold text-base text-foreground relative z-10">Your First Conversation</span>
                 </a>
-                <a href="#voice-vs-typing" className="group text-chart-2 hover:text-chart-2/80 transition-all hover:translate-x-1 flex items-center gap-3 p-3 rounded-lg hover:bg-chart-2/5">
-                  <Mic className="h-5 w-5 flex-shrink-0" />
-                  <span className="font-medium">Voice vs. Typing</span>
+                <a href="#voice-vs-typing" className="group relative bg-gradient-to-br from-chart-2/10 to-chart-2/5 border-2 border-chart-2/30 hover:border-chart-2 hover:shadow-lg transition-all flex items-center gap-4 p-5 rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-chart-2/0 to-chart-2/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="h-12 w-12 bg-gradient-to-br from-chart-2 to-chart-5 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                    <Mic className="h-6 w-6 text-white" />
+                  </div>
+                  <span className="font-semibold text-base text-foreground relative z-10">Voice vs. Typing</span>
                 </a>
-                <a href="#understanding-agents" className="group text-accent hover:text-accent/80 transition-all hover:translate-x-1 flex items-center gap-3 p-3 rounded-lg hover:bg-accent/5">
-                  <Sparkles className="h-5 w-5 flex-shrink-0" />
-                  <span className="font-medium">Understanding AI Agents</span>
+                <a href="#understanding-agents" className="group relative bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30 hover:border-accent hover:shadow-lg transition-all flex items-center gap-4 p-5 rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/0 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="h-12 w-12 bg-gradient-to-br from-accent to-chart-3 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                    <Sparkles className="h-6 w-6 text-white" />
+                  </div>
+                  <span className="font-semibold text-base text-foreground relative z-10">Understanding AI Agents</span>
                 </a>
-                <a href="#first-task" className="group text-chart-1 hover:text-chart-1/80 transition-all hover:translate-x-1 flex items-center gap-3 p-3 rounded-lg hover:bg-chart-1/5">
-                  <Play className="h-5 w-5 flex-shrink-0" />
-                  <span className="font-medium">Your First Agent Task</span>
+                <a href="#first-task" className="group relative bg-gradient-to-br from-chart-1/10 to-chart-1/5 border-2 border-chart-1/30 hover:border-chart-1 hover:shadow-lg transition-all flex items-center gap-4 p-5 rounded-xl overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-chart-1/0 to-chart-1/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="h-12 w-12 bg-gradient-to-br from-chart-1 to-secondary rounded-xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                    <Play className="h-6 w-6 text-white" />
+                  </div>
+                  <span className="font-semibold text-base text-foreground relative z-10">Your First Agent Task</span>
                 </a>
               </div>
             </CardContent>
@@ -108,8 +125,8 @@ export default function GettingStarted() {
           {/* Guide Cards */}
           <div className="space-y-16">
             {/* Guide 1: Your First Conversation */}
-            <div id="first-conversation">
-            <Card className="card-lift border-2 border-primary/30 shadow-xl hover:border-primary/50 transition-all duration-300 overflow-hidden">
+            <div id="first-conversation" className="space-y-16">
+            <Card className="card-lift border-2 border-primary/30 shadow-xl hover:border-primary transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-chart-1"></div>
               <CardHeader className="pb-6">
                 <div className="flex items-start gap-5">
@@ -172,7 +189,7 @@ export default function GettingStarted() {
             </Card>
 
             {/* Guide 2: The 5-Minute Test */}
-            <Card className="card-lift border-2 border-accent/30 shadow-xl hover:border-accent/50 transition-all duration-300 overflow-hidden">
+            <Card className="card-lift border-2 border-accent/30 shadow-xl hover:border-accent transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-chart-3"></div>
               <CardHeader className="pb-6">
                 <div className="flex items-start gap-5">
@@ -238,7 +255,7 @@ export default function GettingStarted() {
             </div>
             {/* Guide 2: Voice vs Typing */}
             <div id="voice-vs-typing">
-            <Card className="card-lift border-2 border-chart-2/30 shadow-xl hover:border-chart-2/50 transition-all duration-300 overflow-hidden">
+            <Card className="card-lift border-2 border-chart-2/30 shadow-xl hover:border-chart-2 transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-chart-2 to-chart-5"></div>
               <CardHeader className="pb-6">
                 <div className="flex items-start gap-5">
@@ -358,7 +375,7 @@ export default function GettingStarted() {
             </div>
             {/* Guide 3: Understanding AI Agents */}
             <div id="understanding-agents">
-            <Card className="card-lift border-2 border-chart-1/30 shadow-xl hover:border-chart-1/50 transition-all duration-300 overflow-hidden">
+            <Card className="card-lift border-2 border-chart-1/30 shadow-xl hover:border-chart-1 transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-chart-1 to-secondary"></div>
               <CardHeader className="pb-6">
                 <div className="flex items-start gap-5">
@@ -440,7 +457,7 @@ export default function GettingStarted() {
             </div>
             {/* Guide 4: Your First Agent Task */}
             <div id="first-task">
-            <Card className="card-lift border-2 border-primary/30 shadow-xl hover:border-primary/50 transition-all duration-300 overflow-hidden">
+            <Card className="card-lift border-2 border-primary/30 shadow-xl hover:border-primary transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-chart-1 to-accent"></div>
               <CardHeader className="pb-6">
                 <div className="flex items-start gap-5">
@@ -511,17 +528,17 @@ export default function GettingStarted() {
           </div>
 
           {/* Next Steps */}
-          <div className="mt-16 animated-gradient rounded-2xl p-10 text-white text-center shadow-2xl card-lift">
+          <div className="mt-16 animated-gradient rounded-2xl p-8 md:p-10 text-white text-center shadow-2xl card-lift">
             <h3 className="text-3xl md:text-4xl font-bold mb-5 tracking-tight">Ready for More?</h3>
             <p className="text-xl mb-8 opacity-95 leading-relaxed max-w-2xl mx-auto">
               Now that you know the basics, learn how to chain multiple agents together for even bigger time savings
             </p>
-            <div className="flex flex-col sm:flex-row gap-5 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
               <Link href="/learn">
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="relative text-lg px-10 py-6 font-semibold hover:scale-105 transition-transform shadow-lg overflow-hidden"
+                  className="relative text-base md:text-lg px-6 md:px-10 py-5 md:py-6 font-semibold transition-all shadow-lg hover:shadow-xl"
                   onClick={handleBurst}
                 >
                   Learn Advanced Concepts
@@ -532,7 +549,7 @@ export default function GettingStarted() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="relative text-lg px-10 py-6 font-semibold bg-white/10 hover:bg-accent text-white border-2 border-white hover:border-accent hover:scale-105 transition-transform shadow-lg overflow-hidden"
+                  className="relative text-base md:text-lg px-6 md:px-10 py-5 md:py-6 font-semibold bg-white/10 hover:bg-accent text-white border-2 border-white hover:border-accent transition-all shadow-lg hover:shadow-xl"
                   onClick={handleBurst}
                 >
                   See Workflow Recipes
@@ -542,11 +559,11 @@ export default function GettingStarted() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="relative text-lg px-10 py-6 font-semibold bg-white/10 hover:bg-accent text-white border-2 border-white hover:border-accent hover:scale-105 transition-transform shadow-lg overflow-hidden"
+                  className="relative text-base md:text-lg px-6 md:px-10 py-5 md:py-6 font-semibold bg-white/10 hover:bg-accent text-white border-2 border-white hover:border-accent transition-all shadow-lg hover:shadow-xl whitespace-nowrap"
                   onClick={handleBurst}
                 >
                   <Briefcase className="mr-2 h-5 w-5" />
-                  Business Case for Management
+                  Business Case
                 </Button>
               </Link>
             </div>

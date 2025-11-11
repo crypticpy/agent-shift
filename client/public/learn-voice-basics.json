@@ -79,14 +79,185 @@
     },
     {
       "heading": "The Science Behind Voice Efficiency",
-      "content": [
-        "Peer-reviewed research confirms that voice input dramatically outperforms typing:",
-        "**Speed:** Average speaking speed is 150-180 words per minute ([National Center for Voice and Speech](https://virtualspeech.com/blog/average-speaking-rate-words-per-minute)), while average typing speed is only 38-40 WPM. Professional typists reach 65-75 WPM—still slower than casual speech. [Stanford research](https://arxiv.org/abs/1608.07323) found voice input is 3× faster than mobile typing (Ruan et al., 2016).",
+      "intro": "Peer-reviewed research confirms that voice input dramatically outperforms typing:",
+      "stats": [
+        {
+          "value": "3x",
+          "label": "Faster Than Typing",
+          "description": "Average speaking speed is 150 words per minute vs 40 WPM typing. Professional typists reach 65-75 WPM—still slower than casual speech.",
+          "icon": "zap",
+          "color": "from-primary/10 to-accent/10",
+          "citation": {
+            "text": "Stanford University, 2016",
+            "url": "https://arxiv.org/abs/1608.07323"
+          }
+        },
+        {
+          "value": "150",
+          "label": "Words Per Minute",
+          "description": "Your natural speaking speed enables you to express ideas 3x faster than your fingers can type them.",
+          "icon": "message",
+          "color": "from-chart-2/10 to-chart-2/5",
+          "citation": {
+            "text": "National Center for Voice & Speech",
+            "url": "https://virtualspeech.com/blog/average-speaking-rate-words-per-minute"
+          }
+        },
+        {
+          "value": "20%",
+          "label": "Fewer Errors",
+          "description": "Modern speech recognition achieves significantly lower error rates than mobile typing for English, thanks to advances in deep learning.",
+          "icon": "target",
+          "color": "from-accent/10 to-accent/5",
+          "citation": {
+            "text": "Stanford Research, Ruan et al.",
+            "url": "https://arxiv.org/abs/1608.07323"
+          }
+        },
+        {
+          "value": "29%",
+          "label": "Fewer Corrections",
+          "description": "Voice input results in fewer user corrections and lower cognitive demand. Speaking is less mentally taxing than typing.",
+          "icon": "brain",
+          "color": "from-chart-1/10 to-chart-1/5",
+          "citation": {
+            "text": "CHI 2012, Kumar et al.",
+            "url": "https://dl.acm.org/doi/10.1145/2207676.2208386"
+          }
+        }
+      ],
+      "additionalResearch": [
         "**Multitasking:** Voice interfaces enable hands-free operation, allowing you to work while your hands and eyes are occupied with other activities. [Healthcare studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2815406/) show hands-free communication tools reduce communication time by 25% (Vandenkerkhof et al., 2009) and [51% of physicians report time savings](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10035815/) with voice recognition technology.",
-        "**Cognitive Load:** Voice typing reduces mental overhead by enabling natural thought expression. [Research shows](https://dl.acm.org/doi/10.1145/2207676.2208386) voice input results in 29% fewer user corrections and lower cognitive demand compared to traditional dictation (Kumar et al., CHI 2012). Speaking is less cognitively demanding than typing, as writing requires sustained attention, planning, and motor execution.",
-        "**Accuracy:** Modern speech recognition (2016 onwards) achieves [20% lower error rates](https://arxiv.org/abs/1608.07323) than mobile typing for English, and up to 63% lower for Mandarin (Stanford, Ruan et al.). These improvements stem from advances in deep learning and neural networks.",
-        "**Additional Research:** [Federal Reserve study (2024)](https://www.stlouisfed.org/on-the-economy/2025/feb/impact-generative-ai-work-productivity) found workers using generative AI save an average of 2.2 hours per week. [Harvard/BCG study (2023)](https://www.hbs.edu/faculty/Pages/item.aspx?num=64700) showed consultants using AI completed tasks 25% faster with 40% higher quality."
-      ]
+        "**Productivity Gains:** [Federal Reserve study (2024)](https://www.stlouisfed.org/on-the-economy/2025/feb/impact-generative-ai-work-productivity) found workers using generative AI save an average of 2.2 hours per week. [Harvard/BCG study (2023)](https://www.hbs.edu/faculty/Pages/item.aspx?num=64700) showed consultants using AI completed tasks 25% faster with 40% higher quality."
+      ],
+      "navigationLink": {
+        "text": "Want to see this in action? Watch our interactive speed comparison showing the 3x difference in real-time.",
+        "buttonText": "⚡ See The Speed Difference",
+        "scrollTo": "why-voice-changes-everything"
+      }
+    },
+    {
+      "heading": "Voice Multitasking: The Real Power",
+      "intro": "The true advantage of voice isn't just speed—it's the ability to work while doing other things. Watch this real-world scenario:",
+      "walkingDemo": {
+        "voiceInput": "I need to follow up with Sarah about the budget meeting, send the team a reminder about Friday's deadline, and check in with IT about that server issue from last week.",
+        "totalDuration": 15000,
+        "typewriterDuration": 5100,
+        "taskStartDelay": 500,
+        "tasks": [
+          {
+            "title": "Email to Sarah",
+            "emoji": "📧",
+            "color": "primary",
+            "steps": [
+              {
+                "icon": "🔗",
+                "text": "Connecting to Gmail API...",
+                "duration": 1200
+              },
+              {
+                "icon": "🔍",
+                "text": "Searching threads with Sarah about 'budget meeting'...",
+                "duration": 1300
+              },
+              {
+                "icon": "📊",
+                "text": "Analyzing Q3_Budget.xlsx attachment...",
+                "duration": 1400
+              },
+              {
+                "icon": "📖",
+                "text": "Reading last 5 email exchanges...",
+                "duration": 1300
+              },
+              {
+                "icon": "✍️",
+                "text": "Drafting professional follow-up...",
+                "duration": 1200
+              },
+              {
+                "icon": "✅",
+                "text": "Email ready",
+                "duration": 1100
+              }
+            ]
+          },
+          {
+            "title": "Team Reminder",
+            "emoji": "📢",
+            "color": "chart-2",
+            "steps": [
+              {
+                "icon": "🔗",
+                "text": "Connecting to Slack API...",
+                "duration": 900
+              },
+              {
+                "icon": "👥",
+                "text": "Finding #project-alpha channel...",
+                "duration": 950
+              },
+              {
+                "icon": "📋",
+                "text": "Checking JIRA tickets for Friday items...",
+                "duration": 1000
+              },
+              {
+                "icon": "📊",
+                "text": "Reviewing project timeline...",
+                "duration": 950
+              },
+              {
+                "icon": "✍️",
+                "text": "Composing reminder with context...",
+                "duration": 900
+              },
+              {
+                "icon": "✅",
+                "text": "Message ready",
+                "duration": 1000
+              }
+            ]
+          },
+          {
+            "title": "IT Ticket Update",
+            "emoji": "🎫",
+            "color": "accent",
+            "steps": [
+              {
+                "icon": "🔗",
+                "text": "Connecting to ServiceNow...",
+                "duration": 1000
+              },
+              {
+                "icon": "🔍",
+                "text": "Opening ticket INC0024821...",
+                "duration": 1100
+              },
+              {
+                "icon": "📖",
+                "text": "Reading server logs from incident...",
+                "duration": 1150
+              },
+              {
+                "icon": "🔧",
+                "text": "Checking current server status...",
+                "duration": 1100
+              },
+              {
+                "icon": "✍️",
+                "text": "Adding follow-up with status...",
+                "duration": 1050
+              },
+              {
+                "icon": "✅",
+                "text": "Ticket updated",
+                "duration": 1200
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

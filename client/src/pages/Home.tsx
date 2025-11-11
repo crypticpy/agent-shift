@@ -314,40 +314,46 @@ export default function Home() {
       </div>
 
       {/* Search and Filters */}
-      <div className="bg-gradient-to-br from-orange-50/80 via-amber-50/60 to-teal-50/80 pt-32 pb-12 -mt-24 -mx-4 px-4 mb-8">
-        <div className="container mx-auto px-4">
-          <Card className="glass shadow-lg border-2 border-orange-200/50">
-            <CardContent className="pt-6">
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-3 h-5 w-5 text-orange-600" />
-                  <Input
-                    placeholder="Search tools by name, description, or category..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="pl-10 border-orange-200/50 focus-visible:border-orange-400"
-                  />
+      <div className="relative -mx-4 px-4 mb-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/80 via-amber-50/60 to-teal-50/80" style={{
+          maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)'
+        }}></div>
+        <div className="relative pt-8 pb-10">
+          <div className="container mx-auto px-4">
+            <Card className="glass shadow-lg border-2 border-orange-200/50">
+              <CardContent className="pt-6">
+                <div className="flex flex-col md:flex-row gap-4">
+                  <div className="flex-1 relative">
+                    <Search className="absolute left-3 top-3 h-5 w-5 text-orange-600" />
+                    <Input
+                      placeholder="Search tools by name, description, or category..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="pl-10 border-orange-200/50 focus-visible:border-orange-400"
+                    />
+                  </div>
+                  <div className="flex gap-2">
+                    <select
+                      value={relevanceFilter}
+                      onChange={(e) => setRelevanceFilter(e.target.value)}
+                      className="px-4 py-2 border border-orange-200/50 rounded-md bg-white text-sm hover:border-orange-400 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200/50 transition-all"
+                    >
+                      <option value="all">All Relevance</option>
+                      <option value="Critical">Critical</option>
+                      <option value="High">High</option>
+                      <option value="Moderate">Moderate</option>
+                    </select>
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  <select
-                    value={relevanceFilter}
-                    onChange={(e) => setRelevanceFilter(e.target.value)}
-                    className="px-4 py-2 border border-orange-200/50 rounded-md bg-white text-sm hover:border-orange-400 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200/50 transition-all"
-                  >
-                    <option value="all">All Relevance</option>
-                    <option value="Critical">Critical</option>
-                    <option value="High">High</option>
-                    <option value="Moderate">Moderate</option>
-                  </select>
-                </div>
-              </div>
-              {searchQuery && (
-                <p className="text-sm text-slate-600 mt-3">
-                  Found <strong>{filteredTools.length}</strong> tools matching "{searchQuery}"
-                </p>
-              )}
-            </CardContent>
-          </Card>
+                {searchQuery && (
+                  <p className="text-sm text-slate-600 mt-3">
+                    Found <strong>{filteredTools.length}</strong> tools matching "{searchQuery}"
+                  </p>
+                )}
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
 
@@ -507,11 +513,10 @@ export default function Home() {
   );
 }
 
-// Enhanced Tool Card with magnetic 3D tilt and animations
+// Enhanced Tool Card with subtle hover effects
 function ToolCard({ tool, index, onSelect }: { tool: Tool; index: number; onSelect: (tool: Tool) => void }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isRevealed, setIsRevealed] = useState(false);
-  const [transform, setTransform] = useState("");
   const [isHovered, setIsHovered] = useState(false);
 
   // Intersection Observer for staggered reveal
@@ -535,28 +540,11 @@ function ToolCard({ tool, index, onSelect }: { tool: Tool; index: number; onSele
     return () => observer.disconnect();
   }, [index]);
 
-  // Magnetic 3D tilt effect
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = ((y - centerY) / centerY) * -10;
-    const rotateY = ((x - centerX) / centerX) * 10;
-
-    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`);
-  };
-
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
-    setTransform("");
     setIsHovered(false);
   };
 
@@ -567,16 +555,15 @@ function ToolCard({ tool, index, onSelect }: { tool: Tool; index: number; onSele
       style={{ transitionDelay: `${index * 50}ms` }}
     >
       <Card
-        className="tool-card-3d animated-border shimmer card-lift shadow-lg cursor-pointer group relative overflow-hidden"
-        style={{ transform }}
-        onMouseMove={handleMouseMove}
+        className="shadow-lg hover:shadow-xl cursor-pointer group relative overflow-hidden transition-all duration-300 hover:border-primary/50"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onClick={() => onSelect(tool)}
       >
         {/* Magic Dust Effect */}
         <CardMagicDust isHovered={isHovered} />
         <CardHeader>
-          <CardTitle className="text-lg group-hover:text-primary transition-colors">{tool.name}</CardTitle>
+          <CardTitle className="text-lg">{tool.name}</CardTitle>
           <CardDescription className="line-clamp-2">{tool.description}</CardDescription>
         </CardHeader>
         <CardContent className="space-y-3">
@@ -601,7 +588,7 @@ function ToolCard({ tool, index, onSelect }: { tool: Tool; index: number; onSele
           </div>
           <div className="flex items-center justify-between pt-3 border-t">
             <Badge className="bg-primary/10 text-primary border-primary/20">{tool.pricing}</Badge>
-            <Button size="sm" variant="outline" onClick={() => onSelect(tool)} className="group-hover:bg-accent group-hover:text-white transition-all">
+            <Button size="sm" variant="outline">
               View Details
             </Button>
           </div>

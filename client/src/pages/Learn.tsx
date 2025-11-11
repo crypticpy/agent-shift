@@ -2,9 +2,12 @@ import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mic, Zap, Link2, MessageSquare, Briefcase, CheckCircle2, XCircle, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Mic, Zap, Link2, MessageSquare, Briefcase, CheckCircle2, XCircle, Sparkles, ArrowUp } from "lucide-react";
 import { Streamdown } from "streamdown";
 import SpeedComparison from "@/components/SpeedComparison";
+import VoiceStatsCards from "@/components/VoiceStatsCards";
+import WalkingToCarDemo from "@/components/WalkingToCarDemo";
 
 interface LearnContent {
   title: string;
@@ -71,8 +74,82 @@ export default function Learn() {
 
         {/* Speed Comparison Interactive Visual */}
         {section.heading === "Why Voice Changes Everything" && (
-          <div className="my-8">
+          <div className="my-8" id="why-voice-changes-everything">
             <SpeedComparison />
+          </div>
+        )}
+
+        {/* Intro text (for sections without stats or walkingDemo) */}
+        {section.intro && !section.stats && !section.walkingDemo && (
+          <div className="text-lg text-muted-foreground leading-relaxed">
+            <Streamdown>{section.intro}</Streamdown>
+          </div>
+        )}
+
+        {/* Voice Stats Cards */}
+        {section.stats && (
+          <div>
+            {section.intro && (
+              <div className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <Streamdown>{section.intro}</Streamdown>
+              </div>
+            )}
+            <VoiceStatsCards stats={section.stats} />
+
+            {/* Additional Research */}
+            {section.additionalResearch && (
+              <div className="mt-8 space-y-3">
+                {section.additionalResearch.map((paragraph: string, i: number) => (
+                  <div key={i} className="text-sm text-muted-foreground">
+                    <Streamdown>{paragraph}</Streamdown>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Navigation Link to Speed Comparison */}
+            {section.navigationLink && (
+              <div className="mt-8">
+                <Card className="border-2 border-accent/30 bg-gradient-to-br from-accent/10 to-primary/10 shadow-lg hover:shadow-xl transition-all">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between flex-wrap gap-4">
+                      <div className="flex items-start gap-3 flex-1">
+                        <Sparkles className="h-6 w-6 text-accent mt-0.5 flex-shrink-0" />
+                        <p className="text-base text-foreground">
+                          {section.navigationLink.text}
+                        </p>
+                      </div>
+                      <Button
+                        onClick={() => {
+                          const element = document.getElementById(section.navigationLink.scrollTo);
+                          element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }}
+                        className="bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-white flex-shrink-0"
+                      >
+                        {section.navigationLink.buttonText}
+                        <ArrowUp className="ml-2 h-4 w-4" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Walking to Car Demo */}
+        {section.walkingDemo && (
+          <div>
+            {section.intro && (
+              <div className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <Streamdown>{section.intro}</Streamdown>
+              </div>
+            )}
+            <WalkingToCarDemo
+              voiceInput={section.walkingDemo.voiceInput}
+              tasks={section.walkingDemo.tasks}
+              totalDuration={section.walkingDemo.totalDuration}
+            />
           </div>
         )}
 
@@ -168,13 +245,6 @@ export default function Learn() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        )}
-
-        {/* Intro text */}
-        {section.intro && (
-          <div className="text-lg text-muted-foreground leading-relaxed">
-            <Streamdown>{section.intro}</Streamdown>
           </div>
         )}
 

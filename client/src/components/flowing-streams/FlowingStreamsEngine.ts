@@ -53,6 +53,11 @@ export class FlowingStreamsEngine {
   private currentHue: number = 35; // Start at orange
   private readonly HUE_SPEED = 360 / 37500; // 360 degrees / 37.5 seconds = 0.0096°/ms
 
+  // Adaptive random injection system (prevents pattern formation)
+  private engineStartTime: number = 0;
+  private lastInjectionTime: number = 0;
+  private nextInjectionInterval: number = 10000; // Initial interval
+
   constructor(canvas: HTMLCanvasElement, config: Partial<EngineConfig> = {}) {
     this.canvas = canvas;
     const ctx = canvas.getContext('2d', {
@@ -143,6 +148,8 @@ export class FlowingStreamsEngine {
     this.isRunning = true;
     this.lastTime = performance.now();
     this.lastFpsUpdate = this.lastTime;
+    this.engineStartTime = this.lastTime;
+    this.lastInjectionTime = this.lastTime;
     this.animate(this.lastTime);
   }
 
@@ -217,8 +224,8 @@ export class FlowingStreamsEngine {
     while (this.particles.length < this.config.particleCount) {
       const layer = Math.floor(Math.random() * this.config.layers);
 
-      // 5% chance of mid-screen spawn, 95% from left edge
-      const isMidScreenSpawn = Math.random() < 0.05;
+      // 35% chance of mid-screen spawn, 65% from left edge (prevents left-edge clustering)
+      const isMidScreenSpawn = Math.random() < 0.35;
 
       const particle = createStreamParticle(
         this.canvas.width,
@@ -236,6 +243,57 @@ export class FlowingStreamsEngine {
 
     // Update wave system
     this.updateWaves(effectiveDelta);
+
+    // Adaptive random particle injection to prevent pattern formation
+    this.updateRandomInjection(this.time);
+  }
+
+  /**
+   * Inject random particles to break up clustering patterns
+   * Injection rate increases over time as patterns become more likely
+   */
+  private updateRandomInjection(currentTime: number): void {
+    const timeSinceLastInjection = currentTime - this.lastInjectionTime;
+
+    // Check if it's time to inject
+    if (timeSinceLastInjection >= this.nextInjectionInterval) {
+      // Calculate session age
+      const sessionAge = currentTime - this.engineStartTime;
+
+      // Determine injection interval based on session age
+      let baseInterval: number;
+      let variance: number;
+
+      if (sessionAge < 90000) {
+        // 0-90 seconds: Low injection rate (patterns haven't formed yet)
+        baseInterval = 8000;
+        variance = 4000;
+      } else if (sessionAge < 180000) {
+        // 90-180 seconds: Medium injection rate (patterns starting)
+        baseInterval = 5000;
+        variance = 3000;
+      } else {
+        // 180+ seconds: High injection rate (combat stable patterns)
+        baseInterval = 3000;
+        variance = 2000;
+      }
+
+      // Calculate next interval with randomization
+      this.nextInjectionInterval = baseInterval + Math.random() * variance;
+
+      // Inject a random "chaos particle"
+      const layer = Math.floor(Math.random() * this.config.layers);
+      const particle = createStreamParticle(
+        this.canvas.width,
+        this.canvas.height,
+        layer,
+        true // Force random screen position (not left edge)
+      );
+      this.particles.push(particle);
+
+      // Update injection timer
+      this.lastInjectionTime = currentTime;
+    }
   }
 
   /**

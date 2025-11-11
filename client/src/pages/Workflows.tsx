@@ -533,7 +533,7 @@ export default function Workflows() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-block mb-4">
               <Badge
-                className="px-4 py-2 text-sm text-white border-transparent"
+                className="px-4 py-2 text-sm text-slate-800 border-transparent"
                 style={{
                   background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))`,
                 }}
@@ -563,7 +563,7 @@ export default function Workflows() {
                   background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.22 ${complementLight}))`,
                 }}
               >
-                <Sparkles className="h-7 w-7 text-white" />
+                <Sparkles className="h-7 w-7 text-slate-800" />
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">Want to See Advanced Multi-Agent Workflows?</h3>
@@ -573,7 +573,7 @@ export default function Workflows() {
                 </p>
                 <Link href="/use-cases">
                   <Button
-                    className="relative text-white shadow-lg overflow-hidden border-0"
+                    className="relative text-slate-800 shadow-lg overflow-hidden border-0"
                     style={{
                       background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.22 ${complementLight}))`,
                     }}
@@ -593,7 +593,7 @@ export default function Workflows() {
               <TabsTrigger
                 value="all"
                 onClick={() => setSelectedCategory("all")}
-                className="data-[state=active]:text-white rounded-lg"
+                className="data-[state=active]:text-slate-800 rounded-lg"
                 style={
                   selectedCategory === "all"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -605,7 +605,7 @@ export default function Workflows() {
               <TabsTrigger
                 value="Beginner"
                 onClick={() => setSelectedCategory("Beginner")}
-                className="data-[state=active]:text-white rounded-lg"
+                className="data-[state=active]:text-slate-800 rounded-lg"
                 style={
                   selectedCategory === "Beginner"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -617,7 +617,7 @@ export default function Workflows() {
               <TabsTrigger
                 value="Intermediate"
                 onClick={() => setSelectedCategory("Intermediate")}
-                className="data-[state=active]:text-white rounded-lg"
+                className="data-[state=active]:text-slate-800 rounded-lg"
                 style={
                   selectedCategory === "Intermediate"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -629,7 +629,7 @@ export default function Workflows() {
               <TabsTrigger
                 value="Advanced"
                 onClick={() => setSelectedCategory("Advanced")}
-                className="data-[state=active]:text-white rounded-lg"
+                className="data-[state=active]:text-slate-800 rounded-lg"
                 style={
                   selectedCategory === "Advanced"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -723,7 +723,7 @@ export default function Workflows() {
                             <div className="glass p-6 rounded-2xl border-l-4 border-primary hover:border-accent transition-all card-lift bg-white/50">
                               <div className="flex gap-5 items-start">
                                 <div
-                                  className="h-12 w-12 text-white rounded-2xl flex items-center justify-center flex-shrink-0 font-bold text-lg shadow-lg"
+                                  className="h-12 w-12 text-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0 font-bold text-lg shadow-lg"
                                   style={{
                                     background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.22 ${complementLight}))`,
                                   }}
