@@ -496,8 +496,8 @@ export default function MindsetSelfAssessment() {
                   onClick={() => handleAnswer(question.id, option.type, idx)}
                   className={`w-full text-left p-4 rounded-lg border-2 transition-all ${
                     selectedOption === idx
-                      ? 'border-primary bg-primary/10 shadow-md'
-                      : 'border-border hover:border-primary/50 hover:bg-accent'
+                      ? 'border-orange-300 bg-orange-50/60 shadow-md'
+                      : 'border-border hover:border-amber-300 hover:bg-amber-50/40'
                   }`}
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
