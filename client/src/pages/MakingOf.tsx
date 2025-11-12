@@ -170,34 +170,33 @@ export default function MakingOf() {
 
             <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
               <p>
-                After two years of public sector AI work—building apps, training teams, shaping policy—a pattern emerged.
-                People kept asking for demonstrations, wanting to see what AI agents could do. But most treated AI like Google:
-                a resource for when they're stuck. The reality? AI is good enough now to be a <strong>teammate</strong>.
-                Not a search engine. A collaborator you work <em>with</em>, not a tool you go <em>to</em>.
-                That shift in thinking changes everything.
+                After two years of public sector AI work, including building apps, training teams, and shaping policy, a pattern emerged.
+                People often ask for demonstrations, wanting to see what's truly possible, as it's difficult to grasp what AI can and can't do.
+                Another trend emerged, where most people treat AI like Google, using it only when they're stuck or want to get an answer.
+                Many people lack exposure to understand the full capabilities of AI and that it's powerful enough now to be a <strong>full-time collaborator</strong>,
+                a tool. That shift in thinking changes everything.
               </p>
 
               <p>
-                Demonstrating that collaboration is tricky in government and public sector environments. One agency has Azure.
+                Demonstrating that collaboration is also tricky in government and public sector environments. One agency has Azure.
                 Another uses Google Workspace. A third is locked into legacy systems. Security requirements mean the latest tools
-                lag behind by months or even a year. Show someone a complex Azure-based workflow, and half the audience can't
-                replicate it. The challenge: find something with <strong>fewer barriers</strong>, less complexity, lower risk—and
+                lag by months or even a year. Vendors are also bad about lock-in and customizing everything. So anything shown
+                in Azure may not directly translate to the rest of the world. Half the audience will struggle to replicate it.
+                The challenge: find something with <strong>fewer barriers</strong>, less complexity, lower risk—and
                 make it work across different platforms.
               </p>
 
               <p>
                 Then came the question: What if <strong>one person, working entirely through voice conversations with AI</strong>,
-                could build something typically costing $250,000? No typing. No touching code. No looking at the code.
-                Just orchestration—talking, guiding, collaborating. Start with a catalog of AI tools to share after presentations.
-                But then someone said attendees should walk away thinking, "Wow, I didn't know you could do <em>that</em> with AI."
-                That changed the scope entirely.
+                could build something that might typically require a full team and significant funding? No typing. No touching code.
+                No looking at the code. Just orchestration—talking, guiding, collaborating.
               </p>
 
               <p>
-                Why not dogfood the concept? Build the entire website using the exact methods being taught—voice orchestration,
-                agent collaboration, zero manual coding. Let the asset itself be the proof. After test runs showed how fast agents
-                could research, scrape data, and assemble content, the path was clear: <strong>This is what people need to see.</strong>
-                A quarter-million-dollar website—content, copy, design, deployment—created through conversation.
+                Is it possible to build an entire website with interactive modules and advanced functionality, full copywriting,
+                editing, and review, using the exact methods being taught—voice orchestration, agent collaboration, and zero manual coding?
+                Let the asset itself be the proof. After test runs demonstrated how quickly agents could research, scrape data, and
+                assemble content, the path was clear: <strong>this is what people need to see</strong>—
               </p>
 
               <div className="bg-gradient-to-r from-orange-100 to-amber-100 border-l-4 border-orange-500 p-6 rounded-lg my-8">
