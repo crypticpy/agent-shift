@@ -179,7 +179,13 @@ Generated from: AI Agent Portal Business Case Generator
       <div className="min-h-screen bg-gradient-to-br from-[oklch(0.98_0.02_35)] via-white to-[oklch(0.97_0.03_85)]">
       {/* Hero */}
       <div className="bg-gradient-to-r from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] text-white py-16 relative overflow-hidden">
-        <MoneyParticles className="z-0" spawnRate={3.0} maxParticles={60} />
+        <MoneyParticles
+          className="z-0"
+          spawnRate={2.4}      // Reduced by 20% (from 3.0 to 2.4)
+          maxParticles={48}    // Reduced by 20% (from 60 to 48)
+          depthSpeed={0.6}     // Slowed by 40% (makes particles move slower)
+          driftIntensity={0.7} // Slightly calmer lateral drift
+        />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">

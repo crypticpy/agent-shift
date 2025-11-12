@@ -30,7 +30,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
+      <div className="bg-gradient-to-br from-orange-50 via-white to-amber-50">
         {/* Hero Section */}
         <div className="relative container mx-auto px-4 py-20 md:py-28">
           {/* Floating Orbs - Aurora Depth Effect */}

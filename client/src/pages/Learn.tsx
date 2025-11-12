@@ -1329,7 +1329,7 @@ export default function Learn() {
               🎓 Stop Doing. Start Guiding.
             </Badge>
             <h1 className="text-6xl md:text-7xl font-bold mb-8 tracking-tight">
-              Learn the Fundamentals
+              Guide AI Agents
             </h1>
             <p className="text-2xl md:text-3xl text-white/90 leading-relaxed font-light">
               Master voice control, agent chaining, and the art of orchestration. Everything you need to transform from doer to guide.
