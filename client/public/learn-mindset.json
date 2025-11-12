@@ -44,10 +44,10 @@
       "heading": "Real-World Transformation: Quarterly Report",
       "story": {
         "title": "From 3 Days to 3 Hours",
-        "situation": "Sarah, a department director, needs quarterly reports from 5 data systems with trend analysis and executive summary.",
-        "traditionalApproach": "**Doer Approach (3 days):** Monday—export data from each system, manually normalize in Excel (6 hours). Tuesday—create pivot tables, calculate trends, build charts (7 hours). Wednesday—draft analysis, write executive summary, format document (6 hours). Total: 19 hours over 3 days.",
-        "agentApproach": "**Orchestrator Approach (3 hours):** Step 1—Design workflow: Data Agent pulls from 5 systems in parallel, Normalization Agent standardizes formats, Analysis Agent calculates trends, Visualization Agent generates charts (setup: 45 min, execution: 8 min). Step 2—Review insights and validate patterns (1 hour). Step 3—Add strategic context to executive summary (45 min). Total: 3 hours, mostly strategic work.",
-        "outcome": "84% time saved. Sarah released 16 hours for strategic planning. Quality improved—AI caught data inconsistencies she would have missed. The system now runs quarterly with 30 minutes of human oversight."
+        "setup": "Sarah, a department director, needs quarterly reports from 5 data systems with trend analysis and executive summary.",
+        "traditional": "Doer Approach (3 days): Monday—export data from each system, manually normalize in Excel (6 hours). Tuesday—create pivot tables, calculate trends, build charts (7 hours). Wednesday—draft analysis, write executive summary, format document (6 hours). Total: 19 hours over 3 days.",
+        "withAgents": "Orchestrator Approach (3 hours): Step 1—Design workflow: Data Agent pulls from 5 systems in parallel, Normalization Agent standardizes formats, Analysis Agent calculates trends, Visualization Agent generates charts (setup: 45 min, execution: 8 min). Step 2—Review insights and validate patterns (1 hour). Step 3—Add strategic context to executive summary (45 min). Total: 3 hours, mostly strategic work.",
+        "impact": "84% time saved. Sarah released 16 hours for strategic planning. Quality improved—AI caught data inconsistencies she would have missed. The system now runs quarterly with 30 minutes of human oversight."
       }
     },
     {
