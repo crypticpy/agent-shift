@@ -178,7 +178,7 @@ export default function MakingOf() {
               </p>
 
               <p>
-                Demonstrating that collaboration is also tricky in government and public sector environments. One agency has Azure.
+                Demonstrating that level of collaboration is also tricky in government and public sector environments. One agency has Azure.
                 Another uses Google Workspace. A third is locked into legacy systems. Security requirements mean the latest tools
                 lag by months or even a year. Vendors are also bad about lock-in and customizing everything. So anything shown
                 in Azure may not directly translate to the rest of the world. Half the audience will struggle to replicate it.
