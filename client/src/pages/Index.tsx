@@ -57,7 +57,7 @@ export default function Index() {
           </h1>
 
           <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Ideas can strike anytime through conversation with intelligent agents who execute complex work.
+            Ideas can strike anytime. Act on them now, through conversation with intelligent agents.
           </p>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
             Busy work no longer blocks your creative time or inhibits your decision-making. More ideas become impactful. Your mind is freed for complex challenges.
