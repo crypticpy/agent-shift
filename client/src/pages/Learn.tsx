@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Mic, Zap, Link2, MessageSquare, Briefcase, Lightbulb, CheckCircle2, XCircle, Sparkles, ArrowUp, Wrench, Circle } from "lucide-react";
+import { Mic, Zap, Link2, MessageSquare, Briefcase, Lightbulb, CheckCircle2, XCircle, Sparkles, ArrowUp, Wrench, Circle, TrendingUp, Users, Package, DollarSign, FileSearch, Code, Building } from "lucide-react";
 import { Streamdown } from "streamdown";
 import SpeedComparison from "@/components/SpeedComparison";
 import VoiceStatsCards from "@/components/VoiceStatsCards";
@@ -21,12 +21,160 @@ import OrchestrationWorkshop from "@/components/OrchestrationWorkshop";
 import { VoiceToExecutionDiagram } from "@/components/VoiceToExecutionDiagram";
 import SetupChecklistTracker from "@/components/SetupChecklistTracker";
 import DataSourceInventory from "@/components/DataSourceInventory";
+import { DeviceSetupGuide } from "@/components/applications/DeviceSetupGuide";
+import { AgentTypesComparison } from "@/components/applications/AgentTypesComparison";
+import { CrossPlatformWorkflow } from "@/components/applications/CrossPlatformWorkflow";
+import { DailyRoutineIntegration } from "@/components/applications/DailyRoutineIntegration";
+import { AgentCollaborationSetup } from "@/components/applications/AgentCollaborationSetup";
 
 interface LearnContent {
   title: string;
   description: string;
   icon: string;
   sections: any[];
+}
+
+// Troubleshooting Card Component - separate to avoid hooks violations
+function TroubleshootingCard({ example, index }: { example: any; index: number }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Map category to color scheme
+  const getCategoryColor = (category: string) => {
+    const lowerCat = category?.toLowerCase() || '';
+    if (lowerCat.includes('permissions')) {
+      return { bg: 'bg-red-50', border: 'border-red-200', badge: 'bg-red-100 text-red-700 border-red-300', icon: '🔐' };
+    } else if (lowerCat.includes('performance')) {
+      return { bg: 'bg-amber-50', border: 'border-amber-200', badge: 'bg-amber-100 text-amber-700 border-amber-300', icon: '⚡' };
+    } else if (lowerCat.includes('data') || lowerCat.includes('sync')) {
+      return { bg: 'bg-blue-50', border: 'border-blue-200', badge: 'bg-blue-100 text-blue-700 border-blue-300', icon: '🔄' };
+    } else if (lowerCat.includes('integration')) {
+      return { bg: 'bg-purple-50', border: 'border-purple-200', badge: 'bg-purple-100 text-purple-700 border-purple-300', icon: '🔗' };
+    }
+    return { bg: 'bg-slate-50', border: 'border-slate-200', badge: 'bg-slate-100 text-slate-700 border-slate-300', icon: '⚙️' };
+  };
+
+  const colors = getCategoryColor(example.category);
+
+  return (
+    <Card key={index} className={`border-2 ${colors.border} transition-all ${isExpanded ? 'shadow-lg' : ''}`}>
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-full text-left"
+      >
+        <CardHeader className="cursor-pointer hover:bg-slate-50/50 transition-colors">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-start gap-3 flex-1">
+              <span className="text-2xl flex-shrink-0">{colors.icon}</span>
+              <div className="flex-1">
+                <CardTitle className="text-base text-slate-900 mb-1">
+                  {example.problem}
+                </CardTitle>
+                {example.category && (
+                  <Badge variant="outline" className={`${colors.badge} text-xs`}>
+                    {example.category}
+                  </Badge>
+                )}
+              </div>
+            </div>
+            <div className="flex-shrink-0 text-slate-400">
+              {isExpanded ? (
+                <ArrowUp className="h-5 w-5" />
+              ) : (
+                <ArrowUp className="h-5 w-5 rotate-180" />
+              )}
+            </div>
+          </div>
+        </CardHeader>
+      </button>
+
+      {isExpanded && (
+        <CardContent className="space-y-4 pt-0">
+          {/* Solutions */}
+          {example.solutions && (
+            <div className={`${colors.bg} rounded-lg p-4 border ${colors.border}`}>
+              <p className="text-sm font-semibold text-slate-900 mb-3">🔍 Check these solutions:</p>
+              <ul className="space-y-2">
+                {example.solutions.map((solution: string, j: number) => (
+                  <li key={j} className="text-sm text-slate-700 flex items-start gap-2">
+                    <span className="text-orange-500 mt-0.5 flex-shrink-0">•</span>
+                    <span>{solution}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Insight */}
+          {example.insight && (
+            <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+              <p className="text-sm font-semibold text-green-900 mb-2 flex items-center gap-2">
+                <span className="text-green-600">💡</span> Key Insight:
+              </p>
+              <p className="text-sm text-green-800 leading-relaxed italic">{example.insight}</p>
+            </div>
+          )}
+        </CardContent>
+      )}
+    </Card>
+  );
+}
+
+// Security Checklist Item Component - separate to avoid hooks violations
+function SecurityChecklistItem({ tip, index }: { tip: any; index: number }) {
+  const [checked, setChecked] = useState(() => {
+    const saved = document.cookie
+      .split('; ')
+      .find(row => row.startsWith(`securityCheck_${tip.id}=`));
+    return saved ? saved.split('=')[1] === 'true' : false;
+  });
+
+  const handleCheck = () => {
+    const newValue = !checked;
+    setChecked(newValue);
+    const expires = new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toUTCString();
+    document.cookie = `securityCheck_${tip.id}=${newValue}; expires=${expires}; path=/`;
+  };
+
+  return (
+    <button
+      onClick={handleCheck}
+      className="w-full text-left"
+    >
+      <Card className={`border-2 transition-all hover:shadow-lg ${
+        checked ? 'border-green-300 bg-green-50/30' : 'border-slate-200 hover:border-orange-300'
+      }`}>
+        <CardHeader>
+          <div className="flex items-start gap-3">
+            <div className="flex-shrink-0 mt-1">
+              {checked ? (
+                <CheckCircle2 className="h-5 w-5 text-green-500" />
+              ) : (
+                <Circle className="h-5 w-5 text-slate-300" />
+              )}
+            </div>
+            <div className="flex-1">
+              <CardTitle className="text-base flex items-center gap-2 mb-2">
+                {tip.tip}
+                {tip.priority && (
+                  <Badge variant={tip.priority === 'Critical' ? 'destructive' : 'outline'} className="text-xs">
+                    {tip.priority}
+                  </Badge>
+                )}
+              </CardTitle>
+              <CardDescription className="text-sm leading-relaxed">
+                <Streamdown>{tip.description}</Streamdown>
+                {tip.reasoning && (
+                  <div className="mt-2 text-xs text-slate-600">
+                    <strong>Why:</strong> {tip.reasoning}
+                  </div>
+                )}
+              </CardDescription>
+            </div>
+          </div>
+        </CardHeader>
+      </Card>
+    </button>
+  );
 }
 
 export default function Learn() {
@@ -156,6 +304,41 @@ export default function Learn() {
         {section.setupChecklistTracker && (
           <div className="my-8">
             <SetupChecklistTracker checklist={section.checklist} />
+          </div>
+        )}
+
+        {/* Device Setup Guide */}
+        {section.deviceSetupGuide && (
+          <div className="my-8">
+            <DeviceSetupGuide />
+          </div>
+        )}
+
+        {/* Agent Types Comparison */}
+        {section.agentTypesComparison && (
+          <div className="my-8">
+            <AgentTypesComparison />
+          </div>
+        )}
+
+        {/* Cross Platform Workflow */}
+        {section.crossPlatformWorkflow && (
+          <div className="my-8">
+            <CrossPlatformWorkflow />
+          </div>
+        )}
+
+        {/* Daily Routine Integration */}
+        {section.dailyRoutineIntegration && (
+          <div className="my-8">
+            <DailyRoutineIntegration />
+          </div>
+        )}
+
+        {/* Agent Collaboration Setup */}
+        {section.agentCollaborationSetup && (
+          <div className="my-8">
+            <AgentCollaborationSetup />
           </div>
         )}
 
@@ -371,6 +554,82 @@ export default function Learn() {
           </div>
         )}
 
+        {/* Decision Tree Examples (with topChoices, reasoning, setupTime, difficultyLevel) */}
+        {section.examples && section.examples[0]?.topChoices && !section.trapScenarios && (
+          <div className="space-y-4">
+            {section.examples.map((ex: any, i: number) => {
+              // Map difficulty to color scheme
+              const getDifficultyColor = (level: string) => {
+                if (level?.toLowerCase().includes('easy') || level?.toLowerCase().includes('beginner')) {
+                  return { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-700', badge: 'bg-green-100 text-green-700 border-green-300' };
+                } else if (level?.toLowerCase().includes('medium')) {
+                  return { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-700', badge: 'bg-amber-100 text-amber-700 border-amber-300' };
+                } else if (level?.toLowerCase().includes('advanced')) {
+                  return { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-700', badge: 'bg-purple-100 text-purple-700 border-purple-300' };
+                }
+                return { bg: 'bg-slate-50', border: 'border-slate-200', text: 'text-slate-700', badge: 'bg-slate-100 text-slate-700 border-slate-300' };
+              };
+
+              const colors = getDifficultyColor(ex.difficultyLevel);
+
+              return (
+                <Card key={i} className={`border-2 ${colors.border} ${colors.bg} hover:shadow-lg transition-all`}>
+                  <CardHeader>
+                    <div className="flex items-start justify-between gap-4 flex-wrap">
+                      <CardTitle className="text-lg flex-1">
+                        <span className="text-slate-700">🎯 {ex.scenario}</span>
+                      </CardTitle>
+                      <div className="flex gap-2 flex-wrap">
+                        {ex.difficultyLevel && (
+                          <Badge variant="outline" className={colors.badge}>
+                            {ex.difficultyLevel}
+                          </Badge>
+                        )}
+                        {ex.setupTime && (
+                          <Badge variant="outline" className="text-orange-700 border-orange-300 bg-orange-50">
+                            ⏱ {ex.setupTime}
+                          </Badge>
+                        )}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {/* Top Choices */}
+                    {ex.topChoices && (
+                      <div className="bg-white rounded-lg p-4 border border-slate-200">
+                        <p className="text-sm font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                          <span className="text-orange-500">✓</span> Recommended Tools:
+                        </p>
+                        <p className="text-sm text-slate-700 leading-relaxed">{ex.topChoices}</p>
+                      </div>
+                    )}
+
+                    {/* Reasoning */}
+                    {ex.reasoning && (
+                      <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                        <p className="text-sm font-semibold text-blue-900 mb-2 flex items-center gap-2">
+                          <span className="text-blue-600">💡</span> Why This Works:
+                        </p>
+                        <p className="text-sm text-blue-800 leading-relaxed">{ex.reasoning}</p>
+                      </div>
+                    )}
+
+                    {/* Limitation (for beginner scenarios) */}
+                    {ex.limitation && (
+                      <div className="bg-yellow-50 rounded-lg p-4 border border-yellow-200">
+                        <p className="text-sm font-semibold text-yellow-900 mb-2 flex items-center gap-2">
+                          <span className="text-yellow-600">⚠️</span> Important Note:
+                        </p>
+                        <p className="text-sm text-yellow-800 leading-relaxed">{ex.limitation}</p>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        )}
+
         {/* Tools grid */}
         {section.tools && (
           <div className="grid md:grid-cols-2 gap-6">
@@ -476,7 +735,7 @@ export default function Learn() {
         )}
 
         {/* Steps (object array with step/description) */}
-        {section.steps && Array.isArray(section.steps) && section.steps[0]?.step && (
+        {section.steps && Array.isArray(section.steps) && section.steps[0]?.step && !section.stepWizard && (
           <div className="space-y-4">
             {section.steps.map((step: any, i: number) => (
               <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
@@ -494,6 +753,137 @@ export default function Learn() {
                     <p className="text-sm text-muted-foreground italic">&quot;{step.example}&quot;</p>
                   </CardContent>
                 )}
+              </Card>
+            ))}
+          </div>
+        )}
+
+        {/* Steps Wizard (enhanced with expandable sections) */}
+        {section.stepWizard && section.steps && (
+          <div className="space-y-4">
+            {section.steps.map((step: any, i: number) => (
+              <Card key={i} className="border-2 border-orange-200 hover:border-orange-300 transition-all shadow-md">
+                <CardHeader>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex items-start gap-3 flex-1">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 text-white flex items-center justify-center text-lg font-bold shadow-md">
+                        {i + 1}
+                      </div>
+                      <div className="flex-1">
+                        <CardTitle className="text-lg mb-2">{step.step}</CardTitle>
+                        <CardDescription className="text-base leading-relaxed">{step.description}</CardDescription>
+                      </div>
+                    </div>
+                    {step.timeInvestment && (
+                      <Badge variant="outline" className="flex-shrink-0 text-orange-700 border-orange-300">
+                        ⏱ {step.timeInvestment}
+                      </Badge>
+                    )}
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {step.tasks && (
+                    <div className="bg-slate-50 rounded-lg p-4">
+                      <p className="text-sm font-semibold text-slate-900 mb-2">Checklist:</p>
+                      <ul className="space-y-1">
+                        {step.tasks.map((task: string, j: number) => (
+                          <li key={j} className="text-sm text-slate-700 flex items-start gap-2">
+                            <span className="text-orange-500 mt-0.5">•</span>
+                            <span>{task}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {step.goodUseCases && (
+                    <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+                      <p className="text-sm font-semibold text-green-900 mb-2">💡 Good first use cases:</p>
+                      <ul className="space-y-1">
+                        {step.goodUseCases.map((useCase: string, j: number) => (
+                          <li key={j} className="text-sm text-green-800 flex items-start gap-2">
+                            <span className="text-green-600 mt-0.5">✓</span>
+                            <span>{useCase}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {step.researchChecklist && (
+                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                      <p className="text-sm font-semibold text-blue-900 mb-2">🔍 Research checklist:</p>
+                      <ul className="space-y-1">
+                        {step.researchChecklist.map((item: string, j: number) => (
+                          <li key={j} className="text-sm text-blue-800 flex items-start gap-2">
+                            <span className="text-blue-600 mt-0.5">□</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {step.commonCombinations && (
+                    <div className="bg-purple-50 rounded-lg p-4 border border-purple-200">
+                      <p className="text-sm font-semibold text-purple-900 mb-2">🔗 Common tool combinations:</p>
+                      <div className="space-y-2">
+                        {step.commonCombinations.map((combo: any, j: number) => (
+                          <div key={j} className="text-sm">
+                            <span className="text-purple-900 font-medium">{combo.sources}</span>
+                            <span className="text-purple-700"> → {combo.tools}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {step.setupProcess && (
+                    <div className="bg-slate-50 rounded-lg p-4">
+                      <p className="text-sm font-semibold text-slate-900 mb-2">Setup process:</p>
+                      <ol className="space-y-1">
+                        {step.setupProcess.map((process: string, j: number) => (
+                          <li key={j} className="text-sm text-slate-700 flex items-start gap-2">
+                            <span className="text-orange-600 font-semibold">{j + 1}.</span>
+                            <span>{process}</span>
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+                  )}
+                  {step.securityNote && (
+                    <div className="bg-yellow-50 rounded-lg p-3 border-l-4 border-yellow-500">
+                      <p className="text-sm text-yellow-900">
+                        <strong>🔒 Security note:</strong> {step.securityNote}
+                      </p>
+                    </div>
+                  )}
+                  {step.testExamples && (
+                    <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+                      <p className="text-sm font-semibold text-green-900 mb-2">🧪 Test examples:</p>
+                      <ul className="space-y-1">
+                        {step.testExamples.map((example: string, j: number) => (
+                          <li key={j} className="text-sm text-green-800 flex items-start gap-2">
+                            <span className="text-green-600 mt-0.5">▸</span>
+                            <span className="font-mono">{example}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {(step.ifWorks || step.ifFails) && (
+                    <div className="grid md:grid-cols-2 gap-3">
+                      {step.ifWorks && (
+                        <div className="bg-green-50 rounded-lg p-3 border border-green-200">
+                          <p className="text-sm font-semibold text-green-900 mb-1">✅ If it works:</p>
+                          <p className="text-sm text-green-800">{step.ifWorks}</p>
+                        </div>
+                      )}
+                      {step.ifFails && (
+                        <div className="bg-red-50 rounded-lg p-3 border border-red-200">
+                          <p className="text-sm font-semibold text-red-900 mb-1">❌ If it fails:</p>
+                          <p className="text-sm text-red-800">{step.ifFails}</p>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </CardContent>
               </Card>
             ))}
           </div>
@@ -631,8 +1021,57 @@ export default function Learn() {
           </div>
         )}
 
-        {/* Use Cases */}
-        {section.useCases && (
+        {/* Use Cases (role-based with icons and recommended setups) */}
+        {section.useCases && section.useCases[0]?.recommendedSetup && (
+          <div className="grid md:grid-cols-2 gap-4">
+            {section.useCases.map((useCase: any, i: number) => {
+              // Map icon names to lucide-react components
+              const getIcon = (iconName: string) => {
+                const iconMap: Record<string, any> = {
+                  TrendingUp: TrendingUp,
+                  Users: Users,
+                  Package: Package,
+                  DollarSign: DollarSign,
+                  FileSearch: FileSearch,
+                  Briefcase: Briefcase,
+                  Code: Code,
+                  Building: Building
+                };
+                return iconMap[iconName] || Briefcase;
+              };
+              const IconComponent = getIcon(useCase.icon);
+
+              return (
+                <Card key={i} className="border-2 border-orange-200 hover:border-orange-300 hover:shadow-lg transition-all">
+                  <CardHeader>
+                    <div className="flex items-start gap-3 mb-2">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center">
+                        <IconComponent className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <CardTitle className="text-lg mb-1">{useCase.scenario}</CardTitle>
+                      </div>
+                    </div>
+                    <CardDescription className="text-sm leading-relaxed text-slate-600">
+                      {useCase.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg p-4 border border-orange-200">
+                      <p className="text-sm font-semibold text-orange-900 mb-2 flex items-center gap-2">
+                        <span className="text-orange-600">🔧</span> Recommended Setup:
+                      </p>
+                      <p className="text-sm text-slate-700 leading-relaxed">{useCase.recommendedSetup}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Use Cases (simple examples without recommendedSetup) */}
+        {section.useCases && !section.useCases[0]?.recommendedSetup && (
           <div className="space-y-4">
             {section.useCases.map((useCase: any, i: number) => (
               <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
@@ -641,9 +1080,20 @@ export default function Learn() {
                   <CardDescription className="text-base leading-relaxed">{useCase.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground italic">&quot;{useCase.example}&quot;</p>
+                  {useCase.example && (
+                    <p className="text-sm text-muted-foreground italic">&quot;{useCase.example}&quot;</p>
+                  )}
                 </CardContent>
               </Card>
+            ))}
+          </div>
+        )}
+
+        {/* Troubleshooting Examples (expandable accordion with problem/solutions/insight) */}
+        {section.examples && section.examples[0]?.problem && section.examples[0]?.solutions && (
+          <div className="space-y-3">
+            {section.examples.map((ex: any, i: number) => (
+              <TroubleshootingCard key={i} example={ex} index={i} />
             ))}
           </div>
         )}
@@ -725,63 +1175,9 @@ export default function Learn() {
         {/* Security Checklist - Interactive */}
         {section.securityChecklist && section.tips && (
           <div className="space-y-3">
-            {section.tips.map((tip: any, i: number) => {
-              const [checked, setChecked] = React.useState(() => {
-                const saved = document.cookie
-                  .split('; ')
-                  .find(row => row.startsWith(`securityCheck_${tip.id}=`));
-                return saved ? saved.split('=')[1] === 'true' : false;
-              });
-
-              const handleCheck = () => {
-                const newValue = !checked;
-                setChecked(newValue);
-                const expires = new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toUTCString();
-                document.cookie = `securityCheck_${tip.id}=${newValue}; expires=${expires}; path=/`;
-              };
-
-              return (
-                <button
-                  key={i}
-                  onClick={handleCheck}
-                  className="w-full text-left"
-                >
-                  <Card className={`border-2 transition-all hover:shadow-lg ${
-                    checked ? 'border-green-300 bg-green-50/30' : 'border-slate-200 hover:border-orange-300'
-                  }`}>
-                    <CardHeader>
-                      <div className="flex items-start gap-3">
-                        <div className="flex-shrink-0 mt-1">
-                          {checked ? (
-                            <CheckCircle2 className="h-5 w-5 text-green-500" />
-                          ) : (
-                            <Circle className="h-5 w-5 text-slate-300" />
-                          )}
-                        </div>
-                        <div className="flex-1">
-                          <CardTitle className="text-base flex items-center gap-2 mb-2">
-                            {tip.tip}
-                            {tip.priority && (
-                              <Badge variant={tip.priority === 'Critical' ? 'destructive' : 'outline'} className="text-xs">
-                                {tip.priority}
-                              </Badge>
-                            )}
-                          </CardTitle>
-                          <CardDescription className="text-sm leading-relaxed">
-                            <Streamdown>{tip.description}</Streamdown>
-                            {tip.reasoning && (
-                              <div className="mt-2 text-xs text-slate-600">
-                                <strong>Why:</strong> {tip.reasoning}
-                              </div>
-                            )}
-                          </CardDescription>
-                        </div>
-                      </div>
-                    </CardHeader>
-                  </Card>
-                </button>
-              );
-            })}
+            {section.tips.map((tip: any, i: number) => (
+              <SecurityChecklistItem key={i} tip={tip} index={i} />
+            ))}
           </div>
         )}
 
