@@ -173,8 +173,8 @@ export default function MakingOf() {
                 After two years of public sector AI work, including building apps, training teams, and shaping policy, a pattern emerged.
                 People often ask for demonstrations, wanting to see what's truly possible, as it's difficult to grasp what AI can and can't do.
                 Another trend emerged, where most people treat AI like Google, using it only when they're stuck or want to get an answer.
-                Many people lack exposure to understand the full capabilities of AI and that it's powerful enough now to be a <strong>full-time collaborator</strong>,
-                a tool. That shift in thinking changes everything.
+                Many people lack exposure to understand the full capabilities of AI and that it's powerful enough now to be a <strong>full-time collaborator</strong>.
+                That shift in thinking changes everything.
               </p>
 
               <p>
