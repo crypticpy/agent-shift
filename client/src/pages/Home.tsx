@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Search, Building2, HeartPulse, Scale, Siren, ShieldCheck, Code, Filter, ExternalLink, CheckCircle2, AlertCircle, TrendingUp, Users, Database, Globe, GitCompare } from "lucide-react";
+import { Search, Building2, HeartPulse, Scale, Siren, ShieldCheck, Code, Filter, ExternalLink, CheckCircle2, AlertCircle, TrendingUp, Users, Database, Globe, GitCompare, Building, DollarSign, BarChart, FileText, Headphones, Workflow, Microscope, Server, GraduationCap, Megaphone, Blocks } from "lucide-react";
 import { Link } from "wouter";
 import { APP_TITLE } from "@/const";
 import { Particles } from "@/components/Particles";
@@ -59,11 +59,23 @@ interface CatalogData {
 
 const iconMap: Record<string, any> = {
   "building-2": Building2,
+  "building": Building,
   "heart-pulse": HeartPulse,
   "scale": Scale,
   "siren": Siren,
   "shield-check": ShieldCheck,
   "code": Code,
+  "dollar-sign": DollarSign,
+  "users": Users,
+  "bar-chart": BarChart,
+  "file-text": FileText,
+  "headphones": Headphones,
+  "workflow": Workflow,
+  "microscope": Microscope,
+  "server": Server,
+  "graduation-cap": GraduationCap,
+  "megaphone": Megaphone,
+  "blocks": Blocks,
 };
 
 export default function Home() {
@@ -255,8 +267,24 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 pb-16">
+        {/* Mobile Dropdown Selector */}
+        <div className="block md:hidden mb-6">
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="w-full px-4 py-3 text-base border-2 border-orange-200 rounded-xl bg-white shadow-lg focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200/50 transition-all"
+          >
+            <option value="all">All Categories</option>
+            {catalogData && catalogData.categories.map((category) => (
+              <option key={category.id} value={category.id}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <Tabs defaultValue="all" value={selectedCategory} onValueChange={setSelectedCategory}>
-          <TabsList className="flex flex-wrap h-auto gap-2 bg-card p-3 rounded-xl shadow-lg mb-10 border">
+          <TabsList className="hidden md:flex flex-wrap h-auto gap-2 bg-card p-3 rounded-xl shadow-lg mb-10 border">
             <TabsTrigger
               value="all"
               className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all duration-300"
