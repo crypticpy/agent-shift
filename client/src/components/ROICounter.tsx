@@ -79,8 +79,8 @@ export function ROICounter({
     <div className={`absolute top-8 left-1/2 -translate-x-1/2 ${className}`}>
       <div className="text-center">
         {/* Ticker-style counter */}
-        <div className="relative inline-block">
-          {/* Background panel - like a flip clock or LED display */}
+        <div className="relative inline-block min-w-[450px] md:min-w-[650px] lg:min-w-[800px]">
+          {/* Background panel - like a flip clock or LED display (STATIC) */}
           <div
             className="absolute inset-0 bg-black/40 rounded-lg"
             style={{
@@ -93,15 +93,14 @@ export function ROICounter({
           />
 
           {/* Counter display */}
-          <div
-            className={`relative px-6 py-4 md:px-8 md:py-5 transition-all duration-200 ${
-              isJumping ? "scale-105" : "scale-100"
-            }`}
-          >
+          <div className="relative px-6 py-4 md:px-8 md:py-5">
             <div
-              className="text-white text-3xl md:text-5xl lg:text-6xl font-black tracking-wider"
+              className={`text-white text-3xl md:text-5xl lg:text-6xl font-black tracking-wider transition-all duration-200 ${
+                isJumping ? "scale-105" : "scale-100"
+              }`}
               style={{
-                fontFamily: "'Impact', 'Arial Black', sans-serif",
+                fontFamily: "'Courier New', 'Consolas', monospace",
+                fontVariantNumeric: "tabular-nums",
                 textShadow: `
                   0 0 ${15 + glowIntensity * 30}px rgba(255, 255, 255, ${0.6 + glowIntensity * 0.4}),
                   0 0 ${30 + glowIntensity * 50}px rgba(251, 146, 60, ${0.4 + glowIntensity * 0.6}),
