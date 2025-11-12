@@ -1,0 +1,205 @@
+{
+  "title": "Setup Your AI Orchestration Stack",
+  "description": "Learn how to choose and configure AI tools based on your data sources, understand connectors and MCP servers, and get your first agent running.",
+  "icon": "Wrench",
+  "sections": [
+    {
+      "heading": "The Setup Mindset: Data Access First",
+      "content": [
+        "**The Key Principle:** Choose AI tools based on what data sources they can access, not on features alone.",
+        "Most professionals pick AI tools by features ('this has great summarization!') and then struggle to feed the tool their data. Smart orchestrators work backwards: identify your data sources first, then choose tools that can connect to them.",
+        "**Your Data Sources Are Likely:** Email (Gmail, Outlook), Team Chat (Slack, Teams), Documents (Google Drive, Dropbox, OneDrive, Notion), Project Management (Asana, Jira, Monday), CRM (Salesforce, HubSpot), Databases (PostgreSQL, MongoDB, Airtable), APIs (your company's internal systems)."
+      ]
+    },
+    {
+      "heading": "Understanding Connectors, Plugins, and MCP Servers",
+      "content": [
+        "AI tools connect to your data sources through three main mechanisms. Understanding these helps you evaluate whether a tool can access your information."
+      ],
+      "tips": [
+        {
+          "tip": "Native Integrations / Plugins",
+          "description": "The AI tool has built-in support for specific platforms. ChatGPT has native plugins for Google Drive, Slack, etc. These are the easiest to set up—usually just OAuth authentication.\n\n**Example:** Claude Desktop has native plugins for Google Drive. You authenticate once, and Claude can read/write files directly.\n\n**Look for:** Tools that list your data sources in their 'Integrations' or 'Plugins' page."
+        },
+        {
+          "tip": "API Connections",
+          "description": "The tool can call APIs programmatically. This requires some technical setup but offers maximum flexibility.\n\n**Example:** Make.com can connect to almost any service with an API. You provide API credentials, and Make orchestrates data flow between systems.\n\n**Look for:** Tools with 'API' or 'Webhook' support, or Zapier/Make.com integration."
+        },
+        {
+          "tip": "MCP Servers (Model Context Protocol)",
+          "description": "A new standard for AI-to-data connections. MCP servers act as bridges between AI agents and your data sources.\n\n**What it is:** Your AI agent talks to an MCP server (instead of directly to your data). The MCP server handles authentication, data retrieval, and formatting. This creates a standard interface for agents to access many data sources.\n\n**Example:** An MCP server for Gmail gives any MCP-compatible agent (Claude, GPT, etc.) the ability to read/send emails through a standard protocol.\n\n**Look for:** Tools that support MCP or advertise 'context protocol' compatibility. This is cutting-edge (2024-2025) but growing fast."
+        }
+      ]
+    },
+    {
+      "heading": "The Setup Workflow: 5 Steps to Your First Agent",
+      "intro": "Follow this systematic approach to get from 'no AI' to 'first working agent' in under an hour.",
+      "steps": [
+        {
+          "step": "Step 1: Inventory Your Data Sources",
+          "description": "List where your work data lives. Don't skip this—it determines everything else.\n\n**Create a list:**\n- Email: Gmail, Outlook, other?\n- Chat: Slack, Teams, Discord?\n- Files: Google Drive, Dropbox, OneDrive, Box?\n- Notes: Notion, Obsidian, Evernote?\n- Project Management: Asana, Jira, Monday, Trello?\n- CRM: Salesforce, HubSpot?\n- Other: Internal databases, APIs, SharePoint?\n\n**Time investment:** 10 minutes"
+        },
+        {
+          "step": "Step 2: Identify Your Highest-Value Use Case",
+          "description": "Pick ONE routine task that involves data from the sources you just listed. Start simple.\n\n**Good first use cases:**\n- 'Summarize my unread Slack messages and email each morning'\n- 'Pull data from Google Sheets and generate a weekly report'\n- 'Search my Notion notes and Google Drive for information on X topic'\n- 'Monitor my Asana tasks and notify me of blockers'\n\n**Time investment:** 5 minutes"
+        },
+        {
+          "step": "Step 3: Match Tools to Your Data Sources",
+          "description": "Research which AI tools can access your specific data sources. Use the catalog on this site to filter by your needs.\n\n**Research checklist:**\n- Does the tool natively integrate with [your data source]?\n- Does it support MCP servers for [your data source]?\n- Can it connect via API/webhooks?\n- Do I need a middle layer (Zapier, Make.com)?\n\n**Common tool combinations:**\n- Gmail + Slack + Google Drive → Claude Desktop with plugins OR ChatGPT Plus\n- Notion + Airtable → n8n with API connections\n- Microsoft ecosystem → Microsoft Copilot OR Power Automate\n- Cross-platform → Make.com or Zapier as orchestrator\n\n**Time investment:** 15-20 minutes"
+        },
+        {
+          "step": "Step 4: Subscribe and Configure Connections",
+          "description": "Sign up for your chosen tool and connect it to your data sources.\n\n**Setup process:**\n1. Subscribe to the tool (start with free tier if available)\n2. Navigate to Integrations/Plugins/Connections section\n3. Authenticate each data source (usually OAuth—'Sign in with Google')\n4. Grant necessary permissions (read-only vs. read-write)\n5. Test the connection (most tools have a 'Test Connection' button)\n\n**Security note:** Use read-only permissions initially. Upgrade to write permissions only when you trust the workflow.\n\n**Time investment:** 15-20 minutes"
+        },
+        {
+          "step": "Step 5: Run Your First Agent Task",
+          "description": "Execute a simple test to confirm everything works.\n\n**Test examples:**\n- 'List my 5 most recent Gmail emails'\n- 'Show me Slack messages from the last hour in #general'\n- 'Find files in Google Drive modified this week'\n- 'Summarize my Notion page titled X'\n\n**If it works:** Celebrate! You've configured your first agent.\n\n**If it fails:** Check permissions, re-authenticate, or consult the tool's troubleshooting docs.\n\n**Time investment:** 10 minutes"
+        }
+      ]
+    },
+    {
+      "heading": "Tool Selection Decision Tree",
+      "content": [
+        "Use this decision tree to narrow down your tool choices based on your data sources and technical comfort level."
+      ],
+      "examples": [
+        {
+          "scenario": "My data is all in Google Workspace (Gmail, Drive, Docs)",
+          "recommendation": "**Top choices:** Claude Desktop with Google Drive plugin, ChatGPT Plus with plugins, or Google Gemini (native integration).\n\n**Why:** These tools have native Google integrations with minimal setup.\n\n**Setup time:** 10-15 minutes"
+        },
+        {
+          "scenario": "My data is all in Microsoft ecosystem (Outlook, OneDrive, Teams)",
+          "recommendation": "**Top choices:** Microsoft Copilot (native integration across all M365 apps), Claude/ChatGPT with Microsoft Graph API via Make.com.\n\n**Why:** Microsoft Copilot is purpose-built for this ecosystem.\n\n**Setup time:** 5-10 minutes (Copilot), 30 minutes (Make.com route)"
+        },
+        {
+          "scenario": "My data is scattered across many platforms (Gmail, Slack, Notion, Asana, etc.)",
+          "recommendation": "**Top choices:** Make.com or Zapier as the orchestration layer, connected to ChatGPT/Claude via API.\n\n**Why:** These platforms specialize in connecting disparate services. You build workflows that pull data from multiple sources and feed it to your AI.\n\n**Setup time:** 45-60 minutes initial setup, reusable for future workflows"
+        },
+        {
+          "scenario": "I have technical skills and want maximum control",
+          "recommendation": "**Top choices:** n8n (open-source automation), LangChain with custom MCP servers, or direct API integration to OpenAI/Anthropic.\n\n**Why:** Full control over data flow, authentication, and agent behavior. Can build custom MCP servers for proprietary systems.\n\n**Setup time:** 2-4 hours initial setup, but you own the entire stack"
+        },
+        {
+          "scenario": "I just want to try AI quickly with minimal setup",
+          "recommendation": "**Top choices:** ChatGPT web interface (upload files manually) or Claude web (paste text).\n\n**Why:** Zero setup. Start orchestrating immediately by copy-pasting data or uploading files.\n\n**Limitation:** No automatic data access. You're the 'connector' manually feeding the agent.\n\n**Setup time:** 0 minutes"
+        }
+      ]
+    },
+    {
+      "heading": "Common Connection Patterns by Industry",
+      "content": [
+        "Here are the most common data source combinations for different roles, with recommended setup approaches."
+      ],
+      "useCases": [
+        {
+          "scenario": "Marketing Manager",
+          "description": "Typical data sources: Google Analytics, HubSpot, Social media APIs (Twitter, LinkedIn), Google Sheets, Slack",
+          "example": "**Recommended setup:** Make.com connecting GA + HubSpot + Sheets → Claude/ChatGPT for analysis. Use Make.com to pull data from analytics platforms, store in Sheets, then feed to AI for campaign insights."
+        },
+        {
+          "scenario": "Program Manager (Government/Nonprofit)",
+          "description": "Typical data sources: Outlook/Gmail, SharePoint, Airtable/Smartsheet, Zoom (transcripts), Survey tools",
+          "example": "**Recommended setup:** Microsoft Power Automate (for Outlook/SharePoint) + Zapier (for surveys) → ChatGPT API. Use Power Automate for document processing, Zapier for survey analysis."
+        },
+        {
+          "scenario": "Product Manager (Tech)",
+          "description": "Typical data sources: Jira, Confluence, Slack, Google Drive, GitHub, Mixpanel",
+          "example": "**Recommended setup:** n8n (self-hosted) with API connections to all platforms. Build workflows that aggregate: bug reports (Jira) + team discussions (Slack) + usage data (Mixpanel) → AI generates product insights."
+        },
+        {
+          "scenario": "Sales Professional",
+          "description": "Typical data sources: Salesforce/HubSpot CRM, Gmail/Outlook, LinkedIn, Calendar, Google Docs",
+          "example": "**Recommended setup:** Native CRM AI (Salesforce Einstein, HubSpot AI) + Claude Desktop for document drafting. Let the CRM's native AI handle contact data, use Claude for proposal/email writing pulling context from Drive."
+        },
+        {
+          "scenario": "Researcher / Analyst",
+          "description": "Typical data sources: Zotero/Mendeley, Google Scholar, PDFs, Notion, Python/R notebooks, databases",
+          "example": "**Recommended setup:** Elicit (research-specific AI) for paper analysis + Claude for synthesis. Upload PDFs to Elicit for extraction, feed results to Claude for writing. Technically advanced users: custom MCP server for database access."
+        }
+      ]
+    },
+    {
+      "heading": "Troubleshooting Connection Issues",
+      "content": [
+        "Even with good setup, connections sometimes fail. Here's how to diagnose and fix common issues."
+      ],
+      "examples": [
+        {
+          "doNot": "The agent can't access my Google Drive",
+          "do": "Check: 1) Did you grant the correct OAuth permissions? (Go to Google Account → Security → Third-party apps). 2) Does your organization block third-party access? (Check with IT). 3) Are you using the right Google account? (Log out and re-authenticate).",
+          "impact": "Most 'can't access' issues are permissions-related, not tool failures."
+        },
+        {
+          "doNot": "The API connection keeps timing out",
+          "do": "Check: 1) Is your API rate limit exceeded? (Most APIs have limits—check docs). 2) Is the data payload too large? (Try smaller queries). 3) Does your firewall block the API endpoint? (Test from a different network).",
+          "impact": "Timeouts usually mean rate limits or network blocks, not broken integrations."
+        },
+        {
+          "doNot": "The agent gives outdated data",
+          "do": "Check: 1) Is caching enabled? (Some tools cache data for performance—disable for real-time needs). 2) What's the data sync frequency? (Many integrations sync hourly, not real-time). 3) Did you refresh the connection? (Re-authenticate to force a fresh data pull).",
+          "impact": "Understanding data freshness expectations prevents frustration with 'stale' results."
+        },
+        {
+          "doNot": "I can't find an integration for my niche tool",
+          "do": "Options: 1) Check if the tool has an API (build custom integration with Make.com/n8n). 2) Export data manually and upload to AI (less automated but works). 3) Request an MCP server (if the tool is popular, someone may build one). 4) Use Zapier's 'Webhooks' feature as a universal connector.",
+          "impact": "Most modern tools have APIs. You can usually build a workaround even without native integrations."
+        }
+      ]
+    },
+    {
+      "heading": "Security and Permissions Best Practices",
+      "content": [
+        "Connecting AI tools to your data requires careful permission management. Follow these practices to maintain security."
+      ],
+      "tips": [
+        {
+          "tip": "Start Read-Only",
+          "description": "Always grant read-only permissions first. Test your workflow thoroughly before giving write/modify access.\n\n**Why:** If something goes wrong, the AI can't accidentally delete or modify your data. You can always upgrade permissions later."
+        },
+        {
+          "tip": "Use Service Accounts for Team Data",
+          "description": "Don't connect your personal account to shared team data. Create a service account with limited scope.\n\n**Why:** If you leave the organization or change roles, workflows don't break. IT can manage service account permissions centrally."
+        },
+        {
+          "tip": "Audit Connections Quarterly",
+          "description": "Review what tools have access to your data every 3 months. Revoke permissions for tools you no longer use.\n\n**Why:** Access creep is real. You might have granted permissions to 10 tools and only use 3. Minimize your attack surface."
+        },
+        {
+          "tip": "Understand Data Retention Policies",
+          "description": "Check each tool's data retention policy. Does it store your data? For how long? Can you delete it?\n\n**Why:** Some AI tools retain your data for training (though most enterprise tools don't). Know what happens to your information."
+        }
+      ]
+    },
+    {
+      "heading": "Your Setup Checklist",
+      "callout": {
+        "title": "Complete Setup Checklist",
+        "steps": [
+          "□ Inventory: List all data sources you regularly access",
+          "□ Prioritize: Identify your #1 time-consuming routine task",
+          "□ Research: Find 2-3 tools that can connect to your data sources",
+          "□ Subscribe: Sign up for your chosen tool (free tier to start)",
+          "□ Connect: Authenticate and test each data source connection",
+          "□ Test: Run a simple agent task to confirm everything works",
+          "□ Security: Review and document what permissions you granted",
+          "□ Document: Save your setup steps for future reference",
+          "□ Iterate: Once working, add additional data sources gradually"
+        ],
+        "footer": "Setup is front-loaded work, but once configured, your agents can run for months with minimal maintenance. Invest the time upfront."
+      }
+    },
+    {
+      "heading": "Next Steps: From Setup to Orchestration",
+      "content": [
+        "You've configured your first agent connections. Now it's time to design your first orchestrated workflow.",
+        "**Recommended learning path:**",
+        "1. **Review Mindset tab:** Understand the orchestrator mindset now that you have tools configured",
+        "2. **Explore Applications tab:** See real-world examples of multi-agent workflows",
+        "3. **Try Voice Basics:** Learn to orchestrate using voice commands (game-changer for mobile workflows)",
+        "4. **Study Chaining:** Understand how to connect multiple agents in sequence",
+        "",
+        "**Your immediate next action:** Go to the Mindset tab and work through the 'Your First Week as an Orchestrator' section. Now that your tools are connected, you can actually implement those workflows."
+      ]
+    }
+  ]
+}

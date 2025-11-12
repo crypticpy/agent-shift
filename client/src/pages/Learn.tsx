@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Mic, Zap, Link2, MessageSquare, Briefcase, Lightbulb, CheckCircle2, XCircle, Sparkles, ArrowUp } from "lucide-react";
+import { Mic, Zap, Link2, MessageSquare, Briefcase, Lightbulb, CheckCircle2, XCircle, Sparkles, ArrowUp, Wrench } from "lucide-react";
 import { Streamdown } from "streamdown";
 import SpeedComparison from "@/components/SpeedComparison";
 import VoiceStatsCards from "@/components/VoiceStatsCards";
@@ -33,16 +33,21 @@ export default function Learn() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     // Load all JSON content files
     const loadContent = async () => {
       try {
         const tabs = [
           "mindset",
+          "setup",
+          "applications",
           "voice-basics",
           "advanced-voice",
           "chaining",
-          "ai-to-ai",
-          "applications"
+          "ai-to-ai"
         ];
         
         const contentPromises = tabs.map(async (tab) => {
@@ -70,7 +75,9 @@ export default function Learn() {
       Zap,
       Link2,
       MessageSquare,
-      Briefcase
+      Briefcase,
+      Lightbulb,
+      Wrench
     };
     return icons[iconName] || Mic;
   };
@@ -787,11 +794,12 @@ export default function Learn() {
 
   const tabConfig = [
     { value: "mindset", label: "Mindset", icon: Lightbulb },
+    { value: "setup", label: "Setup", icon: Wrench },
+    { value: "applications", label: "Applications", icon: Briefcase },
     { value: "voice-basics", label: "Voice Basics", icon: Mic },
     { value: "advanced-voice", label: "Advanced Voice", icon: Zap },
     { value: "chaining", label: "Chaining", icon: Link2 },
-    { value: "ai-to-ai", label: "AI-to-AI", icon: MessageSquare },
-    { value: "applications", label: "Applications", icon: Briefcase }
+    { value: "ai-to-ai", label: "AI-to-AI", icon: MessageSquare }
   ];
 
   if (loading) {
@@ -830,7 +838,7 @@ export default function Learn() {
       {/* Tabs Section */}
       <div className="container mx-auto px-4 py-16">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-10">
-          <TabsList className="grid w-full grid-cols-6 h-auto p-2 bg-card/95 backdrop-blur-sm border-2 rounded-xl shadow-lg">
+          <TabsList className="grid w-full grid-cols-7 h-auto p-2 bg-card/95 backdrop-blur-sm border-2 rounded-xl shadow-lg">
             {tabConfig.map((tab) => {
               const Icon = tab.icon;
               return (
