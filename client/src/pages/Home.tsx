@@ -102,7 +102,7 @@ export default function Home() {
       <div className="min-h-screen flex items-center justify-center gradient-mesh">
         <div className="text-center glass rounded-2xl p-8 backdrop-blur-md">
           <div className="animate-spin rounded-full h-16 w-16 border-4 border-primary/20 border-t-primary mx-auto mb-4"></div>
-          <p className="text-foreground font-medium">Loading comprehensive catalog...</p>
+          <p className="text-foreground font-medium">Loading catalog...</p>
         </div>
       </div>
     );
