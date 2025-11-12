@@ -107,7 +107,7 @@ export default function Navigation() {
                 <img src={APP_LOGO} alt="Logo" className="h-8 w-8 group-hover:scale-110 transition-transform" />
               )}
               <div className="flex flex-col">
-                <span className="text-xl font-bold bg-gradient-to-r from-[#FF6B35] via-[#FFC107] via-[#10B981] to-[#14B8A6] bg-clip-text text-transparent">
+                <span className="text-xl font-bold bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, #FF6B35 0%, #FFC107 33%, #10B981 66%, #14B8A6 100%)' }}>
                   Agent Shift
                 </span>
                 <span className="text-[10px] text-slate-500 tracking-wide uppercase font-medium -mt-0.5">
