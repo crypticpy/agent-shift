@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="white"/>
+
+  <!-- Rotated diamond grid - centered -->
+  <g transform="translate(256, 256) rotate(45) translate(-256, -256)">
+    <!-- Top-left: Orange -->
+    <rect x="64" y="64" width="176" height="176" rx="16" fill="#FF6B35"/>
+
+    <!-- Top-right: Yellow -->
+    <rect x="272" y="64" width="176" height="176" rx="16" fill="#FFC107"/>
+
+    <!-- Bottom-left: Green -->
+    <rect x="64" y="272" width="176" height="176" rx="16" fill="#10B981"/>
+
+    <!-- Bottom-right: Teal -->
+    <rect x="272" y="272" width="176" height="176" rx="16" fill="#14B8A6"/>
+  </g>
+</svg>
