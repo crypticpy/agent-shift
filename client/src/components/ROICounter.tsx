@@ -99,16 +99,16 @@ export function ROICounter({
                 isJumping ? "scale-105" : "scale-100"
               }`}
               style={{
-                color: "#fbbf24",
+                color: "#fb923c",
                 fontFamily: "'Courier New', 'Consolas', monospace",
                 fontVariantNumeric: "tabular-nums",
                 textShadow: `
-                  0 0 ${15 + glowIntensity * 30}px rgba(251, 191, 36, ${0.8 + glowIntensity * 0.2}),
-                  0 0 ${30 + glowIntensity * 50}px rgba(251, 146, 60, ${0.5 + glowIntensity * 0.5}),
+                  0 0 ${15 + glowIntensity * 30}px rgba(251, 146, 60, ${0.7 + glowIntensity * 0.3}),
+                  0 0 ${30 + glowIntensity * 50}px rgba(249, 115, 22, ${0.5 + glowIntensity * 0.5}),
                   0 2px 4px rgba(0, 0, 0, 0.8)
                 `,
                 letterSpacing: "0.05em",
-                WebkitTextStroke: isJumping ? "1px rgba(251,191,36,0.4)" : "0px",
+                WebkitTextStroke: isJumping ? "1px rgba(251,146,60,0.3)" : "0px",
               }}
             >
               ${formattedValue}
