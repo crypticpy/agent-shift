@@ -417,7 +417,17 @@ export default function Learn() {
                       <Button
                         onClick={() => {
                           const element = document.getElementById(section.navigationLink.scrollTo);
-                          element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                          if (element) {
+                            const navHeight = 64; // Navigation bar height (h-16 = 4rem = 64px)
+                            const offset = 16; // Additional breathing room
+                            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                            const offsetPosition = elementPosition - navHeight - offset;
+
+                            window.scrollTo({
+                              top: offsetPosition,
+                              behavior: 'smooth'
+                            });
+                          }
                         }}
                         className="bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-white flex-shrink-0"
                       >

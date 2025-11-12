@@ -307,6 +307,11 @@
     }
   }
 
+  /* Scroll offset for fixed header navigation - ensures hash link targets clear the sticky nav bar */
+  [id] {
+    scroll-margin-top: 5rem; /* 80px - accounts for 64px nav bar + 16px breathing room */
+  }
+
   /* Glassmorphism effect for modern cards */
   .glass {
     background: oklch(1 0 0 / 60%);
