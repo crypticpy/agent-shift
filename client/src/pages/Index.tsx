@@ -47,11 +47,11 @@ export default function Index() {
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
             From{" "}
             <span className="bg-gradient-to-r from-slate-600 to-slate-800 bg-clip-text text-transparent">
-              Doer
+              Do
             </span>
             {" "}to{" "}
             <span className="animated-gradient bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 bg-clip-text text-transparent">
-              Orchestrator
+              Orchestrate
             </span>
           </h1>
 
