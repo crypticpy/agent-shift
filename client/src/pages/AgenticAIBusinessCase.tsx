@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useReactToPrint } from "react-to-print";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -35,6 +35,10 @@ export default function AgenticAIBusinessCase() {
   const [companyName, setCompanyName] = useState("");
   const [department, setDepartment] = useState("");
   const [useCase, setUseCase] = useState("");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Ref for the printable component
   const printableRef = useRef<HTMLDivElement>(null);
@@ -980,7 +984,8 @@ Generated from: AI Agent Portal Business Case Generator
                         <ul className="list-disc list-inside space-y-1 text-sm text-green-900">
                           <li>Disciplined use-case selection with clear business value</li>
                           <li>Clear-eyed assessment of technology maturity</li>
-                          <li>Willingness to leverage alternative AI techniques when appropriate</li>
+                          <li>Willingness to use alternative AI techniques when appropriate</li>
+                          <li><strong>Train teams to think like orchestrators, not just tool users</strong> - Focus on outcome-focused thinking rather than task automation</li>
                           <li>Empower line managers (not just central AI labs) to drive adoption</li>
                           <li>Select tools that integrate deeply and adapt over time</li>
                         </ul>
