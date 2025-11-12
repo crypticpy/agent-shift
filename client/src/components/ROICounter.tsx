@@ -23,6 +23,7 @@ export function ROICounter({
   const animationFrameRef = useRef<number>();
   const lastJumpRef = useRef<number>(Date.now());
   const lastUpdateRef = useRef<number>(Date.now());
+  const jumpStartTimeRef = useRef<number>(0);
 
   useEffect(() => {
     const animate = () => {
@@ -33,6 +34,21 @@ export function ROICounter({
       // Normal incrementation
       setValue((prev) => prev + incrementSpeed * deltaTime * 60);
 
+      // Smooth glow fade
+      if (jumpStartTimeRef.current > 0) {
+        const timeSinceJump = now - jumpStartTimeRef.current;
+        if (timeSinceJump < 400) {
+          // Ramp down over 400ms (matching scale animation)
+          const progress = timeSinceJump / 400;
+          // Ease out cubic: 1 - (1-x)^3
+          const eased = 1 - Math.pow(1 - progress, 3);
+          setGlowIntensity(1 - eased);
+        } else {
+          setGlowIntensity(0);
+          jumpStartTimeRef.current = 0;
+        }
+      }
+
       // Random jump logic
       const timeSinceLastJump = (now - lastJumpRef.current) / 1000;
       if (timeSinceLastJump >= jumpFrequency) {
@@ -41,6 +57,7 @@ export function ROICounter({
           jumpMinSize + Math.random() * (jumpMaxSize - jumpMinSize);
         setValue((prev) => prev + jumpAmount);
         lastJumpRef.current = now;
+        jumpStartTimeRef.current = now;
 
         // Trigger flash effect
         setIsJumping(true);
@@ -50,11 +67,6 @@ export function ROICounter({
         setTimeout(() => {
           setIsJumping(false);
         }, 200);
-
-        // Fade glow
-        setTimeout(() => {
-          setGlowIntensity(0);
-        }, 500);
       }
 
       animationFrameRef.current = requestAnimationFrame(animate);
