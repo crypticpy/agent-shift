@@ -658,8 +658,8 @@ export default function Workflows() {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           {/* Callout to Use Cases */}
-          <div ref={calloutRef} className="glass card-lift p-8 rounded-2xl mb-12 border border-primary/20 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">
-            <div className="flex items-start gap-6">
+          <div ref={calloutRef} className="glass card-lift p-6 md:p-8 rounded-2xl mb-12 border border-primary/20 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
               <div
                 className="h-14 w-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg"
                 style={{
@@ -669,23 +669,25 @@ export default function Workflows() {
                 <Sparkles className="h-7 w-7 text-slate-800" />
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl font-bold mb-3 text-slate-900">Want to See Advanced Multi-Agent Workflows?</h3>
-                <p className="mb-6 text-slate-700 text-lg leading-relaxed">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-slate-900 text-center md:text-left">Want to See Advanced Multi-Agent Workflows?</h3>
+                <p className="mb-6 text-slate-700 text-base md:text-lg leading-relaxed text-center md:text-left">
                   Check out our Use Cases page for detailed examples of complex workflows that chain 3-5 agents together.
                   See how to turn a week of work into 30 minutes using tools like KOSMOS, Julius AI, Manus, and Beautiful.ai.
                 </p>
-                <Link href="/use-cases">
-                  <Button
-                    className="relative text-slate-800 shadow-lg overflow-hidden border-0"
-                    style={{
-                      background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.22 ${complementLight}))`,
-                    }}
-                    onClick={handleBurst}
-                  >
-                    View Advanced Use Cases
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+                <div className="flex justify-center md:justify-start">
+                  <Link href="/use-cases">
+                    <Button
+                      className="w-full md:w-auto relative text-slate-800 shadow-lg overflow-hidden border-0 text-sm md:text-base"
+                      style={{
+                        background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.22 ${complementLight}))`,
+                      }}
+                      onClick={handleBurst}
+                    >
+                      View Advanced Use Cases
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -693,11 +695,11 @@ export default function Workflows() {
           {/* Filter Tabs */}
           <div className="sticky top-0 z-30 bg-gradient-to-br from-warm-50 via-white to-amber-50 py-4 -mx-4 px-4 mb-6">
             <Tabs defaultValue="all" className="">
-              <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto bg-slate-100/80 backdrop-blur-sm p-1.5 rounded-xl shadow-md">
+              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 max-w-2xl mx-auto bg-slate-100/80 backdrop-blur-sm p-1.5 md:p-2 rounded-xl shadow-md">
               <TabsTrigger
                 value="all"
                 onClick={() => setSelectedCategory("all")}
-                className="data-[state=active]:text-slate-800 rounded-lg"
+                className="data-[state=active]:text-slate-800 rounded-lg text-xs sm:text-sm"
                 style={
                   selectedCategory === "all"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -709,7 +711,7 @@ export default function Workflows() {
               <TabsTrigger
                 value="Beginner"
                 onClick={() => setSelectedCategory("Beginner")}
-                className="data-[state=active]:text-slate-800 rounded-lg"
+                className="data-[state=active]:text-slate-800 rounded-lg text-xs sm:text-sm"
                 style={
                   selectedCategory === "Beginner"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -721,7 +723,7 @@ export default function Workflows() {
               <TabsTrigger
                 value="Intermediate"
                 onClick={() => setSelectedCategory("Intermediate")}
-                className="data-[state=active]:text-slate-800 rounded-lg"
+                className="data-[state=active]:text-slate-800 rounded-lg text-xs sm:text-sm"
                 style={
                   selectedCategory === "Intermediate"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -733,7 +735,7 @@ export default function Workflows() {
               <TabsTrigger
                 value="Advanced"
                 onClick={() => setSelectedCategory("Advanced")}
-                className="data-[state=active]:text-slate-800 rounded-lg"
+                className="data-[state=active]:text-slate-800 rounded-lg text-xs sm:text-sm"
                 style={
                   selectedCategory === "Advanced"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -831,10 +833,10 @@ export default function Workflows() {
                               ></div>
                             )}
 
-                            <div className="glass p-6 rounded-2xl border-l-4 border-primary hover:border-accent transition-all card-lift bg-white/50">
-                              <div className="flex gap-5 items-start">
+                            <div className="glass p-4 md:p-6 rounded-2xl border-l-4 border-primary hover:border-accent transition-all card-lift bg-white/50">
+                              <div className="flex gap-3 md:gap-5 items-start">
                                 <div
-                                  className="h-12 w-12 text-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0 font-bold text-lg shadow-lg"
+                                  className="h-10 w-10 md:h-12 md:w-12 text-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0 font-bold text-base md:text-lg shadow-lg"
                                   style={{
                                     background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.22 ${complementLight}))`,
                                   }}
@@ -843,8 +845,8 @@ export default function Workflows() {
                                 </div>
                                 <div className="flex-1">
                                   <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-                                    <h5 className="font-bold text-lg md:text-xl text-slate-900">{step.title}</h5>
-                                    <Badge variant="outline" className="flex items-center gap-1.5 border-accent/30 text-slate-900">
+                                    <h5 className="font-bold text-base md:text-lg lg:text-xl text-slate-900">{step.title}</h5>
+                                    <Badge variant="outline" className="flex items-center gap-1.5 border-accent/30 text-slate-900 text-xs md:text-sm">
                                       <Clock className="h-3.5 w-3.5" />
                                       {step.time}
                                     </Badge>
@@ -880,13 +882,13 @@ export default function Workflows() {
                     <div className="flex justify-center">
                       <Button
                         onClick={() => setExpandedWorkflow(workflow.id)}
-                        className="text-slate-900 shadow-lg text-base py-5 px-6 border-0"
+                        className="w-full sm:w-auto text-slate-900 shadow-lg text-sm md:text-base py-4 md:py-5 px-5 md:px-6 border-0"
                         style={{
                           background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.68 0.20 ${complementLight}), oklch(0.70 0.22 ${complementDark}))`,
                         }}
                       >
                         View Step-by-Step Instructions
-                        <ArrowRight className="ml-2 h-5 w-5" />
+                        <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                       </Button>
                     </div>
                   )}
