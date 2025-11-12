@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Mic, Zap, Link2, MessageSquare, Briefcase, Lightbulb, CheckCircle2, XCircle, Sparkles, ArrowUp, Wrench } from "lucide-react";
+import { Mic, Zap, Link2, MessageSquare, Briefcase, Lightbulb, CheckCircle2, XCircle, Sparkles, ArrowUp, Wrench, Circle } from "lucide-react";
 import { Streamdown } from "streamdown";
 import SpeedComparison from "@/components/SpeedComparison";
 import VoiceStatsCards from "@/components/VoiceStatsCards";
@@ -19,6 +19,8 @@ import TrapScenarios from "@/components/TrapScenarios";
 import WeeklyProgressTracker from "@/components/WeeklyProgressTracker";
 import OrchestrationWorkshop from "@/components/OrchestrationWorkshop";
 import { VoiceToExecutionDiagram } from "@/components/VoiceToExecutionDiagram";
+import SetupChecklistTracker from "@/components/SetupChecklistTracker";
+import DataSourceInventory from "@/components/DataSourceInventory";
 
 interface LearnContent {
   title: string;
@@ -137,6 +139,23 @@ export default function Learn() {
         {section.weeklyProgressTracker && (
           <div className="my-8">
             <WeeklyProgressTracker />
+          </div>
+        )}
+
+        {/* Data Source Inventory */}
+        {section.dataSourceInventory && (
+          <div className="my-8">
+            <DataSourceInventory
+              principle={section.principle}
+              dataSources={section.dataSources}
+            />
+          </div>
+        )}
+
+        {/* Setup Checklist Tracker */}
+        {section.setupChecklistTracker && (
+          <div className="my-8">
+            <SetupChecklistTracker checklist={section.checklist} />
           </div>
         )}
 
@@ -703,8 +722,71 @@ export default function Learn() {
           </div>
         )}
 
-        {/* Tips - Only render if techniqueCards is not present */}
-        {section.tips && !section.techniqueCards && (
+        {/* Security Checklist - Interactive */}
+        {section.securityChecklist && section.tips && (
+          <div className="space-y-3">
+            {section.tips.map((tip: any, i: number) => {
+              const [checked, setChecked] = React.useState(() => {
+                const saved = document.cookie
+                  .split('; ')
+                  .find(row => row.startsWith(`securityCheck_${tip.id}=`));
+                return saved ? saved.split('=')[1] === 'true' : false;
+              });
+
+              const handleCheck = () => {
+                const newValue = !checked;
+                setChecked(newValue);
+                const expires = new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toUTCString();
+                document.cookie = `securityCheck_${tip.id}=${newValue}; expires=${expires}; path=/`;
+              };
+
+              return (
+                <button
+                  key={i}
+                  onClick={handleCheck}
+                  className="w-full text-left"
+                >
+                  <Card className={`border-2 transition-all hover:shadow-lg ${
+                    checked ? 'border-green-300 bg-green-50/30' : 'border-slate-200 hover:border-orange-300'
+                  }`}>
+                    <CardHeader>
+                      <div className="flex items-start gap-3">
+                        <div className="flex-shrink-0 mt-1">
+                          {checked ? (
+                            <CheckCircle2 className="h-5 w-5 text-green-500" />
+                          ) : (
+                            <Circle className="h-5 w-5 text-slate-300" />
+                          )}
+                        </div>
+                        <div className="flex-1">
+                          <CardTitle className="text-base flex items-center gap-2 mb-2">
+                            {tip.tip}
+                            {tip.priority && (
+                              <Badge variant={tip.priority === 'Critical' ? 'destructive' : 'outline'} className="text-xs">
+                                {tip.priority}
+                              </Badge>
+                            )}
+                          </CardTitle>
+                          <CardDescription className="text-sm leading-relaxed">
+                            <Streamdown>{tip.description}</Streamdown>
+                            {tip.reasoning && (
+                              <div className="mt-2 text-xs text-slate-600">
+                                <strong>Why:</strong> {tip.reasoning}
+                              </div>
+                            )}
+                          </CardDescription>
+                        </div>
+                      </div>
+                    </CardHeader>
+                  </Card>
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Tips - Only render if techniqueCards and securityChecklist are not present */}
+        {section.tips && !section.techniqueCards && !section.securityChecklist && (
           <div className="space-y-3">
             {section.tips.map((tip: any, i: number) => (
               <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
@@ -712,9 +794,34 @@ export default function Learn() {
                   <CardTitle className="text-base flex items-center gap-2">
                     <Sparkles className="h-4 w-4 text-primary" />
                     {tip.tip}
+                    {tip.complexity && (
+                      <Badge variant="outline" className="text-xs ml-2">
+                        {tip.complexity}
+                      </Badge>
+                    )}
+                    {tip.setupTime && (
+                      <Badge variant="outline" className="text-xs">
+                        {tip.setupTime}
+                      </Badge>
+                    )}
                   </CardTitle>
-                  <CardDescription className="text-base leading-relaxed">
+                  <CardDescription className="text-base leading-relaxed space-y-2">
                     <Streamdown>{tip.description || tip.why}</Streamdown>
+                    {tip.whatItIs && (
+                      <div className="mt-2 pt-2 border-t border-slate-200">
+                        <p className="text-sm text-slate-700"><strong>What it is:</strong> {tip.whatItIs}</p>
+                      </div>
+                    )}
+                    {tip.example && (
+                      <div className="mt-2 pt-2 border-t border-slate-200">
+                        <p className="text-sm text-slate-700"><strong>Example:</strong> {tip.example}</p>
+                      </div>
+                    )}
+                    {tip.lookFor && (
+                      <div className="mt-2 pt-2 border-t border-slate-200">
+                        <p className="text-sm text-slate-700"><strong>Look for:</strong> {tip.lookFor}</p>
+                      </div>
+                    )}
                   </CardDescription>
                 </CardHeader>
               </Card>
