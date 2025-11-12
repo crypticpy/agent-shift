@@ -588,7 +588,7 @@ export default function MakingOf() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <h3 className="text-2xl font-bold text-slate-900">Phase 4: Going Local - The Claude Code Revolution</h3>
+                    <h3 className="text-2xl font-bold text-slate-900">Phase 4: Going Local - The Power of Claude Code</h3>
                     <span className="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">Breakthrough</span>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
@@ -678,7 +678,7 @@ export default function MakingOf() {
                               super advanced algorithmic challenges. It was about <strong>interaction, communication, and speed</strong>.
                             </p>
                             <p className="leading-relaxed font-semibold text-purple-900">
-                              Once we hit the Sonnet 4.5 train, it changed everything.
+                              Once we were aboard the Sonnet train, everything changed.
                             </p>
                           </div>
                         </div>
