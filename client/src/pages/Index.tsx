@@ -30,16 +30,16 @@ export default function Index() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50 relative">
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
         {/* Hero Section */}
-        {/* Floating Orbs - Aurora Depth Effect */}
-        <FloatingOrbs />
+        <div className="relative container mx-auto px-4 py-20 md:py-28">
+          {/* Floating Orbs - Aurora Depth Effect */}
+          <FloatingOrbs />
 
-        {/* Wind-Driven Particles */}
-        <AdvancedParticles count={150} windSpeed={80} flockingEnabled={true} />
+          {/* Wind-Driven Particles */}
+          <AdvancedParticles count={150} windSpeed={80} flockingEnabled={true} />
 
-      <div className="container mx-auto px-4 py-20 md:py-28">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-coral-100 text-coral-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="h-4 w-4" />
             Stop Doing. Start Guiding.
@@ -109,11 +109,11 @@ export default function Index() {
             *Based on McKinsey research showing 60-70% of work activities can be automated with generative AI (2023),
             and multiple peer-reviewed studies documenting significant productivity gains across knowledge work tasks.
           </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* Doer vs Orchestrator Diagram */}
+      {/* Doer vs Orchestrator Diagram */}
     <div className="bg-white py-12">
         <div className="container mx-auto px-4">
           <DoerVsOrchestratorDiagram />
