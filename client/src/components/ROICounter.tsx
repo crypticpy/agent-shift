@@ -95,10 +95,12 @@ export function ROICounter({
           {/* Counter display */}
           <div className="relative px-6 py-4 md:px-8 md:py-5">
             <div
-              className={`text-3xl md:text-5xl lg:text-6xl font-black tracking-wider transition-all duration-200 ${
-                isJumping ? "scale-105" : "scale-100"
-              }`}
+              className="text-3xl md:text-5xl lg:text-6xl font-black tracking-wider"
               style={{
+                transform: isJumping ? "scale(1.05)" : "scale(1.0)",
+                transition: isJumping
+                  ? "transform 0.1s cubic-bezier(0.34, 1.56, 0.64, 1)"
+                  : "transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)",
                 color: "#fb923c",
                 fontFamily: "'Courier New', 'Consolas', monospace",
                 fontVariantNumeric: "tabular-nums",
