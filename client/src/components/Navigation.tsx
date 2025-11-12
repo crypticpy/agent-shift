@@ -85,12 +85,6 @@ export default function Navigation() {
       description: "Calculator and conversation guides",
       icon: MessageSquare,
     },
-    {
-      href: "/resources",
-      label: "Implementation",
-      description: "30-day plan and roadmap",
-      icon: Map,
-    },
   ];
 
   const isActive = (href: string) => {
