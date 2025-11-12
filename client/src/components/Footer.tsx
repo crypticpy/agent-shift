@@ -77,7 +77,7 @@ export default function Footer() {
                   Manus
                 </a>
                 <a
-                  href="https://www.zhipuai.cn"
+                  href="https://z.ai"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full font-medium hover:bg-white/30 hover:scale-105 transition-all duration-200 cursor-pointer"
