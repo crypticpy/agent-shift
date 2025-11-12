@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Redirect } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Navigation from "./components/Navigation";
@@ -12,10 +12,11 @@ import Compare from "./pages/Compare";
 import GettingStarted from "./pages/GettingStarted";
 import Learn from "./pages/Learn";
 import Workflows from "./pages/Workflows";
-import Calculator from "./pages/Calculator";
+import Guidance from "./pages/Guidance";
 import Resources from "./pages/Resources";
 import UseCases from "./pages/UseCases";
 import AgenticAIBusinessCase from "./pages/AgenticAIBusinessCase";
+import ToolStrategy from "./pages/ToolStrategy";
 
 function Router() {
   return (
@@ -30,10 +31,14 @@ function Router() {
         <Route path="/getting-started" component={GettingStarted} />
         <Route path="/learn" component={Learn} />
         <Route path="/workflows" component={Workflows} />
-        <Route path="/calculator" component={Calculator} />
+        <Route path="/calculator">
+          <Redirect to="/guidance" />
+        </Route>
+        <Route path="/guidance" component={Guidance} />
         <Route path="/resources" component={Resources} />
         <Route path="/business-case" component={AgenticAIBusinessCase} />
       <Route path="/use-cases" component={UseCases} />
+        <Route path="/tool-strategy" component={ToolStrategy} />
        <Route path={"/compare"} component={Compare} />
       <Route path={"/404"} component={NotFound} />        <Route component={NotFound} />
       </Switch>

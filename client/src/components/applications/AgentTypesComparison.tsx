@@ -11,7 +11,8 @@ import {
   FileText,
   CheckCircle2,
   XCircle,
-  Sparkles
+  Sparkles,
+  Layers
 } from "lucide-react";
 
 /**
@@ -58,11 +59,11 @@ export function AgentTypesComparison() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-4 gap-4">
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex items-center justify-between mb-3">
                 <p className="font-bold text-foreground">Claude (Sonnet)</p>
-                <Badge variant="default" className="bg-blue-600">Best</Badge>
+                <Badge variant="default" className="bg-blue-600">Best Overall</Badge>
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
@@ -82,21 +83,42 @@ export function AgentTypesComparison() {
 
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex items-center justify-between mb-3">
-                <p className="font-bold text-foreground">ChatGPT (o1)</p>
-                <Badge variant="outline">Strong</Badge>
+                <p className="font-bold text-foreground">OpenAI Codex</p>
+                <Badge variant="outline">Cloud Agent</Badge>
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Code generation, snippets</span>
+                  <span>Autonomous coding tasks</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Algorithm optimization</span>
+                  <span>Runs tests, fixes bugs</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Multi-language support</span>
+                  <span>Multi-task parallel work</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
+              <div className="flex items-center justify-between mb-3">
+                <p className="font-bold text-foreground">Jules (Google)</p>
+                <Badge variant="outline">Async Agent</Badge>
+              </div>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>GitHub integration</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Async task execution</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Gemini 2.5 powered</span>
                 </div>
               </div>
             </div>
@@ -125,7 +147,7 @@ export function AgentTypesComparison() {
 
           <div className="mt-4 p-4 bg-blue-50 rounded-lg">
             <p className="text-sm text-blue-900">
-              <strong>Use Case:</strong> Building a new feature? Start with Claude for architecture, use ChatGPT for algorithm optimization, and Copilot for line-by-line coding.
+              <strong>Use Case:</strong> Building a new feature? Start with Claude for architecture, use OpenAI Codex for autonomous implementation, Jules for async GitHub workflows, and Copilot for line-by-line coding.
             </p>
           </div>
         </Card>
@@ -164,30 +186,52 @@ export function AgentTypesComparison() {
               </div>
             </div>
 
-            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200 opacity-60">
+            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex items-center justify-between mb-3">
-                <p className="font-bold text-foreground">ChatGPT</p>
-                <Badge variant="secondary">Coming Soon</Badge>
+                <p className="font-bold text-foreground">ChatGPT agent</p>
+                <Badge variant="outline">Now Available</Badge>
               </div>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p>Computer control features announced but not yet released</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Browse & interact with sites</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Run code, analyze data</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Agent mode in Plus/Pro</span>
+                </div>
               </div>
             </div>
 
-            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200 opacity-60">
+            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex items-center justify-between mb-3">
-                <p className="font-bold text-foreground">Gemini</p>
-                <Badge variant="secondary">In Development</Badge>
+                <p className="font-bold text-foreground">Gemini Computer Use</p>
+                <Badge variant="outline">Available</Badge>
               </div>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p>Desktop automation capabilities in research phase</p>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Browser automation</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Screenshot inference</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>UI action generation</span>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="mt-4 p-4 bg-purple-50 rounded-lg">
             <p className="text-sm text-purple-900">
-              <strong>Use Case:</strong> "Fill out this expense report by pulling data from my receipts folder and entering it into the company portal." Agent sees your screen, opens apps, and completes the task.
+              <strong>Use Case:</strong> "Fill out this expense report by pulling data from my receipts folder and entering it into the company portal." Agent sees your screen, opens apps, and completes the task. Or use ChatGPT agent to book appointments and research while you browse.
             </p>
           </div>
         </Card>
@@ -208,7 +252,7 @@ export function AgentTypesComparison() {
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex items-center justify-between mb-3">
                 <p className="font-bold text-foreground">Perplexity</p>
-                <Badge variant="default" className="bg-emerald-600">Best</Badge>
+                <Badge variant="default" className="bg-emerald-600">Best Research</Badge>
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
@@ -228,21 +272,21 @@ export function AgentTypesComparison() {
 
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex items-center justify-between mb-3">
-                <p className="font-bold text-foreground">ChatGPT Browse</p>
-                <Badge variant="outline">Strong</Badge>
+                <p className="font-bold text-foreground">ChatGPT Atlas</p>
+                <Badge variant="outline">AI Browser</Badge>
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Current information</span>
+                  <span>Agent mode while browsing</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Multiple sources</span>
+                  <span>Browser memories</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Conversation context</span>
+                  <span>Tasks while you browse</span>
                 </div>
               </div>
             </div>
@@ -271,7 +315,7 @@ export function AgentTypesComparison() {
 
           <div className="mt-4 p-4 bg-emerald-50 rounded-lg">
             <p className="text-sm text-emerald-900">
-              <strong>Use Case:</strong> Competitive intelligence? Use Perplexity for cited research. Product comparisons? ChatGPT Browse synthesizes across sources. YouTube research? Gemini extracts video content.
+              <strong>Use Case:</strong> Competitive intelligence? Use Perplexity for cited research. Need agents while browsing? ChatGPT Atlas automates tasks as you browse. YouTube research? Gemini extracts video content and integrates with Google Workspace.
             </p>
           </div>
         </Card>
@@ -291,35 +335,41 @@ export function AgentTypesComparison() {
           <div className="grid md:grid-cols-4 gap-4">
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex flex-col gap-2 mb-3">
-                <p className="font-bold text-foreground">DALL-E 3</p>
-                <Badge variant="default" className="bg-pink-600 w-fit">Accessible</Badge>
+                <p className="font-bold text-foreground">ChatGPT (GPT-4o)</p>
+                <Badge variant="default" className="bg-pink-600 w-fit">#1 Overall</Badge>
               </div>
-              <p className="text-sm text-muted-foreground">Built into ChatGPT, best for quick visuals and text rendering</p>
+              <p className="text-sm text-muted-foreground">Best text accuracy, photorealism, complex scenes. Built into ChatGPT.</p>
             </div>
 
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex flex-col gap-2 mb-3">
-                <p className="font-bold text-foreground">Midjourney</p>
+                <p className="font-bold text-foreground">Google Imagen 4</p>
+                <Badge variant="outline" className="w-fit">Speed & Realism</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground">4K output, photorealistic, accurate text, built-in watermarking</p>
+            </div>
+
+            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
+              <div className="flex flex-col gap-2 mb-3">
+                <p className="font-bold text-foreground">MiniMax Image</p>
+                <Badge variant="outline" className="w-fit">Photorealistic</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground">Realistic photos, clean compositions, camera effects. $0.01/image.</p>
+            </div>
+
+            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
+              <div className="flex flex-col gap-2 mb-3">
+                <p className="font-bold text-foreground">Midjourney V7</p>
                 <Badge variant="outline" className="w-fit">Artistic</Badge>
               </div>
-              <p className="text-sm text-muted-foreground">Discord-based, stunning artistic images, illustration-focused</p>
+              <p className="text-sm text-muted-foreground">Stunning artistic images, illustration-focused, creative quality</p>
             </div>
+          </div>
 
-            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
-              <div className="flex flex-col gap-2 mb-3">
-                <p className="font-bold text-foreground">Stable Diffusion</p>
-                <Badge variant="outline" className="w-fit">Customizable</Badge>
-              </div>
-              <p className="text-sm text-muted-foreground">Open source, run locally, full control, model training</p>
-            </div>
-
-            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
-              <div className="flex flex-col gap-2 mb-3">
-                <p className="font-bold text-foreground">Ideogram</p>
-                <Badge variant="outline" className="w-fit">Typography</Badge>
-              </div>
-              <p className="text-sm text-muted-foreground">Best at text within images, logos, posters, signage</p>
-            </div>
+          <div className="mt-4 p-4 bg-pink-50 rounded-lg">
+            <p className="text-sm text-pink-900">
+              <strong>Use Case:</strong> Marketing materials? ChatGPT for text-heavy designs. Product photos? MiniMax or Imagen 4 for photorealism. Artistic concepts? Midjourney for creative illustrations.
+            </p>
           </div>
         </Card>
 
@@ -331,70 +381,70 @@ export function AgentTypesComparison() {
             </div>
             <div className="flex-1">
               <h4 className="text-xl font-bold text-foreground mb-1">Video Generation Agents</h4>
-              <p className="text-muted-foreground">Create videos from text, edit clips, generate animations</p>
+              <p className="text-muted-foreground">Create videos from text, edit clips, generate animations with audio</p>
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex items-center justify-between mb-3">
-                <p className="font-bold text-foreground">Minimax</p>
-                <Badge variant="default" className="bg-indigo-600">Emerging Leader</Badge>
+                <p className="font-bold text-foreground">OpenAI Sora 2</p>
+                <Badge variant="default" className="bg-indigo-600">Physics Master</Badge>
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Text-to-video generation</span>
+                  <span>Cinematic realism</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>High-quality output</span>
+                  <span>Accurate physics simulation</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Growing capabilities</span>
+                  <span>Synchronized audio (1080p)</span>
                 </div>
               </div>
             </div>
 
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex items-center justify-between mb-3">
-                <p className="font-bold text-foreground">Runway</p>
+                <p className="font-bold text-foreground">Google Veo 3.1</p>
+                <Badge variant="outline">4K + Control</Badge>
+              </div>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>4K resolution output</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Lip-synced dialogue</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Creative controls + API</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
+              <div className="flex items-center justify-between mb-3">
+                <p className="font-bold text-foreground">Runway Gen-3</p>
                 <Badge variant="outline">Professional</Badge>
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Advanced editing tools</span>
+                  <span>Advanced editing suite</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Motion graphics</span>
+                  <span>Motion graphics tools</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Industry adoption</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
-              <div className="flex items-center justify-between mb-3">
-                <p className="font-bold text-foreground">Pika</p>
-                <Badge variant="outline">Creative</Badge>
-              </div>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Flexible generation</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Style control</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Community-driven</span>
+                  <span>Industry standard</span>
                 </div>
               </div>
             </div>
@@ -402,7 +452,7 @@ export function AgentTypesComparison() {
 
           <div className="mt-4 p-4 bg-indigo-50 rounded-lg">
             <p className="text-sm text-indigo-900">
-              <strong>Use Case:</strong> Social media content? Minimax generates eye-catching clips. Professional presentations? Runway offers precision editing. Quick animations? Pika provides creative flexibility.
+              <strong>Use Case:</strong> Cinematic shorts with realistic physics? Sora 2 excels at natural movement. High-resolution commercial content? Veo 3.1 delivers 4K with dialogue. Professional film editing? Runway Gen-3 offers the full creative toolkit.
             </p>
           </div>
         </Card>
@@ -415,7 +465,7 @@ export function AgentTypesComparison() {
             </div>
             <div className="flex-1">
               <h4 className="text-xl font-bold text-foreground mb-1">Voice & Audio Agents</h4>
-              <p className="text-muted-foreground">Voice input, speech generation, audio transcription, voice cloning</p>
+              <p className="text-muted-foreground">Real-time conversation, speech generation, transcription, voice cloning</p>
             </div>
           </div>
 
@@ -432,11 +482,11 @@ export function AgentTypesComparison() {
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Low latency</span>
+                  <span>Ultra-low latency</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Built into mobile app</span>
+                  <span>Voice customization (2025)</span>
                 </div>
               </div>
             </div>
@@ -449,37 +499,154 @@ export function AgentTypesComparison() {
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Emotionally rich speech</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                   <span>Custom voice creation</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Multiple languages</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Professional quality</span>
+                  <span>32+ languages</span>
                 </div>
               </div>
             </div>
 
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
               <div className="flex items-center justify-between mb-3">
-                <p className="font-bold text-foreground">Whisper (OpenAI)</p>
+                <p className="font-bold text-foreground">GPT-4o Transcribe</p>
                 <Badge variant="outline">Transcription</Badge>
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Accurate transcription</span>
+                  <span>Lower word error rate</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>99 languages</span>
+                  <span>Better language recognition</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Open source</span>
+                  <span>API access (2025 upgrade)</span>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-4 p-4 bg-orange-50 rounded-lg">
+            <p className="text-sm text-orange-900">
+              <strong>Use Case:</strong> Real-time phone calls? ChatGPT Voice for natural conversation. Podcasts and audiobooks? ElevenLabs for emotional depth. Meeting transcripts? GPT-4o Transcribe for accuracy across languages.
+            </p>
+          </div>
+        </Card>
+
+        {/* Super Agents / Agent Platforms */}
+        <Card className="p-6 border-2 border-violet-200 hover:border-violet-400 transition-colors bg-gradient-to-br from-violet-50 to-purple-50">
+          <div className="flex items-start gap-4 mb-6">
+            <div className="p-3 rounded-xl bg-violet-100">
+              <Layers className="h-7 w-7 text-violet-600" />
+            </div>
+            <div className="flex-1">
+              <h4 className="text-xl font-bold text-foreground mb-1">Super Agents / Agent Platforms</h4>
+              <p className="text-muted-foreground">Fully integrated systems with VM spawning, built-in IDEs, presentation tools, and multiple capabilities—no add-ons needed</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-white p-5 rounded-lg border-2 border-violet-200">
+              <div className="flex items-center justify-between mb-3">
+                <p className="font-bold text-foreground">Kimi K2</p>
+                <Badge variant="default" className="bg-violet-600">OK Computer</Badge>
+              </div>
+              <div className="space-y-2 text-sm mb-3">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Virtual computer for tasks</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Website builder (chat → site)</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>1M row data processing</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>VS Code integration (Cline)</span>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground italic">1T parameter MoE, K2 Thinking (Nov 2025)</p>
+            </div>
+
+            <div className="bg-white p-5 rounded-lg border-2 border-violet-200">
+              <div className="flex items-center justify-between mb-3">
+                <p className="font-bold text-foreground">Manus</p>
+                <Badge variant="outline">Cloud VM</Badge>
+              </div>
+              <div className="space-y-2 text-sm mb-3">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Dedicated cloud VM per session</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Sandboxed environment</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Multi-agent architecture</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Runs 24/7 even when offline</span>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground italic">Launched March 2025, 2M+ waitlist signups</p>
+            </div>
+
+            <div className="bg-white p-5 rounded-lg border-2 border-violet-200">
+              <div className="flex items-center justify-between mb-3">
+                <p className="font-bold text-foreground">MiniMax Agent</p>
+                <Badge variant="outline">All-in-One</Badge>
+              </div>
+              <div className="space-y-2 text-sm mb-3">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Shell, Browser, Python built-in</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>No-code app builder</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>Lightning & Pro modes</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>8% of Claude price, 2x speed</span>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground italic">M2 model (230B params), 69.4 SWE-bench score</p>
+            </div>
+          </div>
+
+          <div className="mt-4 p-4 bg-violet-50 rounded-lg border-l-4 border-violet-500">
+            <p className="text-sm text-violet-900">
+              <strong>Use Case:</strong> Need a full development environment? These platforms spawn virtual machines with IDE access. Building apps from scratch? No-code builders turn descriptions into working sites. Processing massive datasets? They handle millions of rows natively. Unlike specialized agents, super agents combine coding, browsing, data processing, and presentations in one platform.
+            </p>
+          </div>
+
+          <div className="mt-4 p-5 bg-gradient-to-r from-violet-100 to-purple-100 rounded-lg border border-violet-300">
+            <div className="flex items-start gap-3">
+              <span className="text-2xl">🚀</span>
+              <div>
+                <p className="font-bold text-foreground mb-2">The Future: Router Models & Unified Platforms</p>
+                <p className="text-sm text-muted-foreground">
+                  ChatGPT and Google are moving toward this model—folding multiple specialized models under a router that picks the right one for each task. These Chinese platforms (Kimi K2, Manus, MiniMax) are already there, offering truly general-purpose AI agents that can tackle complex, multi-step workflows across domains without switching tools.
+                </p>
               </div>
             </div>
           </div>
@@ -518,7 +685,7 @@ export function AgentTypesComparison() {
 
         <div className="mt-6 p-5 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg border-l-4 border-primary">
           <p className="text-foreground font-medium">
-            <strong>Pro Tip:</strong> Don't feel locked into one platform. The best orchestrators use 3-5 different agents for different specialties—Claude for code architecture, Perplexity for research, Minimax for video, ChatGPT for general tasks. Mix and match based on what each does best.
+            <strong>Pro Tip:</strong> Don't feel locked into one platform. The best orchestrators use 3-5 different agents for different specialties—Claude for code architecture, Perplexity for research, MiniMax for video, ChatGPT for general tasks. For complex multi-step projects requiring VM environments and full development stacks, consider super agent platforms like Kimi K2, Manus, or MiniMax Agent. Mix and match based on what each does best.
           </p>
         </div>
       </Card>

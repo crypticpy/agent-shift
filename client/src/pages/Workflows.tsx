@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +18,7 @@ import { FloatingOrbs } from "@/components/FloatingOrbs";
 import { FlowingStreams } from "@/components/FlowingStreams";
 import { useParticleBurst } from "@/hooks/useParticleBurst";
 import { useComplementaryColors } from "@/hooks/useComplementaryColors";
+import { MultiAgentWorkflowDiagram } from "@/components/MultiAgentWorkflowDiagram";
 
 interface WorkflowStep {
   title: string;
@@ -36,6 +37,7 @@ interface Workflow {
   timeSaved: string;
   roiAnnual: string;
   category: string;
+  pattern: string; // Orchestration pattern label
   steps: WorkflowStep[];
 }
 
@@ -50,6 +52,7 @@ const workflows: Workflow[] = [
     timeSaved: "10 minutes per email",
     roiAnnual: "$5,000+ for frequent emailers",
     category: "Beginner",
+    pattern: "Sequential: Capture → Transcribe → Polish",
     steps: [
       {
         title: "Record Your Thoughts",
@@ -81,6 +84,7 @@ const workflows: Workflow[] = [
     timeSaved: "20 minutes per meeting",
     roiAnnual: "$10,000+ for managers",
     category: "Beginner",
+    pattern: "Sequential: Record → Transcribe → Summarize",
     steps: [
       {
         title: "Record the Meeting",
@@ -118,6 +122,7 @@ const workflows: Workflow[] = [
     timeSaved: "1 hour 45 minutes",
     roiAnnual: "$15,000+ for researchers",
     category: "Beginner",
+    pattern: "Iterative: Research → Review → Refine → Format",
     steps: [
       {
         title: "Ask for Research",
@@ -149,6 +154,7 @@ const workflows: Workflow[] = [
     timeSaved: "4+ hours",
     roiAnnual: "$20,000+ for frequent presenters",
     category: "Intermediate",
+    pattern: "Sequential: Record → Extract → Generate → Polish",
     steps: [
       {
         title: "Record & Transcribe",
@@ -186,6 +192,7 @@ const workflows: Workflow[] = [
     timeSaved: "1+ hour daily",
     roiAnnual: "$25,000+ for high-volume inboxes",
     category: "Intermediate",
+    pattern: "Batch Processing: Summarize → Draft → Review",
     steps: [
       {
         title: "Summarize Incoming Emails",
@@ -217,6 +224,7 @@ const workflows: Workflow[] = [
     timeSaved: "5+ hours",
     roiAnnual: "$30,000+ for analysts",
     category: "Intermediate",
+    pattern: "Sequential: Gather → Structure → Generate → Format",
     steps: [
       {
         title: "Gather and Summarize Sources",
@@ -254,6 +262,7 @@ const workflows: Workflow[] = [
     timeSaved: "45 minutes (80% faster)",
     roiAnnual: "$15,000+ for field staff",
     category: "Intermediate",
+    pattern: "Sequential: Speak → Transcribe → Polish",
     steps: [
       {
         title: "Start Dictation",
@@ -285,6 +294,7 @@ const workflows: Workflow[] = [
     timeSaved: "25+ hours",
     roiAnnual: "$50,000+ for research teams",
     category: "Advanced",
+    pattern: "Agent Chain: Research → Analyze → Write → Visualize",
     steps: [
       {
         title: "Agent 1: Topic Research",
@@ -328,6 +338,7 @@ const workflows: Workflow[] = [
     timeSaved: "10+ hours",
     roiAnnual: "$40,000+ for policy analysts",
     category: "Advanced",
+    pattern: "Sequential Analysis: Ingest → Compare → Assess → Recommend",
     steps: [
       {
         title: "Document Ingestion",
@@ -371,6 +382,7 @@ const workflows: Workflow[] = [
     timeSaved: "7+ hours",
     roiAnnual: "$35,000+ for data analysts",
     category: "Advanced",
+    pattern: "Sequential: Clean → Analyze → Visualize → Present",
     steps: [
       {
         title: "Data Upload & Cleaning",
@@ -414,6 +426,7 @@ const workflows: Workflow[] = [
     timeSaved: "16+ hours",
     roiAnnual: "$60,000+ for power users",
     category: "Advanced",
+    pattern: "Multi-Agent: Design → Gather → Analyze → Synthesize",
     steps: [
       {
         title: "Design the Chain",
@@ -463,6 +476,7 @@ const workflows: Workflow[] = [
     timeSaved: "50%+ of prompt writing time",
     roiAnnual: "$20,000+ for frequent AI users",
     category: "Advanced",
+    pattern: "Cascading: Define → Generate Prompt → Execute → Refine",
     steps: [
       {
         title: "Define the End Goal",
@@ -501,6 +515,8 @@ const workflows: Workflow[] = [
 export default function Workflows() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [expandedWorkflow, setExpandedWorkflow] = useState<string | null>(null);
+  const [showFloatingCTA, setShowFloatingCTA] = useState(false);
+  const calloutRef = useRef<HTMLDivElement>(null);
   const handleBurst = useParticleBurst();
   const { complementaryHue, complementLight, complementDark, cssVariables } = useComplementaryColors();
 
@@ -509,6 +525,26 @@ export default function Workflows() {
   const filteredWorkflows = selectedCategory === "all"
     ? workflows
     : workflows.filter(w => w.category === selectedCategory);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Track scroll position to show/hide floating CTA
+  useEffect(() => {
+    const handleScroll = () => {
+      if (calloutRef.current) {
+        const rect = calloutRef.current.getBoundingClientRect();
+        // Show floating CTA when callout has scrolled past the top of viewport
+        setShowFloatingCTA(rect.bottom < 0);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -552,10 +588,77 @@ export default function Workflows() {
         </div>
       </div>
 
+      {/* Multi-Agent Workflow Diagram */}
+      <div className="bg-white py-12">
+        <div className="container mx-auto px-4">
+          <MultiAgentWorkflowDiagram />
+        </div>
+      </div>
+
+      {/* Understanding Agents Callout */}
+      <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="glass card-lift p-8 rounded-2xl border-2 border-blue-200/50 bg-white/80 backdrop-blur-sm">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="text-4xl">💡</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3">Understanding "Agents" in These Workflows</h3>
+                  <p className="text-lg text-slate-700 mb-4 leading-relaxed">
+                    When we say "Agent 1," "Agent 2," etc., we're talking about <span className="font-semibold text-slate-900">functional roles</span>, not different tools.
+                  </p>
+                  <p className="text-base text-slate-600 mb-6 leading-relaxed">
+                    Think of it like this: The same AI tool can play different roles depending on what you ask it to do.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-br from-blue-50 to-white p-5 rounded-xl border border-blue-200">
+                  <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                    <span className="text-lg">🔄</span>
+                    One Tool, Multiple Roles
+                  </h4>
+                  <p className="text-sm text-slate-700 leading-relaxed">
+                    You could use ChatGPT for all 3 steps in a workflow—just give it different prompts for each role.
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-purple-50 to-white p-5 rounded-xl border border-purple-200">
+                  <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                    <span className="text-lg">🎯</span>
+                    Built-In Orchestration
+                  </h4>
+                  <p className="text-sm text-slate-700 leading-relaxed">
+                    Advanced platforms like Manus or Claude can spawn sub-agents internally to handle different parts of your request.
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-teal-50 to-white p-5 rounded-xl border border-teal-200">
+                  <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                    <span className="text-lg">🎨</span>
+                    Mix and Match
+                  </h4>
+                  <p className="text-sm text-slate-700 leading-relaxed">
+                    Use ChatGPT for research, Claude for writing, and Perplexity for fact-checking—whatever works best.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 bg-slate-50 rounded-lg border-l-4 border-blue-500">
+                <p className="text-sm font-semibold text-slate-900">
+                  💡 The key insight: What makes it "multi-agent" is the <span className="text-blue-600">orchestration pattern</span> (how tasks flow together), not how many tool subscriptions you need.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           {/* Callout to Use Cases */}
-          <div className="glass card-lift p-8 rounded-2xl mb-12 border border-primary/20 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">
+          <div ref={calloutRef} className="glass card-lift p-8 rounded-2xl mb-12 border border-primary/20 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">
             <div className="flex items-start gap-6">
               <div
                 className="h-14 w-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg"
@@ -588,8 +691,9 @@ export default function Workflows() {
           </div>
 
           {/* Filter Tabs */}
-          <Tabs defaultValue="all" className="mb-10">
-            <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto bg-slate-100/80 backdrop-blur-sm p-1.5 rounded-xl">
+          <div className="sticky top-0 z-30 bg-gradient-to-br from-warm-50 via-white to-amber-50 py-4 -mx-4 px-4 mb-6">
+            <Tabs defaultValue="all" className="">
+              <TabsList className="grid w-full grid-cols-4 max-w-2xl mx-auto bg-slate-100/80 backdrop-blur-sm p-1.5 rounded-xl shadow-md">
               <TabsTrigger
                 value="all"
                 onClick={() => setSelectedCategory("all")}
@@ -639,7 +743,8 @@ export default function Workflows() {
                 Advanced
               </TabsTrigger>
             </TabsList>
-          </Tabs>
+            </Tabs>
+          </div>
 
           {/* Workflow Cards */}
           <div className="space-y-8">
@@ -654,9 +759,15 @@ export default function Workflows() {
                           {workflow.difficulty}
                         </Badge>
                       </div>
-                      <CardDescription className="text-base md:text-lg text-slate-600">
+                      <CardDescription className="text-base md:text-lg text-slate-600 mb-3">
                         {workflow.description}
                       </CardDescription>
+
+                      {/* Orchestration Pattern Badge */}
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary">
+                        <span className="text-xs">🎼</span>
+                        <span>{workflow.pattern}</span>
+                      </div>
                     </div>
                   </div>
 
@@ -670,18 +781,18 @@ export default function Workflows() {
                       <div className="font-bold text-lg text-slate-900">{workflow.timeManual}</div>
                     </div>
                     <div className="glass p-4 rounded-xl border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all">
-                      <div className="flex items-center gap-2 text-accent text-sm mb-2">
+                      <div className="flex items-center gap-2 text-slate-900 text-sm mb-2">
                         <Zap className="h-4 w-4" />
                         <span className="font-medium">With AI</span>
                       </div>
-                      <div className="font-bold text-lg text-accent">{workflow.timeAI}</div>
+                      <div className="font-bold text-lg text-slate-900">{workflow.timeAI}</div>
                     </div>
                     <div className="glass p-4 rounded-xl border border-accent/20 bg-accent/10 hover:bg-accent/20 transition-all">
-                      <div className="flex items-center gap-2 text-accent-foreground text-sm mb-2">
+                      <div className="flex items-center gap-2 text-slate-900 text-sm mb-2">
                         <TrendingUp className="h-4 w-4" />
                         <span className="font-medium">Time Saved</span>
                       </div>
-                      <div className="font-bold text-lg text-accent-foreground">{workflow.timeSaved}</div>
+                      <div className="font-bold text-lg text-slate-900">{workflow.timeSaved}</div>
                     </div>
                     <div className="glass p-4 rounded-xl border border-primary/30 bg-primary/5 hover:bg-primary/10 transition-all">
                       <div className="flex items-center gap-2 text-primary text-sm mb-2">
@@ -733,7 +844,7 @@ export default function Workflows() {
                                 <div className="flex-1">
                                   <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
                                     <h5 className="font-bold text-lg md:text-xl text-slate-900">{step.title}</h5>
-                                    <Badge variant="outline" className="flex items-center gap-1.5 border-accent/30 text-accent">
+                                    <Badge variant="outline" className="flex items-center gap-1.5 border-accent/30 text-slate-900">
                                       <Clock className="h-3.5 w-3.5" />
                                       {step.time}
                                     </Badge>
@@ -744,7 +855,7 @@ export default function Workflows() {
                                       <Badge
                                         key={toolIndex}
                                         variant="secondary"
-                                        className="bg-gradient-to-r from-slate-50 to-slate-100 hover:from-primary/10 hover:to-accent/10 border border-slate-200 transition-all"
+                                        className="bg-gradient-to-r from-slate-50 to-slate-100 hover:from-primary/10 hover:to-accent/10 border border-slate-200 transition-all text-slate-900"
                                       >
                                         {tool}
                                       </Badge>
@@ -766,16 +877,18 @@ export default function Workflows() {
                       </Button>
                     </div>
                   ) : (
-                    <Button
-                      onClick={() => setExpandedWorkflow(workflow.id)}
-                      className="w-full text-white shadow-lg text-base py-6 border-0"
-                      style={{
-                        background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.68 0.20 ${complementLight}), oklch(0.70 0.22 ${complementDark}))`,
-                      }}
-                    >
-                      View Step-by-Step Instructions
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
+                    <div className="flex justify-center">
+                      <Button
+                        onClick={() => setExpandedWorkflow(workflow.id)}
+                        className="text-slate-900 shadow-lg text-base py-5 px-6 border-0"
+                        style={{
+                          background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.68 0.20 ${complementLight}), oklch(0.70 0.22 ${complementDark}))`,
+                        }}
+                      >
+                        View Step-by-Step Instructions
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </div>
                   )}
                 </CardContent>
               </Card>
@@ -824,6 +937,26 @@ export default function Workflows() {
           </div>
         </div>
       </div>
+
+      {/* Floating CTA Button */}
+      {showFloatingCTA && (
+        <div className="fixed bottom-8 right-8 z-40 animate-in slide-in-from-bottom-4 fade-in duration-300">
+          <Link href="/use-cases">
+            <Button
+              size="lg"
+              className="relative text-white shadow-2xl overflow-hidden border-0 text-base px-6 py-6 hover:scale-105 transition-transform"
+              style={{
+                background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.68 0.20 ${complementLight}), oklch(0.70 0.22 ${complementDark}))`,
+              }}
+              onClick={handleBurst}
+            >
+              <Sparkles className="mr-2 h-5 w-5" />
+              View Advanced Use Cases
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -22,6 +23,10 @@ import { useParticleBurst } from "@/hooks/useParticleBurst";
 export default function Resources() {
   const handleBurst = useParticleBurst();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
       {/* Hero */}
@@ -29,10 +34,10 @@ export default function Resources() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Resources & Guides
+              Your Orchestration Toolkit
             </h1>
             <p className="text-xl opacity-95">
-              Everything you need to successfully implement AI agents in your organization
+              Guides, timelines, and resources to help you shift from doing to orchestrating
             </p>
           </div>
         </div>
@@ -40,6 +45,17 @@ export default function Resources() {
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
+          {/* Context Card */}
+          <Card className="mb-8 border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-white">
+            <CardContent className="p-6">
+              <p className="text-lg text-slate-700">
+                You've learned the concept: <strong>You orchestrate. Agents execute.</strong>{" "}
+                Now here's everything you need to make it real in your organization—from
+                your first 30 days to security guidelines to future roadmaps.
+              </p>
+            </CardContent>
+          </Card>
+
           {/* Featured: Business Case Article */}
           <Card className="mb-8 border-2 border-orange-300 bg-gradient-to-br from-orange-50 to-amber-50 shadow-xl">
             <CardHeader>
@@ -396,7 +412,7 @@ export default function Resources() {
                     <div className="bg-gradient-to-br from-amber-50 to-amber-100 p-5 rounded-lg border-l-4 border-amber-600 card-lift hover:shadow-md transition-all">
                       <h5 className="font-semibold mb-2">Mobile-First AI</h5>
                       <p className="text-sm text-slate-700">
-                        AI agents will work seamlessly on your phone. Start a task on your phone while walking, 
+                        AI agents will work smoothly on your phone. Start a task on your phone while walking,
                         and see the results on your computer later.
                       </p>
                     </div>

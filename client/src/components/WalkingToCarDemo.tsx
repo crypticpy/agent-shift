@@ -10,10 +10,12 @@ interface WalkingToCarDemoProps {
   voiceInput: string;
   tasks: Task[];
   totalDuration: number; // total animation duration in milliseconds
+  typewriterDuration?: number; // how long typewriter effect takes
+  taskStartDelay?: number; // delay after typewriter before tasks start
   imagePath?: string; // path to the walking image
 }
 
-const TypewriterText = ({ text, isPlaying }: { text: string; isPlaying: boolean }) => {
+const TypewriterText = ({ text, isPlaying, onComplete }: { text: string; isPlaying: boolean; onComplete?: () => void }) => {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
@@ -31,11 +33,12 @@ const TypewriterText = ({ text, isPlaying }: { text: string; isPlaying: boolean 
         currentIndex++;
       } else {
         clearInterval(interval);
+        onComplete?.();
       }
     }, typingSpeed);
 
     return () => clearInterval(interval);
-  }, [text, isPlaying]);
+  }, [text, isPlaying, onComplete]);
 
   return <>{displayedText}</>;
 };
@@ -44,12 +47,15 @@ export default function WalkingToCarDemo({
   voiceInput,
   tasks,
   totalDuration,
+  typewriterDuration = 5100,
+  taskStartDelay = 500,
   imagePath = "/images/walking-to-car.png",
 }: WalkingToCarDemoProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [completedTaskCount, setCompletedTaskCount] = useState(0);
   const [showSummary, setShowSummary] = useState(false);
+  const [typewriterComplete, setTypewriterComplete] = useState(false);
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -61,13 +67,19 @@ export default function WalkingToCarDemo({
 
       if (elapsed >= totalDuration) {
         setIsPlaying(false);
-        setShowSummary(true);
         clearInterval(interval);
       }
     }, 50); // Update every 50ms for smooth animation
 
     return () => clearInterval(interval);
   }, [isPlaying, totalDuration]);
+
+  // Show summary only when ALL tasks are complete
+  useEffect(() => {
+    if (completedTaskCount === tasks.length && !showSummary && !isPlaying) {
+      setShowSummary(true);
+    }
+  }, [completedTaskCount, tasks.length, showSummary, isPlaying]);
 
   const formatTime = (ms: number) => {
     const totalSeconds = Math.floor(ms / 1000);
@@ -80,6 +92,7 @@ export default function WalkingToCarDemo({
     setElapsedTime(0);
     setCompletedTaskCount(0);
     setShowSummary(false);
+    setTypewriterComplete(false);
     setIsPlaying(true);
   };
 
@@ -87,6 +100,7 @@ export default function WalkingToCarDemo({
     setElapsedTime(0);
     setCompletedTaskCount(0);
     setShowSummary(false);
+    setTypewriterComplete(false);
     setIsPlaying(false);
   };
 
@@ -94,10 +108,15 @@ export default function WalkingToCarDemo({
     setCompletedTaskCount((prev) => prev + 1);
   };
 
+  const handleTypewriterComplete = () => {
+    setTypewriterComplete(true);
+  };
+
   const progress = Math.min((elapsedTime / totalDuration) * 100, 100);
 
-  // Tasks start at 0ms, 500ms, and 1000ms for overlap
-  const taskStartTimes = [0, 500, 1000];
+  // All tasks start at the same time: after typewriter finishes + delay
+  const tasksStartTime = typewriterDuration + taskStartDelay;
+  const taskStartTimes = [tasksStartTime, tasksStartTime, tasksStartTime];
 
   return (
     <div className="my-8">
@@ -105,7 +124,7 @@ export default function WalkingToCarDemo({
       <div className="text-center mb-6">
         <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Voice Multitasking in Action</h3>
         <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-          Watch how a single voice command gets transformed into multiple completed tasks in 30 seconds
+          Watch how a single voice command gets transformed into multiple completed tasks in 15 seconds
         </p>
       </div>
 
@@ -201,7 +220,7 @@ export default function WalkingToCarDemo({
                   <div>
                     <p className="text-xs font-semibold text-blue-900 dark:text-blue-100 mb-1">You said:</p>
                     <p className="text-sm text-foreground italic leading-relaxed">
-                      "<TypewriterText text={voiceInput} isPlaying={isPlaying && !showSummary} />"
+                      "{showSummary ? voiceInput : <TypewriterText text={voiceInput} isPlaying={isPlaying && !typewriterComplete} onComplete={handleTypewriterComplete} />}"
                     </p>
                   </div>
                 </div>
@@ -243,13 +262,13 @@ export default function WalkingToCarDemo({
                   <div>
                     <p className="font-bold text-base text-emerald-900 dark:text-emerald-100 mb-1">Mission Complete!</p>
                     <p className="text-xs text-muted-foreground mb-2">
-                      <strong>{tasks.length} tasks completed</strong> in 30 seconds
+                      <strong>{tasks.length} tasks completed</strong> in 15 seconds
                     </p>
                     <p className="text-xs text-muted-foreground mb-1">
                       Traditional approach: <strong>25-30 minutes</strong> of manual work
                     </p>
                     <p className="text-sm font-semibold text-emerald-700 dark:text-emerald-300 mt-2">
-                      Time saved: ~27 minutes (98% faster!)
+                      Time saved: ~27 minutes (99% faster!)
                     </p>
                   </div>
                 </div>

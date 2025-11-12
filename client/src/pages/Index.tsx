@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,10 +18,15 @@ import {
 import { FloatingOrbs } from "@/components/FloatingOrbs";
 import { AdvancedParticles } from "@/components/advanced-particles";
 import { useParticleBurst } from "@/hooks/useParticleBurst";
+import { DoerVsOrchestratorDiagram } from "@/components/DoerVsOrchestratorDiagram";
 
 // Updated version
 export default function Index() {
   const handleBurst = useParticleBurst();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
@@ -102,6 +108,13 @@ export default function Index() {
             *Based on McKinsey research showing 60-70% of work activities can be automated with generative AI (2023),
             and multiple peer-reviewed studies documenting significant productivity gains across knowledge work tasks.
           </p>
+        </div>
+      </div>
+
+      {/* Doer vs Orchestrator Diagram */}
+      <div className="bg-white py-12">
+        <div className="container mx-auto px-4">
+          <DoerVsOrchestratorDiagram />
         </div>
       </div>
 
@@ -277,7 +290,7 @@ export default function Index() {
               Less work blocks your calendar or inhibits your decision-making. More ideas become impactful. Your mind is freed for the complex challenges that matter.
             </p>
             <p className="text-lg mb-8 opacity-95 leading-relaxed font-normal">
-              Everyone can leverage AI agents. Great ideas that dried on the vine can finally happen.
+              Everyone can use AI agents. Great ideas that dried on the vine can finally happen.
             </p>
             <Link href="/learn">
               <Button size="lg" variant="secondary" className="text-lg px-8 py-6 rounded-lg font-semibold card-lift">
@@ -306,7 +319,7 @@ export default function Index() {
                   className="relative text-lg px-8 py-6 bg-gradient-to-r from-accent/90 to-accent hover:from-accent hover:to-accent/80 text-white rounded-lg font-semibold card-lift overflow-hidden"
                   onClick={handleBurst}
                 >
-                  Start Your First Task
+                  Start Orchestrating
                 </Button>
               </Link>
               <Link href="/workflows">
@@ -316,7 +329,7 @@ export default function Index() {
                   className="relative text-lg px-8 py-6 border-2 border-accent rounded-lg font-semibold hover:border-accent/80 hover:bg-accent/10 card-lift overflow-hidden"
                   onClick={handleBurst}
                 >
-                  Browse Workflows
+                  See Orchestration Patterns
                 </Button>
               </Link>
             </div>

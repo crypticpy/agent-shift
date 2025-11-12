@@ -4,21 +4,52 @@
   "icon": "Wrench",
   "sections": [
     {
-      "heading": "The Setup Mindset: Data Access First",
-      "dataSourceInventory": true,
-      "principle": "Choose AI tools based on what data sources they can access, not on features alone.",
+      "heading": "The Setup Mindset: Connections Matter More Than Features",
+      "intro": "Most professionals pick AI tools by features ('this has great summarization!') and then struggle to feed the tool their data. Smart orchestrators work backwards: **identify your data sources first, then choose tools that can connect to them.**",
       "content": [
-        "Most professionals pick AI tools by features ('this has great summarization!') and then struggle to feed the tool their data. Smart orchestrators work backwards: identify your data sources first, then choose tools that can connect to them."
+        "Before you commit to any AI platform, think about the categories of tools you need to connect. Each category represents a different type of work data your agents will need access to."
       ],
-      "dataSources": [
-        "Email (Gmail, Outlook)",
-        "Team Chat (Slack, Teams)",
-        "Documents (Google Drive, Dropbox, OneDrive, Notion)",
-        "Project Management (Asana, Jira, Monday)",
-        "CRM (Salesforce, HubSpot)",
-        "Databases (PostgreSQL, MongoDB, Airtable)",
-        "APIs (your company's internal systems)"
-      ]
+      "useCases": [
+        {
+          "scenario": "Core Communication",
+          "icon": "MessageSquare",
+          "description": "Your daily communication hub—agents need access to understand context and automate responses.",
+          "recommendedSetup": "**Email:** Gmail, Outlook, ProtonMail | **Team Chat:** Slack, Teams, Discord, Telegram | **Video:** Zoom, Meet, Teams"
+        },
+        {
+          "scenario": "Document & Knowledge",
+          "icon": "FileText",
+          "description": "Where your institutional knowledge lives—critical for research agents and writing assistants.",
+          "recommendedSetup": "**Cloud Storage:** Google Drive, Dropbox, OneDrive, Box | **Note-taking:** Notion, Obsidian, Evernote, OneNote | **Wikis:** Confluence, internal knowledge bases"
+        },
+        {
+          "scenario": "Work Management",
+          "icon": "CheckCircle2",
+          "description": "Task automation and workflow orchestration require access to your project management tools.",
+          "recommendedSetup": "**Project Management:** Asana, Jira, Monday, ClickUp, Linear | **Task Tracking:** Trello, Todoist | **Time Tracking:** Harvest, Toggl"
+        },
+        {
+          "scenario": "Business Systems",
+          "icon": "Briefcase",
+          "description": "Enterprise data sources—often require custom integration work and elevated security.",
+          "recommendedSetup": "**CRM:** Salesforce, HubSpot, Pipedrive | **ERP:** SAP, Oracle, NetSuite | **Finance:** QuickBooks, Xero | **HR:** Workday, BambooHR"
+        },
+        {
+          "scenario": "Data & Development",
+          "icon": "Code",
+          "description": "Technical infrastructure—need API connections or MCP servers for secure access.",
+          "recommendedSetup": "**Databases:** PostgreSQL, MongoDB, MySQL, Airtable | **APIs:** Your company's internal systems | **Code Repos:** GitHub, GitLab, Bitbucket"
+        }
+      ],
+      "callout": {
+        "title": "Why This Matters",
+        "type": "warning",
+        "content": [
+          "The connection capabilities of your AI tools will determine whether you can actually automate your workflows or if you'll be stuck copying and pasting data manually.",
+          "A tool with amazing features but no access to your data sources is like hiring a brilliant assistant who can't access your files—frustrating and inefficient.",
+          "**Smart orchestrators think about connections first, features second.**"
+        ]
+      }
     },
     {
       "heading": "Understanding Connectors, Plugins, and MCP Servers",
@@ -50,6 +81,53 @@
           "lookFor": "Tools that support MCP or advertise 'context protocol' compatibility. This is cutting-edge (2024-2025) but growing fast.",
           "complexity": "Advanced",
           "setupTime": "30-60 minutes"
+        }
+      ]
+    },
+    {
+      "heading": "Connector Tiers: Consumer vs. Enterprise",
+      "intro": "Not all connectors are created equal. The connection options available to you depend on your company size, industry, and security requirements. Understanding these tiers helps set realistic expectations for what you can deploy.",
+      "callout": {
+        "title": "Two Worlds of AI Integration",
+        "type": "warning",
+        "content": [
+          "**Consumer/Small Business Tier:** Most AI tools advertise consumer-grade connectors—the kind you can enable with a few clicks and OAuth authentication. These work great for individuals, startups, and small teams. You can sign up for ChatGPT Plus, connect your personal Gmail, and start automating within minutes.",
+          "**Enterprise Tier:** For mid-size to large organizations, especially those in regulated industries (finance, healthcare, government), the consumer approach won't cut it. You likely can't just grab an off-the-shelf AI tool and plug it into your work email, customer database, or financial systems. Here's why:",
+          "• **Security & Compliance:** Your IT and security teams need to vet every integration. Data residency requirements, SOC 2 compliance, HIPAA, GDPR, and internal security policies all come into play.",
+          "• **Procurement Processes:** Enterprise contracts involve legal review, vendor assessments, security questionnaires, and multi-month procurement cycles. You're not swiping a credit card—you're negotiating SLAs and data processing agreements.",
+          "• **Custom Development:** Many enterprise integrations require custom development work. Your internal APIs, legacy systems, and proprietary databases won't have plug-and-play connectors. You'll need developers to build secure bridges between your systems and AI agents.",
+          "• **Team vs. Enterprise Plans:** Most AI platforms offer Team and Enterprise tiers with enhanced security, admin controls, SSO, and audit logs. These aren't optional for regulated industries—they're requirements.",
+          "",
+          "**Bottom Line:** Understanding which tier you're in prevents frustration and sets realistic timelines. An individual can go from zero to working agent in 30 minutes. An enterprise? Plan for 2-6 months."
+        ]
+      },
+      "tips": [
+        {
+          "tip": "Individual/Startup (1-20 people)",
+          "description": "If you're working solo or at a startup with fewer than 20 people, you can likely use consumer-tier connectors and get up and running quickly. **No IT approval needed, no procurement process, no security reviews.**",
+          "whatItIs": "Consumer-grade OAuth connectors (click to authorize) • Self-service setup—no IT involvement • Pay-as-you-go pricing (credit card) • Free trials to test before committing • Instant activation",
+          "example": "Sign up for ChatGPT Plus ($20/month), connect your personal Gmail with OAuth (2 clicks), start automating email summaries within 10 minutes. Done.",
+          "lookFor": "Free trials, OAuth integrations, pay-as-you-go pricing, self-service setup",
+          "complexity": "Easy",
+          "setupTime": "Minutes to hours"
+        },
+        {
+          "tip": "Small Business (20-100 people)",
+          "description": "Teams of 20-100 people should consider Team plans that offer basic admin controls and security features while still maintaining ease of use. **You're balancing speed with some organizational oversight.**",
+          "whatItIs": "Team plans with user management (add/remove people) • Shared workspaces (collaborate on agent projects) • Basic SSO support (Google/Microsoft login) • Volume pricing discounts (per-seat) • Some admin controls (usage tracking, permissions)",
+          "example": "Purchase Slack Business+ plan for the team, add ChatGPT plugin via Slack admin panel, IT reviews basic security settings, team starts using within a week.",
+          "lookFor": "Team plans with user management, shared workspaces, basic SSO, volume pricing",
+          "complexity": "Medium",
+          "setupTime": "Days to 1-2 weeks"
+        },
+        {
+          "tip": "Enterprise (100+ people or regulated industries)",
+          "description": "Organizations with 100+ employees, strict security requirements, or operating in regulated industries (finance, healthcare, government) should expect a formal procurement process and custom integration work. **You can't just grab an off-the-shelf tool.**\n\n**Timeline Breakdown:** Legal review (2-4 weeks) • Security assessment (4-8 weeks) • Procurement (1-3 months from first contact to signed contract) • Custom development (4-12 weeks to build secure connectors for internal systems) • Training & rollout (2-4 weeks to onboard users)",
+          "whatItIs": "Enterprise contracts with SLAs (guaranteed uptime) • SOC 2, ISO, HIPAA compliance certifications • SAML/SSO integration (Okta, Azure AD) • Data residency options (choose where data is stored) • Dedicated support (account manager, priority tickets) • Custom integrations (API access, MCP servers) • Advanced admin controls (audit logs, role-based access)",
+          "example": "Hospital evaluates Claude Enterprise for patient note summarization → 3-month process including HIPAA BAA negotiation, security audit, data residency verification, custom integration with EHR system, staff training. Total cost: $50K+ annually plus custom dev work.",
+          "lookFor": "Enterprise plans with SSO, SAML, data residency options, dedicated support, SOC 2/ISO compliance, BAAs (for healthcare), custom contracts",
+          "complexity": "Advanced",
+          "setupTime": "2-6 months (procurement + security + custom dev + training)"
         }
       ]
     },

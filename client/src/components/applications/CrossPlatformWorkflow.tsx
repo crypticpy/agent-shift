@@ -53,7 +53,7 @@ export function CrossPlatformWorkflow() {
           <div className="relative">
             <div className="flex items-start gap-6">
               {/* Time & Device */}
-              <div className="flex-shrink-0 text-center">
+              <div className="flex-shrink-0 text-center relative z-10">
                 <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-amber-500 rounded-2xl flex items-center justify-center shadow-lg mb-2">
                   <Smartphone className="h-10 w-10 text-white" />
                 </div>
@@ -82,14 +82,14 @@ export function CrossPlatformWorkflow() {
             </div>
 
             {/* Connector */}
-            <div className="absolute left-12 top-28 bottom-0 w-0.5 bg-gradient-to-b from-orange-300 to-green-300 -mb-4"></div>
+            <div className="absolute left-12 top-28 bottom-0 w-0.5 bg-gradient-to-b from-orange-300 to-green-300 -mb-4 z-0"></div>
           </div>
 
           {/* Mid-Morning - Laptop */}
           <div className="relative">
             <div className="flex items-start gap-6">
               {/* Time & Device */}
-              <div className="flex-shrink-0 text-center">
+              <div className="flex-shrink-0 text-center relative z-10">
                 <div className="w-24 h-24 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg mb-2">
                   <Laptop className="h-10 w-10 text-white" />
                 </div>
@@ -131,14 +131,14 @@ export function CrossPlatformWorkflow() {
             </div>
 
             {/* Connector */}
-            <div className="absolute left-12 top-28 bottom-0 w-0.5 bg-gradient-to-b from-green-300 to-blue-300 -mb-4"></div>
+            <div className="absolute left-12 top-28 bottom-0 w-0.5 bg-gradient-to-b from-green-300 to-blue-300 -mb-4 z-0"></div>
           </div>
 
           {/* Afternoon - Desktop */}
           <div className="relative">
             <div className="flex items-start gap-6">
               {/* Time & Device */}
-              <div className="flex-shrink-0 text-center">
+              <div className="flex-shrink-0 text-center relative z-10">
                 <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center shadow-lg mb-2">
                   <Monitor className="h-10 w-10 text-white" />
                 </div>

@@ -105,7 +105,7 @@ export function ROICounter({
           />
 
           {/* Counter display */}
-          <div className="relative px-6 py-4 md:px-8 md:py-5">
+          <div className="relative px-4 py-3 md:px-6 md:py-4">
             <div
               className="text-3xl md:text-5xl lg:text-6xl font-black tracking-wider"
               style={{

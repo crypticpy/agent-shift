@@ -92,6 +92,11 @@ export default function Home() {
       });
   }, []);
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center gradient-mesh">
@@ -168,7 +173,11 @@ export default function Home() {
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-6xl font-bold mb-6 tracking-tight">{catalogData.metadata.title}</h1>
-            <p className="text-2xl text-white/90 mb-8 font-light leading-relaxed">{catalogData.metadata.subtitle}</p>
+            <p className="text-2xl text-white/90 mb-4 font-light leading-relaxed">{catalogData.metadata.subtitle}</p>
+
+            <p className="text-lg text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+              You're not just browsing tools—you're building your team of specialized AI agents. Each tool handles a different part of your work. You orchestrate them. They execute.
+            </p>
 
             <div className="flex justify-center mb-10">
               <Link href="/compare">
@@ -198,161 +207,48 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Statistics Dashboard - Enhanced with new color scheme */}
-      <div className="container mx-auto px-4 -mt-12 mb-8 relative z-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Government Relevance - Coral accent */}
-          <Card className="card-lift shadow-xl border-l-4 border-l-primary bg-card/95 backdrop-blur-sm">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-base font-semibold text-foreground flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
-                Government Relevance
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">Critical</span>
-                  <Badge className="bg-primary/10 text-primary border-primary/20 group-hover:bg-accent transition-all">
-                    {catalogData.statistics.by_government_relevance.Critical}
-                  </Badge>
-                </div>
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">High</span>
-                  <Badge className="bg-orange-100 text-orange-700 border-orange-200 group-hover:bg-orange-200 transition-all">
-                    {catalogData.statistics.by_government_relevance.High}
-                  </Badge>
-                </div>
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">Moderate</span>
-                  <Badge className="bg-yellow-100 text-yellow-700 border-yellow-200 group-hover:bg-yellow-200 transition-all">
-                    {catalogData.statistics.by_government_relevance.Moderate}
-                  </Badge>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Adoption Maturity - Amber accent */}
-          <Card className="card-lift shadow-xl border-l-4 border-l-secondary bg-card/95 backdrop-blur-sm">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-base font-semibold text-foreground flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-secondary animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                Adoption Maturity
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">Emerging</span>
-                  <Badge className="bg-accent/10 text-accent-foreground border-accent/20 group-hover:bg-accent group-hover:text-accent-foreground transition-all">
-                    {catalogData.statistics.by_adoption_maturity.Emerging}
-                  </Badge>
-                </div>
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">Moderate</span>
-                  <Badge className="bg-emerald-100 text-emerald-700 border-emerald-200 group-hover:bg-emerald-200 transition-all">
-                    {catalogData.statistics.by_adoption_maturity.Moderate}
-                  </Badge>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Pricing Models - Teal accent */}
-          <Card className="card-lift shadow-xl border-l-4 border-l-accent bg-card/95 backdrop-blur-sm">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-base font-semibold text-foreground flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-accent animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                Pricing Models
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">Open Source</span>
-                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_pricing_model["Free/Open Source"]}</Badge>
-                </div>
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">Subscription</span>
-                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_pricing_model.Subscription}</Badge>
-                </div>
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">Enterprise</span>
-                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_pricing_model.Enterprise}</Badge>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Top Compliance - Chart-3 (teal) accent */}
-          <Card className="card-lift shadow-xl border-l-4 border-l-chart-3 bg-card/95 backdrop-blur-sm">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-base font-semibold text-foreground flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-chart-3 animate-pulse" style={{ animationDelay: '0.6s' }}></div>
-                Top Compliance
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">SOC 2</span>
-                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_compliance["SOC 2"]}</Badge>
-                </div>
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">FedRAMP</span>
-                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_compliance.FedRAMP}</Badge>
-                </div>
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm font-medium">HIPAA</span>
-                  <Badge variant="outline" className="group-hover:bg-muted transition-all">{catalogData.statistics.by_compliance.HIPAA}</Badge>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-
-      {/* Search and Filters */}
-      <div className="relative -mx-4 px-4 mb-8">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/80 via-amber-50/60 to-teal-50/80" style={{
-          maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)'
-        }}></div>
-        <div className="relative pt-8 pb-10">
-          <div className="container mx-auto px-4">
-            <Card className="glass shadow-lg border-2 border-orange-200/50">
-              <CardContent className="pt-6">
-                <div className="flex flex-col md:flex-row gap-4">
-                  <div className="flex-1 relative">
-                    <Search className="absolute left-3 top-3 h-5 w-5 text-orange-600" />
-                    <Input
-                      placeholder="Search tools by name, description, or category..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-10 border-orange-200/50 focus-visible:border-orange-400"
-                    />
+      {/* Search and Filters - moved up to replace statistics dashboard */}
+      <div className="container mx-auto px-4 mt-12 mb-8 relative z-20">
+        <div className="relative px-4">
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-50/40 via-amber-50/30 to-teal-50/40" style={{
+            maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)'
+          }}></div>
+          <div className="relative pt-8 pb-10">
+            <div className="container mx-auto px-4">
+              <Card className="glass shadow-lg border-2 border-orange-200/50">
+                <CardContent className="pt-6">
+                  <div className="flex flex-col md:flex-row gap-4">
+                    <div className="flex-1 relative">
+                      <Search className="absolute left-3 top-3 h-5 w-5 text-orange-600" />
+                      <Input
+                        placeholder="Search tools by name, description, or category..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="pl-10 border-orange-200/50 focus-visible:border-orange-400"
+                      />
+                    </div>
+                    <div className="flex gap-2">
+                      <select
+                        value={relevanceFilter}
+                        onChange={(e) => setRelevanceFilter(e.target.value)}
+                        className="px-4 py-2 border border-orange-200/50 rounded-md bg-white text-sm hover:border-orange-400 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200/50 transition-all"
+                      >
+                        <option value="all">All Relevance</option>
+                        <option value="Critical">Critical</option>
+                        <option value="High">High</option>
+                        <option value="Moderate">Moderate</option>
+                      </select>
+                    </div>
                   </div>
-                  <div className="flex gap-2">
-                    <select
-                      value={relevanceFilter}
-                      onChange={(e) => setRelevanceFilter(e.target.value)}
-                      className="px-4 py-2 border border-orange-200/50 rounded-md bg-white text-sm hover:border-orange-400 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200/50 transition-all"
-                    >
-                      <option value="all">All Relevance</option>
-                      <option value="Critical">Critical</option>
-                      <option value="High">High</option>
-                      <option value="Moderate">Moderate</option>
-                    </select>
-                  </div>
-                </div>
-                {searchQuery && (
-                  <p className="text-sm text-slate-600 mt-3">
-                    Found <strong>{filteredTools.length}</strong> tools matching "{searchQuery}"
-                  </p>
-                )}
-              </CardContent>
-            </Card>
+                  {searchQuery && (
+                    <p className="text-sm text-slate-600 mt-3">
+                      Found <strong>{filteredTools.length}</strong> tools matching "{searchQuery}"
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </div>

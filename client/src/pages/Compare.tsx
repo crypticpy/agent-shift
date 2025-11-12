@@ -33,6 +33,10 @@ export default function Compare() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     fetch("/catalog_data_v2.json")
       .then((res) => res.json())
       .then((data) => setCatalogData(data))
@@ -91,10 +95,10 @@ export default function Compare() {
               </Button>
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Compare AI Agent Tools
+              Build Your Agent Team
             </h1>
             <p className="text-xl opacity-95">
-              Select up to 3 tools to compare side-by-side
+              Compare tools to find the right agents for your work. Each tool is a specialist—pick the ones that match your needs.
             </p>
           </div>
         </div>
@@ -102,7 +106,19 @@ export default function Compare() {
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-7xl mx-auto">
-          
+
+          {/* Context Card */}
+          <div className="max-w-3xl mx-auto mb-8">
+            <Card className="border-orange-200 bg-orange-50/50">
+              <CardContent className="p-4 text-center">
+                <p className="text-slate-700">
+                  <strong>Remember:</strong> You're the conductor. These tools are your orchestra.
+                  Pick specialists that excel at specific tasks, not generalists that do everything okay.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
           {/* Tool Selection */}
           {selectedTools.length < 3 && (
             <Card className="mb-8 card-lift shadow-lg hover:shadow-xl transition-shadow duration-300">

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -19,12 +20,16 @@ import { useParticleBurst } from "@/hooks/useParticleBurst";
 
 export default function UseCases() {
   const handleBurst = useParticleBurst();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const useCases = [
     {
       id: 1,
       icon: BarChart3,
       title: "Community Survey Analysis & Reporting",
-      subtitle: "From Raw Data to Three Presentations",
+      subtitle: "Orchestrating 5 Agents: Survey Data → Analysis → Portal → Presentations",
       difficulty: "Intermediate",
       timeTraditional: "1 week + small team",
       timeAI: "10 minutes of voice input",
@@ -63,7 +68,7 @@ export default function UseCases() {
           duration: "5 minutes per deck"
         }
       ],
-      outcome: "In about 30-40 minutes total (mostly AI working time), you've completed what would traditionally take a week with a team of analysts, web developers, and designers. The program manager only spent 10 minutes actually working - the rest was AI agents working autonomously.",
+      outcome: "In about 30-40 minutes total (mostly AI working time), you've orchestrated what would traditionally take a week with a team of analysts, web developers, and designers. As the orchestrator, you spent 10 minutes directing the work. The five AI agents handled execution autonomously.",
       tools: ["Superwhisper/Voice Access", "Julius AI", "ChatGPT", "Manus", "Beautiful.ai/Gamma"]
     },
     {
@@ -373,10 +378,10 @@ export default function UseCases() {
               Real-World Examples
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Multi-Agent Workflow Examples
+              Orchestration in Action
             </h1>
             <p className="text-xl opacity-95">
-              See how combining AI agents transforms weeks of work into hours. These are real workflows being used today.
+              Watch how orchestrating multiple AI agents transforms weeks of work into hours. You conduct. They execute. These workflows are being used today.
             </p>
           </div>
         </div>

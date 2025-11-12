@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -14,9 +15,14 @@ import {
 } from "lucide-react";
 import { AdvancedParticles } from "@/components/advanced-particles";
 import { useParticleBurst } from "@/hooks/useParticleBurst";
+import { LearningProgressionTimeline } from "@/components/LearningProgressionTimeline";
 
 export default function GettingStarted() {
   const handleBurst = useParticleBurst();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-white to-secondary/10">
@@ -525,6 +531,83 @@ export default function GettingStarted() {
               </CardContent>
             </Card>
             </div>
+          </div>
+
+          {/* Bridge: From Tasks to Orchestration */}
+          <div className="mt-16">
+            <Card className="border-2 border-primary/30 shadow-xl bg-gradient-to-br from-primary/5 to-accent/5">
+              <CardHeader>
+                <div className="flex items-start gap-5">
+                  <div className="h-14 w-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <Lightbulb className="h-7 w-7 text-white" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-3xl mb-3 text-foreground font-bold">From One Task to Complete Projects</CardTitle>
+                    <CardDescription className="text-lg text-muted-foreground">
+                      You've learned to delegate single tasks. Now learn to orchestrate complete workflows.
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="space-y-6">
+                  <div className="glass bg-muted/50 p-6 rounded-xl border border-muted">
+                    <h4 className="font-bold mb-3 text-lg text-foreground flex items-center gap-2">
+                      <span className="text-2xl">🎯</span> Level 1: Task Assistance
+                    </h4>
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      You ask AI to help with one thing: "Draft an email" or "Summarize this document." The AI handles that single task. You review and use it.
+                    </p>
+                  </div>
+
+                  <div className="glass bg-chart-2/10 p-6 rounded-xl border-2 border-chart-2/30">
+                    <h4 className="font-bold mb-3 text-lg text-foreground flex items-center gap-2">
+                      <span className="text-2xl">⚡</span> Level 2: Task Delegation
+                    </h4>
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      You describe what you need and let the AI figure out how to do it: "Create a presentation about our community survey results." The AI handles multiple steps without you watching each one.
+                    </p>
+                  </div>
+
+                  <div className="glass bg-primary/10 p-6 rounded-xl border-2 border-primary/30 shadow-md">
+                    <h4 className="font-bold mb-3 text-lg text-foreground flex items-center gap-2">
+                      <span className="text-2xl">🎼</span> Level 3: Workflow Orchestration
+                    </h4>
+                    <p className="text-base text-muted-foreground leading-relaxed mb-4">
+                      You coordinate multiple AI agents to handle complete projects: "Take this survey data, analyze it, create three presentations for different audiences, and draft follow-up emails." Each agent handles its specialty. You orchestrate them.
+                    </p>
+                    <div className="bg-white/60 p-4 rounded-lg">
+                      <p className="text-sm font-medium text-foreground mb-2">This is where real power comes from:</p>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">✓</span>
+                          <span>Work happens while you do other things</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">✓</span>
+                          <span>Multiple agents work in parallel</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">✓</span>
+                          <span>You focus on strategy and decisions, not execution</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-accent/10 to-primary/10 p-6 rounded-xl border-l-4 border-primary">
+                    <p className="text-base text-foreground font-medium leading-relaxed">
+                      The guides above taught you Level 1 and Level 2. Ready to learn Level 3? That's what the rest of this site is about: teaching you to think like an orchestrator, not just a faster worker.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Learning Progression Timeline */}
+          <div className="mt-16">
+            <LearningProgressionTimeline />
           </div>
 
           {/* Next Steps */}

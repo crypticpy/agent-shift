@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import {
   Calculator as CalculatorIcon,
   DollarSign,
@@ -16,7 +16,8 @@ import {
   Trophy,
   Briefcase,
   Lightbulb,
-  Copy
+  Copy,
+  MessageSquare
 } from "lucide-react";
 import { useParticleBurst } from "@/hooks/useParticleBurst";
 import { MoneyParticles } from "@/components/MoneyParticles";
@@ -32,6 +33,7 @@ interface CalculationResult {
 
 export default function Calculator() {
   const handleBurst = useParticleBurst();
+  const [, setLocation] = useLocation();
   const [taskType, setTaskType] = useState<string>("");
   const [currentTime, setCurrentTime] = useState<string>("");
   const [frequency, setFrequency] = useState<string>("");
@@ -184,6 +186,44 @@ export default function Calculator() {
             </CardContent>
           </Card>
 
+          {/* Guidance Button */}
+          <Card className="mb-8 border-2 border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50">
+            <CardContent className="py-4">
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div className="flex items-start gap-3 flex-1">
+                  <MessageSquare className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-amber-900 mb-1">
+                      Need help making your case to leadership?
+                    </div>
+                    <div className="text-sm text-amber-700">
+                      Get scenario-based guidance for conversations, RFPs, presentations, and tool selection strategies
+                    </div>
+                  </div>
+                </div>
+                <Button
+                  onClick={() => {
+                    // Store calculator data in localStorage for the guidance page
+                    const guidanceData = {
+                      result,
+                      taskType,
+                      taskPresets,
+                    };
+                    localStorage.setItem("calculator_guidance_data", JSON.stringify(guidanceData));
+                    // Navigate to guidance page
+                    setLocation("/guidance");
+                  }}
+                  variant="default"
+                  className="bg-amber-600 hover:bg-amber-700 text-white flex-shrink-0"
+                >
+                  Get Guidance
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Calculator Form and Results */}
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Calculator Form */}
             <Card className="border-2 border-[oklch(0.65_0.18_35)]/20 shadow-lg card-lift">
@@ -328,6 +368,33 @@ export default function Calculator() {
                         </div>
                       </div>
 
+                      {/* Capability Expansion Section - Moved before metrics */}
+                      <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 shadow-lg">
+                        <CardHeader>
+                          <CardTitle className="text-xl flex items-center gap-2 text-foreground">
+                            <Lightbulb className="h-5 w-5" />
+                            As an Orchestrator, You Gain New Capabilities
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-3 text-base text-muted-foreground">
+                          <p className="leading-relaxed">
+                            Time savings are just the beginning. When you orchestrate AI agents, you expand what your team can do:
+                          </p>
+                          <ul className="space-y-2 ml-6 list-disc">
+                            <li><strong>Handle work that used to require specialists</strong> - No need to hire consultants for routine analysis or design</li>
+                            <li><strong>Scale your output without hiring</strong> - Do more as demand grows</li>
+                            <li><strong>Deliver higher quality work</strong> - Research shows AI assistance improves quality by up to 40%</li>
+                            <li><strong>Focus your {result.totalWeeklySavings.toFixed(1)} saved hours on strategy</strong> - Spend time on decisions, relationships, and creative thinking</li>
+                            <li><strong>Bring capabilities in-house</strong> - Stop outsourcing work you can orchestrate internally</li>
+                          </ul>
+                          <div className="bg-white/60 p-4 rounded-lg mt-4">
+                            <p className="text-sm font-medium text-foreground">
+                              This is what changes when you think like an orchestrator instead of a faster worker. You're not just saving time—you're expanding what's possible.
+                            </p>
+                          </div>
+                        </CardContent>
+                      </Card>
+
                       <div className="bg-white p-5 rounded-lg border-2 border-[oklch(0.65_0.18_175)]/30 card-lift transition-all duration-300 hover:border-[oklch(0.65_0.18_175)]">
                         <div className="flex items-center gap-3 mb-2">
                           <Clock className="h-5 w-5 text-[oklch(0.65_0.18_175)]" />
@@ -408,32 +475,6 @@ export default function Calculator() {
                       <p>
                         The financial value of this time is <strong className="text-[oklch(0.65_0.18_35)]">${result.dollarValue.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong> per year,
                         even after paying for the AI tools.
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  {/* Capability Expansion Section */}
-                  <Card className="border-2 border-amber-200 bg-amber-50/50 card-lift animate-in fade-in duration-500 delay-300">
-                    <CardHeader>
-                      <CardTitle className="text-xl flex items-center gap-2 text-amber-900">
-                        <Lightbulb className="h-5 w-5" />
-                        Beyond Time Savings: Expanded Capabilities
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-2 text-sm text-amber-900">
-                      <p className="mb-3">
-                        The value of AI extends beyond time savings. With AI assistance, your team can:
-                      </p>
-                      <ul className="space-y-2 ml-6 list-disc">
-                        <li><strong>Complete tasks previously requiring specialized skills</strong> - No need to hire consultants for routine analysis, design, or writing</li>
-                        <li><strong>Handle higher volumes without additional hiring</strong> - Scale your output as demand grows</li>
-                        <li><strong>Deliver higher quality outputs</strong> - Research shows AI assistance improves work quality by up to 40%</li>
-                        <li><strong>Reallocate {result.totalWeeklySavings.toFixed(1)} hours weekly to strategic work</strong> - Focus on relationship-building, creativity, and decision-making</li>
-                        <li><strong>Reduce dependency on external contractors</strong> - Bring capabilities in-house that were previously outsourced</li>
-                        <li><strong>Remove learning curve barriers</strong> - Use tools and processes without extensive training</li>
-                      </ul>
-                      <p className="text-xs mt-3 pt-3 border-t border-amber-300">
-                        <em>This represents capability expansion that's difficult to quantify in dollars but creates significant organizational value.</em>
                       </p>
                     </CardContent>
                   </Card>
