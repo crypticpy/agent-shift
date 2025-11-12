@@ -76,61 +76,83 @@ export function ROICounter({
   });
 
   return (
-    <div className={`absolute inset-0 flex items-center justify-center ${className}`}>
+    <div className={`absolute top-8 left-1/2 -translate-x-1/2 ${className}`}>
       <div className="text-center">
-        {/* Label */}
+        {/* Ticker-style counter */}
+        <div className="relative inline-block">
+          {/* Background panel - like a flip clock or LED display */}
+          <div
+            className="absolute inset-0 bg-black/40 rounded-lg"
+            style={{
+              boxShadow: `
+                inset 0 2px 8px rgba(0, 0, 0, 0.6),
+                0 4px 16px rgba(0, 0, 0, 0.4),
+                0 0 ${30 + glowIntensity * 60}px rgba(251, 146, 60, ${0.2 + glowIntensity * 0.3})
+              `,
+            }}
+          />
+
+          {/* Counter display */}
+          <div
+            className={`relative px-6 py-4 md:px-8 md:py-5 transition-all duration-200 ${
+              isJumping ? "scale-105" : "scale-100"
+            }`}
+          >
+            <div
+              className="text-white text-3xl md:text-5xl lg:text-6xl font-black tracking-wider"
+              style={{
+                fontFamily: "'Impact', 'Arial Black', sans-serif",
+                textShadow: `
+                  0 0 ${15 + glowIntensity * 30}px rgba(255, 255, 255, ${0.6 + glowIntensity * 0.4}),
+                  0 0 ${30 + glowIntensity * 50}px rgba(251, 146, 60, ${0.4 + glowIntensity * 0.6}),
+                  0 2px 4px rgba(0, 0, 0, 0.8)
+                `,
+                letterSpacing: "0.05em",
+                WebkitTextStroke: isJumping ? "1px rgba(255,255,255,0.3)" : "0px",
+              }}
+            >
+              ${formattedValue}
+            </div>
+          </div>
+
+          {/* Scan line effect (like LED displays) */}
+          <div
+            className="absolute inset-0 pointer-events-none rounded-lg"
+            style={{
+              background:
+                "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px)",
+            }}
+          />
+
+          {/* Flash effect on jump */}
+          {isJumping && (
+            <div
+              className="absolute inset-0 bg-white/20 rounded-lg"
+              style={{
+                animation: "flash 0.2s ease-out",
+              }}
+            />
+          )}
+        </div>
+
+        {/* Label below */}
         <div
-          className="text-white/60 text-sm md:text-base font-medium mb-2 tracking-wider uppercase"
+          className="mt-3 text-white/70 text-xs md:text-sm font-semibold tracking-widest uppercase"
           style={{
-            textShadow: "0 0 10px rgba(255,255,255,0.3)",
+            textShadow: "0 1px 3px rgba(0,0,0,0.5)",
+            letterSpacing: "0.15em",
           }}
         >
           Total Value Created Today
         </div>
-
-        {/* Counter */}
-        <div
-          className={`text-white text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight transition-all duration-200 ${
-            isJumping ? "scale-110" : "scale-100"
-          }`}
-          style={{
-            fontFamily: "'Courier New', 'Courier', monospace",
-            textShadow: `
-              0 0 ${20 + glowIntensity * 40}px rgba(255, 255, 255, ${0.4 + glowIntensity * 0.6}),
-              0 0 ${40 + glowIntensity * 60}px rgba(251, 146, 60, ${0.3 + glowIntensity * 0.7}),
-              0 4px 8px rgba(0, 0, 0, 0.3)
-            `,
-            opacity: isJumping ? 1 : 0.95,
-            filter: `blur(${isJumping ? "1px" : "0px"})`,
-          }}
-        >
-          ${formattedValue}
-        </div>
-
-        {/* Subtle pulse indicator */}
-        {isJumping && (
-          <div
-            className="absolute inset-0 bg-white/10 rounded-full animate-ping"
-            style={{
-              animation: "ping 0.5s cubic-bezier(0, 0, 0.2, 1)",
-            }}
-          />
-        )}
       </div>
 
-      {/* Background animated gradient overlay */}
-      <div
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{
-          background: `
-            radial-gradient(circle at 50% 50%,
-              rgba(251, 146, 60, ${0.3 + glowIntensity * 0.4}) 0%,
-              transparent 70%
-            )
-          `,
-          filter: "blur(60px)",
-        }}
-      />
+      <style>{`
+        @keyframes flash {
+          0% { opacity: 1; }
+          100% { opacity: 0; }
+        }
+      `}</style>
     </div>
   );
 }
