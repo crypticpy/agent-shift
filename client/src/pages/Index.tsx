@@ -60,7 +60,7 @@ export default function Index() {
             Ideas can strike anytime. Act on them now, through conversation with intelligent agents.
           </p>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Don't let busy work block your creativity and progress!
+            Don't let busy work block your creativity!
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
