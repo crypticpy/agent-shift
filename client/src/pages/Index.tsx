@@ -29,13 +29,14 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50 relative">
-      {/* Hero Section */}
-      {/* Floating Orbs - Aurora Depth Effect */}
-      <FloatingOrbs />
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50 relative">
+        {/* Hero Section */}
+        {/* Floating Orbs - Aurora Depth Effect */}
+        <FloatingOrbs />
 
-      {/* Wind-Driven Particles */}
-      <AdvancedParticles count={150} windSpeed={80} flockingEnabled={true} />
+        {/* Wind-Driven Particles */}
+        <AdvancedParticles count={150} windSpeed={80} flockingEnabled={true} />
 
       <div className="container mx-auto px-4 py-20 md:py-28">
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -112,9 +113,8 @@ export default function Index() {
       </div>
     </div>
 
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
-      {/* Doer vs Orchestrator Diagram */}
-      <div className="bg-white py-12">
+    {/* Doer vs Orchestrator Diagram */}
+    <div className="bg-white py-12">
         <div className="container mx-auto px-4">
           <DoerVsOrchestratorDiagram />
         </div>
@@ -338,6 +338,6 @@ export default function Index() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
