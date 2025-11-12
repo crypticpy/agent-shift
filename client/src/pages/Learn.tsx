@@ -3,11 +3,22 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Mic, Zap, Link2, MessageSquare, Briefcase, CheckCircle2, XCircle, Sparkles, ArrowUp } from "lucide-react";
+import { Mic, Zap, Link2, MessageSquare, Briefcase, Lightbulb, CheckCircle2, XCircle, Sparkles, ArrowUp } from "lucide-react";
 import { Streamdown } from "streamdown";
 import SpeedComparison from "@/components/SpeedComparison";
 import VoiceStatsCards from "@/components/VoiceStatsCards";
 import WalkingToCarDemo from "@/components/WalkingToCarDemo";
+import EnhancedTimeSavingsCalculator from "@/components/TimeSavingsCalculator";
+import EnhancedRoleScenarioExplorer from "@/components/RoleScenarioExplorer";
+import EnhancedWalkingDemoView from "@/components/EnhancedWalkingDemo";
+import MindsetSelfAssessment from "@/components/MindsetSelfAssessment";
+import BeforeAfterScenarioBuilder from "@/components/BeforeAfterScenarioBuilder";
+import PhaseExplorer from "@/components/PhaseExplorer";
+import TechniqueCards from "@/components/TechniqueCards";
+import TrapScenarios from "@/components/TrapScenarios";
+import WeeklyProgressTracker from "@/components/WeeklyProgressTracker";
+import OrchestrationWorkshop from "@/components/OrchestrationWorkshop";
+import { VoiceToExecutionDiagram } from "@/components/VoiceToExecutionDiagram";
 
 interface LearnContent {
   title: string;
@@ -17,7 +28,7 @@ interface LearnContent {
 }
 
 export default function Learn() {
-  const [activeTab, setActiveTab] = useState("voice-basics");
+  const [activeTab, setActiveTab] = useState("mindset");
   const [content, setContent] = useState<Record<string, LearnContent>>({});
   const [loading, setLoading] = useState(true);
 
@@ -26,6 +37,7 @@ export default function Learn() {
     const loadContent = async () => {
       try {
         const tabs = [
+          "mindset",
           "voice-basics",
           "advanced-voice",
           "chaining",
@@ -71,6 +83,80 @@ export default function Learn() {
             {section.heading}
           </h3>
         </div>
+
+        {/* Mindset Self Assessment */}
+        {section.mindsetSelfAssessment && (
+          <div className="my-8">
+            <MindsetSelfAssessment />
+          </div>
+        )}
+
+        {/* Before/After Scenario Builder */}
+        {section.beforeAfterScenario && (
+          <div className="my-8">
+            <BeforeAfterScenarioBuilder />
+          </div>
+        )}
+
+        {/* Phase Explorer */}
+        {section.phaseExplorer && (
+          <div className="my-8">
+            <PhaseExplorer />
+          </div>
+        )}
+
+        {/* Technique Cards */}
+        {section.techniqueCards && (
+          <div className="my-8">
+            <TechniqueCards />
+          </div>
+        )}
+
+        {/* Trap Scenarios */}
+        {section.trapScenarios && (
+          <div className="my-8">
+            <TrapScenarios />
+          </div>
+        )}
+
+        {/* Orchestration Workshop */}
+        {section.orchestrationWorkshop && (
+          <div className="my-8">
+            <OrchestrationWorkshop />
+          </div>
+        )}
+
+        {/* Weekly Progress Tracker */}
+        {section.weeklyProgressTracker && (
+          <div className="my-8">
+            <WeeklyProgressTracker />
+          </div>
+        )}
+
+        {/* Time Savings Calculator */}
+        {section.timeSavingsCalculator && (
+          <div className="my-8">
+            <EnhancedTimeSavingsCalculator />
+          </div>
+        )}
+
+        {/* Role Scenarios Explorer */}
+        {section.roleScenarios && (
+          <div className="my-8">
+            <EnhancedRoleScenarioExplorer />
+          </div>
+        )}
+
+        {/* Enhanced Walking Demo */}
+        {section.enhancedWalkingDemo && (
+          <div className="my-8">
+            <EnhancedWalkingDemoView
+              tasks={section.enhancedWalkingDemo.tasks}
+              totalDuration={section.enhancedWalkingDemo.totalDuration}
+              taskStartDelay={section.enhancedWalkingDemo.taskStartDelay}
+            />
+          </div>
+        )}
 
         {/* Speed Comparison Interactive Visual */}
         {section.heading === "Why Voice Changes Everything" && (
@@ -149,23 +235,34 @@ export default function Learn() {
               voiceInput={section.walkingDemo.voiceInput}
               tasks={section.walkingDemo.tasks}
               totalDuration={section.walkingDemo.totalDuration}
+              typewriterDuration={section.walkingDemo.typewriterDuration}
+              taskStartDelay={section.walkingDemo.taskStartDelay}
             />
+
+            {/* Voice to Execution Diagram - Only shown in voice-basics tab */}
+            {activeTab === "voice-basics" && (
+              <div className="mt-12">
+                <VoiceToExecutionDiagram />
+              </div>
+            )}
           </div>
         )}
 
         {/* Regular content paragraphs */}
         {section.content && (
-          <div className="space-y-4">
-            {section.content.map((paragraph: string, i: number) => (
-              <div key={i}>
-                <Streamdown>{paragraph}</Streamdown>
-              </div>
-            ))}
-          </div>
+          <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
+            <CardContent className="p-6 space-y-4">
+              {section.content.map((paragraph: string, i: number) => (
+                <div key={i} className="text-base text-muted-foreground leading-relaxed">
+                  <Streamdown>{paragraph}</Streamdown>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
         )}
 
-        {/* Examples (Do/Don't) */}
-        {section.examples && section.examples[0]?.type && (
+        {/* Examples (Do/Don't) - Only render if trapScenarios is not present */}
+        {section.examples && section.examples[0]?.type && !section.trapScenarios && (
           <div className="grid md:grid-cols-2 gap-4">
             {section.examples.map((ex: any, i: number) => (
               <Card key={i} className={`border-2 transition-all hover:shadow-lg h-full ${
@@ -197,8 +294,8 @@ export default function Learn() {
           </div>
         )}
 
-        {/* Work/Home Examples (role-based) */}
-        {section.examples && section.examples[0]?.role && (
+        {/* Work/Home Examples (role-based) - Only render if trapScenarios is not present */}
+        {section.examples && section.examples[0]?.role && !section.trapScenarios && (
           <div className="space-y-4">
             {section.examples.map((ex: any, i: number) => (
               <Card key={i} className="card-lift border-2 hover:border-primary/30 transition-all">
@@ -489,8 +586,8 @@ export default function Learn() {
           </div>
         )}
 
-        {/* Patterns */}
-        {section.patterns && (
+        {/* Patterns - Only render if phaseExplorer is not present */}
+        {section.patterns && !section.phaseExplorer && (
           <div className="grid md:grid-cols-2 gap-4">
             {section.patterns.map((pattern: any, i: number) => (
               <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
@@ -545,8 +642,8 @@ export default function Learn() {
           </Card>
         )}
 
-        {/* Workflows */}
-        {section.workflows && (
+        {/* Workflows - Only render if weeklyProgressTracker is not present */}
+        {section.workflows && !section.weeklyProgressTracker && (
           <div className="space-y-6">
             {section.workflows.map((workflow: any, i: number) => (
               <Card key={i} className="border-2 border-accent/30 dark:border-accent/40 hover:shadow-lg transition-all">
@@ -599,8 +696,8 @@ export default function Learn() {
           </div>
         )}
 
-        {/* Tips */}
-        {section.tips && (
+        {/* Tips - Only render if techniqueCards is not present */}
+        {section.tips && !section.techniqueCards && (
           <div className="space-y-3">
             {section.tips.map((tip: any, i: number) => (
               <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
@@ -689,6 +786,7 @@ export default function Learn() {
   };
 
   const tabConfig = [
+    { value: "mindset", label: "Mindset", icon: Lightbulb },
     { value: "voice-basics", label: "Voice Basics", icon: Mic },
     { value: "advanced-voice", label: "Advanced Voice", icon: Zap },
     { value: "chaining", label: "Chaining", icon: Link2 },
@@ -732,7 +830,7 @@ export default function Learn() {
       {/* Tabs Section */}
       <div className="container mx-auto px-4 py-16">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-10">
-          <TabsList className="grid w-full grid-cols-5 h-auto p-2 bg-card/95 backdrop-blur-sm border-2 rounded-xl shadow-lg">
+          <TabsList className="grid w-full grid-cols-6 h-auto p-2 bg-card/95 backdrop-blur-sm border-2 rounded-xl shadow-lg">
             {tabConfig.map((tab) => {
               const Icon = tab.icon;
               return (
