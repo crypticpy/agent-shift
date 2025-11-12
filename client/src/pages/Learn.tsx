@@ -241,11 +241,27 @@ export default function Learn() {
           </h3>
         </div>
 
-        {/* Mindset Self Assessment */}
+        {/* Mindset Self Assessment - Enhanced Container */}
         {section.mindsetSelfAssessment && (
-          <div className="my-8">
-            <MindsetSelfAssessment />
-          </div>
+          <Card className="border-2 border-emerald-300 bg-gradient-to-br from-emerald-50 to-green-50 shadow-lg my-8">
+            <CardContent className="p-8 space-y-6">
+              {/* Descriptive intro text */}
+              {section.content && (
+                <div className="text-center space-y-4 mb-6">
+                  {section.content.map((paragraph: string, i: number) => (
+                    <div key={i} className="text-lg font-medium text-slate-700 leading-relaxed max-w-3xl mx-auto">
+                      <Streamdown>{paragraph}</Streamdown>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Self-assessment component */}
+              <div className="mt-6">
+                <MindsetSelfAssessment />
+              </div>
+            </CardContent>
+          </Card>
         )}
 
         {/* Before/After Scenario Builder */}
@@ -467,8 +483,8 @@ export default function Learn() {
           </div>
         )}
 
-        {/* Regular content paragraphs */}
-        {section.content && (
+        {/* Regular content paragraphs (skip if mindsetSelfAssessment since it renders its own content) */}
+        {section.content && !section.mindsetSelfAssessment && (
           <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
             <CardContent className="p-6 space-y-4">
               {section.content.map((paragraph: string, i: number) => (

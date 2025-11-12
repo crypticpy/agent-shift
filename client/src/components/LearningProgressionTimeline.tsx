@@ -1,4 +1,4 @@
-import { Baby, Footprints, Rocket, GraduationCap, Clock, TrendingUp } from "lucide-react";
+import { Baby, Footprints, Rocket, GraduationCap, Clock, TrendingUp, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function LearningProgressionTimeline() {
@@ -159,7 +159,9 @@ export function LearningProgressionTimeline() {
       <div className="mt-12">
         <Card className="border-2 border-orange-200 bg-gradient-to-r from-orange-50 to-amber-50 shadow-md">
           <CardContent className="p-8">
-            <div className="flex items-center justify-between flex-wrap gap-6">
+            {/* Mobile: 2x2 grid (Week 1 + Arrow, Week 12 + Badge) | Desktop: flex row with timeline grouped left, badge right */}
+            <div className="grid grid-cols-2 md:flex md:items-center md:justify-between gap-x-4 gap-y-6 md:gap-6">
+              {/* Week 1 */}
               <div className="flex items-center gap-4">
                 <div className="h-16 w-16 bg-slate-400 rounded-full flex items-center justify-center">
                   <Baby className="h-8 w-8 text-white" />
@@ -170,8 +172,12 @@ export function LearningProgressionTimeline() {
                 </div>
               </div>
 
-              <div className="hidden md:block text-3xl text-slate-400">→</div>
+              {/* Animated Arrow - rotates down on mobile, points right on desktop */}
+              <div className="flex items-center justify-center md:justify-start">
+                <ArrowRight className="h-6 w-6 md:h-8 md:w-8 text-slate-400 animate-pulse rotate-90 md:rotate-0" />
+              </div>
 
+              {/* Week 12 */}
               <div className="flex items-center gap-4">
                 <div className="h-16 w-16 bg-emerald-500 rounded-full flex items-center justify-center">
                   <GraduationCap className="h-8 w-8 text-white" />
@@ -184,7 +190,8 @@ export function LearningProgressionTimeline() {
                 </div>
               </div>
 
-              <div className="w-full md:w-auto">
+              {/* 7X Badge - on desktop, pushed to right with ml-auto */}
+              <div className="md:ml-auto">
                 <div className="bg-emerald-100 text-emerald-800 px-6 py-3 rounded-full font-semibold text-center">
                   <div className="flex items-center gap-2 justify-center">
                     <TrendingUp className="h-5 w-5" />

@@ -6,9 +6,24 @@
     {
       "heading": "The Limiting Paradigm: Task-by-Task Execution",
       "content": [
-        "**Current State:** You start work, encounter a problem, open ChatGPT, get help, continue. Repeat 50 times a day. You're using AI like a smart search engine—reactive, task-focused, and still doing 90% of the work yourself.",
-        "**The Real Cost:** Every 'quick question' to AI keeps you operating at the task level. You ask 'How do I write this formula?' instead of 'Who should handle all data processing?' This mindset caps your potential at incremental efficiency gains (saving 10-15% of time) when transformational gains (releasing 60-80% capacity) are available.",
-        "**Industry Reality:** According to McKinsey's 2025 research on agentic organizations, professionals who remain in task-execution mode see minimal productivity gains from AI, while those who shift to orchestration see 3-5x outcome velocity improvements."
+        "You start work, encounter a problem, open ChatGPT, get help, continue. Repeat 50 times a day. You're using AI like a smart search engine—reactive, task-focused, and still doing 90% of the work yourself.",
+        "This pattern feels productive because you're getting answers quickly. But it keeps you trapped in the execution layer, never stepping back to design the system that could handle entire workflows."
+      ],
+      "callout": {
+        "title": "The Hidden Cost of Task-by-Task Thinking",
+        "steps": [
+          "Every 'quick question' to AI keeps you operating at the task level",
+          "You ask 'How do I write this formula?' instead of 'Who should handle all data processing?'",
+          "This mindset caps your potential at incremental efficiency gains (saving 10-15% of time)",
+          "Meanwhile, transformational gains (releasing 60-80% of capacity) remain out of reach"
+        ],
+        "footer": "The problem isn't using AI for tasks. The problem is stopping there instead of orchestrating complete workflows."
+      },
+      "benefits": [
+        {
+          "title": "Research Insight: The Orchestration Advantage",
+          "description": "According to [McKinsey's 2025 research on agentic organizations](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-agentic-organization-contours-of-the-next-paradigm-for-the-ai-era), professionals who remain in task-execution mode see minimal productivity gains from AI, while those who shift to orchestration see 3-5x outcome velocity improvements."
+        }
       ]
     },
     {
