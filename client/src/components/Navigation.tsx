@@ -1,37 +1,105 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { 
-  BookOpen, 
-  Lightbulb, 
-  Wrench, 
-  Zap, 
-  Calculator, 
+import {
+  BookOpen,
+  Lightbulb,
+  Wrench,
+  Zap,
   FileText,
   Menu,
   X,
-  Sparkles
+  Sparkles,
+  MessageSquare,
+  Home as HomeIcon,
+  GraduationCap,
+  BarChart3,
+  Briefcase,
+  GitCompare,
+  Target,
+  FileCheck,
+  Presentation,
+  Map
 } from "lucide-react";
 import { useState } from "react";
 import { APP_LOGO } from "@/const";
+import { NavigationDropdown, NavigationDropdownItem } from "./NavigationDropdown";
 
 export default function Navigation() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null);
 
-  const navItems = [
-    { href: "/", label: "Home", icon: null },
-    { href: "/getting-started", label: "Getting Started", icon: BookOpen },
-    { href: "/learn", label: "Learn", icon: Lightbulb },
-    { href: "/use-cases", label: "Use Cases", icon: Sparkles },
-    { href: "/catalog", label: "Tools", icon: Wrench },
-    { href: "/workflows", label: "Workflows", icon: Zap },
-    { href: "/calculator", label: "Calculator", icon: Calculator },
-    { href: "/resources", label: "Resources", icon: FileText },
+  // Define dropdown menu items
+  const learnDropdown: NavigationDropdownItem[] = [
+    {
+      href: "/getting-started",
+      label: "Getting Started",
+      description: "First-time tutorial for beginners",
+      icon: BookOpen,
+    },
+    {
+      href: "/learn",
+      label: "Core Concepts",
+      description: "Comprehensive learning with 7 topics",
+      icon: GraduationCap,
+    },
+    {
+      href: "/use-cases",
+      label: "Use Cases",
+      description: "Advanced real-world examples",
+      icon: Sparkles,
+    },
+  ];
+
+  const toolsDropdown: NavigationDropdownItem[] = [
+    {
+      href: "/catalog",
+      label: "Browse Catalog",
+      description: "Search 190+ AI tools by category",
+      icon: Wrench,
+    },
+    {
+      href: "/compare",
+      label: "Compare Tools",
+      description: "Side-by-side tool comparison",
+      icon: GitCompare,
+    },
+    {
+      href: "/tool-strategy",
+      label: "Selection Guide",
+      description: "Platform vs best-of-breed strategy",
+      icon: Target,
+    },
+  ];
+
+  const businessDropdown: NavigationDropdownItem[] = [
+    {
+      href: "/business-case",
+      label: "Build Your Case",
+      description: "Research-backed business justification",
+      icon: FileCheck,
+    },
+    {
+      href: "/guidance",
+      label: "ROI & Templates",
+      description: "Calculator and conversation guides",
+      icon: MessageSquare,
+    },
+    {
+      href: "/resources",
+      label: "Implementation",
+      description: "30-day plan and roadmap",
+      icon: Map,
+    },
   ];
 
   const isActive = (href: string) => {
     if (href === "/") return location === "/";
     return location.startsWith(href);
+  };
+
+  const isDropdownActive = (items: NavigationDropdownItem[]) => {
+    return items.some((item) => isActive(item.href));
   };
 
   return (
@@ -44,32 +112,84 @@ export default function Navigation() {
               {APP_LOGO && (
                 <img src={APP_LOGO} alt="Logo" className="h-8 w-8 group-hover:scale-110 transition-transform" />
               )}
-              <span className="text-xl font-bold bg-gradient-to-r from-orange-600 via-amber-500 to-emerald-600 bg-clip-text text-transparent">
-                Agent Shift
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold bg-gradient-to-r from-orange-600 via-amber-500 to-emerald-600 bg-clip-text text-transparent">
+                  Agent Shift
+                </span>
+                <span className="text-[10px] text-slate-500 tracking-wide uppercase font-medium -mt-0.5">
+                  Stop doing. Start guiding.
+                </span>
+              </div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-2">
-            {navItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link key={item.href} href={item.href}>
-                  <Button
-                    variant={isActive(item.href) ? "default" : "ghost"}
-                    className={`flex items-center gap-2 transition-all duration-300 ${
-                      isActive(item.href)
-                        ? "bg-primary text-primary-foreground shadow-lg"
-                        : "hover:bg-accent/50"
-                    }`}
-                  >
-                    {Icon && <Icon className="h-4 w-4" />}
-                    {item.label}
-                  </Button>
-                </Link>
-              );
-            })}
+            {/* Home */}
+            <Link href="/">
+              <Button
+                variant={isActive("/") ? "default" : "ghost"}
+                className={`flex items-center gap-2 transition-all duration-300 ${
+                  isActive("/")
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "hover:bg-accent/50"
+                }`}
+              >
+                <HomeIcon className="h-4 w-4" />
+                Home
+              </Button>
+            </Link>
+
+            {/* Learn Dropdown */}
+            <NavigationDropdown
+              label="Learn"
+              items={learnDropdown}
+              isActive={isDropdownActive(learnDropdown)}
+            />
+
+            {/* Workflows */}
+            <Link href="/workflows">
+              <Button
+                variant={isActive("/workflows") ? "default" : "ghost"}
+                className={`flex items-center gap-2 transition-all duration-300 ${
+                  isActive("/workflows")
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "hover:bg-accent/50"
+                }`}
+              >
+                <Zap className="h-4 w-4" />
+                Workflows
+              </Button>
+            </Link>
+
+            {/* Tools Dropdown */}
+            <NavigationDropdown
+              label="Tools"
+              items={toolsDropdown}
+              isActive={isDropdownActive(toolsDropdown)}
+            />
+
+            {/* Business Dropdown */}
+            <NavigationDropdown
+              label="Business"
+              items={businessDropdown}
+              isActive={isDropdownActive(businessDropdown)}
+            />
+
+            {/* Resources */}
+            <Link href="/resources">
+              <Button
+                variant={isActive("/resources") ? "default" : "ghost"}
+                className={`flex items-center gap-2 transition-all duration-300 ${
+                  isActive("/resources")
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "hover:bg-accent/50"
+                }`}
+              >
+                <FileText className="h-4 w-4" />
+                Resources
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,25 +211,224 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border backdrop-blur-xl">
             <div className="flex flex-col gap-2">
-              {navItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <Link key={item.href} href={item.href}>
-                    <Button
-                      variant={isActive(item.href) ? "default" : "ghost"}
-                      className={`w-full justify-start flex items-center gap-2 transition-all duration-300 ${
-                        isActive(item.href)
-                          ? "bg-primary text-primary-foreground shadow-md"
-                          : "hover:bg-accent/50"
-                      }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {Icon && <Icon className="h-4 w-4" />}
-                      {item.label}
-                    </Button>
-                  </Link>
-                );
-              })}
+              {/* Home */}
+              <Link href="/">
+                <Button
+                  variant={isActive("/") ? "default" : "ghost"}
+                  className={`w-full justify-start flex items-center gap-2 transition-all duration-300 ${
+                    isActive("/")
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "hover:bg-accent/50"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <HomeIcon className="h-4 w-4" />
+                  Home
+                </Button>
+              </Link>
+
+              {/* Learn Section */}
+              <div>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-between flex items-center gap-2"
+                  onClick={() =>
+                    setMobileDropdownOpen(
+                      mobileDropdownOpen === "learn" ? null : "learn"
+                    )
+                  }
+                >
+                  <div className="flex items-center gap-2">
+                    <Lightbulb className="h-4 w-4" />
+                    Learn
+                  </div>
+                  <svg
+                    className={`h-4 w-4 transition-transform ${
+                      mobileDropdownOpen === "learn" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </Button>
+                {mobileDropdownOpen === "learn" && (
+                  <div className="ml-6 mt-2 space-y-1">
+                    {learnDropdown.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <Link key={item.href} href={item.href}>
+                          <Button
+                            variant={isActive(item.href) ? "default" : "ghost"}
+                            size="sm"
+                            className={`w-full justify-start flex items-center gap-2 ${
+                              isActive(item.href)
+                                ? "bg-primary text-primary-foreground"
+                                : ""
+                            }`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            <Icon className="h-3 w-3" />
+                            {item.label}
+                          </Button>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+
+              {/* Workflows */}
+              <Link href="/workflows">
+                <Button
+                  variant={isActive("/workflows") ? "default" : "ghost"}
+                  className={`w-full justify-start flex items-center gap-2 transition-all duration-300 ${
+                    isActive("/workflows")
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "hover:bg-accent/50"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Zap className="h-4 w-4" />
+                  Workflows
+                </Button>
+              </Link>
+
+              {/* Tools Section */}
+              <div>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-between flex items-center gap-2"
+                  onClick={() =>
+                    setMobileDropdownOpen(
+                      mobileDropdownOpen === "tools" ? null : "tools"
+                    )
+                  }
+                >
+                  <div className="flex items-center gap-2">
+                    <Wrench className="h-4 w-4" />
+                    Tools
+                  </div>
+                  <svg
+                    className={`h-4 w-4 transition-transform ${
+                      mobileDropdownOpen === "tools" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </Button>
+                {mobileDropdownOpen === "tools" && (
+                  <div className="ml-6 mt-2 space-y-1">
+                    {toolsDropdown.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <Link key={item.href} href={item.href}>
+                          <Button
+                            variant={isActive(item.href) ? "default" : "ghost"}
+                            size="sm"
+                            className={`w-full justify-start flex items-center gap-2 ${
+                              isActive(item.href)
+                                ? "bg-primary text-primary-foreground"
+                                : ""
+                            }`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            <Icon className="h-3 w-3" />
+                            {item.label}
+                          </Button>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+
+              {/* Business Section */}
+              <div>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-between flex items-center gap-2"
+                  onClick={() =>
+                    setMobileDropdownOpen(
+                      mobileDropdownOpen === "business" ? null : "business"
+                    )
+                  }
+                >
+                  <div className="flex items-center gap-2">
+                    <Briefcase className="h-4 w-4" />
+                    Business
+                  </div>
+                  <svg
+                    className={`h-4 w-4 transition-transform ${
+                      mobileDropdownOpen === "business" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </Button>
+                {mobileDropdownOpen === "business" && (
+                  <div className="ml-6 mt-2 space-y-1">
+                    {businessDropdown.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <Link key={item.href} href={item.href}>
+                          <Button
+                            variant={isActive(item.href) ? "default" : "ghost"}
+                            size="sm"
+                            className={`w-full justify-start flex items-center gap-2 ${
+                              isActive(item.href)
+                                ? "bg-primary text-primary-foreground"
+                                : ""
+                            }`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            <Icon className="h-3 w-3" />
+                            {item.label}
+                          </Button>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+
+              {/* Resources */}
+              <Link href="/resources">
+                <Button
+                  variant={isActive("/resources") ? "default" : "ghost"}
+                  className={`w-full justify-start flex items-center gap-2 transition-all duration-300 ${
+                    isActive("/resources")
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "hover:bg-accent/50"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <FileText className="h-4 w-4" />
+                  Resources
+                </Button>
+              </Link>
             </div>
           </div>
         )}
