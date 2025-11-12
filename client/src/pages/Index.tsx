@@ -29,15 +29,15 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50 relative">
       {/* Hero Section */}
-      <div className="relative container mx-auto px-4 py-20 md:py-28">
-        {/* Floating Orbs - Aurora Depth Effect */}
-        <FloatingOrbs />
+      {/* Floating Orbs - Aurora Depth Effect */}
+      <FloatingOrbs />
 
-        {/* Wind-Driven Particles */}
-        <AdvancedParticles count={150} windSpeed={80} flockingEnabled={true} />
+      {/* Wind-Driven Particles */}
+      <AdvancedParticles count={150} windSpeed={80} flockingEnabled={true} />
 
+      <div className="container mx-auto px-4 py-20 md:py-28">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-coral-100 text-coral-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="h-4 w-4" />
@@ -50,7 +50,7 @@ export default function Index() {
               Do
             </span>
             {" "}to{" "}
-            <span className="animated-gradient bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 bg-clip-text text-transparent">
+            <span className="animated-gradient bg-gradient-to-r from-[#FF6B35] via-[#FFC107] via-[#10B981] to-[#14B8A6] bg-clip-text text-transparent">
               Orchestrate
             </span>
           </h1>
@@ -110,7 +110,9 @@ export default function Index() {
           </p>
         </div>
       </div>
+    </div>
 
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
       {/* Doer vs Orchestrator Diagram */}
       <div className="bg-white py-12">
         <div className="container mx-auto px-4">
