@@ -548,7 +548,7 @@ export default function Workflows() {
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case "Beginner": return "bg-accent/10 text-accent-foreground border-accent/20 hover:bg-accent/20";
+      case "Beginner": return "bg-green-50 text-green-700 border-green-300 hover:bg-green-100";
       case "Intermediate": return "bg-amber-50 text-amber-700 border-amber-300 hover:bg-amber-100";
       case "Advanced": return "bg-primary/10 text-primary border-primary/30 hover:bg-primary/20";
       default: return "bg-slate-100 text-slate-700";
@@ -695,7 +695,7 @@ export default function Workflows() {
           {/* Filter Tabs */}
           <div className="sticky top-0 z-30 bg-gradient-to-br from-warm-50 via-white to-amber-50 py-4 -mx-4 px-4 mb-6">
             <Tabs defaultValue="all" className="">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 max-w-2xl mx-auto bg-slate-100/80 backdrop-blur-sm p-1.5 md:p-2 rounded-xl shadow-md">
+              <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 max-w-2xl mx-auto bg-slate-100/80 backdrop-blur-sm p-1.5 md:p-2 rounded-xl shadow-md">
               <TabsTrigger
                 value="all"
                 onClick={() => setSelectedCategory("all")}
