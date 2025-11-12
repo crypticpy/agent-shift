@@ -137,7 +137,7 @@ export default function MakingOf() {
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Making the Sausage:<br />
-              <span className="text-white/80">How We Actually Built This</span>
+              <span className="text-white/80">Behind the Build</span>
             </h1>
 
             <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
