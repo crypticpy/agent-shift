@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import { AgenticAIBusinessCasePrintable } from "@/components/AgenticAIBusinessCasePrintable";
+import { MoneyParticles } from "@/components/MoneyParticles";
 
 export default function AgenticAIBusinessCase() {
   const [activeTab, setActiveTab] = useState("roi");
@@ -177,8 +178,9 @@ Generated from: AI Agent Portal Business Case Generator
       {/* Visible UI */}
       <div className="min-h-screen bg-gradient-to-br from-[oklch(0.98_0.02_35)] via-white to-[oklch(0.97_0.03_85)]">
       {/* Hero */}
-      <div className="bg-gradient-to-r from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] text-white py-16">
-        <div className="container mx-auto px-4">
+      <div className="bg-gradient-to-r from-[oklch(0.65_0.18_35)] to-[oklch(0.70_0.16_50)] text-white py-16 relative overflow-hidden">
+        <MoneyParticles className="z-0" spawnRate={3.0} maxParticles={60} />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <Briefcase className="h-5 w-5" />
