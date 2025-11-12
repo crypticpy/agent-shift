@@ -192,8 +192,8 @@ export function DoerVsOrchestratorDiagram() {
         <Card className="inline-block border-2 border-orange-200 bg-orange-50/50">
           <CardContent className="p-6">
             <p className="text-lg text-slate-700 max-w-2xl">
-              <strong className="text-orange-900">The shift:</strong> You stop being the person who executes every task.
-              You become the person who defines what success looks like and ensures quality.
+              <strong className="text-orange-900">The shift:</strong> You don't need to execute every task.
+              You define what success looks like.
             </p>
           </CardContent>
         </Card>
