@@ -95,19 +95,20 @@ export function ROICounter({
           {/* Counter display */}
           <div className="relative px-6 py-4 md:px-8 md:py-5">
             <div
-              className={`text-white text-3xl md:text-5xl lg:text-6xl font-black tracking-wider transition-all duration-200 ${
+              className={`text-3xl md:text-5xl lg:text-6xl font-black tracking-wider transition-all duration-200 ${
                 isJumping ? "scale-105" : "scale-100"
               }`}
               style={{
+                color: "#fbbf24",
                 fontFamily: "'Courier New', 'Consolas', monospace",
                 fontVariantNumeric: "tabular-nums",
                 textShadow: `
-                  0 0 ${15 + glowIntensity * 30}px rgba(255, 255, 255, ${0.6 + glowIntensity * 0.4}),
-                  0 0 ${30 + glowIntensity * 50}px rgba(251, 146, 60, ${0.4 + glowIntensity * 0.6}),
+                  0 0 ${15 + glowIntensity * 30}px rgba(251, 191, 36, ${0.8 + glowIntensity * 0.2}),
+                  0 0 ${30 + glowIntensity * 50}px rgba(251, 146, 60, ${0.5 + glowIntensity * 0.5}),
                   0 2px 4px rgba(0, 0, 0, 0.8)
                 `,
                 letterSpacing: "0.05em",
-                WebkitTextStroke: isJumping ? "1px rgba(255,255,255,0.3)" : "0px",
+                WebkitTextStroke: isJumping ? "1px rgba(251,191,36,0.4)" : "0px",
               }}
             >
               ${formattedValue}
