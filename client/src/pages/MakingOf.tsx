@@ -137,12 +137,12 @@ export default function MakingOf() {
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Making the Sausage:<br />
-              <span className="text-white/80">Behind the Build</span>
+              <span className="text-white/80">A Whole New Workflow</span>
             </h1>
 
             <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-              The unfiltered story of orchestrating 10+ AI platforms, pivoting from platform failures,
-              and using models to critique models so we could talk less.
+              The unfiltered story of orchestrating 10+ AI platforms, pivoting through failures,
+              using models to critique models, all guided by voice alone.
             </p>
 
             <div className="flex flex-wrap gap-3">
