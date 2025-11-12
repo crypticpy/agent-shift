@@ -238,7 +238,7 @@ export default function MakingOf() {
                     <span className="text-sm bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">Foundation</span>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    Before writing any code, we needed data. Lots of it. 190+ AI tools don't research themselves.
+                    Before writing any code, data was needed. Lots of it. 190+ AI tools don't research themselves.
                     The challenge: gather high-quality data at scale without breaking the bank.
                   </p>
                   <Card className="border-2 border-purple-200 mb-4">
@@ -275,7 +275,7 @@ export default function MakingOf() {
                         The Cost Equation
                       </h4>
                       <p className="text-sm text-slate-700 mb-4">
-                        Our goal was to create <strong>tables of structured data</strong> on 190+ tools. We needed volume,
+                        The goal was to create <strong>tables of structured data</strong> on 190+ tools. The approach required volume,
                         quality, and speed—but at a sustainable cost.
                       </p>
 
@@ -310,7 +310,7 @@ export default function MakingOf() {
                       </div>
 
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h5 className="font-semibold text-slate-900 mb-2 text-sm">Why We Didn't Use Others</h5>
+                        <h5 className="font-semibold text-slate-900 mb-2 text-sm">Why Other Tools Weren't Used</h5>
                         <ul className="space-y-2 text-xs text-slate-600">
                           <li className="flex items-start gap-2">
                             <span className="text-slate-400">•</span>
@@ -322,7 +322,7 @@ export default function MakingOf() {
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-slate-400">•</span>
-                            <span><strong>Other Western APIs:</strong> Cost-prohibitive for the scale we needed (190+ tools × multiple data points)</span>
+                            <span><strong>Other Western APIs:</strong> Cost-prohibitive for the required scale (190+ tools × multiple data points)</span>
                           </li>
                         </ul>
                       </div>
@@ -354,8 +354,8 @@ export default function MakingOf() {
                     <span className="text-sm bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-medium">Design Wars</span>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    With research complete, we needed great web design. Instead of picking one platform, we ran a competition.
-                    <strong>We let AI models judge each other's work</strong>.
+                    With research complete, great web design was needed. Instead of picking one platform, a competition was run.
+                    <strong>AI models were configured to judge each other's work</strong>.
                   </p>
 
                   <Card className="border-2 border-amber-200 mb-4">
@@ -403,7 +403,7 @@ export default function MakingOf() {
                         The Judging Process: Models Critique Models
                       </h4>
                       <p className="text-sm text-slate-700 mb-4">
-                        We didn't choose the winner ourselves. We let the AI models evaluate each other.
+                        The winner wasn't chosen manually. The AI models were set up to evaluate each other.
                       </p>
 
                       <div className="space-y-3 mb-4">
@@ -459,7 +459,7 @@ export default function MakingOf() {
                   <div className="mt-4 bg-slate-50 border-l-4 border-amber-500 p-4 rounded">
                     <p className="text-sm text-slate-700">
                       <strong>Why this matters:</strong> Having models critique models removed human bias from the design selection.
-                      We weren't picking our favorite—we were orchestrating an objective evaluation based on design principles.
+                      The process focused on orchestrating an objective evaluation based on design principles, not picking favorites.
                       This is orchestration at its finest: using AI to make AI better.
                     </p>
                   </div>
@@ -481,7 +481,7 @@ export default function MakingOf() {
                     <span className="text-sm bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium">Crisis & Recovery</span>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    With Manus winning the design competition, we consolidated all work into their platform. Then the Git system corrupted.
+                    With Manus winning the design competition, all work was consolidated into their platform. Then the Git system corrupted.
                     What followed was a dramatic data rescue mission that showed both the risks and rewards of bleeding-edge platforms.
                   </p>
 
@@ -543,8 +543,8 @@ export default function MakingOf() {
                         The Rescue Mission
                       </h4>
                       <p className="text-sm text-slate-700 mb-4">
-                        Manus's advanced features actually <strong>saved</strong> us. Because they give you VM access,
-                        we could get creative.
+                        Manus's advanced features actually <strong>enabled the rescue</strong>. Because the platform provides VM access,
+                        creative solutions became possible.
                       </p>
                       <div className="space-y-3 mb-4">
                         <div className="flex items-start gap-3">
@@ -553,7 +553,7 @@ export default function MakingOf() {
                           </div>
                           <div>
                             <p className="font-medium text-slate-900 text-sm">Opened Manus Computer View</p>
-                            <p className="text-xs text-slate-600">Remote access into the virtual machine where our project lived</p>
+                            <p className="text-xs text-slate-600">Remote access into the virtual machine where the project files were stored</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-3">
@@ -562,7 +562,7 @@ export default function MakingOf() {
                           </div>
                           <div>
                             <p className="font-medium text-slate-900 text-sm">Accessed VS Code terminal</p>
-                            <p className="text-xs text-slate-600">Manus's integrated VS Code meant we had full shell access</p>
+                            <p className="text-xs text-slate-600">Manus's integrated VS Code provided full shell access</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-3">
@@ -571,7 +571,7 @@ export default function MakingOf() {
                           </div>
                           <div>
                             <p className="font-medium text-slate-900 text-sm">Navigated to the root filesystem</p>
-                            <p className="text-xs text-slate-600">Found the checkpoint VM with our latest work still intact</p>
+                            <p className="text-xs text-slate-600">Found the checkpoint VM with the latest work still intact</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-3">
@@ -580,7 +580,7 @@ export default function MakingOf() {
                           </div>
                           <div>
                             <p className="font-medium text-slate-900 text-sm">Tar zipped everything</p>
-                            <p className="text-xs text-slate-600">Compressed all assets, components, and data into an archive we could export</p>
+                            <p className="text-xs text-slate-600">Compressed all assets, components, and data into an archive ready for export</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-3">
@@ -590,8 +590,8 @@ export default function MakingOf() {
                           <div>
                             <p className="font-medium text-slate-900 text-sm">Used AI to salvage and organize</p>
                             <p className="text-xs text-slate-600">
-                              AI agents helped us go through all the rescued files, extracting the data catalog and newer UI components.
-                              Organized everything for the local setup.
+                              AI agents processed all the rescued files, extracting the data catalog and newer UI components.
+                              Everything was organized for the local setup.
                             </p>
                           </div>
                         </div>
@@ -600,12 +600,12 @@ export default function MakingOf() {
                       <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded mb-4">
                         <p className="text-sm font-semibold text-purple-900 mb-1">🎤 Still Voice-First, Even in Crisis</p>
                         <p className="text-sm text-slate-700 mb-2">
-                          <strong>We did the majority of this rescue operation with voice commands.</strong> Only 2-3 times
-                          did we need to physically intervene with manual typing—and looking back, we probably could have avoided even
-                          those with Atlas browser's visual agent.
+                          <strong>The majority of this rescue operation was conducted with voice commands.</strong> Only 2-3 times
+                          was manual typing required—and looking back, those instances probably could have been avoided
+                          using Atlas browser's visual agent.
                         </p>
                         <p className="text-sm text-slate-700">
-                          We weren't just <em>talking</em> about voice orchestration. We were <strong>proving</strong> it works—even when
+                          This wasn't just <em>talking</em> about voice orchestration. This was <strong>proving</strong> it works—even when
                           things go sideways.
                         </p>
                       </div>
@@ -613,7 +613,7 @@ export default function MakingOf() {
                       <div className="bg-white border-l-4 border-green-500 p-4 rounded">
                         <p className="text-sm font-semibold text-green-900 mb-1">💡 Mission Accomplished</p>
                         <p className="text-sm text-slate-700">
-                          We rescued everything. Zero data loss. And ironically, it was Manus's advanced VM features that made the rescue possible.
+                          Everything was rescued. Zero data loss. And ironically, it was Manus's advanced VM features that made the rescue possible.
                         </p>
                       </div>
                     </CardContent>
@@ -622,8 +622,8 @@ export default function MakingOf() {
                   <div className="mt-4 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
                     <p className="text-sm font-semibold text-blue-900 mb-1">The Strategic Decision</p>
                     <p className="text-sm text-slate-700">
-                      We'd invested too much in these assets to risk another platform failure. The decision was clear:
-                      <strong> bring everything local</strong> where we'd have 100% control. Use GitHub for proper version control and backup.
+                      Too much had been invested in these assets to risk another platform failure. The decision was clear:
+                      <strong> bring everything local</strong> for 100% control. Use GitHub for proper version control and backup.
                       No more platform dependencies for critical infrastructure.
                     </p>
                   </div>
@@ -683,11 +683,11 @@ export default function MakingOf() {
                             The Orchestration Breakthrough
                           </h5>
                           <p className="text-sm text-slate-700 mb-2">
-                            We had <strong>models critique each other's work</strong>.
+                            <strong>Models were configured to critique each other's work</strong>.
                           </p>
                           <p className="text-sm text-slate-700">
                             One instance would generate code. Another would review it and suggest improvements. A third would
-                            implement the suggestions. We orchestrated the orchestrators—bouncing ideas between models to cut our work
+                            implement the suggestions. The orchestration involved bouncing ideas between models to reduce effort
                             and improve results.
                           </p>
                         </div>
@@ -717,7 +717,7 @@ export default function MakingOf() {
                           </h5>
                           <div className="space-y-3 text-sm text-slate-700">
                             <p className="leading-relaxed">
-                              Once we started piping <strong>SuperWhisper directly into Claude Code CLI</strong>, the quality of the
+                              Once <strong>SuperWhisper was piped directly into Claude Code CLI</strong>, the quality of the
                               design and code <strong>shot up dramatically</strong>. It's genuinely hard to express how much faster
                               things started moving.
                             </p>
@@ -731,7 +731,7 @@ export default function MakingOf() {
                               super advanced algorithmic challenges. It was about <strong>interaction, communication, and speed</strong>.
                             </p>
                             <p className="leading-relaxed font-semibold text-purple-900">
-                              Once we were aboard the Sonnet train, everything changed.
+                              Once the workflow shifted to Sonnet, everything changed.
                             </p>
                           </div>
                         </div>
@@ -746,66 +746,347 @@ export default function MakingOf() {
             <div className="mb-12">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
-                  <div className="h-16 w-16 bg-orange-100 rounded-xl flex items-center justify-center">
-                    <Mic2 className="h-8 w-8 text-orange-600" />
+                  <div className="h-16 w-16 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <Workflow className="h-8 w-8 text-blue-600" />
                   </div>
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <h3 className="text-2xl font-bold text-slate-900">Phase 5: The Voice Layer (Throughout)</h3>
-                    <span className="text-sm bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium">Foundation</span>
+                    <h3 className="text-2xl font-bold text-slate-900">Phase 5: Deployment to Vercel</h3>
+                    <span className="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">Production</span>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    The universal interface. Every platform. Every prompt. All voice.
+                    From local development to live production. Setting up professional hosting infrastructure through voice commands.
                   </p>
-                  <Card className="border-2 border-orange-200">
+                  <Card className="border-2 border-blue-200">
                     <CardContent className="pt-6">
                       <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
-                        <MessageSquare className="h-5 w-5 text-orange-600" />
-                        SuperWhisper + Haiku: AI-to-AI Voice Architecture
+                        <GitBranch className="h-5 w-5 text-blue-600" />
+                        Why Vercel Over GitHub Pages
                       </h4>
-                      <div className="space-y-4">
-                        <div className="flex items-start gap-4">
-                          <div className="h-10 w-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-lg">🎤</span>
-                          </div>
-                          <div>
-                            <h5 className="font-semibold text-slate-900">SuperWhisper: Pre-Configured Context Gateway</h5>
-                            <p className="text-sm text-slate-600">
-                              Alt+Space hotkey → natural speech → text. SuperWhisper was pre-configured
-                              to understand the app context, the AI it was talking to, and the coding environment.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-4">
-                          <div className="h-10 w-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-lg">✨</span>
-                          </div>
-                          <div>
-                            <h5 className="font-semibold text-slate-900">Haiku: The Intelligent Interceptor</h5>
-                            <p className="text-sm text-slate-600 mb-2">
-                              Haiku doesn't just transcribe—it <strong>intercepts and processes</strong> the content.
-                              This isn't word-for-word voice-to-text. It's an AI layer that translates casual speech into
-                              contextually-aware, well-structured prompts.
-                            </p>
-                            <p className="text-sm text-slate-600">
-                              The architecture: <strong>Human → AI (Haiku) → AI (Coding Scaffold)</strong>
-                            </p>
-                          </div>
-                        </div>
-                        <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-lg">
-                          <p className="text-sm font-semibold text-orange-900 mb-1">🧠 Not Direct Input</p>
-                          <p className="text-sm text-slate-700">
-                            This is <strong>AI-to-AI orchestration</strong>, not human-to-machine dictation. You speak naturally.
-                            Haiku understands context, cleans up speech patterns, and delivers clear instructions to the coding agents.
-                            The coding scaffold never sees raw voice transcription—it gets intelligent, context-aware prompts.
+                      <div className="space-y-3 mb-6">
+                        <div className="bg-slate-50 p-4 rounded-lg">
+                          <h5 className="font-semibold text-slate-900 mb-2 text-sm">The SPA Routing Problem</h5>
+                          <p className="text-sm text-slate-600 mb-2">
+                            This React SPA uses client-side routing (Wouter). When users access pages directly like
+                            <code className="bg-slate-200 px-1 rounded mx-1">/catalog</code> or
+                            <code className="bg-slate-200 px-1 rounded mx-1">/making-of</code>, the server needs to serve
+                            <code className="bg-slate-200 px-1 rounded mx-1">index.html</code> for all routes.
+                          </p>
+                          <p className="text-sm text-slate-600">
+                            GitHub Pages doesn't support this configuration without hacky workarounds. Vercel handles it natively.
                           </p>
                         </div>
+                        <div className="grid md:grid-cols-2 gap-3">
+                          <div className="bg-green-50 border-l-4 border-green-500 p-3 rounded">
+                            <h5 className="font-semibold text-green-900 mb-1 text-sm">Vercel Advantages</h5>
+                            <ul className="text-xs text-slate-600 space-y-1">
+                              <li>• SPA routing via vercel.json</li>
+                              <li>• Instant global CDN</li>
+                              <li>• Preview deployments per commit</li>
+                              <li>• Automatic builds from Git</li>
+                              <li>• Zero configuration needed</li>
+                            </ul>
+                          </div>
+                          <div className="bg-slate-50 border-l-4 border-slate-400 p-3 rounded">
+                            <h5 className="font-semibold text-slate-900 mb-1 text-sm">GitHub Pages Limitations</h5>
+                            <ul className="text-xs text-slate-600 space-y-1">
+                              <li>• No native SPA routing</li>
+                              <li>• 404 errors on direct links</li>
+                              <li>• Requires 404.html workarounds</li>
+                              <li>• Slower deployment pipeline</li>
+                              <li>• Limited configuration options</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h4 className="font-semibold text-lg mb-3 flex items-center gap-2 mt-6">
+                        <Zap className="h-5 w-5 text-blue-600" />
+                        The Deployment Process
+                      </h4>
+                      <div className="space-y-3">
+                        <div className="flex items-start gap-3">
+                          <div className="h-6 w-6 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
+                            1
+                          </div>
+                          <div>
+                            <p className="font-medium text-slate-900 text-sm">Voice-orchestrated vercel.json configuration</p>
+                            <p className="text-xs text-slate-600">Created SPA rewrite rules to serve index.html for all routes, fixing the 404 issue</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="h-6 w-6 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
+                            2
+                          </div>
+                          <div>
+                            <p className="font-medium text-slate-900 text-sm">Connected GitHub repository to Vercel</p>
+                            <p className="text-xs text-slate-600">Linked the repo for automatic deployments on every push to main branch</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="h-6 w-6 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
+                            3
+                          </div>
+                          <div>
+                            <p className="font-medium text-slate-900 text-sm">Configured build settings</p>
+                            <p className="text-xs text-slate-600">Set build command (pnpm build), output directory (dist/public), and environment variables</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="h-6 w-6 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
+                            4
+                          </div>
+                          <div>
+                            <p className="font-medium text-slate-900 text-sm">Connected custom domain</p>
+                            <p className="text-xs text-slate-600">DNS configuration and SSL certificate setup handled automatically by Vercel</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg mt-6">
+                        <p className="text-sm font-semibold text-blue-900 mb-1">⚡ Real-Time Workflow</p>
+                        <p className="text-sm text-slate-700">
+                          Voice command → Code change → Git commit → Vercel deployment → Live site updated. The entire
+                          pipeline from speaking a change to seeing it live: typically under 2 minutes.
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* What Was Built */}
+      <div className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
+              What Was Built
+            </h2>
+
+            {/* The Metrics */}
+            <Card className="border-2 border-slate-200 mb-8">
+              <CardHeader>
+                <CardTitle className="text-2xl">The Metrics</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div>
+                    <div className="text-4xl font-bold text-orange-600 mb-1">355+</div>
+                    <div className="text-sm text-slate-600">Total prompts</div>
+                    <div className="text-xs text-slate-500 mt-1">98 lines per prompt average</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-bold text-amber-600 mb-1">190+</div>
+                    <div className="text-sm text-slate-600">AI tools cataloged</div>
+                    <div className="text-xs text-slate-500 mt-1">Researched and documented</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-bold text-green-600 mb-1">$250k</div>
+                    <div className="text-sm text-slate-600">Estimated value</div>
+                    <div className="text-xs text-slate-500 mt-1">Comparable deliverable</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-bold text-teal-600 mb-1">40k+</div>
+                    <div className="text-sm text-slate-600">Words spoken</div>
+                    <div className="text-xs text-slate-500 mt-1">Estimated voice input</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-bold text-blue-600 mb-1">10+</div>
+                    <div className="text-sm text-slate-600">Platforms used</div>
+                    <div className="text-xs text-slate-500 mt-1">Tools orchestrated</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-bold text-purple-600 mb-1">4-6</div>
+                    <div className="text-sm text-slate-600">Concurrent instances</div>
+                    <div className="text-xs text-slate-500 mt-1">AI models in parallel</div>
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-slate-200">
+                  <div>
+                    <div className="text-3xl font-bold text-orange-600 mb-1">2</div>
+                    <div className="text-sm text-slate-600">Major pivots survived</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-slate-900 mb-1">1 person</div>
+                    <div className="text-sm text-slate-600">Weeks of work</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Comparison */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-slate-900">Compared to Other Approaches</h3>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                {/* WordPress/Website Builder */}
+                <Card className="border-2 border-orange-200">
+                  <CardHeader>
+                    <CardTitle className="text-lg">WordPress / Website Builder</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Template-based</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Fully custom</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Pre-built components</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Any feature needed</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Generic designs</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Unique branding</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Click interface</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Natural language</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Still the doer</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Orchestrator role</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Traditional Team */}
+                <Card className="border-2 border-amber-200">
+                  <CardHeader>
+                    <CardTitle className="text-lg">Traditional Development Team</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">$150k-$250k budget</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Fraction of cost</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">3-6 months timeline</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Weeks</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Managing people</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Orchestrating AI</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Communication overhead</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Direct commands</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Vendor dependency</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Full ownership</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Solo Traditional */}
+                <Card className="border-2 border-green-200">
+                  <CardHeader>
+                    <CardTitle className="text-lg">Solo Traditional Development</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Typing code</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Speaking intent</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Tool switching</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Unified interface</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Manual execution</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Parallel processing</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Single-threaded</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">4-6 concurrent tasks</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-slate-400 mt-1">•</span>
+                        <div>
+                          <span className="text-slate-500">Implementation focus</span>
+                          <span className="text-slate-400 mx-2">vs</span>
+                          <span className="font-medium text-slate-900">Direction focus</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* The Shift */}
+              <Card className="border-2 border-blue-200 bg-blue-50/30 mt-8">
+                <CardContent className="pt-6">
+                  <p className="text-lg text-slate-700 leading-relaxed">
+                    From executing tasks to directing intelligence. From writing code to describing outcomes.
+                    From doer to orchestrator.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
@@ -819,7 +1100,7 @@ export default function MakingOf() {
               The Complete Tool Stack
             </h2>
             <p className="text-xl text-slate-600 mb-12 text-center max-w-3xl mx-auto">
-              Every platform we used, what we used it for, and our honest verdict.
+              Every platform involved in this project, what it was used for, and an honest assessment.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -876,7 +1157,7 @@ export default function MakingOf() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
-              What We Learned
+              Key Lessons Learned
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -952,7 +1233,7 @@ export default function MakingOf() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Build Your Own Sausage?
+              Are You Ready to Cook?
             </h2>
             <p className="text-xl mb-8 opacity-95">
               This workflow isn't mystical. It's orchestration. And you can do it too.
