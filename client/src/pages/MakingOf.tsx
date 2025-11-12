@@ -160,6 +160,60 @@ export default function MakingOf() {
         </div>
       </div>
 
+      {/* The Genesis */}
+      <div className="py-20 bg-gradient-to-br from-orange-50 via-white to-amber-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              The Genesis: From Question to Experiment
+            </h2>
+
+            <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
+              <p>
+                After two years of public sector AI work—building apps, training teams, shaping policy—a pattern emerged.
+                People kept asking for demonstrations, wanting to see what AI agents could do. But most treated AI like Google:
+                a resource for when they're stuck. The reality? AI is good enough now to be a <strong>teammate</strong>.
+                Not a search engine. A collaborator you work <em>with</em>, not a tool you go <em>to</em>.
+                That shift in thinking changes everything.
+              </p>
+
+              <p>
+                Demonstrating that collaboration is tricky in government and public sector environments. One agency has Azure.
+                Another uses Google Workspace. A third is locked into legacy systems. Security requirements mean the latest tools
+                lag behind by months or even a year. Show someone a complex Azure-based workflow, and half the audience can't
+                replicate it. The challenge: find something with <strong>fewer barriers</strong>, less complexity, lower risk—and
+                make it work across different platforms.
+              </p>
+
+              <p>
+                Then came the question: What if <strong>one person, working entirely through voice conversations with AI</strong>,
+                could build something typically costing $250,000? No typing. No touching code. No looking at the code.
+                Just orchestration—talking, guiding, collaborating. Start with a catalog of AI tools to share after presentations.
+                But then someone said attendees should walk away thinking, "Wow, I didn't know you could do <em>that</em> with AI."
+                That changed the scope entirely.
+              </p>
+
+              <p>
+                Why not dogfood the concept? Build the entire website using the exact methods being taught—voice orchestration,
+                agent collaboration, zero manual coding. Let the asset itself be the proof. After test runs showed how fast agents
+                could research, scrape data, and assemble content, the path was clear: <strong>This is what people need to see.</strong>
+                A quarter-million-dollar website—content, copy, design, deployment—created through conversation.
+              </p>
+
+              <div className="bg-gradient-to-r from-orange-100 to-amber-100 border-l-4 border-orange-500 p-6 rounded-lg my-8">
+                <div className="flex items-center gap-3 mb-2">
+                  <Sparkles className="h-6 w-6 text-orange-600" />
+                  <p className="font-bold text-orange-900 text-xl">The Proof of Concept</p>
+                </div>
+                <p className="text-orange-800 font-medium">
+                  One person. Voice only. $250,000 value. Zero code touched.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* The Journey */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -168,7 +222,7 @@ export default function MakingOf() {
               Five Phases: From Research to Launch
             </h2>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-              This wasn't a straight line. It was experimentation, competition, failure, and adaptation—all driven by voice.
+              This experiment unfolded in five distinct phases. This wasn't a straight line. It was experimentation, competition, failure, and adaptation—all driven by voice.
             </p>
 
             {/* Phase 1 */}
