@@ -600,9 +600,9 @@ export default function Workflows() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="glass card-lift p-8 rounded-2xl border-2 border-blue-200/50 bg-white/80 backdrop-blur-sm">
-              <div className="flex items-start gap-4 mb-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6 text-center md:text-left">
                 <div className="text-4xl">💡</div>
-                <div>
+                <div className="w-full">
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Understanding "Agents" in These Workflows</h3>
                   <p className="text-lg text-slate-700 mb-4 leading-relaxed">
                     When we say "Agent 1," "Agent 2," etc., we're talking about <span className="font-semibold text-slate-900">functional roles</span>, not different tools.
@@ -695,11 +695,11 @@ export default function Workflows() {
           {/* Filter Tabs */}
           <div className="sticky top-0 z-30 bg-gradient-to-br from-warm-50 via-white to-amber-50 py-4 -mx-4 px-4 mb-6">
             <Tabs defaultValue="all" className="">
-              <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 max-w-2xl mx-auto bg-slate-100/80 backdrop-blur-sm p-1.5 md:p-2 rounded-xl shadow-md">
+              <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 max-w-2xl mx-auto bg-slate-100/80 backdrop-blur-sm rounded-xl shadow-md">
               <TabsTrigger
                 value="all"
                 onClick={() => setSelectedCategory("all")}
-                className="data-[state=active]:text-slate-800 rounded-lg text-xs sm:text-sm"
+                className="data-[state=active]:text-slate-800 rounded-lg text-sm"
                 style={
                   selectedCategory === "all"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -711,7 +711,7 @@ export default function Workflows() {
               <TabsTrigger
                 value="Beginner"
                 onClick={() => setSelectedCategory("Beginner")}
-                className="data-[state=active]:text-slate-800 rounded-lg text-xs sm:text-sm"
+                className="data-[state=active]:text-slate-800 rounded-lg text-sm"
                 style={
                   selectedCategory === "Beginner"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -723,7 +723,7 @@ export default function Workflows() {
               <TabsTrigger
                 value="Intermediate"
                 onClick={() => setSelectedCategory("Intermediate")}
-                className="data-[state=active]:text-slate-800 rounded-lg text-xs sm:text-sm"
+                className="data-[state=active]:text-slate-800 rounded-lg text-sm"
                 style={
                   selectedCategory === "Intermediate"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -735,7 +735,7 @@ export default function Workflows() {
               <TabsTrigger
                 value="Advanced"
                 onClick={() => setSelectedCategory("Advanced")}
-                className="data-[state=active]:text-slate-800 rounded-lg text-xs sm:text-sm"
+                className="data-[state=active]:text-slate-800 rounded-lg text-sm"
                 style={
                   selectedCategory === "Advanced"
                     ? { background: `linear-gradient(135deg, oklch(0.65 0.18 ${complementaryHue}), oklch(0.70 0.20 ${complementLight}))` }
@@ -911,7 +911,7 @@ export default function Workflows() {
                 See exactly how much time and money these workflows can save you
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/calculator">
+                <Link href="/guidance">
                   <Button
                     size="lg"
                     className="relative text-lg px-10 py-6 bg-white shadow-xl overflow-hidden border-0"

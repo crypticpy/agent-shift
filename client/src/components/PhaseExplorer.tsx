@@ -138,11 +138,11 @@ export default function PhaseExplorer() {
             >
               <Card className={`border-2 ${colors.border} shadow-lg`}>
                 <CardHeader>
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
                     <div className={`h-14 w-14 ${colors.icon} rounded-lg flex items-center justify-center flex-shrink-0`}>
                       <Icon className="h-7 w-7" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 w-full">
                       <CardTitle className="text-2xl mb-2">{currentPhase.title}</CardTitle>
                       <CardDescription className="text-base italic">
                         "{currentPhase.mindset}"
@@ -192,18 +192,19 @@ export default function PhaseExplorer() {
                   </div>
 
                   {/* Navigation */}
-                  <div className="flex justify-between items-center pt-4">
+                  <div className="flex flex-col sm:flex-row gap-3 justify-between items-center pt-4">
                     <Button
                       variant="outline"
                       onClick={() => setActivePhase(Math.max(0, activePhase - 1))}
                       disabled={activePhase === 0}
+                      className="w-full sm:w-auto"
                     >
                       Previous Phase
                     </Button>
                     {activePhase < phases.length - 1 ? (
                       <Button
                         onClick={() => setActivePhase(activePhase + 1)}
-                        className="bg-orange-500 hover:bg-orange-600"
+                        className="bg-orange-500 hover:bg-orange-600 w-full sm:w-auto"
                       >
                         Next Phase
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -211,7 +212,7 @@ export default function PhaseExplorer() {
                     ) : (
                       <Button
                         onClick={() => setShowQuiz(true)}
-                        className="bg-orange-500 hover:bg-orange-600"
+                        className="bg-orange-500 hover:bg-orange-600 w-full sm:w-auto"
                       >
                         Which Phase Are You?
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -248,11 +249,11 @@ export default function PhaseExplorer() {
                       : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                   }`}
                 >
-                  <div className="flex items-start gap-3">
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                     <div className={`h-10 w-10 ${phaseColors.icon} rounded-lg flex items-center justify-center flex-shrink-0`}>
                       <PhaseIcon className="h-5 w-5" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 w-full">
                       <h4 className="font-semibold mb-1">{phase.title}</h4>
                       <p className="text-sm text-slate-600 italic">"{phase.mindset}"</p>
                     </div>

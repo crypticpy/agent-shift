@@ -34,12 +34,12 @@ export default function ToolStrategy() {
             <span className="text-sm font-medium text-orange-900">Comprehensive Tool Selection Guide</span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-orange-900 to-slate-900 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 px-2 leading-tight bg-gradient-to-r from-slate-900 via-orange-900 to-slate-900 bg-clip-text text-transparent [-webkit-background-clip:text]">
             Hire Your Agent Team
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-700 mb-4 max-w-3xl mx-auto">
-            Should you hire from one company (platform) or hire specialists (best-of-breed)?
+            Choose the right agent per task, no matter who makes it.
           </p>
 
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
@@ -224,7 +224,7 @@ export default function ToolStrategy() {
             <p className="text-lg text-slate-700 mb-6 max-w-2xl mx-auto">
               Use our ROI calculator to see exactly how much time and money you'll save with AI tools
             </p>
-            <Link href="/calculator">
+            <Link href="/guidance">
               <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
                 Go to ROI Calculator
                 <ArrowRight className="ml-2 h-5 w-5" />

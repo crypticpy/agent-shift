@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "title": "Glossary of AI & Government Terms",
+    "description": "Definitions of key technical terms, compliance standards, and AI concepts used throughout Agent Shift",
+    "lastUpdated": "2025-11-13",
+    "totalTerms": 13
+  },
+  "categories": [
+    {
+      "id": "ai-automation",
+      "name": "AI & Automation",
+      "icon": "Sparkles",
+      "description": "Core concepts related to artificial intelligence and automation technologies"
+    },
+    {
+      "id": "compliance-security",
+      "name": "Compliance & Security",
+      "icon": "Shield",
+      "description": "Standards and regulations for data security and compliance"
+    },
+    {
+      "id": "technical",
+      "name": "Technical Concepts",
+      "icon": "Code",
+      "description": "General technical terminology and concepts"
+    }
+  ],
+  "terms": [
+    {
+      "id": "agentic-ai",
+      "term": "Agentic AI",
+      "category": "ai-automation",
+      "definition": "AI systems that can act autonomously to achieve goals without constant human intervention. Unlike traditional AI that simply responds to prompts, agentic AI can plan multi-step workflows, make decisions, use tools, and adapt its approach based on feedback.",
+      "example": "An agentic AI system could automatically monitor disease surveillance data, detect anomalies, generate weekly reports, and email them to stakeholders—all without human intervention.",
+      "relatedTerms": ["AI Agent", "Orchestration", "Workflow"],
+      "usedIn": ["/learn", "/use-cases", "/catalog"],
+      "aliases": ["Autonomous AI", "Goal-Oriented AI"]
+    },
+    {
+      "id": "ai-agent",
+      "term": "AI Agent",
+      "category": "ai-automation",
+      "definition": "A software program powered by AI that performs specific tasks on your behalf. Think of it as a specialized team member that handles one type of work (like writing, data analysis, or scheduling) using artificial intelligence.",
+      "example": "Claude (text generation), Julius AI (data analysis), or Make.com (workflow automation) are all AI agents that handle different types of tasks.",
+      "relatedTerms": ["Agentic AI", "LLM"],
+      "usedIn": ["/", "/catalog", "/learn"],
+      "aliases": ["AI Tool", "AI Assistant"]
+    },
+    {
+      "id": "llm",
+      "term": "LLM (Large Language Model)",
+      "category": "ai-automation",
+      "definition": "An AI model trained on vast amounts of text data that can understand and generate human-like text. LLMs power many AI agents for tasks like writing, summarization, and conversation.",
+      "example": "GPT-4, Claude, and Gemini are all LLMs that can write reports, answer questions, analyze documents, and more.",
+      "relatedTerms": ["AI Agent", "Prompt"],
+      "usedIn": ["/catalog", "/learn"],
+      "aliases": ["Language Model", "Foundation Model"]
+    },
+    {
+      "id": "mcp",
+      "term": "MCP (Model Context Protocol)",
+      "category": "ai-automation",
+      "definition": "A standardized way for AI models to connect to external data sources and tools. MCP allows AI agents to access databases, APIs, and other systems securely without custom integrations for each connection.",
+      "example": "Using MCP, Claude can directly access your organization's database, file system, or internal APIs to retrieve real-time data for analysis.",
+      "relatedTerms": ["API", "AI Agent"],
+      "usedIn": ["/catalog", "/learn"],
+      "aliases": ["Context Protocol"]
+    },
+    {
+      "id": "orchestration",
+      "term": "Orchestration",
+      "category": "ai-automation",
+      "definition": "The process of coordinating multiple AI agents to work together as a team. Instead of doing tasks yourself, you orchestrate (direct and manage) AI agents to complete complex workflows.",
+      "example": "For a disease surveillance workflow, you orchestrate: Make.com collects data → Claude standardizes it → Julius AI analyzes it → Claude writes the report → Make.com distributes it.",
+      "relatedTerms": ["Agentic AI", "Workflow", "AI Agent"],
+      "usedIn": ["/", "/learn", "/use-cases"],
+      "aliases": ["AI Coordination", "Multi-Agent Systems"]
+    },
+    {
+      "id": "prompt",
+      "term": "Prompt",
+      "category": "ai-automation",
+      "definition": "Instructions you give to an AI agent to tell it what task to perform and how. A well-written prompt includes context, specific requirements, format preferences, and examples.",
+      "example": "Instead of 'Write a report,' a good prompt is: 'Write a 2-page executive summary of this disease surveillance data. Include trends, geographic clusters, and recommendations. Use formal language appropriate for state health officials.'",
+      "relatedTerms": ["LLM", "AI Agent"],
+      "usedIn": ["/learn", "/getting-started"],
+      "aliases": ["Instruction", "Query"]
+    },
+    {
+      "id": "workflow",
+      "term": "Workflow",
+      "category": "ai-automation",
+      "definition": "A sequence of connected tasks that accomplish a specific goal. In AI orchestration, workflows define which agents do what, in what order, and how information flows between them.",
+      "example": "A grant proposal workflow might be: 1) Research funding opportunities, 2) Draft proposal sections, 3) Generate budget tables, 4) Review and refine, 5) Format and submit.",
+      "relatedTerms": ["Orchestration", "Agentic AI"],
+      "usedIn": ["/use-cases", "/workflows", "/learn"],
+      "aliases": ["Process", "Pipeline"]
+    },
+    {
+      "id": "fedramp",
+      "term": "FedRAMP",
+      "category": "compliance-security",
+      "definition": "Federal Risk and Authorization Management Program. A government-wide program that provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products and services. Required for federal agencies to use cloud services.",
+      "example": "Microsoft 365 Government and Google Workspace for Government are FedRAMP authorized, meaning federal agencies can legally use them to process government data.",
+      "relatedTerms": ["Compliance", "SOC 2"],
+      "usedIn": ["/catalog", "/faq"],
+      "aliases": ["Federal Authorization"]
+    },
+    {
+      "id": "hipaa",
+      "term": "HIPAA",
+      "category": "compliance-security",
+      "definition": "Health Insurance Portability and Accountability Act. U.S. law that sets standards for protecting sensitive patient health information (PHI). Any tool processing PHI must be HIPAA compliant and have a Business Associate Agreement (BAA).",
+      "example": "If a public health department uses an AI tool to analyze patient data, that tool must be HIPAA compliant and have a signed BAA.",
+      "relatedTerms": ["PHI", "Compliance"],
+      "usedIn": ["/catalog", "/faq", "/use-cases"],
+      "aliases": ["Health Privacy Law"]
+    },
+    {
+      "id": "cjis",
+      "term": "CJIS",
+      "category": "compliance-security",
+      "definition": "Criminal Justice Information Services. FBI security policy that governs access to criminal justice information. Law enforcement and related agencies must use CJIS-compliant systems when handling criminal records, fingerprints, or other justice data.",
+      "example": "A police department using AI for report writing must ensure the tool is CJIS compliant if officers input information related to criminal cases.",
+      "relatedTerms": ["Compliance"],
+      "usedIn": ["/catalog", "/faq"],
+      "aliases": ["Criminal Justice Security"]
+    },
+    {
+      "id": "compliance",
+      "term": "Compliance",
+      "category": "compliance-security",
+      "definition": "Adherence to laws, regulations, and standards that govern how data must be collected, stored, and processed. Different sectors have different compliance requirements (healthcare = HIPAA, government = FedRAMP, finance = SOC 2).",
+      "example": "Before using an AI tool, check which compliance standards it meets to ensure it's legal for your specific use case.",
+      "relatedTerms": ["FedRAMP", "HIPAA", "CJIS", "SOC 2", "ISO 27001"],
+      "usedIn": ["/catalog", "/faq"],
+      "aliases": ["Regulatory Compliance"]
+    },
+    {
+      "id": "soc2",
+      "term": "SOC 2",
+      "category": "compliance-security",
+      "definition": "Service Organization Control 2. An auditing standard that evaluates how well a company protects customer data. SOC 2 reports verify that a service provider has proper security controls for data privacy, availability, and confidentiality.",
+      "example": "Most enterprise AI tools have SOC 2 Type II certification, which means they've been independently audited for security practices.",
+      "relatedTerms": ["Compliance", "ISO 27001"],
+      "usedIn": ["/catalog"],
+      "aliases": ["SOC 2 Type II"]
+    },
+    {
+      "id": "iso27001",
+      "term": "ISO 27001",
+      "category": "compliance-security",
+      "definition": "International Organization for Standardization (ISO) standard for information security management. It specifies requirements for establishing, implementing, maintaining, and continuously improving an information security management system (ISMS).",
+      "example": "Global companies often require ISO 27001 certification from their vendors to ensure consistent security practices across international operations.",
+      "relatedTerms": ["Compliance", "SOC 2"],
+      "usedIn": ["/catalog"],
+      "aliases": ["ISO/IEC 27001"]
+    },
+    {
+      "id": "phi",
+      "term": "PHI (Protected Health Information)",
+      "category": "compliance-security",
+      "definition": "Any information about health status, provision of healthcare, or payment for healthcare that can be linked to a specific individual. This includes names, addresses, birth dates, medical records, and insurance information. PHI is protected under HIPAA.",
+      "example": "Patient names, diagnosis codes, lab results, and prescription records are all PHI and require HIPAA-compliant handling.",
+      "relatedTerms": ["HIPAA", "Compliance"],
+      "usedIn": ["/faq", "/use-cases"],
+      "aliases": ["Patient Data", "Health Information"]
+    },
+    {
+      "id": "api",
+      "term": "API (Application Programming Interface)",
+      "category": "technical",
+      "definition": "A way for different software programs to talk to each other and exchange data. APIs allow AI agents to connect to databases, web services, and other tools without needing manual copy-paste.",
+      "example": "The Claude API allows Make.com to send text to Claude for analysis and receive the results automatically—no human needed to copy-paste.",
+      "relatedTerms": ["MCP", "Workflow"],
+      "usedIn": ["/catalog", "/learn"],
+      "aliases": ["Integration", "Connection"]
+    },
+    {
+      "id": "saas",
+      "term": "SaaS (Software as a Service)",
+      "category": "technical",
+      "definition": "Software that you access through a web browser or app, rather than installing on your computer. You typically pay a monthly or annual subscription. Most AI tools are SaaS products.",
+      "example": "Google Workspace, Microsoft 365, Salesforce, and most AI tools listed in our catalog are SaaS products—you access them online without installation.",
+      "relatedTerms": ["API"],
+      "usedIn": ["/catalog"],
+      "aliases": ["Cloud Software", "Web Application"]
+    }
+  ]
+}

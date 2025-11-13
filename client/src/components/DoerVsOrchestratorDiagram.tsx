@@ -188,13 +188,20 @@ export function DoerVsOrchestratorDiagram() {
       </div>
 
       {/* Key Insight */}
-      <div className="mt-8 text-center">
-        <Card className="inline-block border-2 border-orange-200 bg-orange-50/50">
-          <CardContent className="p-6">
-            <p className="text-lg text-slate-700 max-w-2xl">
-              <strong className="text-orange-900">The shift:</strong> You don't need to execute every task.
-              You define what success looks like.
-            </p>
+      <div className="mt-12 text-center">
+        <Card className="inline-block border-2 border-orange-300 bg-gradient-to-br from-orange-50 to-amber-50 shadow-lg max-w-4xl">
+          <CardContent className="p-8">
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-100 to-amber-100 border-2 border-orange-300 shadow-sm">
+                <span className="text-orange-700 font-bold text-sm uppercase tracking-wider">The Shift</span>
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 via-amber-600 to-orange-600 bg-clip-text text-transparent leading-tight">
+                Define, Collaborate, Review
+              </h3>
+              <p className="text-base text-slate-600 mt-4 max-w-2xl mx-auto">
+                Your three-step workflow with AI agents
+              </p>
+            </div>
           </CardContent>
         </Card>
       </div>

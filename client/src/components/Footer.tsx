@@ -105,7 +105,7 @@ export default function Footer() {
                 </span>
               </div>
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-                Stop doing. Start guiding. Your complete catalog and learning platform for AI agents.
+                Stop Doing. Start Talking. Your complete catalog and learning platform for AI agents.
               </p>
               <div className="space-y-2 text-sm text-slate-600">
                 <div className="flex items-center gap-2">

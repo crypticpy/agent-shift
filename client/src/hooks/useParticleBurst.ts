@@ -5,6 +5,7 @@
  */
 
 import { useCallback } from 'react';
+import { PARTICLE_BURST } from '@/constants/animations';
 
 interface ParticleBurstOptions {
   particleCount?: number;
@@ -12,19 +13,19 @@ interface ParticleBurstOptions {
   duration?: number;
 }
 
-export function useParticleBurst(options: ParticleBurstOptions = {}) {
+export function useParticleBurst(options: ParticleBurstOptions = {}): (event: React.MouseEvent<HTMLButtonElement>) => void {
   const {
-    particleCount = 10,
+    particleCount = PARTICLE_BURST.DEFAULT_COUNT,
     colors = [
       'oklch(0.65 0.24 155)', // Vibrant green
       'oklch(0.75 0.20 45)',  // Amber
       'oklch(0.70 0.22 35)',  // Coral
     ],
-    duration = 700,
+    duration = PARTICLE_BURST.DURATION,
   } = options;
 
   const createBurst = useCallback(
-    (event: React.MouseEvent<HTMLElement>) => {
+    (event: React.MouseEvent<HTMLButtonElement>) => {
       const button = event.currentTarget;
       const rect = button.getBoundingClientRect();
 
@@ -49,8 +50,9 @@ export function useParticleBurst(options: ParticleBurstOptions = {}) {
 
       for (let i = 0; i < particleCount; i++) {
         const angle = angleStep * i;
-        const distance = 40 + Math.random() * 30; // 40-70px
-        const size = 4 + Math.random() * 4; // 4-8px
+        // Use constants for distance and size ranges
+        const distance = PARTICLE_BURST.MIN_DISTANCE + Math.random() * PARTICLE_BURST.MAX_DISTANCE_DELTA;
+        const size = PARTICLE_BURST.MIN_SIZE + Math.random() * PARTICLE_BURST.MAX_SIZE_DELTA;
         const colorIndex = Math.floor(Math.random() * colors.length);
 
         const particle = document.createElement('div');

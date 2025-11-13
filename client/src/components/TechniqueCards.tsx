@@ -184,12 +184,12 @@ export default function TechniqueCards() {
                 {/* Card Header - Always Visible */}
                 <div
                   onClick={() => toggleCard(technique.id)}
-                  className="flex items-start gap-3"
+                  className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left"
                 >
                   <div className={`h-12 w-12 ${colors.icon} rounded-lg flex items-center justify-center flex-shrink-0`}>
                     <Icon className="h-6 w-6" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 w-full">
                     <div className="flex items-start justify-between">
                       <h4 className="font-semibold text-lg text-slate-900">{technique.name}</h4>
                       {isExpanded ? (

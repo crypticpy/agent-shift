@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { IconTextSection } from "@/components/ui/icon-text-section";
 import {
   Sun,
   Coffee,
@@ -21,19 +22,13 @@ export function DailyRoutineIntegration() {
     <div className="space-y-8">
       {/* Overview */}
       <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 p-8">
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-3 rounded-xl bg-primary/10">
-            <Zap className="h-8 w-8 text-primary" />
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-2">
-              Make Agents Your First Stop, Not Your Last Resort
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              The shift to orchestration happens when you go to agents <strong>first</strong>, not after you're stuck. Here's how to rewire your daily routine so agents become your default collaborators.
-            </p>
-          </div>
-        </div>
+        <IconTextSection
+          icon={<Zap className="h-8 w-8 text-primary" />}
+          title="Make Agents Your First Stop, Not Your Last Resort"
+          description={<>The shift to orchestration happens when you go to agents <strong>first</strong>, not after you're stuck. Here's how to rewire your daily routine so agents become your default collaborators.</>}
+          iconBg="bg-primary/10"
+          className="mb-6"
+        />
 
         <div className="bg-amber-50 border-l-4 border-amber-400 p-5 rounded-lg">
           <p className="text-amber-900 font-medium">
@@ -45,15 +40,15 @@ export function DailyRoutineIntegration() {
 
       {/* Morning Routine */}
       <Card className="p-8 border-2 border-orange-200 hover:shadow-xl transition-shadow">
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-4 rounded-xl bg-gradient-to-br from-orange-400 to-amber-500 shadow-lg">
-            <Sun className="h-8 w-8 text-white" />
-          </div>
-          <div>
-            <h4 className="text-2xl font-bold text-foreground mb-1">Morning (6AM - 10AM)</h4>
-            <p className="text-muted-foreground">Set up your day before you even sit down</p>
-          </div>
-        </div>
+        <IconTextSection
+          icon={<Sun className="h-8 w-8 text-white" />}
+          title="Morning (6AM - 10AM)"
+          description="Set up your day before you even sit down"
+          iconBg="bg-gradient-to-br from-orange-400 to-amber-500 shadow-lg p-4 rounded-xl"
+          titleClassName="text-2xl font-bold text-foreground"
+          descriptionClassName="text-muted-foreground"
+          className="mb-6"
+        />
 
         <div className="space-y-6">
           {/* While Getting Ready */}
@@ -146,15 +141,15 @@ export function DailyRoutineIntegration() {
 
       {/* Midday/Afternoon Routine */}
       <Card className="p-8 border-2 border-blue-200 hover:shadow-xl transition-shadow">
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-4 rounded-xl bg-gradient-to-br from-blue-400 to-indigo-500 shadow-lg">
-            <Briefcase className="h-8 w-8 text-white" />
-          </div>
-          <div>
-            <h4 className="text-2xl font-bold text-foreground mb-1">Midday & Afternoon (10AM - 5PM)</h4>
-            <p className="text-muted-foreground">Agent-first approach for focused work</p>
-          </div>
-        </div>
+        <IconTextSection
+          icon={<Briefcase className="h-8 w-8 text-white" />}
+          title="Midday & Afternoon (10AM - 5PM)"
+          description="Agent-first approach for focused work"
+          iconBg="bg-gradient-to-br from-blue-400 to-indigo-500 shadow-lg p-4 rounded-xl"
+          titleClassName="text-2xl font-bold text-foreground"
+          descriptionClassName="text-muted-foreground"
+          className="mb-6"
+        />
 
         <div className="space-y-6">
           {/* Before Starting Tasks */}
@@ -239,15 +234,15 @@ export function DailyRoutineIntegration() {
 
       {/* Evening Routine */}
       <Card className="p-8 border-2 border-purple-200 hover:shadow-xl transition-shadow">
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-4 rounded-xl bg-gradient-to-br from-purple-400 to-pink-500 shadow-lg">
-            <Moon className="h-8 w-8 text-white" />
-          </div>
-          <div>
-            <h4 className="text-2xl font-bold text-foreground mb-1">Evening (5PM - End of Day)</h4>
-            <p className="text-muted-foreground">Set up tomorrow before you leave</p>
-          </div>
-        </div>
+        <IconTextSection
+          icon={<Moon className="h-8 w-8 text-white" />}
+          title="Evening (5PM - End of Day)"
+          description="Set up tomorrow before you leave"
+          iconBg="bg-gradient-to-br from-purple-400 to-pink-500 shadow-lg p-4 rounded-xl"
+          titleClassName="text-2xl font-bold text-foreground"
+          descriptionClassName="text-muted-foreground"
+          className="mb-6"
+        />
 
         <div className="space-y-6">
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">

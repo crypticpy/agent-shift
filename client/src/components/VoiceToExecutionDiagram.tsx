@@ -15,11 +15,11 @@ export function VoiceToExecutionDiagram() {
         {/* Voice Input */}
         <Card className="border-2 border-teal-300 bg-gradient-to-r from-teal-50 to-cyan-50 shadow-md">
           <CardContent className="p-6">
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
               <div className="h-12 w-12 bg-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
                 <Mic className="h-6 w-6 text-white" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <div className="font-bold text-lg text-slate-900 mb-2">VOICE INPUT</div>
                 <div className="bg-white rounded-lg p-4 border border-teal-200">
                   <p className="text-slate-700 italic">
@@ -44,11 +44,11 @@ export function VoiceToExecutionDiagram() {
         {/* AI Agent Orchestration */}
         <Card className="border-2 border-orange-300 bg-gradient-to-br from-orange-50 to-amber-50 shadow-lg">
           <CardContent className="p-6">
-            <div className="flex items-start gap-4 mb-6">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6 text-center md:text-left">
               <div className="h-12 w-12 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center flex-shrink-0">
                 <Zap className="h-6 w-6 text-white" />
               </div>
-              <div>
+              <div className="w-full">
                 <div className="font-bold text-lg text-slate-900 mb-1">AI AGENT ORCHESTRATION</div>
                 <div className="text-sm text-slate-600">Multiple agents working in parallel and sequence</div>
               </div>
@@ -127,11 +127,11 @@ export function VoiceToExecutionDiagram() {
         {/* Output Results */}
         <Card className="border-2 border-emerald-300 bg-gradient-to-r from-emerald-50 to-green-50 shadow-md">
           <CardContent className="p-6">
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
               <div className="h-12 w-12 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
                 <FileCheck className="h-6 w-6 text-white" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <div className="font-bold text-lg text-slate-900 mb-2">OUTPUT FOR YOUR REVIEW</div>
 
                 <div className="bg-white rounded-lg p-4 border border-emerald-200 mb-3">

@@ -213,9 +213,9 @@ Generated: ${new Date().toLocaleDateString()}`;
           animate={{ opacity: 1, scale: 1 }}
           className="bg-gradient-to-r from-green-500 to-teal-500 text-white p-6 rounded-lg shadow-lg"
         >
-          <div className="flex items-start gap-4">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
             <CheckCircle2 className="h-8 w-8 flex-shrink-0" />
-            <div>
+            <div className="w-full">
               <h3 className="text-xl font-bold mb-2">Setup Complete!</h3>
               <p className="mb-3 opacity-95">
                 You've completed all setup tasks. Your AI orchestration stack is ready to use!

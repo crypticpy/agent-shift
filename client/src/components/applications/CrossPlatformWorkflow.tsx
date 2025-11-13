@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { IconTextSection } from "@/components/ui/icon-text-section";
 import {
   Smartphone,
   Laptop,
@@ -21,19 +22,13 @@ export function CrossPlatformWorkflow() {
     <div className="space-y-8">
       {/* Overview */}
       <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-8">
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-3 rounded-xl bg-blue-100">
-            <Cloud className="h-8 w-8 text-blue-600" />
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-2">
-              One Agent Team, Every Device
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              Your agents aren't stuck on one device. Start a task on your phone, continue on your laptop, finish on your desktop. Everything syncs automatically through the cloud.
-            </p>
-          </div>
-        </div>
+        <IconTextSection
+          icon={<Cloud className="h-8 w-8 text-blue-600" />}
+          title="One Agent Team, Every Device"
+          description="Your agents aren't stuck on one device. Start a task on your phone, continue on your laptop, finish on your desktop. Everything syncs automatically through the cloud."
+          iconBg="bg-blue-100"
+          className="mb-6"
+        />
 
         <div className="bg-blue-100 border-l-4 border-blue-500 p-5 rounded-lg">
           <p className="text-blue-900 font-medium">

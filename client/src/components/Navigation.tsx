@@ -18,7 +18,9 @@ import {
   Target,
   FileCheck,
   Presentation,
-  Map
+  Map,
+  HelpCircle,
+  Book
 } from "lucide-react";
 import { useState } from "react";
 import { APP_LOGO } from "@/const";
@@ -48,6 +50,12 @@ export default function Navigation() {
       label: "Use Cases",
       description: "Advanced real-world examples",
       icon: Sparkles,
+    },
+    {
+      href: "/faq",
+      label: "FAQ",
+      description: "Frequently asked questions",
+      icon: HelpCircle,
     },
   ];
 
@@ -87,6 +95,21 @@ export default function Navigation() {
     },
   ];
 
+  const resourcesDropdown: NavigationDropdownItem[] = [
+    {
+      href: "/resources",
+      label: "Resources Hub",
+      description: "Guides, articles, and external links",
+      icon: FileText,
+    },
+    {
+      href: "/glossary",
+      label: "Glossary",
+      description: "AI & compliance terms defined",
+      icon: Book,
+    },
+  ];
+
   const isActive = (href: string) => {
     if (href === "/") return location === "/";
     return location.startsWith(href);
@@ -97,7 +120,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-background/80 backdrop-blur-lg border-b border-border sticky top-0 z-50 shadow-lg">
+    <nav className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -111,7 +134,7 @@ export default function Navigation() {
                   Agent Shift
                 </span>
                 <span className="text-[10px] text-slate-500 tracking-wide uppercase font-medium -mt-0.5">
-                  Stop doing. Start guiding.
+                  Stop Doing. Start Talking.
                 </span>
               </div>
             </div>
@@ -170,20 +193,12 @@ export default function Navigation() {
               isActive={isDropdownActive(businessDropdown)}
             />
 
-            {/* Resources */}
-            <Link href="/resources">
-              <Button
-                variant={isActive("/resources") ? "default" : "ghost"}
-                className={`flex items-center gap-2 transition-all duration-300 ${
-                  isActive("/resources")
-                    ? "bg-primary text-primary-foreground shadow-lg"
-                    : "hover:bg-accent/50"
-                }`}
-              >
-                <FileText className="h-4 w-4" />
-                Resources
-              </Button>
-            </Link>
+            {/* Resources Dropdown */}
+            <NavigationDropdown
+              label="Resources"
+              items={resourcesDropdown}
+              isActive={isDropdownActive(resourcesDropdown)}
+            />
           </div>
 
           {/* Mobile Menu Button */}
@@ -192,18 +207,25 @@ export default function Navigation() {
             size="icon"
             className="lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-controls="mobile-navigation"
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-6 w-6" aria-hidden="true" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6" aria-hidden="true" />
             )}
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border backdrop-blur-xl">
+          <nav
+            id="mobile-navigation"
+            className="lg:hidden py-4 border-t border-border backdrop-blur-xl"
+            aria-label="Mobile navigation"
+          >
             <div className="flex flex-col gap-2">
               {/* Home */}
               <Link href="/">
@@ -231,9 +253,11 @@ export default function Navigation() {
                       mobileDropdownOpen === "learn" ? null : "learn"
                     )
                   }
+                  aria-expanded={mobileDropdownOpen === "learn"}
+                  aria-label="Toggle Learn menu"
                 >
                   <div className="flex items-center gap-2">
-                    <Lightbulb className="h-4 w-4" />
+                    <Lightbulb className="h-4 w-4" aria-hidden="true" />
                     Learn
                   </div>
                   <svg
@@ -243,6 +267,7 @@ export default function Navigation() {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -408,23 +433,64 @@ export default function Navigation() {
                 )}
               </div>
 
-              {/* Resources */}
-              <Link href="/resources">
+              {/* Resources Section */}
+              <div>
                 <Button
-                  variant={isActive("/resources") ? "default" : "ghost"}
-                  className={`w-full justify-start flex items-center gap-2 transition-all duration-300 ${
-                    isActive("/resources")
-                      ? "bg-primary text-primary-foreground shadow-md"
-                      : "hover:bg-accent/50"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
+                  variant="ghost"
+                  className="w-full justify-between flex items-center gap-2"
+                  onClick={() =>
+                    setMobileDropdownOpen(
+                      mobileDropdownOpen === "resources" ? null : "resources"
+                    )
+                  }
                 >
-                  <FileText className="h-4 w-4" />
-                  Resources
+                  <div className="flex items-center gap-2">
+                    <FileText className="h-4 w-4" />
+                    Resources
+                  </div>
+                  <svg
+                    className={`h-4 w-4 transition-transform ${
+                      mobileDropdownOpen === "resources" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </Button>
-              </Link>
+                {mobileDropdownOpen === "resources" && (
+                  <div className="ml-6 mt-2 space-y-1">
+                    {resourcesDropdown.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <Link key={item.href} href={item.href}>
+                          <Button
+                            variant={isActive(item.href) ? "default" : "ghost"}
+                            size="sm"
+                            className={`w-full justify-start flex items-center gap-2 ${
+                              isActive(item.href)
+                                ? "bg-primary text-primary-foreground"
+                                : ""
+                            }`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            <Icon className="h-3 w-3" />
+                            {item.label}
+                          </Button>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
+          </nav>
         )}
       </div>
     </nav>

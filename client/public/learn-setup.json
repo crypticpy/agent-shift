@@ -256,97 +256,32 @@
     {
       "heading": "Common Connection Patterns by Industry",
       "content": [
-        "Here are the most common data source combinations for different roles, with recommended setup approaches."
+        "Connecting data sources to AI agents requires understanding different integration methods. The three main approaches are Native connections (built-in), API connections (custom integration), and MCP (Model Context Protocol) for local data access."
       ],
-      "useCases": [
+      "examples": [
         {
-          "scenario": "Marketing Manager",
-          "description": "Aggregate campaign data from analytics platforms, social media, and CRM to generate AI-powered insights and recommendations.",
-          "difficulty": "Medium",
-          "technicalLevel": "Intermediate",
-          "tools": {
-            "dataSources": [
-              {"name": "Google Analytics", "type": "API", "icon": "BarChart"},
-              {"name": "HubSpot", "type": "Native", "icon": "Mail"},
-              {"name": "LinkedIn API", "type": "API", "icon": "TrendingUp"},
-              {"name": "Google Sheets", "type": "Native", "icon": "FileSpreadsheet"},
-              {"name": "Slack", "type": "Native", "icon": "MessageSquare"}
-            ],
-            "orchestration": {"name": "Make.com", "icon": "Workflow"},
-            "aiAgent": {"name": "Claude", "icon": "Sparkles"}
-          },
-          "icon": "TrendingUp"
+          "method": "Native Connections",
+          "description": "Built-in integrations requiring no coding",
+          "tools": ["Gmail → Salesforce", "Outlook → Power Automate", "Google Sheets → Make.com"],
+          "bestFor": "Beginners, quick setup, common business tools",
+          "setupTime": "5-15 minutes per connection"
         },
         {
-          "scenario": "Program Manager (Government/Nonprofit)",
-          "description": "Connect project management tools, communication platforms, and survey data for automated reporting and analysis.",
-          "difficulty": "Medium",
-          "technicalLevel": "Intermediate",
-          "tools": {
-            "dataSources": [
-              {"name": "Outlook", "type": "Native", "icon": "Mail"},
-              {"name": "SharePoint", "type": "Native", "icon": "Database"},
-              {"name": "Airtable", "type": "API", "icon": "FileSpreadsheet"},
-              {"name": "Zoom Transcripts", "type": "API", "icon": "MessageSquare"}
-            ],
-            "orchestration": {"name": "Power Automate", "icon": "Workflow"},
-            "aiAgent": {"name": "ChatGPT", "icon": "Sparkles"}
-          },
-          "icon": "Users"
+          "method": "API Connections",
+          "description": "Custom integrations using platform APIs",
+          "tools": ["Jira API", "LinkedIn API", "Mixpanel API", "Google Analytics API"],
+          "bestFor": "Intermediate users, specific data needs, real-time syncing",
+          "setupTime": "30-60 minutes per API"
         },
         {
-          "scenario": "Product Manager (Tech)",
-          "description": "Aggregate bug reports, team discussions, and usage analytics to generate comprehensive product insights and roadmap recommendations.",
-          "difficulty": "Advanced",
-          "technicalLevel": "Advanced",
-          "tools": {
-            "dataSources": [
-              {"name": "Jira", "type": "API", "icon": "FileSpreadsheet"},
-              {"name": "Confluence", "type": "API", "icon": "Database"},
-              {"name": "Slack", "type": "API", "icon": "MessageSquare"},
-              {"name": "GitHub", "type": "API", "icon": "Github"},
-              {"name": "Mixpanel", "type": "API", "icon": "BarChart"}
-            ],
-            "orchestration": {"name": "n8n (self-hosted)", "icon": "Workflow"},
-            "aiAgent": {"name": "Claude", "icon": "Sparkles"}
-          },
-          "icon": "Package"
-        },
-        {
-          "scenario": "Sales Professional",
-          "description": "Leverage native CRM AI for contact insights combined with Claude for intelligent document drafting and proposal generation.",
-          "difficulty": "Easy",
-          "technicalLevel": "Beginner",
-          "tools": {
-            "dataSources": [
-              {"name": "Salesforce CRM", "type": "Native", "icon": "Database"},
-              {"name": "Gmail", "type": "Native", "icon": "Mail"},
-              {"name": "LinkedIn", "type": "Native", "icon": "TrendingUp"},
-              {"name": "Google Calendar", "type": "Native", "icon": "Calendar"}
-            ],
-            "orchestration": {"name": "Salesforce Einstein", "icon": "Zap"},
-            "aiAgent": {"name": "Claude Desktop", "icon": "Sparkles"}
-          },
-          "icon": "DollarSign"
-        },
-        {
-          "scenario": "Researcher / Analyst",
-          "description": "Connect academic databases, reference managers, and custom data sources for AI-assisted literature review and synthesis.",
-          "difficulty": "Advanced",
-          "technicalLevel": "Advanced",
-          "tools": {
-            "dataSources": [
-              {"name": "Zotero", "type": "MCP", "icon": "Database"},
-              {"name": "Google Scholar", "type": "API", "icon": "FileSearch"},
-              {"name": "PDF Library", "type": "MCP", "icon": "FileSpreadsheet"},
-              {"name": "Notion", "type": "API", "icon": "Database"}
-            ],
-            "orchestration": {"name": "Elicit", "icon": "Workflow"},
-            "aiAgent": {"name": "Claude", "icon": "Sparkles"}
-          },
-          "icon": "FileSearch"
+          "method": "MCP (Model Context Protocol)",
+          "description": "Direct local data access for AI agents",
+          "tools": ["Zotero MCP Server", "Local PDF Library", "Custom databases"],
+          "bestFor": "Advanced users, privacy-sensitive data, research workflows",
+          "setupTime": "2-4 hours initial setup"
         }
-      ]
+      ],
+      "callToAction": "For detailed role-based connection setups showing exactly which tools to connect for your industry, visit the Use Cases page where we provide complete connection guides for Marketing Managers, Program Managers, Product Managers, Sales Professionals, and Researchers."
     },
     {
       "heading": "Troubleshooting Connection Issues",

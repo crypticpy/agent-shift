@@ -18,11 +18,17 @@ import {
 import { FloatingOrbs } from "@/components/FloatingOrbs";
 import { AdvancedParticles } from "@/components/advanced-particles";
 import { useParticleBurst } from "@/hooks/useParticleBurst";
+import { useIsMobile } from "@/hooks/useMobile";
 import { DoerVsOrchestratorDiagram } from "@/components/DoerVsOrchestratorDiagram";
+import { PARTICLE_COUNTS } from "@/constants/animations";
 
 // Updated version
 export default function Index() {
   const handleBurst = useParticleBurst();
+  const isMobile = useIsMobile();
+
+  // Adjust particle count for mobile performance
+  const particleCount = isMobile ? PARTICLE_COUNTS.MOBILE : PARTICLE_COUNTS.INDEX_PAGE_DESKTOP;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -36,13 +42,13 @@ export default function Index() {
           {/* Floating Orbs - Aurora Depth Effect */}
           <FloatingOrbs />
 
-          {/* Wind-Driven Particles */}
-          <AdvancedParticles count={150} windSpeed={80} flockingEnabled={true} />
+          {/* Wind-Driven Particles - Reduced on mobile for performance */}
+          <AdvancedParticles count={particleCount} windSpeed={80} flockingEnabled={true} />
 
           <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-coral-100 text-coral-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="h-4 w-4" />
-            Stop Doing. Start Guiding.
+            Stop Doing. Start Talking.
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
@@ -223,7 +229,7 @@ export default function Index() {
               </Card>
             </Link>
 
-            <Link href="/calculator">
+            <Link href="/guidance">
               <Card className="glass card-lift hover:shadow-lg transition-all cursor-pointer border-2 hover:border-amber-300 h-full">
                 <CardHeader>
                   <div className="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">

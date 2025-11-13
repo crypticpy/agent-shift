@@ -27,7 +27,9 @@ import { AgentTypesComparison } from "@/components/applications/AgentTypesCompar
 import { CrossPlatformWorkflow } from "@/components/applications/CrossPlatformWorkflow";
 import { DailyRoutineIntegration } from "@/components/applications/DailyRoutineIntegration";
 import { AgentCollaborationSetup } from "@/components/applications/AgentCollaborationSetup";
-import { IndustryConnectionPipeline } from "@/components/IndustryConnectionPipeline";
+import ContextAwareComparison from "@/components/ContextAwareComparison";
+import ThoughtCaptureSimulator from "@/components/ThoughtCaptureSimulator";
+import NestedWorkflowDemo from "@/components/NestedWorkflowDemo";
 
 interface LearnContent {
   title: string;
@@ -385,6 +387,27 @@ export default function Learn() {
           </div>
         )}
 
+        {/* Context-Aware Comparison Demo */}
+        {section.contextComparison && (
+          <div className="my-8">
+            <ContextAwareComparison data={section.contextComparison} />
+          </div>
+        )}
+
+        {/* Thought Capture Simulator */}
+        {section.thoughtCapture && (
+          <div className="my-8">
+            <ThoughtCaptureSimulator data={section.thoughtCapture} />
+          </div>
+        )}
+
+        {/* Nested Workflow Demo */}
+        {section.nestedWorkflow && (
+          <div className="my-8">
+            <NestedWorkflowDemo data={section.nestedWorkflow} />
+          </div>
+        )}
+
         {/* Speed Comparison Interactive Visual */}
         {section.heading === "Why Voice Changes Everything" && (
           <div className="my-8" id="why-voice-changes-everything">
@@ -485,8 +508,8 @@ export default function Learn() {
           </div>
         )}
 
-        {/* Regular content paragraphs (skip if mindsetSelfAssessment since it renders its own content) */}
-        {section.content && !section.mindsetSelfAssessment && (
+        {/* Regular content paragraphs (skip if mindsetSelfAssessment, contextComparison, thoughtCapture, or nestedWorkflow since they render their own content) */}
+        {section.content && !section.mindsetSelfAssessment && !section.contextComparison && !section.thoughtCapture && !section.nestedWorkflow && (
           <Card className="border-2 border-orange-300 bg-gradient-to-br from-orange-50 to-amber-50">
             <CardContent className="p-6 space-y-4">
               {section.content.map((paragraph: string, i: number) => (
@@ -960,7 +983,9 @@ export default function Learn() {
                         <CardDescription>{day.action}</CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <Badge variant="secondary">{day.time}</Badge>
+                        <Badge variant="secondary" className="bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-200">
+                          {day.time}
+                        </Badge>
                       </CardContent>
                     </Card>
                   ))}
@@ -1035,7 +1060,9 @@ export default function Learn() {
                     <CheckCircle2 className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-lg">{benefit.title}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed">{benefit.description}</CardDescription>
+                  <CardDescription className="text-base leading-relaxed">
+                    <Streamdown>{benefit.description}</Streamdown>
+                  </CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -1061,84 +1088,6 @@ export default function Learn() {
           </div>
         )}
 
-        {/* Use Cases (role-based with pipeline visualization) */}
-        {section.useCases && section.useCases[0]?.tools && (
-          <div className="grid md:grid-cols-2 gap-4">
-            {section.useCases.map((useCase: any, i: number) => (
-              <IndustryConnectionPipeline key={i} data={useCase} />
-            ))}
-          </div>
-        )}
-
-        {/* Use Cases (role-based with icons and recommended setups - legacy format) */}
-        {section.useCases && section.useCases[0]?.recommendedSetup && !section.useCases[0]?.tools && (
-          <div className="grid md:grid-cols-2 gap-4">
-            {section.useCases.map((useCase: any, i: number) => {
-              // Map icon names to lucide-react components
-              const getIcon = (iconName: string) => {
-                const iconMap: Record<string, any> = {
-                  TrendingUp: TrendingUp,
-                  Users: Users,
-                  Package: Package,
-                  DollarSign: DollarSign,
-                  FileSearch: FileSearch,
-                  Briefcase: Briefcase,
-                  Code: Code,
-                  Building: Building
-                };
-                return iconMap[iconName] || Briefcase;
-              };
-              const IconComponent = getIcon(useCase.icon);
-
-              return (
-                <Card key={i} className="border-2 border-orange-200 hover:border-orange-300 hover:shadow-lg transition-all">
-                  <CardHeader>
-                    <div className="flex items-start gap-3 mb-2">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center">
-                        <IconComponent className="h-6 w-6 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <CardTitle className="text-lg mb-1">{useCase.scenario}</CardTitle>
-                      </div>
-                    </div>
-                    <CardDescription className="text-sm leading-relaxed text-slate-600">
-                      {useCase.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg p-4 border border-orange-200">
-                      <p className="text-sm font-semibold text-orange-900 mb-2 flex items-center gap-2">
-                        <span className="text-orange-600">🔧</span> Recommended Setup:
-                      </p>
-                      <div className="text-sm text-slate-700 leading-relaxed">
-                        <Streamdown>{useCase.recommendedSetup}</Streamdown>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        )}
-
-        {/* Use Cases (simple examples without recommendedSetup) */}
-        {section.useCases && !section.useCases[0]?.recommendedSetup && !section.useCases[0]?.tools && (
-          <div className="space-y-4">
-            {section.useCases.map((useCase: any, i: number) => (
-              <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
-                <CardHeader>
-                  <CardTitle className="text-lg">{useCase.scenario}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed">{useCase.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  {useCase.example && (
-                    <p className="text-sm text-muted-foreground italic">&quot;{useCase.example}&quot;</p>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        )}
 
         {/* Troubleshooting Examples (expandable accordion with problem/solutions/insight) */}
         {section.examples && section.examples[0]?.problem && section.examples[0]?.solutions && (
@@ -1183,7 +1132,9 @@ export default function Learn() {
                           {workflow.tools}
                         </Badge>
                         {workflow.time && (
-                          <Badge variant="outline">⏱️ {workflow.time}</Badge>
+                          <Badge variant="outline" className="text-orange-700 border-orange-300 bg-orange-50">
+                            ⏱️ {workflow.time}
+                          </Badge>
                         )}
                         {workflow.timeSaved && (
                           <Badge variant="secondary" className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-100">
@@ -1235,44 +1186,60 @@ export default function Learn() {
         {/* Tips - Only render if techniqueCards and securityChecklist are not present */}
         {section.tips && !section.techniqueCards && !section.securityChecklist && (
           <div className="space-y-3">
-            {section.tips.map((tip: any, i: number) => (
-              <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
-                <CardHeader>
-                  <CardTitle className="text-base flex items-center gap-2">
-                    <Sparkles className="h-4 w-4 text-primary" />
-                    {tip.tip}
-                    {tip.complexity && (
-                      <Badge variant="outline" className="text-xs ml-2">
-                        {tip.complexity}
-                      </Badge>
-                    )}
-                    {tip.setupTime && (
-                      <Badge variant="outline" className="text-xs">
-                        {tip.setupTime}
-                      </Badge>
-                    )}
-                  </CardTitle>
-                  <CardDescription className="text-base leading-relaxed space-y-2">
-                    <Streamdown>{tip.description || tip.why}</Streamdown>
-                    {tip.whatItIs && (
-                      <div className="mt-2 pt-2 border-t border-slate-200">
-                        <p className="text-sm text-slate-700"><strong>What it is:</strong> {tip.whatItIs}</p>
-                      </div>
-                    )}
-                    {tip.example && (
-                      <div className="mt-2 pt-2 border-t border-slate-200">
-                        <p className="text-sm text-slate-700"><strong>Example:</strong> {tip.example}</p>
-                      </div>
-                    )}
-                    {tip.lookFor && (
-                      <div className="mt-2 pt-2 border-t border-slate-200">
-                        <p className="text-sm text-slate-700"><strong>Look for:</strong> {tip.lookFor}</p>
-                      </div>
-                    )}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+            {section.tips.map((tip: any, i: number) => {
+              // Map complexity to color scheme
+              const getComplexityColor = (level: string) => {
+                if (level?.toLowerCase().includes('easy') || level?.toLowerCase().includes('beginner')) {
+                  return 'bg-green-100 text-green-700 border-green-300';
+                } else if (level?.toLowerCase().includes('medium')) {
+                  return 'bg-amber-100 text-amber-700 border-amber-300';
+                } else if (level?.toLowerCase().includes('advanced')) {
+                  return 'bg-purple-100 text-purple-700 border-purple-300';
+                }
+                return 'bg-slate-100 text-slate-700 border-slate-300';
+              };
+
+              const complexityColor = tip.complexity ? getComplexityColor(tip.complexity) : '';
+
+              return (
+                <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
+                  <CardHeader>
+                    <CardTitle className="text-base flex items-center gap-2">
+                      <Sparkles className="h-4 w-4 text-primary" />
+                      {tip.tip}
+                      {tip.complexity && (
+                        <Badge variant="outline" className={`text-xs ml-2 ${complexityColor}`}>
+                          {tip.complexity}
+                        </Badge>
+                      )}
+                      {tip.setupTime && (
+                        <Badge variant="outline" className="text-xs text-orange-700 border-orange-300 bg-orange-50">
+                          {tip.setupTime}
+                        </Badge>
+                      )}
+                    </CardTitle>
+                    <CardDescription className="text-base leading-relaxed space-y-2">
+                      <Streamdown>{tip.description || tip.why}</Streamdown>
+                      {tip.whatItIs && (
+                        <div className="mt-2 pt-2 border-t border-slate-200">
+                          <p className="text-sm text-slate-700"><strong>What it is:</strong> {tip.whatItIs}</p>
+                        </div>
+                      )}
+                      {tip.example && (
+                        <div className="mt-2 pt-2 border-t border-slate-200">
+                          <p className="text-sm text-slate-700"><strong>Example:</strong> {tip.example}</p>
+                        </div>
+                      )}
+                      {tip.lookFor && (
+                        <div className="mt-2 pt-2 border-t border-slate-200">
+                          <p className="text-sm text-slate-700"><strong>Look for:</strong> {tip.lookFor}</p>
+                        </div>
+                      )}
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              );
+            })}
           </div>
         )}
 
@@ -1342,17 +1309,17 @@ export default function Learn() {
                   >
                     <Card className="border-2 border-orange-200 hover:border-orange-400 hover:shadow-lg transition-all cursor-pointer h-full">
                       <CardHeader>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center">
                             <IconComponent className="h-6 w-6 text-white" />
                           </div>
-                          <div className="flex-1">
+                          <div className="flex-1 w-full">
                             <CardTitle className="text-lg mb-2">{link.title}</CardTitle>
                             <CardDescription className="text-sm leading-relaxed">
                               {link.description}
                             </CardDescription>
                           </div>
-                          <ArrowRight className="h-5 w-5 text-orange-500 flex-shrink-0 mt-1" />
+                          <ArrowRight className="hidden md:block h-5 w-5 text-orange-500 flex-shrink-0 mt-1" />
                         </div>
                       </CardHeader>
                     </Card>
@@ -1381,13 +1348,13 @@ export default function Learn() {
                     }}
                     className="w-full text-left flex items-center justify-between gap-4 group"
                   >
-                    <div className="flex items-start gap-3 flex-1">
+                    <div className="flex flex-col md:flex-row items-center md:items-start gap-3 flex-1 text-center md:text-left">
                       <CheckCircle2 className="h-6 w-6 text-emerald-600 flex-shrink-0 mt-0.5" />
                       <p className="text-base text-slate-700 leading-relaxed">
                         {section.selfAssessmentLink.text}
                       </p>
                     </div>
-                    <ArrowRight className="h-5 w-5 text-emerald-600 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="hidden md:block h-5 w-5 text-emerald-600 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </CardContent>
               </Card>
@@ -1410,17 +1377,17 @@ export default function Learn() {
                 >
                   <Card className="border-2 border-orange-200 hover:border-orange-400 hover:shadow-lg transition-all cursor-pointer h-full">
                     <CardHeader>
-                      <div className="flex items-start gap-3">
+                      <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                         <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 text-white flex items-center justify-center text-lg font-bold">
                           {pathItem.step}
                         </div>
-                        <div className="flex-1">
+                        <div className="flex-1 w-full">
                           <CardTitle className="text-lg mb-2">{pathItem.title}</CardTitle>
                           <CardDescription className="text-sm leading-relaxed">
                             {pathItem.description}
                           </CardDescription>
                         </div>
-                        <ArrowRight className="h-5 w-5 text-orange-500 flex-shrink-0 mt-1" />
+                        <ArrowRight className="hidden md:block h-5 w-5 text-orange-500 flex-shrink-0 mt-1" />
                       </div>
                     </CardHeader>
                   </Card>
@@ -1432,9 +1399,9 @@ export default function Learn() {
             {section.nextAction && (
               <Card className="border-2 border-emerald-300 bg-gradient-to-br from-emerald-50 to-green-50">
                 <CardContent className="p-6">
-                  <div className="flex items-start gap-3">
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                     <Sparkles className="h-6 w-6 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-base text-slate-700 leading-relaxed">
+                    <p className="text-base text-slate-700 leading-relaxed w-full">
                       <strong>Next Action:</strong> {section.nextAction}
                     </p>
                   </div>
@@ -1519,7 +1486,7 @@ export default function Learn() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="glass backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/20 text-base font-medium">
-              🎓 Stop Doing. Start Guiding.
+              🎓 Stop Doing. Start Talking.
             </Badge>
             <h1 className="text-6xl md:text-7xl font-bold mb-8 tracking-tight">
               Guide AI Agents

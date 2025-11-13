@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { IconTextSection } from "@/components/ui/icon-text-section";
 import {
   Code,
   Globe,
@@ -24,19 +25,13 @@ export function AgentTypesComparison() {
     <div className="space-y-8">
       {/* Overview */}
       <Card className="border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-primary/5 p-8">
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-3 rounded-xl bg-accent/10">
-            <Sparkles className="h-8 w-8 text-accent" />
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-2">
-              Different Agents for Different Jobs
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              Not all AI agents are the same. Each platform offers specialized agents optimized for specific tasks. Understanding these differences helps you pick the right tool for each job.
-            </p>
-          </div>
-        </div>
+        <IconTextSection
+          icon={<Sparkles className="h-8 w-8 text-accent" />}
+          title="Different Agents for Different Jobs"
+          description="Not all AI agents are the same. Each platform offers specialized agents optimized for specific tasks. Understanding these differences helps you pick the right tool for each job."
+          iconBg="bg-accent/10"
+          className="mb-6"
+        />
 
         <div className="bg-amber-50 border-l-4 border-amber-400 p-5 rounded-lg">
           <p className="text-amber-900 font-medium">
@@ -49,15 +44,15 @@ export function AgentTypesComparison() {
       <div className="grid gap-6">
         {/* Coding Agents */}
         <Card className="p-6 border-2 border-blue-200 hover:border-blue-400 transition-colors">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="p-3 rounded-xl bg-blue-100">
-              <Code className="h-7 w-7 text-blue-600" />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-foreground mb-1">Coding Agents</h4>
-              <p className="text-muted-foreground">Write, debug, and explain code across programming languages</p>
-            </div>
-          </div>
+          <IconTextSection
+            icon={<Code className="h-7 w-7 text-blue-600" />}
+            title="Coding Agents"
+            description="Write, debug, and explain code across programming languages"
+            iconBg="bg-blue-100"
+            titleClassName="text-xl font-bold text-foreground"
+            descriptionClassName="text-muted-foreground"
+            className="mb-6"
+          />
 
           <div className="grid md:grid-cols-4 gap-4">
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
@@ -154,15 +149,15 @@ export function AgentTypesComparison() {
 
         {/* Computer Use Agents */}
         <Card className="p-6 border-2 border-purple-200 hover:border-purple-400 transition-colors">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="p-3 rounded-xl bg-purple-100">
-              <Monitor className="h-7 w-7 text-purple-600" />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-foreground mb-1">Computer Use Agents</h4>
-              <p className="text-muted-foreground">Control your computer, click buttons, navigate apps, automate workflows</p>
-            </div>
-          </div>
+          <IconTextSection
+            icon={<Monitor className="h-7 w-7 text-purple-600" />}
+            title="Computer Use Agents"
+            description="Control your computer, click buttons, navigate apps, automate workflows"
+            iconBg="bg-purple-100"
+            titleClassName="text-xl font-bold text-foreground"
+            descriptionClassName="text-muted-foreground"
+            className="mb-6"
+          />
 
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
@@ -238,15 +233,15 @@ export function AgentTypesComparison() {
 
         {/* Web/Research Agents */}
         <Card className="p-6 border-2 border-emerald-200 hover:border-emerald-400 transition-colors">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="p-3 rounded-xl bg-emerald-100">
-              <Globe className="h-7 w-7 text-emerald-600" />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-foreground mb-1">Web & Research Agents</h4>
-              <p className="text-muted-foreground">Browse the web, gather information, cite sources, track current events</p>
-            </div>
-          </div>
+          <IconTextSection
+            icon={<Globe className="h-7 w-7 text-emerald-600" />}
+            title="Web & Research Agents"
+            description="Browse the web, gather information, cite sources, track current events"
+            iconBg="bg-emerald-100"
+            titleClassName="text-xl font-bold text-foreground"
+            descriptionClassName="text-muted-foreground"
+            className="mb-6"
+          />
 
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
@@ -322,15 +317,15 @@ export function AgentTypesComparison() {
 
         {/* Image Agents */}
         <Card className="p-6 border-2 border-pink-200 hover:border-pink-400 transition-colors">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="p-3 rounded-xl bg-pink-100">
-              <Image className="h-7 w-7 text-pink-600" />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-foreground mb-1">Image Generation Agents</h4>
-              <p className="text-muted-foreground">Create images, edit photos, generate graphics, design assets</p>
-            </div>
-          </div>
+          <IconTextSection
+            icon={<Image className="h-7 w-7 text-pink-600" />}
+            title="Image Generation Agents"
+            description="Create images, edit photos, generate graphics, design assets"
+            iconBg="bg-pink-100"
+            titleClassName="text-xl font-bold text-foreground"
+            descriptionClassName="text-muted-foreground"
+            className="mb-6"
+          />
 
           <div className="grid md:grid-cols-4 gap-4">
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
@@ -375,15 +370,15 @@ export function AgentTypesComparison() {
 
         {/* Video Agents */}
         <Card className="p-6 border-2 border-indigo-200 hover:border-indigo-400 transition-colors">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="p-3 rounded-xl bg-indigo-100">
-              <Video className="h-7 w-7 text-indigo-600" />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-foreground mb-1">Video Generation Agents</h4>
-              <p className="text-muted-foreground">Create videos from text, edit clips, generate animations with audio</p>
-            </div>
-          </div>
+          <IconTextSection
+            icon={<Video className="h-7 w-7 text-indigo-600" />}
+            title="Video Generation Agents"
+            description="Create videos from text, edit clips, generate animations with audio"
+            iconBg="bg-indigo-100"
+            titleClassName="text-xl font-bold text-foreground"
+            descriptionClassName="text-muted-foreground"
+            className="mb-6"
+          />
 
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
@@ -459,15 +454,15 @@ export function AgentTypesComparison() {
 
         {/* Voice Agents */}
         <Card className="p-6 border-2 border-orange-200 hover:border-orange-400 transition-colors">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="p-3 rounded-xl bg-orange-100">
-              <Mic className="h-7 w-7 text-orange-600" />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-foreground mb-1">Voice & Audio Agents</h4>
-              <p className="text-muted-foreground">Real-time conversation, speech generation, transcription, voice cloning</p>
-            </div>
-          </div>
+          <IconTextSection
+            icon={<Mic className="h-7 w-7 text-orange-600" />}
+            title="Voice & Audio Agents"
+            description="Real-time conversation, speech generation, transcription, voice cloning"
+            iconBg="bg-orange-100"
+            titleClassName="text-xl font-bold text-foreground"
+            descriptionClassName="text-muted-foreground"
+            className="mb-6"
+          />
 
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-slate-50 p-5 rounded-lg border border-slate-200">
@@ -543,15 +538,15 @@ export function AgentTypesComparison() {
 
         {/* Super Agents / Agent Platforms */}
         <Card className="p-6 border-2 border-violet-200 hover:border-violet-400 transition-colors bg-gradient-to-br from-violet-50 to-purple-50">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="p-3 rounded-xl bg-violet-100">
-              <Layers className="h-7 w-7 text-violet-600" />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-foreground mb-1">Super Agents / Agent Platforms</h4>
-              <p className="text-muted-foreground">Fully integrated systems with VM spawning, built-in IDEs, presentation tools, and multiple capabilities—no add-ons needed</p>
-            </div>
-          </div>
+          <IconTextSection
+            icon={<Layers className="h-7 w-7 text-violet-600" />}
+            title="Super Agents / Agent Platforms"
+            description="Fully integrated systems with VM spawning, built-in IDEs, presentation tools, and multiple capabilities—no add-ons needed"
+            iconBg="bg-violet-100"
+            titleClassName="text-xl font-bold text-foreground"
+            descriptionClassName="text-muted-foreground"
+            className="mb-6"
+          />
 
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-white p-5 rounded-lg border-2 border-violet-200">

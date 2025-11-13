@@ -1,19 +1,159 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orbitalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#FFC107;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="centerGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFC107;stop-opacity:0.9" />
+    </radialGradient>
+
+    <style>
+      /* Main orbital rotation */
+      @keyframes orbit {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      /* Color cycling through the gradient spectrum */
+      @keyframes colorShift {
+        0% { fill: #FF6B35; } /* orange */
+        25% { fill: #FFC107; } /* amber */
+        50% { fill: #10B981; } /* green */
+        75% { fill: #14B8A6; } /* teal */
+        100% { fill: #FF6B35; } /* back to orange */
+      }
+
+      /* Sub-agent orbits (faster than main orbit) */
+      @keyframes subOrbit {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      /* Main orbital system rotation - SLOWER for visual comfort */
+      .orbital-system {
+        animation: orbit 25s linear infinite;
+        transform-origin: 256px 256px;
+      }
+
+      /* Main agents color cycling - synced with slower orbit */
+      .agent {
+        animation: colorShift 20s ease-in-out infinite;
+      }
+
+      /* Stagger color cycling for visual variety */
+      .agent-1 { animation-delay: 0s; }
+      .agent-2 { animation-delay: 6.67s; }
+      .agent-3 { animation-delay: 13.33s; }
+
+      /* Sub-orbital systems - UNIQUE speeds to prevent synchronization */
+      /* Each sub-agent orbits slower than main system with distinct duration */
+
+      .sub-orbit-1 {
+        animation: subOrbit 12s linear infinite;
+        transform-origin: 256px 116px; /* Agent 1 position */
+      }
+
+      .sub-orbit-2 {
+        animation: subOrbit 15s linear infinite reverse;
+        transform-origin: 135px 326px; /* Agent 2 position */
+      }
+
+      .sub-orbit-3 {
+        animation: subOrbit 18s linear infinite;
+        transform-origin: 377px 326px; /* Agent 3 position */
+      }
+
+      /* Sub-agents color cycling (slower, more graceful) */
+      .sub-agent {
+        animation: colorShift 16s ease-in-out infinite;
+      }
+
+      /* Individual sub-agent timing offsets - ALL UNIQUE to prevent sync */
+      .sub-agent-1a { animation-delay: 2s; }
+      .sub-agent-1b { animation-delay: 7s; }
+
+      .sub-agent-2a { animation-delay: 1s; }
+      .sub-agent-2b { animation-delay: 5s; }
+      .sub-agent-2c { animation-delay: 11s; }
+
+      .sub-agent-3a { animation-delay: 4s; }
+      .sub-agent-3b { animation-delay: 9s; }
+
+      /* Respect reduced motion preferences */
+      @media (prefers-reduced-motion: reduce) {
+        .orbital-system, .sub-orbit-1, .sub-orbit-2, .sub-orbit-3 {
+          animation: none;
+        }
+        .agent, .sub-agent {
+          animation: none;
+          fill: #FF6B35; /* Default to orange */
+        }
+      }
+    </style>
+  </defs>
+
   <!-- Background -->
   <rect width="512" height="512" fill="white"/>
 
-  <!-- Rotated diamond grid - centered -->
-  <g transform="translate(256, 256) rotate(45) translate(-256, -256)">
-    <!-- Top-left: Orange -->
-    <rect x="64" y="64" width="176" height="176" rx="16" fill="#FF6B35"/>
+  <!-- Scale entire logo system by 1.3x (30% larger) from center -->
+  <g transform="translate(256, 256) scale(1.3) translate(-256, -256)">
 
-    <!-- Top-right: Yellow -->
-    <rect x="272" y="64" width="176" height="176" rx="16" fill="#FFC107"/>
+    <!-- Subtle orbital path rings -->
+    <circle cx="256" cy="256" r="140" fill="none" stroke="url(#orbitalGradient)" stroke-width="2" opacity="0.12"/>
+    <circle cx="256" cy="256" r="180" fill="none" stroke="url(#orbitalGradient)" stroke-width="1.5" opacity="0.08"/>
 
-    <!-- Bottom-left: Green -->
-    <rect x="64" y="272" width="176" height="176" rx="16" fill="#10B981"/>
+    <!-- Main rotating orbital system -->
+  <g class="orbital-system">
 
-    <!-- Bottom-right: Teal -->
-    <rect x="272" y="272" width="176" height="176" rx="16" fill="#14B8A6"/>
+    <!-- AGENT 1 (top position) with 2 sub-agents -->
+    <g>
+      <!-- Main agent -->
+      <circle class="agent agent-1" cx="256" cy="116" r="22" fill="#FF6B35"/>
+
+      <!-- Sub-agents orbiting Agent 1 at 40px radius -->
+      <g class="sub-orbit-1">
+        <circle class="sub-agent sub-agent-1a" cx="216" cy="116" r="8" fill="#10B981"/>
+        <circle class="sub-agent sub-agent-1b" cx="296" cy="116" r="8" fill="#14B8A6"/>
+      </g>
+    </g>
+
+    <!-- AGENT 2 (bottom-left position) with 3 sub-agents -->
+    <g>
+      <!-- Main agent -->
+      <circle class="agent agent-2" cx="135" cy="326" r="22" fill="#10B981"/>
+
+      <!-- Sub-agents orbiting Agent 2 at 40px radius, 120° apart -->
+      <g class="sub-orbit-2">
+        <circle class="sub-agent sub-agent-2a" cx="95" cy="326" r="7" fill="#FF6B35"/>
+        <circle class="sub-agent sub-agent-2b" cx="155" cy="291" r="7" fill="#FFC107"/>
+        <circle class="sub-agent sub-agent-2c" cx="155" cy="361" r="7" fill="#14B8A6"/>
+      </g>
+    </g>
+
+    <!-- AGENT 3 (bottom-right position) with 2 sub-agents -->
+    <g>
+      <!-- Main agent -->
+      <circle class="agent agent-3" cx="377" cy="326" r="22" fill="#14B8A6"/>
+
+      <!-- Sub-agents orbiting Agent 3 at 40px radius -->
+      <g class="sub-orbit-3">
+        <circle class="sub-agent sub-agent-3a" cx="337" cy="326" r="8" fill="#FFC107"/>
+        <circle class="sub-agent sub-agent-3b" cx="417" cy="326" r="8" fill="#FF6B35"/>
+      </g>
+    </g>
+
   </g>
+
+    <!-- Central orchestrator (stationary, doesn't rotate) - KEEP THE GLOW -->
+    <circle cx="256" cy="256" r="70" fill="url(#centerGradient)" opacity="0.2"/>
+    <circle cx="256" cy="256" r="55" fill="url(#centerGradient)"/>
+    <circle cx="256" cy="256" r="45" fill="white" opacity="0.3"/>
+
+  </g> <!-- End 1.3x scale group -->
+
 </svg>

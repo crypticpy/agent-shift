@@ -226,7 +226,7 @@ export default function MakingOf() {
 
             {/* Phase 1 */}
             <div className="mb-12">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                 <div className="flex-shrink-0">
                   <div className="h-16 w-16 bg-purple-100 rounded-xl flex items-center justify-center">
                     <Search className="h-8 w-8 text-purple-600" />
@@ -342,7 +342,7 @@ export default function MakingOf() {
 
             {/* Phase 2 */}
             <div className="mb-12">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                 <div className="flex-shrink-0">
                   <div className="h-16 w-16 bg-amber-100 rounded-xl flex items-center justify-center">
                     <Palette className="h-8 w-8 text-amber-600" />
@@ -407,38 +407,38 @@ export default function MakingOf() {
                       </p>
 
                       <div className="space-y-3 mb-4">
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-8 w-8 bg-purple-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
                             1
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Generated designs from all four platforms</p>
                             <p className="text-xs text-slate-600">Each platform created its version of the site</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-8 w-8 bg-purple-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
                             2
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Used ChatGPT's visual agent in Atlas browser</p>
                             <p className="text-xs text-slate-600">The visual agent could see and analyze the actual rendered designs</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-8 w-8 bg-purple-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
                             3
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Models evaluated multiple design factors</p>
                             <p className="text-xs text-slate-600">Mobile responsiveness, information architecture, accessibility, visual hierarchy, and more</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-8 w-8 bg-purple-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
                             4
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Models chose the winner through critique</p>
                             <p className="text-xs text-slate-600">Multiple iterations of feedback and comparison</p>
                           </div>
@@ -469,7 +469,7 @@ export default function MakingOf() {
 
             {/* Phase 3 */}
             <div className="mb-12">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                 <div className="flex-shrink-0">
                   <div className="h-16 w-16 bg-orange-100 rounded-xl flex items-center justify-center">
                     <AlertTriangle className="h-8 w-8 text-orange-600" />
@@ -492,38 +492,38 @@ export default function MakingOf() {
                         What Went Wrong
                       </h4>
                       <div className="space-y-3 mb-4">
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-orange-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             1
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900">Uploaded all work from other platforms into Manus</p>
                             <p className="text-sm text-slate-600">Hundreds of files, components, data structures—everything</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-orange-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             2
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900">Made edits and improvements in the VM</p>
                             <p className="text-sm text-slate-600">Everything worked perfectly in the live preview. Amazing features like integrated VS Code.</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-orange-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             3
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900">Hit publish... nothing happened</p>
                             <p className="text-sm text-slate-600">Something in the Git system got corrupted. Could see the checkpoint, access the site, but couldn't publish.</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-orange-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             4
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900">Contacted Manus support</p>
                             <p className="text-sm text-slate-600">They couldn't help—Git corruption meant no way to recover through normal channels.</p>
                           </div>
@@ -547,47 +547,47 @@ export default function MakingOf() {
                         creative solutions became possible.
                       </p>
                       <div className="space-y-3 mb-4">
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-green-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             1
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Opened Manus Computer View</p>
                             <p className="text-xs text-slate-600">Remote access into the virtual machine where the project files were stored</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-green-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             2
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Accessed VS Code terminal</p>
                             <p className="text-xs text-slate-600">Manus's integrated VS Code provided full shell access</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-green-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             3
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Navigated to the root filesystem</p>
                             <p className="text-xs text-slate-600">Found the checkpoint VM with the latest work still intact</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-green-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             4
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Tar zipped everything</p>
                             <p className="text-xs text-slate-600">Compressed all assets, components, and data into an archive ready for export</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-green-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             5
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Used AI to salvage and organize</p>
                             <p className="text-xs text-slate-600">
                               AI agents processed all the rescued files, extracting the data catalog and newer UI components.
@@ -633,7 +633,7 @@ export default function MakingOf() {
 
             {/* Phase 4 */}
             <div className="mb-12">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                 <div className="flex-shrink-0">
                   <div className="h-16 w-16 bg-green-100 rounded-xl flex items-center justify-center">
                     <Code className="h-8 w-8 text-green-600" />
@@ -744,7 +744,7 @@ export default function MakingOf() {
 
             {/* Phase 5 */}
             <div className="mb-12">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                 <div className="flex-shrink-0">
                   <div className="h-16 w-16 bg-blue-100 rounded-xl flex items-center justify-center">
                     <Workflow className="h-8 w-8 text-blue-600" />
@@ -806,38 +806,38 @@ export default function MakingOf() {
                         The Deployment Process
                       </h4>
                       <div className="space-y-3">
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             1
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Voice-orchestrated vercel.json configuration</p>
                             <p className="text-xs text-slate-600">Created SPA rewrite rules to serve index.html for all routes, fixing the 404 issue</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             2
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Connected GitHub repository to Vercel</p>
                             <p className="text-xs text-slate-600">Linked the repo for automatic deployments on every push to main branch</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             3
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Configured build settings</p>
                             <p className="text-xs text-slate-600">Set build command (pnpm build), output directory (dist/public), and environment variables</p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                           <div className="h-6 w-6 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">
                             4
                           </div>
-                          <div>
+                          <div className="w-full">
                             <p className="font-medium text-slate-900 text-sm">Connected custom domain</p>
                             <p className="text-xs text-slate-600">DNS configuration and SSL certificate setup handled automatically by Vercel</p>
                           </div>

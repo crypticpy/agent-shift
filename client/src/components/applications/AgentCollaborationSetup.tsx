@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { IconTextSection } from "@/components/ui/icon-text-section";
 import {
   Users,
   Share2,
@@ -22,19 +23,13 @@ export function AgentCollaborationSetup() {
     <div className="space-y-8">
       {/* Overview */}
       <Card className="border-2 border-purple/30 bg-gradient-to-br from-purple-50 to-pink-50 p-8">
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-3 rounded-xl bg-purple-100">
-            <Users className="h-8 w-8 text-purple-600" />
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-2">
-              Agents as Your First Line of Collaboration
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              Stop emailing drafts back and forth. Start collaborating directly inside agent conversations—share context, iterate together, and let agents maintain the history of decisions and revisions.
-            </p>
-          </div>
-        </div>
+        <IconTextSection
+          icon={<Users className="h-8 w-8 text-purple-600" />}
+          title="Agents as Your First Line of Collaboration"
+          description="Stop emailing drafts back and forth. Start collaborating directly inside agent conversations—share context, iterate together, and let agents maintain the history of decisions and revisions."
+          iconBg="bg-purple-100"
+          className="mb-6"
+        />
 
         <div className="bg-purple-100 border-l-4 border-purple-500 p-5 rounded-lg">
           <p className="text-purple-900 font-medium">
@@ -45,15 +40,15 @@ export function AgentCollaborationSetup() {
 
       {/* Sharing Conversations */}
       <Card className="p-8 border-2 border-blue-200 hover:shadow-xl transition-shadow">
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-4 rounded-xl bg-gradient-to-br from-blue-400 to-cyan-500 shadow-lg">
-            <Share2 className="h-8 w-8 text-white" />
-          </div>
-          <div>
-            <h4 className="text-2xl font-bold text-foreground mb-1">Sharing Agent Conversations</h4>
-            <p className="text-muted-foreground">Let teammates see the full context and continue the work</p>
-          </div>
-        </div>
+        <IconTextSection
+          icon={<Share2 className="h-8 w-8 text-white" />}
+          title="Sharing Agent Conversations"
+          description="Let teammates see the full context and continue the work"
+          iconBg="bg-gradient-to-br from-blue-400 to-cyan-500 shadow-lg p-4 rounded-xl"
+          titleClassName="text-2xl font-bold text-foreground"
+          descriptionClassName="text-muted-foreground"
+          className="mb-6"
+        />
 
         <div className="space-y-6">
           {/* ChatGPT Sharing */}
@@ -184,15 +179,15 @@ export function AgentCollaborationSetup() {
 
       {/* Collaborative Workflow Patterns */}
       <Card className="p-8 border-2 border-amber-200 hover:shadow-xl transition-shadow">
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-4 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg">
-            <MessageSquare className="h-8 w-8 text-white" />
-          </div>
-          <div>
-            <h4 className="text-2xl font-bold text-foreground mb-1">Collaborative Workflow Patterns</h4>
-            <p className="text-muted-foreground">Real ways teams use agents together</p>
-          </div>
-        </div>
+        <IconTextSection
+          icon={<MessageSquare className="h-8 w-8 text-white" />}
+          title="Collaborative Workflow Patterns"
+          description="Real ways teams use agents together"
+          iconBg="bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg p-4 rounded-xl"
+          titleClassName="text-2xl font-bold text-foreground"
+          descriptionClassName="text-muted-foreground"
+          className="mb-6"
+        />
 
         <div className="space-y-6">
           {/* Pattern 1 */}

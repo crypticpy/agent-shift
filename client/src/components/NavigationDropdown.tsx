@@ -60,13 +60,13 @@ export function NavigationDropdown({ label, items, isActive }: NavigationDropdow
               return (
                 <Link key={item.href} href={item.href}>
                   <div
-                    className="flex items-start gap-3 px-4 py-3 hover:bg-slate-100 transition-colors cursor-pointer group/item"
+                    className="flex flex-col md:flex-row items-center md:items-start gap-3 px-4 py-3 hover:bg-slate-100 transition-colors cursor-pointer group/item text-center md:text-left"
                     onClick={() => setIsOpen(false)}
                   >
                     <div className="h-10 w-10 bg-gradient-to-br from-primary/10 to-chart-1/10 group-hover/item:from-primary/20 group-hover/item:to-chart-1/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors">
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 w-full">
                       <div className="font-semibold text-slate-900 group-hover/item:text-primary mb-0.5 transition-colors">
                         {item.label}
                       </div>

@@ -216,11 +216,11 @@ export default function TrapScenarios() {
         >
           <Card className="border-2 border-orange-300 shadow-lg">
             <CardHeader>
-              <div className="flex items-start gap-3">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3 text-center md:text-left">
                 <div className="h-12 w-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <AlertTriangle className="h-6 w-6" />
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <CardTitle className="text-xl">{scenario.title}</CardTitle>
                   <CardDescription className="mt-2 text-base">
                     {scenario.situation}

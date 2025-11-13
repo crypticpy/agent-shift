@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { COLOR_CYCLING } from '@/constants/animations';
 
 /**
  * Custom hook for synchronized color cycling across the application
@@ -6,13 +7,18 @@ import { useState, useEffect } from 'react';
  * Creates a smooth color cycle that all components can sync to:
  * - Particles cycle through: orange → yellow → green → teal → blue → purple
  * - Complementary UI elements shift to contrasting colors for harmony
+ * - Throttled to only update when hue changes by at least 1 degree for performance
  *
- * @param cycleTime - Duration of one full color cycle in milliseconds (default: 37500ms = 37.5 seconds)
- * @param startHue - Starting hue in degrees (default: 35 for orange)
+ * @param cycleTime - Duration of one full color cycle in milliseconds (default from constants)
+ * @param startHue - Starting hue in degrees (default from constants)
  * @returns Object with current particle hue and complementary hue
  */
-export function useComplementaryColors(cycleTime: number = 37500, startHue: number = 35) {
+export function useComplementaryColors(
+  cycleTime: number = COLOR_CYCLING.CYCLE_TIME,
+  startHue: number = COLOR_CYCLING.START_HUE
+) {
   const [currentHue, setCurrentHue] = useState<number>(startHue);
+  const prevHueRef = useRef<number>(startHue);
 
   useEffect(() => {
     let animationFrameId: number;
@@ -26,7 +32,13 @@ export function useComplementaryColors(cycleTime: number = 37500, startHue: numb
       // Map to full spectrum (0-360 degrees), starting at startHue
       const hue = (cyclePosition * 360 + startHue) % 360;
 
-      setCurrentHue(hue);
+      // Only update state if hue changed by at least UPDATE_THRESHOLD degrees
+      // This prevents unnecessary re-renders (60fps → ~6fps state updates)
+      if (Math.abs(hue - prevHueRef.current) >= COLOR_CYCLING.UPDATE_THRESHOLD) {
+        setCurrentHue(hue);
+        prevHueRef.current = hue;
+      }
+
       animationFrameId = requestAnimationFrame(updateHue);
     };
 

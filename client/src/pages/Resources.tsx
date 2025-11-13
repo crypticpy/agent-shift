@@ -60,11 +60,11 @@ export default function Resources() {
           <Card className="mb-8 border-2 border-orange-300 bg-gradient-to-br from-orange-50 to-amber-50 shadow-xl">
             <CardHeader>
               <div className="flex items-start justify-between flex-wrap gap-4">
-                <div className="flex items-start gap-4 flex-1">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-4 flex-1 text-center md:text-left">
                   <div className="h-14 w-14 bg-gradient-to-br from-orange-500 to-amber-600 rounded-lg flex items-center justify-center shadow-lg flex-shrink-0">
                     <Briefcase className="h-8 w-8 text-white" />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <Badge className="bg-orange-600 text-white mb-2">Featured Resource</Badge>
                     <CardTitle className="text-2xl mb-2">The Business Case for Agentic AI</CardTitle>
                     <CardDescription className="text-base">

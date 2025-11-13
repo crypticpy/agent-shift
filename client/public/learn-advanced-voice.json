@@ -8,7 +8,44 @@
       "content": [
         "The next level of voice control is context-aware AI. These tools know what application you're using and adapt your words to fit that tool perfectly. You can literally just stream your thoughts, and the AI figures out what you mean.",
         "Imagine this: You're in your email app. You start talking about sending a message to your team. The voice AI knows you're in email, so it automatically formats your words as an email draft - subject line, greeting, body, signature. You didn't have to say 'create email' or give any commands. It just knew."
-      ]
+      ],
+      "contextComparison": {
+        "voiceInput": "Schedule a meeting with the design team",
+        "withoutContext": {
+          "response": "I've created a generic calendar event titled 'Meeting with design team' for an unspecified time.",
+          "problems": [
+            "No time preference detected",
+            "Missing attendee email addresses",
+            "No meeting room or location booked",
+            "No agenda or meeting notes attached"
+          ]
+        },
+        "withContext": {
+          "response": "I've scheduled a design review for Thursday 2pm in Conference Room A with Sarah Chen, Mike Johnson, and Lisa Park. Added the latest prototype files to the meeting notes and set a 15-minute reminder.",
+          "contextUsed": [
+            {
+              "type": "Calendar",
+              "icon": "📅",
+              "data": "Checked your availability - next open slot Thursday 2pm"
+            },
+            {
+              "type": "Email History",
+              "icon": "📧",
+              "data": "Found design team members from recent thread"
+            },
+            {
+              "type": "Location",
+              "icon": "📍",
+              "data": "Booked Conference Room A near your desk"
+            },
+            {
+              "type": "Files",
+              "icon": "📎",
+              "data": "Attached prototype files from your recent project folder"
+            }
+          ]
+        }
+      }
     },
     {
       "heading": "Stream-of-Consciousness Dictation",
@@ -16,14 +53,132 @@
         "This is where voice gets really powerful. You don't have to think about structure or format. Just talk. The AI handles the rest.",
         "Example: You're walking to your car and you say: 'Okay so I need to follow up with Sarah about the budget meeting, remind the team about Friday's deadline, and also check in with IT about that server issue we had last week.'",
         "The context-aware voice AI understands you're listing tasks. It creates three separate items, formats them properly, and adds them to your task manager. You didn't say 'create task' three times. You just talked naturally."
-      ]
+      ],
+      "thoughtCapture": {
+        "rawInput": "Okay so like, I was thinking about the um, the marketing campaign and you know, we should probably, wait what was I saying, oh right the social media strategy needs to be more focused on like Gen Z and um, maybe we should look at TikTok or Instagram Reels, and also I think we need to revisit the budget because the um, the paid ads aren't performing as well as we hoped, and Sarah mentioned something about influencer partnerships which could be worth exploring, but anyway, the main thing is we need to pivot from Facebook to where the younger audience actually is, you know what I mean?",
+        "cleanedOutput": {
+          "sections": [
+            {
+              "heading": "Marketing Campaign Strategy",
+              "content": "The marketing campaign requires a strategic pivot to better target Gen Z audiences. Current efforts are not aligned with where younger demographics spend their time."
+            },
+            {
+              "heading": "Social Media Focus Areas",
+              "content": "Shift primary focus from Facebook to TikTok and Instagram Reels. These platforms offer better engagement with Gen Z users and align with current content consumption patterns."
+            },
+            {
+              "heading": "Budget Reallocation",
+              "content": "Review and adjust budget allocation. Paid ads are underperforming and ROI is below expectations. Consider redirecting funds to influencer partnerships as suggested by Sarah."
+            },
+            {
+              "heading": "Action Items",
+              "content": "1. Research TikTok and Instagram Reels advertising options. 2. Analyze current paid ad performance metrics. 3. Schedule meeting with Sarah to discuss influencer partnership opportunities. 4. Develop budget reallocation proposal for leadership review."
+            }
+          ]
+        },
+        "timeSaved": "12 minutes",
+        "normalityMessage": "Your brain thinks in loops, tangents, and filler words. That's not a bug—that's how breakthroughs happen. Stream-of-consciousness capture preserves your creative flow while AI handles the cleanup."
+      }
     },
     {
       "heading": "Workflows Within Workflows",
       "content": [
         "Advanced voice tools let you build custom workflows that trigger automatically based on what you say. This is like having workflows inside your workflows.",
         "For example: You can set up a voice command like 'Start my morning routine' that automatically opens your calendar, reads your top 3 priorities, checks your email for urgent messages, and creates a summary document. All from one spoken phrase."
-      ]
+      ],
+      "nestedWorkflow": {
+        "trigger": [
+          "Start morning routine!",
+          "Oh, and I had this idea last night about a sustainability dashboard that tracks our carbon footprint... can you research visualization approaches and sustainability metrics for that?",
+          "Actually, create a presentation combining everything when you're done"
+        ],
+        "workflows": [
+          {
+            "id": "morning",
+            "name": "Morning Routine",
+            "emoji": "☀️",
+            "color": "amber-500",
+            "steps": [
+              {
+                "icon": "☕",
+                "text": "Start coffee maker via smart home",
+                "duration": 2000
+              },
+              {
+                "icon": "📅",
+                "text": "Pull today's calendar events",
+                "duration": 1500
+              },
+              {
+                "icon": "📧",
+                "text": "Scan emails for urgent flags",
+                "duration": 2500
+              },
+              {
+                "icon": "📰",
+                "text": "Fetch top news headlines",
+                "duration": 2000
+              },
+              {
+                "icon": "✅",
+                "text": "Generate priority list",
+                "duration": 1500
+              }
+            ],
+            "output": "Morning briefing with calendar, urgent emails, news, and prioritized task list"
+          },
+          {
+            "id": "research",
+            "name": "Project Research Workflow",
+            "emoji": "🔬",
+            "color": "blue-500",
+            "spawnTime": 5000,
+            "steps": [
+              {
+                "icon": "🔍",
+                "text": "Search academic databases",
+                "duration": 3000
+              },
+              {
+                "icon": "📊",
+                "text": "Extract key findings and data",
+                "duration": 2500
+              },
+              {
+                "icon": "📝",
+                "text": "Generate summary with citations",
+                "duration": 2000
+              },
+              {
+                "icon": "💡",
+                "text": "Identify recommendations",
+                "duration": 1500
+              }
+            ],
+            "output": "Research brief with academic findings, data analysis, and actionable recommendations"
+          }
+        ],
+        "synthesis": {
+          "task": "Generate 10-slide presentation combining morning context and research findings",
+          "usesContext": [
+            "morning.output",
+            "research.output"
+          ],
+          "result": "PowerPoint presentation created with intelligent synthesis of both workflow outputs",
+          "slidePreview": [
+            "Executive Summary - Key priorities from morning briefing",
+            "Today's Focus Areas - Calendar highlights and urgent items",
+            "Research Overview - Academic findings summary",
+            "Data Analysis - Key metrics and trends from research",
+            "Recommendation #1 - Backed by research data",
+            "Recommendation #2 - Aligned with calendar priorities",
+            "Recommendation #3 - Integrates news context",
+            "Implementation Timeline - Based on today's schedule",
+            "Resource Requirements - Derived from research brief",
+            "Next Steps - Action items combining all contexts"
+          ]
+        }
+      }
     },
     {
       "heading": "Mac Voice Tools",

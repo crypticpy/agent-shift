@@ -1,15 +1,18 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Search, Building2, HeartPulse, Scale, Siren, ShieldCheck, Code, Filter, ExternalLink, CheckCircle2, AlertCircle, TrendingUp, Users, Database, Globe, GitCompare, Building, DollarSign, BarChart, FileText, Headphones, Workflow, Microscope, Server, GraduationCap, Megaphone, Blocks } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Search, Building2, HeartPulse, Scale, Siren, ShieldCheck, Code, Filter, ExternalLink, CheckCircle2, AlertCircle, TrendingUp, Users, Database, Globe, GitCompare, Building, DollarSign, BarChart, FileText, Headphones, Workflow, Microscope, Server, GraduationCap, Megaphone, Blocks, Info, Sparkles } from "lucide-react";
 import { Link } from "wouter";
 import { APP_TITLE } from "@/const";
 import { Particles } from "@/components/Particles";
 import { CardMagicDust } from "@/components/CardMagicDust";
+import { useIsMobile } from "@/hooks/useMobile";
+import { PARTICLE_COUNTS } from "@/constants/animations";
 
 interface Tool {
   name: string;
@@ -84,8 +87,14 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedTool, setSelectedTool] = useState<Tool | null>(null);
   const [relevanceFilter, setRelevanceFilter] = useState<string>("all");
+  const [complianceFilter, setComplianceFilter] = useState<string>("all");
+  const [showReadingGuide, setShowReadingGuide] = useState<boolean>(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const isMobile = useIsMobile();
+
+  // Adjust particle count for mobile performance
+  const particleCount = isMobile ? PARTICLE_COUNTS.MOBILE : PARTICLE_COUNTS.CATALOG_PAGE_DESKTOP;
 
   useEffect(() => {
     fetch("/catalog_data_v2.json")
@@ -109,6 +118,56 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
+  // Memoize badge color functions (must be before early returns)
+  const getRelevanceBadgeColor = useCallback((relevance: string): string => {
+    switch (relevance) {
+      case "Critical": return "bg-red-100 text-red-800 border-red-300";
+      case "High": return "bg-orange-100 text-orange-800 border-orange-300";
+      case "Moderate": return "bg-yellow-100 text-yellow-800 border-yellow-300";
+      default: return "bg-muted text-muted-foreground border-border";
+    }
+  }, []);
+
+  const getMaturityBadgeColor = useCallback((maturity: string): string => {
+    switch (maturity) {
+      case "Emerging": return "bg-amber-100 text-amber-700 border-amber-300 hover:bg-amber-200 transition-colors";
+      case "Moderate": return "bg-emerald-100 text-emerald-700 border-emerald-300 hover:bg-emerald-200 transition-colors";
+      case "Advanced": return "bg-blue-100 text-blue-700 border-blue-300 hover:bg-blue-200 transition-colors";
+      default: return "bg-muted text-muted-foreground border-border";
+    }
+  }, []);
+
+  // Memoize filtered categories to avoid recalculation on every render
+  // Safe to use even when catalogData is null due to early returns below
+  const filteredCategories = useMemo(() => {
+    if (!catalogData) return [];
+    return catalogData.categories.filter((cat) => {
+      const matchesCategory = selectedCategory === "all" || cat.id === selectedCategory;
+      const matchesRelevance = relevanceFilter === "all" || cat.government_relevance === relevanceFilter;
+      return matchesCategory && matchesRelevance;
+    });
+  }, [catalogData, selectedCategory, relevanceFilter]);
+
+  // Memoize filtered tools for performance with 190+ items
+  const filteredTools = useMemo(() => {
+    if (!catalogData) return [];
+    const allTools = filteredCategories.flatMap((cat) =>
+      (cat.tools || []).map(tool => ({ ...tool, category: cat.name }))
+    );
+
+    return allTools.filter((tool) => {
+      const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        tool.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (tool.category && tool.category.toLowerCase().includes(searchQuery.toLowerCase()));
+
+      const matchesCompliance = complianceFilter === "all" ||
+        (tool.compliance && tool.compliance.includes(complianceFilter));
+
+      return matchesSearch && matchesCompliance;
+    });
+  }, [catalogData, filteredCategories, searchQuery, complianceFilter]);
+
+  // Early returns AFTER all hooks are declared
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center gradient-mesh">
@@ -136,45 +195,12 @@ export default function Home() {
     );
   }
 
-  const filteredCategories = catalogData.categories.filter((cat) => {
-    const matchesCategory = selectedCategory === "all" || cat.id === selectedCategory;
-    const matchesRelevance = relevanceFilter === "all" || cat.government_relevance === relevanceFilter;
-    return matchesCategory && matchesRelevance;
-  });
-
-  const allTools = filteredCategories.flatMap((cat) => 
-    (cat.tools || []).map(tool => ({ ...tool, category: cat.name }))
-  );
-  const filteredTools = allTools.filter((tool) =>
-    tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    tool.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    (tool.category && tool.category.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
-
-  const getRelevanceBadgeColor = (relevance: string) => {
-    switch (relevance) {
-      case "Critical": return "bg-red-100 text-red-800 border-red-300";
-      case "High": return "bg-orange-100 text-orange-800 border-orange-300";
-      case "Moderate": return "bg-yellow-100 text-yellow-800 border-yellow-300";
-      default: return "bg-muted text-muted-foreground border-border";
-    }
-  };
-
-  const getMaturityBadgeColor = (maturity: string) => {
-    switch (maturity) {
-      case "Emerging": return "bg-amber-100 text-amber-700 border-amber-300 hover:bg-amber-200 transition-colors";
-      case "Moderate": return "bg-emerald-100 text-emerald-700 border-emerald-300 hover:bg-emerald-200 transition-colors";
-      case "Advanced": return "bg-blue-100 text-blue-700 border-blue-300 hover:bg-blue-200 transition-colors";
-      default: return "bg-muted text-muted-foreground border-border";
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Animated Gradient Mesh */}
       <div className="relative animated-gradient text-white overflow-hidden">
-        {/* Floating Particles */}
-        <Particles count={60} />
+        {/* Floating Particles - Reduced on mobile for performance */}
+        <Particles count={particleCount} />
 
         {/* Subtle animated overlay pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -219,8 +245,147 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Tool Cards Reading Guide */}
+      <div className="container mx-auto px-4 mt-12 mb-6">
+        <Collapsible open={showReadingGuide} onOpenChange={setShowReadingGuide}>
+          <div className="flex justify-center">
+            <CollapsibleTrigger asChild>
+              <Button variant="outline" className="border-2 border-blue-200 hover:bg-blue-50 hover:border-blue-300 transition-all">
+                <Info className="mr-2 h-4 w-4 text-blue-600" />
+                <span className="font-semibold">How to Read Tool Cards</span>
+              </Button>
+            </CollapsibleTrigger>
+          </div>
+          <CollapsibleContent>
+            <Card className="mt-4 border-2 border-blue-200 bg-blue-50/30">
+              <CardContent className="p-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 flex items-center gap-2 text-slate-800">
+                      <DollarSign className="h-5 w-5 text-green-600" />
+                      Pricing Models
+                    </h4>
+                    <ul className="space-y-2 text-sm text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-lg">💚</span>
+                        <div>
+                          <strong>Free/Open Source</strong> - No cost to use, community-supported
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-lg">💙</span>
+                        <div>
+                          <strong>Subscription</strong> - Monthly or annual fee (typically $10-100/month)
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-lg">💜</span>
+                        <div>
+                          <strong>Enterprise</strong> - Custom pricing for large organizations
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-lg">🔄</span>
+                        <div>
+                          <strong>Freemium</strong> - Free tier with paid upgrades
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 flex items-center gap-2 text-slate-800">
+                      <ShieldCheck className="h-5 w-5 text-emerald-600" />
+                      Compliance Badges
+                    </h4>
+                    <ul className="space-y-2 text-sm text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <span className="text-lg">🏛️</span>
+                        <div>
+                          <strong>FedRAMP</strong> - Federal Risk and Authorization Management Program (required for federal use)
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-lg">🏥</span>
+                        <div>
+                          <strong>HIPAA</strong> - Health Insurance Portability and Accountability Act (required for healthcare data)
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-lg">👮</span>
+                        <div>
+                          <strong>CJIS</strong> - Criminal Justice Information Services (required for law enforcement)
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-lg">✅</span>
+                        <div>
+                          <strong>SOC 2</strong> - Security audit standard for service organizations
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-lg">🔒</span>
+                        <div>
+                          <strong>ISO 27001</strong> - International security management standard
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 flex items-center gap-2 text-slate-800">
+                      <Building className="h-5 w-5 text-orange-600" />
+                      Government Fit Ratings
+                    </h4>
+                    <ul className="space-y-2 text-sm text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <Badge className="bg-red-100 text-red-800 border-red-300">Critical</Badge>
+                        <div>Essential for government operations (e.g., document processing, case management)</div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Badge className="bg-orange-100 text-orange-800 border-orange-300">High</Badge>
+                        <div>Highly valuable for efficiency (e.g., meeting transcription, data analysis)</div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Badge className="bg-yellow-100 text-yellow-800 border-yellow-300">Moderate</Badge>
+                        <div>Useful but not critical (e.g., creative tools, optional automation)</div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 flex items-center gap-2 text-slate-800">
+                      <Sparkles className="h-5 w-5 text-purple-600" />
+                      Capabilities Tags
+                    </h4>
+                    <ul className="space-y-2 text-sm text-slate-700">
+                      <li className="flex items-start gap-2">
+                        <Badge variant="outline" className="bg-blue-50">Text Generation</Badge>
+                        <div>Creates written content</div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Badge variant="outline" className="bg-green-50">Data Analysis</Badge>
+                        <div>Processes and analyzes data</div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Badge variant="outline" className="bg-purple-50">Workflow Automation</Badge>
+                        <div>Connects and automates tasks</div>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Badge variant="outline" className="bg-orange-50">Document Processing</Badge>
+                        <div>Extracts and organizes info from documents</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </CollapsibleContent>
+        </Collapsible>
+      </div>
+
       {/* Search and Filters - moved up to replace statistics dashboard */}
-      <div className="container mx-auto px-4 mt-12 mb-8 relative z-20">
+      <div className="container mx-auto px-4 mb-8 relative z-20">
         <div className="relative px-4">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-50/40 via-amber-50/30 to-teal-50/40" style={{
             maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
@@ -232,12 +397,15 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex flex-col md:flex-row gap-4">
                     <div className="flex-1 relative">
-                      <Search className="absolute left-3 top-3 h-5 w-5 text-orange-600" />
+                      <Search className="absolute left-3 top-3 h-5 w-5 text-orange-600" aria-hidden="true" />
                       <Input
                         placeholder="Search tools by name, description, or category..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         className="pl-10 border-orange-200/50 focus-visible:border-orange-400"
+                        aria-label="Search AI tools"
+                        type="search"
+                        role="searchbox"
                       />
                     </div>
                     <div className="flex gap-2">
@@ -245,6 +413,7 @@ export default function Home() {
                         value={relevanceFilter}
                         onChange={(e) => setRelevanceFilter(e.target.value)}
                         className="px-4 py-2 border border-orange-200/50 rounded-md bg-white text-sm hover:border-orange-400 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200/50 transition-all"
+                        aria-label="Filter by government relevance"
                       >
                         <option value="all">All Relevance</option>
                         <option value="Critical">Critical</option>
@@ -253,9 +422,57 @@ export default function Home() {
                       </select>
                     </div>
                   </div>
+
+                  {/* Compliance Filter Section */}
+                  <div className="mt-4 pt-4 border-t border-orange-200/50">
+                    <div className="flex items-center gap-2 mb-3">
+                      <ShieldCheck className="h-4 w-4 text-orange-600" aria-hidden="true" />
+                      <h4 className="text-sm font-semibold text-slate-700">Filter by Compliance</h4>
+                    </div>
+                    <div className="flex flex-wrap gap-2" role="group" aria-label="Compliance filter options">
+                      <Button
+                        variant={complianceFilter === "all" ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setComplianceFilter("all")}
+                        aria-pressed={complianceFilter === "all"}
+                        aria-label="Show all compliance types"
+                        className={`${complianceFilter === "all" ? "bg-orange-500 hover:bg-orange-600" : "border-orange-200/50 hover:border-orange-400"}`}
+                      >
+                        All Tools
+                      </Button>
+                      {catalogData.statistics.by_compliance && Object.entries(catalogData.statistics.by_compliance).map(([compliance, count]) => (
+                        <Button
+                          key={compliance}
+                          variant={complianceFilter === compliance ? "default" : "outline"}
+                          size="sm"
+                          onClick={() => setComplianceFilter(compliance)}
+                          className={`${
+                            complianceFilter === compliance
+                              ? "bg-emerald-600 hover:bg-emerald-700 text-white"
+                              : "border-emerald-200 text-emerald-700 hover:bg-emerald-50"
+                          }`}
+                        >
+                          {compliance === "FedRAMP" && "🏛️ "}
+                          {compliance === "HIPAA" && "🏥 "}
+                          {compliance === "CJIS" && "👮 "}
+                          {compliance}
+                          <Badge variant="secondary" className="ml-2 bg-white/20 text-white">
+                            {count}
+                          </Badge>
+                        </Button>
+                      ))}
+                    </div>
+                  </div>
+
                   {searchQuery && (
                     <p className="text-sm text-slate-600 mt-3">
                       Found <strong>{filteredTools.length}</strong> tools matching "{searchQuery}"
+                    </p>
+                  )}
+                  {complianceFilter !== "all" && (
+                    <p className="text-sm text-emerald-700 mt-3 flex items-center gap-1">
+                      <ShieldCheck className="h-4 w-4" />
+                      Showing <strong>{filteredTools.length}</strong> tools with <strong>{complianceFilter}</strong> compliance
                     </p>
                   )}
                 </CardContent>
@@ -544,12 +761,12 @@ function CategorySection({ category, onToolSelect }: { category: Category; onToo
 
   return (
     <div className="space-y-6">
-      <div className="flex items-start gap-4 p-6 bg-gradient-to-r from-card to-muted/30 rounded-2xl border shadow-sm">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 p-6 bg-gradient-to-r from-card to-muted/30 rounded-2xl border shadow-sm text-center md:text-left">
         <div className="bg-primary/10 p-4 rounded-xl group-hover:bg-accent/20 transition-colors">
           <IconComponent className="h-8 w-8 text-primary group-hover:text-accent transition-colors" />
         </div>
-        <div className="flex-1">
-          <div className="flex flex-wrap items-center gap-3 mb-3">
+        <div className="flex-1 w-full">
+          <div className="flex flex-wrap items-center gap-3 mb-3 justify-center md:justify-start">
             <h3 className="text-3xl font-bold text-foreground">{category.name}</h3>
             <Badge className={getRelevanceBadgeColor(category.government_relevance)}>
               {category.government_relevance} Relevance
@@ -559,7 +776,7 @@ function CategorySection({ category, onToolSelect }: { category: Category; onToo
             </Badge>
           </div>
           <p className="text-muted-foreground mb-4 leading-relaxed">{category.description}</p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 justify-center md:justify-start">
             {category.subcategories.map((sub, i) => (
               <Badge key={i} variant="outline" className="text-xs hover:bg-muted transition-colors">{sub}</Badge>
             ))}

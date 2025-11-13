@@ -197,7 +197,7 @@ export default function CaseStudy() {
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-slate-900 mb-6">The Workflow in Action</h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
                   <div className="h-8 w-8 bg-orange-500 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
                     1
                   </div>
@@ -209,7 +209,7 @@ export default function CaseStudy() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
                   <div className="h-8 w-8 bg-amber-500 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
                     2
                   </div>
@@ -221,7 +221,7 @@ export default function CaseStudy() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
                   <div className="h-8 w-8 bg-green-500 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
                     3
                   </div>

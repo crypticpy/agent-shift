@@ -148,17 +148,6 @@ export function ROICounter({
             />
           )}
         </div>
-
-        {/* Label below */}
-        <div
-          className="mt-3 text-white/70 text-xs md:text-sm font-semibold tracking-widest uppercase"
-          style={{
-            textShadow: "0 1px 3px rgba(0,0,0,0.5)",
-            letterSpacing: "0.15em",
-          }}
-        >
-          Total Value Created Today
-        </div>
       </div>
 
       <style>{`

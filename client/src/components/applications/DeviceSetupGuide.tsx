@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { IconTextSection } from "@/components/ui/icon-text-section";
+import { ResponsiveButtonGroup } from "@/components/ui/responsive-button-group";
 import {
   Smartphone,
   Laptop,
@@ -20,19 +22,13 @@ export function DeviceSetupGuide() {
     <div className="space-y-8">
       {/* Overview Card */}
       <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 p-8">
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-3 rounded-xl bg-primary/10">
-            <Zap className="h-8 w-8 text-primary" />
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-2">
-              Get Agents on All Your Devices
-            </h3>
-            <p className="text-lg text-muted-foreground">
-              Set up once, access everywhere. Your AI agents should work seamlessly across your phone, laptop, and desktop—all synced and ready when you are.
-            </p>
-          </div>
-        </div>
+        <IconTextSection
+          icon={<Zap className="h-8 w-8 text-primary" />}
+          title="Get Agents on All Your Devices"
+          description="Set up once, access everywhere. Your AI agents should work seamlessly across your phone, laptop, and desktop—all synced and ready when you are."
+          iconBg="bg-primary/10"
+          className="mb-6"
+        />
 
         <div className="grid md:grid-cols-3 gap-4">
           <div className="bg-white/60 p-4 rounded-lg border border-primary/20">
@@ -57,17 +53,15 @@ export function DeviceSetupGuide() {
       <div className="grid gap-8">
         {/* Phone Setup */}
         <Card className="p-8 border-2 border-primary/20 hover:border-primary/40 transition-colors">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="p-4 rounded-xl bg-gradient-to-br from-primary to-chart-1 shadow-lg">
-              <Smartphone className="h-8 w-8 text-white" />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-2xl font-bold text-foreground mb-2">Phone Setup (iOS & Android)</h4>
-              <p className="text-muted-foreground">
-                Your phone is where voice input shines. Set up these apps to use agents on the go.
-              </p>
-            </div>
-          </div>
+          <IconTextSection
+            icon={<Smartphone className="h-8 w-8 text-white" />}
+            title="Phone Setup (iOS & Android)"
+            description="Your phone is where voice input shines. Set up these apps to use agents on the go."
+            iconBg="bg-gradient-to-br from-primary to-chart-1 shadow-lg"
+            titleClassName="text-2xl font-bold text-foreground"
+            descriptionClassName="text-muted-foreground"
+            className="mb-6"
+          />
 
           <div className="space-y-6">
             {/* ChatGPT */}
@@ -106,7 +100,7 @@ export function DeviceSetupGuide() {
                 </div>
               </div>
 
-              <div className="flex gap-3">
+              <ResponsiveButtonGroup>
                 <Button asChild variant="default" size="sm">
                   <a href="https://apps.apple.com/app/openai-chatgpt/id6448311069" target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />
@@ -119,7 +113,7 @@ export function DeviceSetupGuide() {
                     Android App
                   </a>
                 </Button>
-              </div>
+              </ResponsiveButtonGroup>
             </div>
 
             {/* Claude */}
@@ -148,7 +142,7 @@ export function DeviceSetupGuide() {
                 </div>
               </div>
 
-              <div className="flex gap-3">
+              <ResponsiveButtonGroup>
                 <Button asChild variant="default" size="sm">
                   <a href="https://apps.apple.com/app/claude-by-anthropic/id6473753684" target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />
@@ -161,7 +155,7 @@ export function DeviceSetupGuide() {
                     Android App
                   </a>
                 </Button>
-              </div>
+              </ResponsiveButtonGroup>
             </div>
 
             {/* Voice Input Apps */}
@@ -181,17 +175,15 @@ export function DeviceSetupGuide() {
 
         {/* Desktop/Laptop Setup */}
         <Card className="p-8 border-2 border-chart-2/20 hover:border-chart-2/40 transition-colors">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="p-4 rounded-xl bg-gradient-to-br from-chart-2 to-chart-5 shadow-lg">
-              <Monitor className="h-8 w-8 text-white" />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-2xl font-bold text-foreground mb-2">Desktop & Laptop Setup</h4>
-              <p className="text-muted-foreground">
-                Your computer is command central. Set up web apps and desktop applications for serious work.
-              </p>
-            </div>
-          </div>
+          <IconTextSection
+            icon={<Monitor className="h-8 w-8 text-white" />}
+            title="Desktop & Laptop Setup"
+            description="Your computer is command central. Set up web apps and desktop applications for serious work."
+            iconBg="bg-gradient-to-br from-chart-2 to-chart-5 shadow-lg"
+            titleClassName="text-2xl font-bold text-foreground"
+            descriptionClassName="text-muted-foreground"
+            className="mb-6"
+          />
 
           <div className="space-y-6">
             {/* Web Apps */}

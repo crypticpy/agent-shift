@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { IconTextSection } from "@/components/ui/icon-text-section";
 import {
   Briefcase,
   Download,
@@ -681,15 +682,15 @@ Generated from: AI Agent Portal Business Case Generator
                 <CardContent className="space-y-6">
                   {/* Healthcare */}
                   <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg border-2 border-blue-200">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="h-12 w-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Stethoscope className="h-7 w-7 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-blue-900">Healthcare</h3>
-                        <p className="text-sm text-blue-700">Market: $538.51M (2024) → $4.96B (2030), CAGR 45.56%</p>
-                      </div>
-                    </div>
+                    <IconTextSection
+                      icon={<Stethoscope className="h-7 w-7 text-white" />}
+                      title="Healthcare"
+                      description="Market: $538.51M (2024) → $4.96B (2030), CAGR 45.56%"
+                      iconBg="h-12 w-12 bg-blue-600 rounded-lg flex items-center justify-center"
+                      titleClassName="text-xl font-bold text-blue-900"
+                      descriptionClassName="text-sm text-blue-700"
+                      className="mb-4"
+                    />
                     <div className="space-y-3">
                       <div>
                         <div className="font-semibold text-blue-900 mb-2">Applications:</div>
@@ -720,15 +721,15 @@ Generated from: AI Agent Portal Business Case Generator
 
                   {/* Manufacturing */}
                   <div className="p-6 bg-gradient-to-br from-slate-50 to-gray-50 rounded-lg border-2 border-slate-300">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Factory className="h-7 w-7 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-slate-900">Manufacturing</h3>
-                        <p className="text-sm text-slate-700">Focus: Predictive maintenance, quality control, supply chain optimization</p>
-                      </div>
-                    </div>
+                    <IconTextSection
+                      icon={<Factory className="h-7 w-7 text-white" />}
+                      title="Manufacturing"
+                      description="Focus: Predictive maintenance, quality control, supply chain optimization"
+                      iconBg="h-12 w-12 bg-slate-700 rounded-lg flex items-center justify-center"
+                      titleClassName="text-xl font-bold text-slate-900"
+                      descriptionClassName="text-sm text-slate-700"
+                      className="mb-4"
+                    />
                     <div className="space-y-3">
                       <div>
                         <div className="font-semibold text-slate-900 mb-2">Applications:</div>
@@ -760,15 +761,15 @@ Generated from: AI Agent Portal Business Case Generator
 
                   {/* Financial Services */}
                   <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg border-2 border-green-200">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="h-12 w-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <DollarSign className="h-7 w-7 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-green-900">Financial Services</h3>
-                        <p className="text-sm text-green-700">Focus: Fraud detection, risk assessment, customer service, trading</p>
-                      </div>
-                    </div>
+                    <IconTextSection
+                      icon={<DollarSign className="h-7 w-7 text-white" />}
+                      title="Financial Services"
+                      description="Focus: Fraud detection, risk assessment, customer service, trading"
+                      iconBg="h-12 w-12 bg-green-600 rounded-lg flex items-center justify-center"
+                      titleClassName="text-xl font-bold text-green-900"
+                      descriptionClassName="text-sm text-green-700"
+                      className="mb-4"
+                    />
                     <div className="space-y-3">
                       <div>
                         <div className="font-semibold text-green-900 mb-2">Applications:</div>
@@ -801,15 +802,15 @@ Generated from: AI Agent Portal Business Case Generator
 
                   {/* Software Development */}
                   <div className="p-6 bg-gradient-to-br from-purple-50 to-violet-50 rounded-lg border-2 border-purple-200">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="h-12 w-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Code className="h-7 w-7 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-purple-900">Software Development</h3>
-                        <p className="text-sm text-purple-700">Nearly 70% of Fortune 500 use Microsoft 365 Copilot</p>
-                      </div>
-                    </div>
+                    <IconTextSection
+                      icon={<Code className="h-7 w-7 text-white" />}
+                      title="Software Development"
+                      description="Nearly 70% of Fortune 500 use Microsoft 365 Copilot"
+                      iconBg="h-12 w-12 bg-purple-600 rounded-lg flex items-center justify-center"
+                      titleClassName="text-xl font-bold text-purple-900"
+                      descriptionClassName="text-sm text-purple-700"
+                      className="mb-4"
+                    />
                     <div className="space-y-3">
                       <div>
                         <div className="font-semibold text-purple-900 mb-2">Developer Impact:</div>
@@ -1369,7 +1370,7 @@ Generated from: AI Agent Portal Business Case Generator
               Explore practical workflows and use the ROI calculator to quantify your specific opportunity
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/calculator">
+              <Link href="/guidance">
                 <Button
                   size="lg"
                   variant="secondary"

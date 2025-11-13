@@ -1,0 +1,1037 @@
+{
+  "metadata": {
+    "title": "AI Agent Use Cases",
+    "description": "Real-world workflows and role-based connection setups",
+    "lastUpdated": "2025-11-13",
+    "totalUseCases": 19
+  },
+  "categories": [
+    {
+      "id": "complete-workflows",
+      "name": "Complete Workflows",
+      "description": "End-to-end multi-agent workflows for complex tasks",
+      "useCases": [
+        {
+          "id": "community-survey",
+          "type": "workflow",
+          "icon": "BarChart3",
+          "title": "Community Survey Analysis & Reporting",
+          "subtitle": "Orchestrating 5 Agents: Survey Data → Analysis → Portal → Presentations",
+          "difficulty": "Intermediate",
+          "timeTraditional": "1 week + small team",
+          "timeAI": "10 minutes of voice input",
+          "savings": "95%",
+          "estimatedSetupTime": "30-45 min",
+          "color": "blue",
+          "scenario": "A program manager receives results from a community health survey with 500 responses. They need to analyze the data, create an interactive portal for the community to explore results, and prepare presentations for three different audiences: executives, community members, and staff.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Voice Input (Superwhisper or Windows Voice Access)",
+              "action": "While walking to your car, describe what you need: 'I have survey results with 500 responses. I need statistical analysis, key findings, demographic breakdowns, and presentations for executives, community, and staff.'",
+              "duration": "2 minutes"
+            },
+            {
+              "step": 2,
+              "tool": "Julius AI or ChatGPT Advanced Data Analysis",
+              "action": "Upload the survey CSV file. The AI automatically cleans the data, performs statistical analysis, identifies significant patterns, creates visualizations (charts, graphs), and generates a comprehensive analysis report.",
+              "duration": "5-10 minutes"
+            },
+            {
+              "step": 3,
+              "tool": "ChatGPT",
+              "action": "Review the analysis results. Ask ChatGPT to build a detailed prompt and information package specifically formatted for Manus to create an interactive web portal.",
+              "duration": "3 minutes"
+            },
+            {
+              "step": 4,
+              "tool": "Manus",
+              "action": "Paste the ChatGPT-generated prompt. Manus creates a full interactive web portal with survey results, filterable data, interactive charts, and downloadable reports that the community can explore.",
+              "duration": "10-15 minutes"
+            },
+            {
+              "step": 5,
+              "tool": "Beautiful.ai or Gamma",
+              "action": "Feed the analysis summary to the presentation AI. It generates three versions automatically: Executive summary (high-level metrics, ROI), Community presentation (accessible language, visual focus), Staff training deck (detailed methodology, action items).",
+              "duration": "5 minutes per deck"
+            }
+          ],
+          "outcome": "In about 30-40 minutes total (mostly AI working time), you've orchestrated what would traditionally take a week with a team of analysts, web developers, and designers. As the orchestrator, you spent 10 minutes directing the work. The five AI agents handled execution autonomously.",
+          "tools": ["Superwhisper/Voice Access", "Julius AI", "ChatGPT", "Manus", "Beautiful.ai/Gamma"],
+          "videoUrl": null,
+          "whyTheseTools": "This workflow combines voice input for natural thought capture with specialized AI agents for data analysis (Julius AI), web development (Manus), and presentation creation (Beautiful.ai/Gamma). Each tool excels at its specific task, and ChatGPT acts as the orchestration layer connecting them. The entire stack can run on free tiers, making enterprise-quality analysis accessible to small nonprofits."
+        },
+        {
+          "id": "scientific-research",
+          "type": "workflow",
+          "icon": "FlaskConical",
+          "title": "Scientific Research Discovery 🚀",
+          "subtitle": "Next-Generation AI Research (November 2025)",
+          "difficulty": "Cutting-Edge Preview",
+          "timeTraditional": "6 months of PhD/postdoc work",
+          "timeAI": "12 hours autonomous + 2 hours review",
+          "savings": "99%",
+          "estimatedSetupTime": "15-20 min",
+          "color": "purple",
+          "scenario": "🔬 LONG HORIZON PREVIEW: While most use cases on this page are available today, this example showcases cutting-edge AI research capabilities emerging in late 2025. A neuroscience researcher needs to understand neuronal vulnerability in aging—traditionally requiring 6 months of literature review, dataset analysis, hypothesis generation, and validation. This represents the rapidly advancing frontier of AI-assisted scientific discovery.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "KOSMOS AI Scientist",
+              "action": "Set the research objective: 'Understand neuronal vulnerability in aging.' KOSMOS runs autonomously for up to 12 hours, reading 1,500 scientific papers, running 42,000 lines of analysis code, performing parallel data analysis, conducting literature searches, and generating hypotheses.",
+              "duration": "12 hours (autonomous)"
+            },
+            {
+              "step": 2,
+              "tool": "KOSMOS Output Review",
+              "action": "KOSMOS delivers a comprehensive report with AI-generated hypotheses and discoveries. In published case studies, KOSMOS analyzed single-cell RNA-seq data and discovered that entorhinal cortex neurons show age-related reduction in Atp10a flippase expression, proposing this may trigger microglial phagocytosis leading to neuronal death. This AI-generated finding was computationally validated across multiple datasets and correlated with tau pathology in human Alzheimer's tissue samples (Braak stage II).",
+              "duration": "1-2 hours human review"
+            },
+            {
+              "step": 3,
+              "tool": "ChatGPT or Claude",
+              "action": "Review KOSMOS findings, refine conclusions, identify the most significant discoveries, and prepare a manuscript draft with proper citations and methodology sections.",
+              "duration": "30 minutes"
+            },
+            {
+              "step": 4,
+              "tool": "Gamma",
+              "action": "Generate a conference presentation and poster design showcasing the key findings, methodology, and implications for Alzheimer's research.",
+              "duration": "10 minutes"
+            }
+          ],
+          "outcome": "KOSMOS compressed 6 months of traditional research into 12 hours of autonomous work. The researcher's actual time investment: about 3 hours total for setup, review, and refinement. The 99% time savings reflects the reduction in human hours required (3 hours vs 960+ hours traditional). The AI generates hypotheses autonomously overnight while you focus on other work or rest.",
+          "tools": ["KOSMOS", "ChatGPT/Claude", "Gamma"],
+          "videoUrl": null,
+          "whyTheseTools": "KOSMOS (by Edison Scientific/FutureHouse) represents the cutting edge of AI research automation—it can autonomously read thousands of papers, write and execute analysis code, and generate novel scientific hypotheses. At $200/run with 79.4% accuracy (85.5% for data analysis, 82.1% for literature review), it's becoming viable for labs to use as a 'junior researcher' that works 24/7. ChatGPT/Claude handle the interpretive synthesis and writing, while Gamma creates publication-ready visuals.",
+          "note": "⚡ ABOUT KOSMOS: Platform launched November 2025 by Edison Scientific (FutureHouse spinout), founded by Sam Rodriques, PhD (MIT, Francis Crick Institute). Published research: arXiv:2511.02824v2. Cost: $200/run (academic free tier: 650 credits). Independent scientist validation: 79.4% overall accuracy (85.5% for data analysis, 82.1% for literature review, 57.9% for interpretive synthesis—requiring human verification). This represents cutting-edge research automation. Most users will start with simpler AI research workflows and progress to advanced tools like this as the technology matures and becomes more accessible."
+        },
+        {
+          "id": "product-design",
+          "type": "workflow",
+          "icon": "Palette",
+          "title": "Product Design & Mockup Creation",
+          "subtitle": "From Concept to Stakeholder Presentation",
+          "difficulty": "Intermediate",
+          "timeTraditional": "3-5 days with design team",
+          "timeAI": "2-3 hours with voice + AI agents",
+          "savings": "90%",
+          "estimatedSetupTime": "1 hour",
+          "color": "pink",
+          "scenario": "A product manager needs to create mockups, flowcharts, and a pitch deck for a new mobile app feature. Traditionally, this requires coordinating with designers, waiting for iterations, and multiple review cycles.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Voice Input (Wispr Flow or Superwhisper)",
+              "action": "Use voice to describe the product concept while commuting: 'New mobile app feature for scheduling appointments. Users should be able to see availability, book slots, receive confirmations, and reschedule. Target audience is busy professionals. Modern, clean design.'",
+              "duration": "5 minutes"
+            },
+            {
+              "step": 2,
+              "tool": "ChatGPT",
+              "action": "The voice transcript is fed to ChatGPT, which generates a detailed design brief, user stories, feature requirements, and user flow descriptions.",
+              "duration": "3 minutes"
+            },
+            {
+              "step": 3,
+              "tool": "Miro AI",
+              "action": "Paste the design brief. Miro AI generates flowcharts showing user journeys, creates wireframe layouts, and builds a visual sitemap of the feature.",
+              "duration": "10 minutes"
+            },
+            {
+              "step": 4,
+              "tool": "Figma AI",
+              "action": "Import the Miro wireframes. Figma AI creates high-fidelity mockups with proper spacing, typography, and interactions. Generate multiple screen states (empty, loading, success, error).",
+              "duration": "20 minutes"
+            },
+            {
+              "step": 5,
+              "tool": "Canva AI",
+              "action": "Create marketing materials and social media graphics to promote the new feature. Generate app store screenshots and promotional images.",
+              "duration": "15 minutes"
+            },
+            {
+              "step": 6,
+              "tool": "Beautiful.ai",
+              "action": "Build a stakeholder presentation with the problem statement, user research insights, design mockups, user flows, technical requirements, and timeline. Beautiful.ai auto-formats everything professionally.",
+              "duration": "10 minutes"
+            }
+          ],
+          "outcome": "In 2-3 hours, you've created comprehensive design assets that would traditionally require days of back-and-forth with a design team. The product manager can now present a fully-realized concept with professional mockups and a polished pitch deck.",
+          "tools": ["Wispr Flow/Superwhisper", "ChatGPT", "Miro AI", "Figma AI", "Canva AI", "Beautiful.ai"],
+          "videoUrl": null,
+          "whyTheseTools": "This workflow uses best-in-class tools for each design phase. Voice input captures unfiltered creative thinking, ChatGPT structures that thinking into requirements, Miro AI visualizes user flows, Figma AI creates pixel-perfect mockups, Canva AI handles marketing assets, and Beautiful.ai generates stakeholder presentations. Each tool specializes in its domain, and the handoffs between them are seamless—you're orchestrating a virtual design agency."
+        },
+        {
+          "id": "policy-analysis",
+          "type": "workflow",
+          "icon": "FileText",
+          "title": "Policy Analysis & Recommendation Report",
+          "subtitle": "Multi-Source Research to Executive Brief",
+          "difficulty": "Advanced",
+          "timeTraditional": "2-3 weeks",
+          "timeAI": "4-6 hours",
+          "savings": "95%",
+          "estimatedSetupTime": "30 min",
+          "color": "green",
+          "scenario": "A policy analyst needs to research a complex issue (e.g., housing affordability), review existing policies in 10 cities, analyze outcomes, and prepare recommendations for city council.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Voice Input + Perplexity",
+              "action": "Use voice to ask Perplexity: 'Research housing affordability policies in Seattle, Portland, San Francisco, Austin, Denver, Minneapolis, Boston, New York, Chicago, and Los Angeles. Focus on inclusionary zoning, rent control, and affordable housing mandates. What worked and what didn't?'",
+              "duration": "5 minutes"
+            },
+            {
+              "step": 2,
+              "tool": "Perplexity Research",
+              "action": "Perplexity searches current sources, government reports, and academic papers. It provides a comprehensive summary with citations for each city's policies and outcomes.",
+              "duration": "10 minutes"
+            },
+            {
+              "step": 3,
+              "tool": "ChatGPT or Claude",
+              "action": "Feed Perplexity's research to ChatGPT. Ask it to: analyze patterns, identify best practices, flag failures, compare effectiveness, and draft policy recommendations tailored to your city's context.",
+              "duration": "15 minutes"
+            },
+            {
+              "step": 4,
+              "tool": "Julius AI",
+              "action": "If you have local housing data (prices, inventory, demographics), upload it to Julius AI. It creates visualizations showing your city's trends and how they compare to the researched cities.",
+              "duration": "10 minutes"
+            },
+            {
+              "step": 5,
+              "tool": "ChatGPT",
+              "action": "Combine the research, analysis, and data visualizations. Ask ChatGPT to write a comprehensive policy brief with: Executive Summary, Problem Statement, Research Findings, Data Analysis, Recommendations, Implementation Timeline, and Risk Assessment.",
+              "duration": "20 minutes"
+            },
+            {
+              "step": 6,
+              "tool": "Gamma",
+              "action": "Generate a presentation for city council with the key findings, data visualizations, and recommendations. Gamma creates a professional deck with proper formatting and visual hierarchy.",
+              "duration": "10 minutes"
+            }
+          ],
+          "outcome": "In 4-6 hours, you've produced a comprehensive policy analysis that would traditionally take 2-3 weeks of research, data gathering, analysis, and writing. The analyst becomes a guide and quality-control expert rather than spending weeks on manual research.",
+          "tools": ["Voice Input", "Perplexity", "ChatGPT/Claude", "Julius AI", "Gamma"],
+          "videoUrl": null,
+          "whyTheseTools": "Perplexity excels at multi-source research with citations—critical for policy work where sources matter. ChatGPT/Claude handle synthesis and writing policy recommendations in formal language. Julius AI brings quantitative rigor by creating data visualizations from local datasets. Gamma generates publication-ready presentations for elected officials. This stack balances research depth, analytical rigor, and presentation polish—essential for government work where credibility is paramount."
+        },
+        {
+          "id": "grant-proposal",
+          "type": "workflow",
+          "icon": "Users",
+          "title": "Grant Proposal Development",
+          "subtitle": "From Idea to Submission-Ready Proposal",
+          "difficulty": "Intermediate",
+          "timeTraditional": "3-4 weeks",
+          "timeAI": "1-2 days",
+          "savings": "90%",
+          "estimatedSetupTime": "45 min",
+          "color": "orange",
+          "scenario": "A nonprofit program director needs to write a grant proposal for a new youth mental health program. This requires research on evidence-based practices, budget development, outcome metrics, and a compelling narrative.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Voice Input + ChatGPT",
+              "action": "While driving, use voice to describe your program idea: 'Youth mental health program for ages 12-18. Focus on early intervention, peer support groups, and family engagement. Need evidence-based practices and outcome metrics.'",
+              "duration": "10 minutes"
+            },
+            {
+              "step": 2,
+              "tool": "Perplexity + ChatGPT",
+              "action": "Research evidence-based youth mental health interventions, successful program models, and relevant outcome metrics. ChatGPT synthesizes findings and identifies the strongest evidence for your approach.",
+              "duration": "30 minutes"
+            },
+            {
+              "step": 3,
+              "tool": "ChatGPT",
+              "action": "Draft the grant narrative sections: Need Statement, Program Description, Goals & Objectives, Methods, Evaluation Plan, and Sustainability. ChatGPT uses the research to support each section with evidence.",
+              "duration": "1 hour"
+            },
+            {
+              "step": 4,
+              "tool": "Julius AI or ChatGPT",
+              "action": "Create the budget. Provide salary info, program costs, and overhead rates. The AI generates a detailed budget with justifications for each line item.",
+              "duration": "30 minutes"
+            },
+            {
+              "step": 5,
+              "tool": "ChatGPT",
+              "action": "Review the funder's priorities and scoring criteria. Ask ChatGPT to revise the proposal to align with specific requirements, use the funder's language, and emphasize relevant outcomes.",
+              "duration": "45 minutes"
+            },
+            {
+              "step": 6,
+              "tool": "Beautiful.ai",
+              "action": "Create a visual logic model and program timeline. Many funders appreciate visual representations of how the program will work and achieve outcomes.",
+              "duration": "20 minutes"
+            }
+          ],
+          "outcome": "In 1-2 days of focused work (with AI doing the heavy lifting), you've created a comprehensive, evidence-based grant proposal. Traditional approach: 3-4 weeks of research, writing, and revisions. The program director focuses on strategy and storytelling while AI handles research and drafting.",
+          "tools": ["Voice Input", "Perplexity", "ChatGPT", "Julius AI", "Beautiful.ai"],
+          "videoUrl": null,
+          "whyTheseTools": "Grant writing demands evidence-based justification, which Perplexity provides with cited research. ChatGPT excels at narrative development and aligning proposals with funder priorities—it can analyze scoring rubrics and optimize language accordingly. Julius AI handles budget complexity with detailed justifications. Beautiful.ai creates visual logic models that make complex programs understandable at a glance. This combination balances research credibility, persuasive writing, financial rigor, and visual communication."
+        },
+        {
+          "id": "emergency-response",
+          "type": "workflow",
+          "icon": "Zap",
+          "title": "Emergency Response Plan Update",
+          "subtitle": "Multi-Jurisdiction Research to Updated Plan",
+          "difficulty": "Advanced",
+          "timeTraditional": "6-8 weeks",
+          "timeAI": "1 week",
+          "savings": "85%",
+          "estimatedSetupTime": "1-2 hours",
+          "color": "red",
+          "scenario": "An emergency management coordinator needs to update the county's emergency response plan based on lessons learned from recent disasters in other jurisdictions and new federal guidelines.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Perplexity + Voice",
+              "action": "Research recent disaster responses (hurricanes, wildfires, floods) in similar jurisdictions. Ask: 'What worked? What failed? What are the new FEMA guidelines for 2025?'",
+              "duration": "1 hour"
+            },
+            {
+              "step": 2,
+              "tool": "ChatGPT",
+              "action": "Analyze the research and compare it to your current plan. ChatGPT identifies gaps, outdated procedures, and areas needing improvement based on recent best practices.",
+              "duration": "2 hours"
+            },
+            {
+              "step": 3,
+              "tool": "ChatGPT + Voice",
+              "action": "Draft updated sections of the plan. Use voice to describe local context and constraints. ChatGPT incorporates your input while maintaining compliance with federal guidelines.",
+              "duration": "4-6 hours over several days"
+            },
+            {
+              "step": 4,
+              "tool": "Miro AI",
+              "action": "Create updated organizational charts, communication flowcharts, and resource allocation maps. Miro AI generates visual representations of the new command structure and response protocols.",
+              "duration": "1 hour"
+            },
+            {
+              "step": 5,
+              "tool": "Gamma",
+              "action": "Build training presentations for different stakeholder groups: first responders, elected officials, community partners, and the public. Each presentation tailored to audience needs.",
+              "duration": "2 hours"
+            },
+            {
+              "step": 6,
+              "tool": "ChatGPT",
+              "action": "Generate a summary of changes document highlighting what's new, why it changed, and how it affects different departments. This helps with stakeholder buy-in and training.",
+              "duration": "30 minutes"
+            }
+          ],
+          "outcome": "In about 1 week of focused work, you've updated a comprehensive emergency response plan that would traditionally take 6-8 weeks of committee meetings, research, and drafting. The coordinator orchestrates the AI agents while focusing on local context and stakeholder engagement.",
+          "tools": ["Perplexity", "ChatGPT", "Miro AI", "Gamma"],
+          "videoUrl": null,
+          "whyTheseTools": "Emergency management requires staying current with best practices from other jurisdictions—Perplexity excels at this comparative research. ChatGPT ensures federal compliance while adapting plans to local context, a critical balance for government work. Miro AI creates command structure visualizations that are essential for multi-agency coordination. Gamma generates role-specific training materials, recognizing that first responders, officials, and citizens need different levels of detail. This stack prioritizes research currency, regulatory compliance, visual clarity, and audience-appropriate communication."
+        }
+      ]
+    },
+    {
+      "id": "role-based-setups",
+      "name": "Role-Based Connection Setups",
+      "description": "Industry-specific data connection workflows by professional role",
+      "useCases": [
+        {
+          "id": "marketing-manager",
+          "type": "role-setup",
+          "scenario": "Marketing Manager",
+          "description": "Aggregate campaign data from analytics platforms, social media, and CRM to generate AI-powered insights and recommendations.",
+          "difficulty": "Medium",
+          "technicalLevel": "Intermediate",
+          "timeSaved": "12 hrs/week",
+          "automationLevel": 75,
+          "estimatedSetupTime": "2-3 hours",
+          "tools": {
+            "dataSources": [
+              {"name": "Google Analytics", "type": "API", "icon": "BarChart"},
+              {"name": "HubSpot", "type": "Native", "icon": "Mail"},
+              {"name": "LinkedIn API", "type": "API", "icon": "TrendingUp"},
+              {"name": "Google Sheets", "type": "Native", "icon": "FileSpreadsheet"},
+              {"name": "Slack", "type": "Native", "icon": "MessageSquare"}
+            ],
+            "orchestration": {"name": "Make.com", "icon": "Workflow"},
+            "aiAgent": {"name": "Claude", "icon": "Sparkles"}
+          },
+          "icon": "TrendingUp",
+          "prerequisites": [
+            "Admin access to Google Analytics account",
+            "HubSpot Marketing Hub Professional or higher",
+            "LinkedIn Campaign Manager API access",
+            "Make.com account (free tier works for testing)",
+            "Claude Pro or API access for best results"
+          ],
+          "traditionalWorkflow": [
+            "Manually export data from Google Analytics",
+            "Pull campaign metrics from LinkedIn separately",
+            "Copy email performance from HubSpot dashboards",
+            "Combine all data in spreadsheet (30-45 min)",
+            "Create charts and analyze trends (1-2 hours)",
+            "Write executive summary and recommendations (1 hour)",
+            "Repeat weekly (4-5 hours per week)"
+          ],
+          "aiWorkflow": [
+            "Automated data sync runs every morning (0 min)",
+            "AI generates weekly performance report (5 min)",
+            "Review AI insights and add context (15 min)",
+            "Total time: 20 minutes vs 4-5 hours"
+          ],
+          "whyTheseTools": "This combination leverages Make.com's visual workflow builder (no coding required) to connect marketing data sources. HubSpot and Google Sheets provide native integrations, while LinkedIn and Google Analytics use reliable API connections. Claude excels at interpreting marketing data patterns and generating actionable recommendations in plain language. The entire setup can run on free/starter tiers, making it accessible for teams of any size.",
+          "videoUrl": null
+        },
+        {
+          "id": "program-manager-gov",
+          "type": "role-setup",
+          "scenario": "Program Manager (Government/Nonprofit)",
+          "description": "Connect project management tools, communication platforms, and survey data for automated reporting and analysis.",
+          "difficulty": "Medium",
+          "technicalLevel": "Intermediate",
+          "timeSaved": "10 hrs/week",
+          "automationLevel": 70,
+          "estimatedSetupTime": "3-4 hours",
+          "tools": {
+            "dataSources": [
+              {"name": "Outlook", "type": "Native", "icon": "Mail"},
+              {"name": "SharePoint", "type": "Native", "icon": "Database"},
+              {"name": "Airtable", "type": "API", "icon": "FileSpreadsheet"},
+              {"name": "Zoom Transcripts", "type": "API", "icon": "MessageSquare"}
+            ],
+            "orchestration": {"name": "Power Automate", "icon": "Workflow"},
+            "aiAgent": {"name": "ChatGPT", "icon": "Sparkles"}
+          },
+          "icon": "Users",
+          "prerequisites": [
+            "Microsoft 365 Government or Office 365 subscription",
+            "Admin access to SharePoint site",
+            "Airtable Pro account (free tier works for small teams)",
+            "Zoom Business or higher for transcript API access",
+            "Power Automate included with M365 (no extra cost)",
+            "ChatGPT Plus or API access"
+          ],
+          "traditionalWorkflow": [
+            "Manually check Outlook for stakeholder updates (20 min daily)",
+            "Review SharePoint documents and version changes (30 min)",
+            "Export data from Airtable project tracker (15 min)",
+            "Download and read Zoom meeting transcripts (45 min)",
+            "Consolidate information into weekly report (2 hours)",
+            "Draft executive summary and action items (1.5 hours)",
+            "Distribute reports via email and schedule follow-ups (30 min)",
+            "Total weekly: 10-12 hours"
+          ],
+          "aiWorkflow": [
+            "Power Automate syncs all data sources overnight automatically",
+            "AI summarizes key updates from emails and SharePoint",
+            "ChatGPT extracts action items from meeting transcripts",
+            "Automated weekly report generated with insights (10 min review)",
+            "One-click distribution to stakeholders",
+            "Total weekly: 30-45 minutes"
+          ],
+          "whyTheseTools": "This setup is ideal for government and nonprofit organizations already using Microsoft 365, as Power Automate is included at no extra cost and integrates seamlessly with Outlook and SharePoint. These native connections require minimal setup—mostly clicking 'Allow' permissions rather than complex API configurations. Airtable provides flexible project tracking with a generous free tier, while Zoom's transcript API ensures meeting notes are captured automatically. ChatGPT excels at summarizing lengthy documents and extracting action items from unstructured meeting notes, which is critical for compliance-heavy sectors where thorough documentation is required.",
+          "videoUrl": null
+        },
+        {
+          "id": "product-manager-tech",
+          "type": "role-setup",
+          "scenario": "Product Manager (Tech)",
+          "description": "Aggregate bug reports, team discussions, and usage analytics to generate comprehensive product insights and roadmap recommendations.",
+          "difficulty": "Advanced",
+          "technicalLevel": "Advanced",
+          "timeSaved": "15 hrs/week",
+          "automationLevel": 85,
+          "estimatedSetupTime": "6-8 hours",
+          "tools": {
+            "dataSources": [
+              {"name": "Jira", "type": "API", "icon": "FileSpreadsheet"},
+              {"name": "Confluence", "type": "API", "icon": "Database"},
+              {"name": "Slack", "type": "API", "icon": "MessageSquare"},
+              {"name": "GitHub", "type": "API", "icon": "Github"},
+              {"name": "Mixpanel", "type": "API", "icon": "BarChart"}
+            ],
+            "orchestration": {"name": "n8n (self-hosted)", "icon": "Workflow"},
+            "aiAgent": {"name": "Claude", "icon": "Sparkles"}
+          },
+          "icon": "Package",
+          "prerequisites": [
+            "Atlassian account with API access (Jira + Confluence)",
+            "Slack workspace admin for app installation",
+            "GitHub Organization admin or PAT with repo access",
+            "Mixpanel account with API access",
+            "Server or cloud VM to host n8n (AWS, DigitalOcean, etc.)",
+            "Claude API access (Anthropic account)",
+            "Basic Docker/Linux knowledge for n8n setup"
+          ],
+          "traditionalWorkflow": [
+            "Manual Jira sprint review: Filter bugs, group by severity (45 min)",
+            "Read through Confluence pages for feature requests (1 hour)",
+            "Scroll through Slack #product-feedback channel (30 min)",
+            "Review GitHub issues and pull request discussions (1 hour)",
+            "Export Mixpanel reports and analyze user behavior (2 hours)",
+            "Cross-reference data across 5 tools to find patterns (3 hours)",
+            "Draft PRD and roadmap recommendations (4 hours)",
+            "Create presentation for stakeholders (2 hours)",
+            "Total weekly: 15-18 hours"
+          ],
+          "aiWorkflow": [
+            "n8n pulls data from all 5 sources hourly (automated)",
+            "Claude generates daily digest of critical issues and trends",
+            "AI identifies feature request patterns from Slack/Confluence",
+            "Automated correlation of bugs with usage drop in Mixpanel",
+            "AI drafts PRD sections based on aggregated insights (15 min review)",
+            "One-click roadmap priority recommendations",
+            "Total weekly: 1-2 hours"
+          ],
+          "whyTheseTools": "This advanced setup uses n8n (self-hosted, open-source) for maximum customization and data privacy—critical for tech companies handling proprietary product data. Unlike cloud automation tools, n8n gives you full control over where your data flows and allows custom integrations for internal tools. All five data sources use API connections because tech PMs need real-time data, not scheduled syncs. Claude's 200k token context window can process entire sprint retrospectives, making it ideal for synthesizing complex technical discussions from multiple sources. This setup requires technical expertise to deploy but delivers enterprise-grade automation at minimal ongoing cost (just server hosting + Claude API usage).",
+          "videoUrl": null
+        },
+        {
+          "id": "sales-professional",
+          "type": "role-setup",
+          "scenario": "Sales Professional",
+          "description": "Leverage native CRM AI for contact insights combined with Claude for intelligent document drafting and proposal generation.",
+          "difficulty": "Easy",
+          "technicalLevel": "Beginner",
+          "timeSaved": "8 hrs/week",
+          "automationLevel": 60,
+          "estimatedSetupTime": "30 min",
+          "tools": {
+            "dataSources": [
+              {"name": "Salesforce CRM", "type": "Native", "icon": "Database"},
+              {"name": "Gmail", "type": "Native", "icon": "Mail"},
+              {"name": "LinkedIn", "type": "Native", "icon": "TrendingUp"},
+              {"name": "Google Calendar", "type": "Native", "icon": "Calendar"}
+            ],
+            "orchestration": {"name": "Salesforce Einstein", "icon": "Zap"},
+            "aiAgent": {"name": "Claude Desktop", "icon": "Sparkles"}
+          },
+          "icon": "DollarSign",
+          "prerequisites": [
+            "Salesforce Sales Cloud (any tier)",
+            "Gmail account connected to Salesforce",
+            "LinkedIn Sales Navigator (optional but recommended)",
+            "Claude Desktop app installed"
+          ],
+          "traditionalWorkflow": [
+            "Research prospect on LinkedIn (15 min)",
+            "Review past emails and interactions in CRM (10 min)",
+            "Draft personalized outreach email (20 min)",
+            "Create proposal document from template (30 min)",
+            "Customize proposal for specific client needs (45 min)",
+            "Follow up manually after meetings (15 min per lead)",
+            "Total per prospect: 2+ hours"
+          ],
+          "aiWorkflow": [
+            "Einstein surfaces relevant prospect insights automatically",
+            "Ask Claude to draft personalized email using CRM data (2 min)",
+            "AI generates custom proposal with client details (5 min)",
+            "Review and send (3 min)",
+            "Total per prospect: 10 minutes"
+          ],
+          "whyTheseTools": "This setup is perfect for beginners because it relies entirely on native integrations—no API setup or coding required. Salesforce Einstein automatically analyzes your CRM data, while Claude Desktop runs locally on your computer for secure document drafting. All tools work together through simple copy-paste workflows, making it accessible even for non-technical sales professionals. The 30-minute setup mostly involves installing Claude Desktop and connecting your Gmail to Salesforce (which most sales teams already have).",
+          "videoUrl": null
+        },
+        {
+          "id": "researcher-analyst",
+          "type": "role-setup",
+          "scenario": "Researcher / Analyst",
+          "description": "Connect academic databases, reference managers, and custom data sources for AI-assisted literature review and synthesis.",
+          "difficulty": "Advanced",
+          "technicalLevel": "Advanced",
+          "timeSaved": "20 hrs/week",
+          "automationLevel": 80,
+          "estimatedSetupTime": "5-6 hours",
+          "tools": {
+            "dataSources": [
+              {"name": "Zotero", "type": "MCP", "icon": "Database"},
+              {"name": "Google Scholar", "type": "API", "icon": "FileSearch"},
+              {"name": "PDF Library", "type": "MCP", "icon": "FileSpreadsheet"},
+              {"name": "Notion", "type": "API", "icon": "Database"}
+            ],
+            "orchestration": {"name": "Elicit", "icon": "Workflow"},
+            "aiAgent": {"name": "Claude", "icon": "Sparkles"}
+          },
+          "icon": "FileSearch",
+          "prerequisites": [
+            "Zotero desktop app with local library",
+            "Claude Desktop with MCP server capability",
+            "Zotero MCP server installed (available on GitHub)",
+            "Google Scholar API access (via SerpAPI or similar)",
+            "Notion account with API access",
+            "Elicit account (free tier works for small projects)",
+            "PDF library organized in accessible folder structure",
+            "Basic command-line familiarity for MCP server setup"
+          ],
+          "traditionalWorkflow": [
+            "Search Google Scholar for relevant papers (2 hours)",
+            "Download and organize PDFs manually (1 hour)",
+            "Read through 15-20 papers to identify key findings (12 hours)",
+            "Extract quotes and citations into Notion (3 hours)",
+            "Cross-reference citations between papers (2 hours)",
+            "Synthesize findings into literature review draft (8 hours)",
+            "Format citations in correct style (1 hour)",
+            "Total per review: 25-30 hours"
+          ],
+          "aiWorkflow": [
+            "Elicit finds relevant papers based on research question (5 min)",
+            "Zotero MCP server gives Claude direct access to your library",
+            "Claude reads and summarizes key findings from PDFs automatically",
+            "AI identifies common themes and contradictions across studies",
+            "Automated citation extraction and formatting",
+            "Draft literature review generated with proper citations (1 hour review)",
+            "Total per review: 2-3 hours"
+          ],
+          "whyTheseTools": "This setup leverages cutting-edge MCP (Model Context Protocol) technology—a new standard that lets AI agents directly access local data sources like Zotero libraries and PDF folders. This eliminates manual copy-pasting of paper content while keeping your research data completely private on your local machine. Elicit excels at semantic search across academic papers, finding relevant studies even when they use different terminology than your search terms. Claude's 200k token window can process multiple research papers simultaneously, identifying patterns and contradictions that would take weeks of manual reading to discover. This setup is for researchers comfortable with command-line tools, but the time savings on literature reviews alone justifies the learning curve.",
+          "videoUrl": null
+        }
+      ]
+    },
+    {
+      "id": "public-health",
+      "name": "Public Health & Epidemiology",
+      "description": "Workflows designed for public health professionals, epidemiologists, and community health programs",
+      "useCases": [
+        {
+          "id": "disease-surveillance",
+          "type": "workflow",
+          "icon": "Activity",
+          "title": "Disease Surveillance & Reporting Automation",
+          "subtitle": "Multi-Source Data → Analysis → Weekly Reports",
+          "difficulty": "Intermediate",
+          "timeTraditional": "35-40 hours/week",
+          "timeAI": "2-3 hours/week",
+          "savings": "92%",
+          "estimatedSetupTime": "4-6 hours",
+          "color": "blue",
+          "scenario": "A county epidemiologist needs to collect disease surveillance data from 5 hospital systems, 3 clinical labs, and county clinics. The data comes in different formats (CSV, PDF reports, database exports). Weekly reporting to the state health department is required, along with anomaly detection for outbreak identification.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Make.com or n8n",
+              "action": "Set up automated data collection from hospital systems (HL7/FHIR APIs), labs (CSV imports), and clinics (Google Sheets). Schedule daily pulls at 6 AM.",
+              "duration": "Initial setup: 3-4 hours"
+            },
+            {
+              "step": 2,
+              "tool": "Python script + Claude API",
+              "action": "Data standardization script runs automatically: standardizes disease names (ICD-10 codes), geocodes addresses, validates data quality, flags missing fields.",
+              "duration": "Automated (5 min runtime)"
+            },
+            {
+              "step": 3,
+              "tool": "Julius AI or Python + Pandas",
+              "action": "Statistical analysis: Calculate disease incidence rates, identify clusters (spatial-temporal analysis), compare against historical baselines, detect anomalies.",
+              "duration": "Automated (10 min runtime)"
+            },
+            {
+              "step": 4,
+              "tool": "ChatGPT or Claude",
+              "action": "Generate weekly surveillance report: Executive summary, disease trends, geographic clusters, recommendations for follow-up, formatted per state requirements.",
+              "duration": "5 minutes (human review)"
+            },
+            {
+              "step": 5,
+              "tool": "Email automation (via Make.com)",
+              "action": "Report automatically distributed to state health department, county leadership, and relevant clinic partners. Alerts sent if anomalies detected.",
+              "duration": "Automated"
+            }
+          ],
+          "outcome": "Weekly surveillance reporting reduced from 35-40 hours of manual work to 2-3 hours of reviewing AI-generated analysis and reports. Outbreak detection is now real-time rather than delayed by manual data processing.",
+          "tools": ["Make.com/n8n", "Python", "Claude API", "Julius AI", "Email automation"],
+          "videoUrl": null,
+          "whyTheseTools": "Make.com/n8n handles complex multi-source data integration with healthcare APIs (HL7, FHIR) without requiring extensive coding. Python provides data standardization capabilities for healthcare-specific needs (ICD-10 mapping, geocoding). Claude excels at writing surveillance reports in the formal language required by state health departments while maintaining HIPAA-compliant handling of aggregated data. Julius AI provides statistical analysis with built-in anomaly detection—critical for outbreak surveillance."
+        },
+        {
+          "id": "community-outreach",
+          "type": "workflow",
+          "icon": "Users",
+          "title": "Multi-Language Community Health Outreach",
+          "subtitle": "Content Creation → Translation → Distribution",
+          "difficulty": "Beginner",
+          "timeTraditional": "15-20 hours/week",
+          "timeAI": "3-4 hours/week",
+          "savings": "80%",
+          "estimatedSetupTime": "1-2 hours",
+          "color": "green",
+          "scenario": "A community health educator needs to create culturally appropriate health education materials about flu vaccination. Materials must be translated into Spanish, Chinese, and Vietnamese, adapted for different literacy levels, and distributed via multiple channels (social media, email, printed flyers).",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Voice Input + ChatGPT",
+              "action": "Use voice to describe key health messages: 'Flu vaccine campaign. Target families with young children. Key messages: vaccine safety, where to get vaccinated, free for uninsured, myths debunked.'",
+              "duration": "5 minutes"
+            },
+            {
+              "step": 2,
+              "tool": "ChatGPT",
+              "action": "Generate base content: Social media posts (Facebook, Instagram, Twitter), email newsletter, flyer text, FAQ document. All written in plain language (6th grade reading level).",
+              "duration": "10 minutes"
+            },
+            {
+              "step": 3,
+              "tool": "DeepL or ChatGPT",
+              "action": "Translate all materials into Spanish, Chinese (Simplified), and Vietnamese. AI ensures culturally appropriate language and maintains health accuracy.",
+              "duration": "15 minutes"
+            },
+            {
+              "step": 4,
+              "tool": "Canva AI",
+              "action": "Generate visual assets: Social media graphics with multilingual text, printable flyers in all 4 languages, email header images.",
+              "duration": "20 minutes"
+            },
+            {
+              "step": 5,
+              "tool": "Make.com",
+              "action": "Automated distribution: Schedule social media posts (Buffer/Hootsuite integration), send multilingual email campaigns (Mailchimp), generate print-ready PDFs for community partners.",
+              "duration": "10 minutes setup, then automated"
+            }
+          ],
+          "outcome": "Reduced weekly content creation and translation from 15-20 hours to 3-4 hours. Community health educators can now produce multilingual campaigns weekly instead of monthly, dramatically increasing reach to non-English speaking communities.",
+          "tools": ["Voice Input", "ChatGPT", "DeepL", "Canva AI", "Make.com", "Buffer/Mailchimp"],
+          "videoUrl": null,
+          "whyTheseTools": "ChatGPT excels at plain language health communication and can adapt tone for different audiences while maintaining medical accuracy. DeepL provides superior translation quality compared to Google Translate, especially for idiomatic expressions in healthcare contexts. Canva AI makes graphic design accessible to non-designers with health-focused templates. Make.com automates multichannel distribution without requiring separate tools for each platform. This stack is HIPAA-compliant when handling only educational content (no PHI)."
+        },
+        {
+          "id": "public-health-grant",
+          "type": "workflow",
+          "icon": "FileText",
+          "title": "Public Health Grant Proposal Development",
+          "subtitle": "Evidence Review → Proposal → Budget",
+          "difficulty": "Intermediate",
+          "timeTraditional": "40-50 hours per grant",
+          "timeAI": "10-15 hours per grant",
+          "savings": "75%",
+          "estimatedSetupTime": "2-3 hours",
+          "color": "purple",
+          "scenario": "A public health program manager needs to write a CDC grant proposal for a diabetes prevention program. This requires literature review on evidence-based interventions, community needs assessment data analysis, program logic model, detailed budget, and evaluation plan.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Perplexity + Voice",
+              "action": "Research CDC-recommended diabetes prevention interventions, successful DPP implementation models, and current CDC funding priorities.",
+              "duration": "30 minutes"
+            },
+            {
+              "step": 2,
+              "tool": "Julius AI",
+              "action": "Upload community health assessment data (diabetes prevalence, demographics, access barriers). AI generates needs statement with statistics and visualizations.",
+              "duration": "20 minutes"
+            },
+            {
+              "step": 3,
+              "tool": "ChatGPT",
+              "action": "Draft grant narrative sections: Problem Statement (with community data), Program Description (evidence-based DPP model), Implementation Plan, Evaluation Framework, Sustainability Plan.",
+              "duration": "2 hours"
+            },
+            {
+              "step": 4,
+              "tool": "ChatGPT",
+              "action": "Create detailed budget: Personnel (DPP lifestyle coaches, coordinator), Program costs (curriculum materials, equipment), Indirect costs. AI generates budget justification.",
+              "duration": "45 minutes"
+            },
+            {
+              "step": 5,
+              "tool": "Beautiful.ai or Miro",
+              "action": "Generate visual logic model showing program inputs → activities → outputs → outcomes → impact. Include evaluation metrics aligned with CDC requirements.",
+              "duration": "30 minutes"
+            },
+            {
+              "step": 6,
+              "tool": "ChatGPT",
+              "action": "Review CDC's Notice of Funding Opportunity (NOFO). AI analyzes scoring criteria and revises proposal to align with review rubric, emphasizing high-scoring elements.",
+              "duration": "1 hour"
+            }
+          ],
+          "outcome": "Grant proposal development reduced from 40-50 hours to 10-15 hours. The AI handles literature review, initial drafting, and budget calculations, allowing the program manager to focus on community-specific context and strategic storytelling.",
+          "tools": ["Perplexity", "Julius AI", "ChatGPT", "Beautiful.ai/Miro"],
+          "videoUrl": null,
+          "whyTheseTools": "Perplexity provides evidence-based public health research with citations from CDC, NIH, and academic journals—critical for grant credibility. Julius AI excels at community health data analysis and creating compelling visualizations from epidemiological data. ChatGPT understands federal grant formatting requirements and can analyze scoring rubrics to optimize proposal language. Beautiful.ai/Miro generate logic models that meet CDC visual standards. This stack is appropriate for non-sensitive, aggregated community data (no PHI)."
+        },
+        {
+          "id": "program-evaluation",
+          "type": "workflow",
+          "icon": "BarChart",
+          "title": "Public Health Program Evaluation Automation",
+          "subtitle": "Data Collection → Analysis → Funder Reports",
+          "difficulty": "Advanced",
+          "timeTraditional": "20-25 hours per report",
+          "timeAI": "4-5 hours per report",
+          "savings": "80%",
+          "estimatedSetupTime": "6-8 hours",
+          "color": "orange",
+          "scenario": "A public health program coordinator runs a maternal health program funded by a state grant. Quarterly reporting requires: participant data from multiple sites, outcome metrics (prenatal care utilization, birth outcomes), program outputs (# of home visits, educational sessions), and analysis comparing results to program targets.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Airtable or Google Sheets",
+              "action": "All program sites enter participant data into shared database: Demographics, services received, outcome measures, satisfaction surveys.",
+              "duration": "Ongoing by staff (no coordinator time)"
+            },
+            {
+              "step": 2,
+              "tool": "Make.com",
+              "action": "Automated quarterly data export from Airtable. Data validation checks run automatically (missing fields, outliers flagged).",
+              "duration": "Automated (2 minutes runtime)"
+            },
+            {
+              "step": 3,
+              "tool": "Julius AI or Python",
+              "action": "Statistical analysis: Calculate outcome metrics (% with adequate prenatal care, preterm birth rate), compare to targets and historical data, demographic breakdowns, site-level performance comparison.",
+              "duration": "10 minutes"
+            },
+            {
+              "step": 4,
+              "tool": "ChatGPT",
+              "action": "Generate evaluation report: Executive summary, program outputs (participants served, services delivered), outcome analysis with interpretation, challenges and lessons learned, recommendations for next quarter.",
+              "duration": "1 hour (review and customization)"
+            },
+            {
+              "step": 5,
+              "tool": "ChatGPT",
+              "action": "Create data visualizations: Charts showing trends over time, outcome comparison to targets, demographic reach, site performance dashboard.",
+              "duration": "30 minutes"
+            },
+            {
+              "step": 6,
+              "tool": "Beautiful.ai",
+              "action": "Generate stakeholder presentation: Board of health presentation (high-level outcomes), funder report (detailed metrics), staff training (lessons learned).",
+              "duration": "20 minutes"
+            }
+          ],
+          "outcome": "Quarterly evaluation reports reduced from 20-25 hours to 4-5 hours. The AI handles data aggregation, statistical analysis, and initial report drafting. The coordinator focuses on contextual interpretation and recommendations, not manual data processing.",
+          "tools": ["Airtable", "Make.com", "Julius AI/Python", "ChatGPT", "Beautiful.ai"],
+          "videoUrl": null,
+          "whyTheseTools": "Airtable provides HIPAA-compliant data storage (Business plan required) with multi-site access controls—essential for programs with distributed service delivery. Make.com automates data extraction while maintaining audit trails required for government reporting. Julius AI handles public health-specific statistical analysis (confidence intervals, significance testing) that program staff may not have training to perform manually. ChatGPT generates reports in the formal language expected by government funders and can adapt the same data into different formats for various stakeholders."
+        }
+      ]
+    },
+    {
+      "id": "government-administration",
+      "name": "Government & Public Administration",
+      "description": "Workflows designed for government staff, policy analysts, and public administrators",
+      "useCases": [
+        {
+          "id": "citizen-services",
+          "type": "workflow",
+          "icon": "MessageSquare",
+          "title": "AI-Powered Citizen Inquiry Response System",
+          "subtitle": "Chatbot Triage → Case Routing → Response Drafting",
+          "difficulty": "Advanced",
+          "timeTraditional": "24-48 hours response time",
+          "timeAI": "< 2 hours response time",
+          "savings": "70%",
+          "estimatedSetupTime": "10-15 hours",
+          "color": "blue",
+          "scenario": "A city's constituent services office receives 200+ inquiries per week via phone, email, and web form. Questions range from simple (trash pickup schedule) to complex (zoning variance process). Limited staff means response times are 24-48 hours and overflow inquiries are delayed weeks.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Chatbot (Intercom/Drift/Custom)",
+              "action": "Website chatbot captures citizen inquiries 24/7. AI asks clarifying questions, classifies inquiry type (license, permit, complaint, information request), and collects required details.",
+              "duration": "Automated (instant)"
+            },
+            {
+              "step": 2,
+              "tool": "ChatGPT + Knowledge Base",
+              "action": "Chatbot uses city knowledge base (FAQs, policy documents, ordinances) to answer routine questions immediately: 'When is trash pickup?' 'How do I pay a parking ticket?' 'What are dog license requirements?'",
+              "duration": "Automated (< 2 min)"
+            },
+            {
+              "step": 3,
+              "tool": "Make.com + CRM",
+              "action": "Complex inquiries automatically routed to appropriate department staff (building permits → planning dept, pothole reports → public works). Case created in CRM with citizen details and AI-generated summary.",
+              "duration": "Automated"
+            },
+            {
+              "step": 4,
+              "tool": "ChatGPT",
+              "action": "For routed inquiries, AI drafts personalized response based on case details and relevant policies. Staff reviews, edits if needed, and sends (or approves AI to send).",
+              "duration": "5-10 min staff review"
+            },
+            {
+              "step": 5,
+              "tool": "Email Automation",
+              "action": "Citizen receives response with case tracking number. Automated follow-up emails sent at key milestones (permit application received, inspection scheduled, permit approved).",
+              "duration": "Automated"
+            }
+          ],
+          "outcome": "80% of routine inquiries answered instantly by chatbot (licenses, schedules, payments). Complex inquiries receive AI-drafted responses within 2 hours vs 24-48 hours traditional. Staff capacity increased 3x—handling 200 inquiries vs 60 with same staffing.",
+          "tools": ["Intercom/Drift", "ChatGPT", "Make.com", "CRM (Salesforce/Dynamics)", "Email automation"],
+          "videoUrl": null,
+          "whyTheseTools": "Intercom/Drift provide government-ready chatbot platforms with SOC 2 compliance and custom knowledge base integration. ChatGPT handles natural language understanding critical for citizen inquiries—it can interpret requests phrased many different ways ('How do I...', 'Where can I...', 'I need to...'). Make.com integrates with government CRMs (Salesforce Government Cloud, Microsoft Dynamics) to ensure case tracking and audit trails. This approach maintains human oversight (staff approve AI responses) while dramatically reducing response times."
+        },
+        {
+          "id": "public-comment-analysis",
+          "type": "workflow",
+          "icon": "FileText",
+          "title": "Public Comment Analysis for Proposed Regulations",
+          "subtitle": "300 Comments → Theme Analysis → Response Document",
+          "difficulty": "Advanced",
+          "timeTraditional": "80 hours manual analysis",
+          "timeAI": "10 hours with AI assistance",
+          "savings": "87%",
+          "estimatedSetupTime": "3-4 hours",
+          "color": "purple",
+          "scenario": "A state agency proposed new environmental regulations. Public comment period generated 300 submissions (emails, web forms, mailed letters). Staff must: categorize comments (substantive vs non-substantive), identify themes, group stakeholders, draft responses addressing each substantive issue, and compile summary for rulemaking record.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Document processing",
+              "action": "Scan mailed letters (OCR), export web form responses (CSV), and collect emails. All comments consolidated into single structured format.",
+              "duration": "2 hours (mostly scanning)"
+            },
+            {
+              "step": 2,
+              "tool": "ChatGPT or Claude",
+              "action": "AI reads all 300 comments and categorizes: Substantive (raises specific legal/technical issues) vs Non-substantive (general support/opposition). Flags comments citing specific statutes or technical data.",
+              "duration": "15 minutes"
+            },
+            {
+              "step": 3,
+              "tool": "ChatGPT or Claude",
+              "action": "AI identifies recurring themes across substantive comments: Economic impact on small businesses, Environmental justice concerns, Implementation timeline, Technical feasibility, Interaction with federal regulations, Enforcement mechanisms.",
+              "duration": "30 minutes"
+            },
+            {
+              "step": 4,
+              "tool": "ChatGPT or Claude",
+              "action": "For each theme, AI: Groups related comments, Identifies stakeholder positions (industry, environmental groups, local government), Summarizes key arguments, Flags factual claims requiring verification.",
+              "duration": "1 hour"
+            },
+            {
+              "step": 5,
+              "tool": "ChatGPT or Claude",
+              "action": "AI drafts initial responses to each theme: Acknowledges concern, Provides technical/legal rationale for agency position, Cites relevant statutes/studies, Explains if/how rule will be modified based on feedback.",
+              "duration": "2 hours"
+            },
+            {
+              "step": 6,
+              "tool": "Staff review + ChatGPT",
+              "action": "Policy analysts review AI-drafted responses, verify technical accuracy, add legal citations, modify language for sensitivity. AI reformats final document per rulemaking requirements.",
+              "duration": "4-5 hours"
+            }
+          ],
+          "outcome": "Public comment analysis reduced from 80 hours to 10 hours. AI handles the tedious work (reading, categorizing, theme extraction), allowing policy staff to focus on substantive policy decisions and legal defensibility of responses.",
+          "tools": ["OCR software", "ChatGPT/Claude", "Word processing"],
+          "videoUrl": null,
+          "whyTheseTools": "Claude's 200k token context window is critical—it can process all 300 comments simultaneously, identifying cross-comment patterns that would be impossible to track manually. ChatGPT/Claude understand legal and regulatory language, essential for identifying comments that raise legitimate legal issues vs general advocacy. Both models can draft responses in the formal, legally-defensible language required for rulemaking documents. No sensitive data concerns since public comments are public records."
+        },
+        {
+          "id": "records-foia",
+          "type": "workflow",
+          "icon": "Database",
+          "title": "Automated Records Management & FOIA Response",
+          "subtitle": "Document Filing → Search → Redaction → Production",
+          "difficulty": "Advanced",
+          "timeTraditional": "15-20 hours/week on filing + 8-12 hours per FOIA",
+          "timeAI": "2-3 hours/week supervision + 2-3 hours per FOIA",
+          "savings": "85%",
+          "estimatedSetupTime": "12-15 hours initial",
+          "color": "red",
+          "scenario": "A county clerk's office manages thousands of documents: contracts, meeting minutes, correspondence, reports, permits. Documents arrive via email, mail scanning, and departmental uploads. The office must: File documents with appropriate metadata, Retain per records schedule, Search for FOIA requests, Redact sensitive information (SSNs, medical, law enforcement), Produce responsive documents within legal deadlines.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Document AI (Azure/AWS/Google)",
+              "action": "Incoming documents automatically scanned via email rules or upload portal. AI extracts text (OCR if scanned), classifies document type (contract, permit, correspondence, etc.), identifies key metadata (date, parties, subject matter).",
+              "duration": "Automated (1-2 min per document)"
+            },
+            {
+              "step": 2,
+              "tool": "Make.com + ChatGPT",
+              "action": "AI suggests filing location based on document type and content. Assigns retention schedule based on document classification. Creates searchable index with AI-generated tags and summary.",
+              "duration": "Automated"
+            },
+            {
+              "step": 3,
+              "tool": "Records management system (Laserfiche/OnBase)",
+              "action": "Documents auto-filed in appropriate digital folder with metadata. Version control tracks changes. Retention policy applied automatically (purge date calculated).",
+              "duration": "Automated"
+            },
+            {
+              "step": 4,
+              "tool": "FOIA Request Processing",
+              "action": "When FOIA request received, clerk enters search terms. AI searches indexed documents using semantic search (finds relevant docs even if exact terms not used).",
+              "duration": "15 minutes"
+            },
+            {
+              "step": 5,
+              "tool": "Azure AI Redaction or Adobe AI",
+              "action": "AI identifies sensitive information for redaction: SSNs, medical records, attorney-client privileged, ongoing law enforcement, trade secrets. Flags items for clerk review.",
+              "duration": "30 minutes per 100 pages"
+            },
+            {
+              "step": 6,
+              "tool": "Staff review + Production",
+              "action": "Clerk reviews AI-flagged redactions, approves/modifies, adds contextual redactions (public safety concerns). System generates response letter with itemized list of documents and redaction justifications.",
+              "duration": "1-2 hours"
+            }
+          ],
+          "outcome": "Daily filing workload reduced from 15-20 hours/week to 2-3 hours of supervision. FOIA response time reduced from 8-12 hours to 2-3 hours per request. Records retention automated—reducing risk of premature purging or over-retention.",
+          "tools": ["Azure/AWS Document AI", "Make.com", "ChatGPT", "Laserfiche/OnBase", "Adobe Acrobat AI"],
+          "videoUrl": null,
+          "whyTheseTools": "Azure/AWS Document AI provide government-grade security (FedRAMP authorized) for sensitive document processing. Laserfiche and OnBase are industry-standard records management systems used by government agencies with built-in retention schedules and audit trails. AI redaction tools (Azure AI, Adobe Acrobat) have been validated for accuracy in legal discovery contexts—critical for FOIA compliance. ChatGPT handles document classification and semantic search, finding responsive records even when exact keywords aren't present. This stack maintains human oversight (clerk reviews redactions) while automating the tedious work of searching thousands of documents."
+        },
+        {
+          "id": "budget-reporting",
+          "type": "workflow",
+          "icon": "DollarSign",
+          "title": "Quarterly Budget Variance Analysis & Reporting",
+          "subtitle": "Multi-Department Data → Variance Analysis → Board Presentation",
+          "difficulty": "Intermediate",
+          "timeTraditional": "30-40 hours per quarter",
+          "timeAI": "6-8 hours per quarter",
+          "savings": "80%",
+          "estimatedSetupTime": "4-5 hours",
+          "color": "green",
+          "scenario": "A city budget analyst must prepare quarterly financial reports for the city council. This requires: Extracting financial data from 15 departments (different accounting systems), Calculating budget vs actual variances, Explaining significant variances (>5%), Forecasting year-end position, Creating presentation with charts and narrative for council meeting.",
+          "workflow": [
+            {
+              "step": 1,
+              "tool": "Power Automate or Make.com",
+              "action": "Automated quarterly data extraction from city financial system (Tyler Munis, Oracle, SAP). All department budgets and actuals pulled into consolidated spreadsheet.",
+              "duration": "Automated (15 min runtime)"
+            },
+            {
+              "step": 2,
+              "tool": "Excel + Power Query or Julius AI",
+              "action": "Calculate variances for all accounts: Budget vs Actual ($ and %), Compare to prior quarter, Compare to same quarter last year, Flag significant variances (>5% or >$10k).",
+              "duration": "Automated (5 minutes)"
+            },
+            {
+              "step": 3,
+              "tool": "ChatGPT + Departmental input",
+              "action": "For flagged variances, AI drafts explanatory narrative based on: Historical patterns (Q3 always high for seasonal programs), Known events (unbudgeted emergency repairs), Department-provided context.",
+              "duration": "2 hours (gathering input + AI drafting)"
+            },
+            {
+              "step": 4,
+              "tool": "Julius AI or Excel",
+              "action": "Create data visualizations: Revenue vs expenditure trends, Department-level variance charts, Fund balance projections, Year-end forecast scenarios (optimistic, likely, conservative).",
+              "duration": "30 minutes"
+            },
+            {
+              "step": 5,
+              "tool": "ChatGPT",
+              "action": "Generate written analysis: Executive summary for council, Detailed variance explanations by department, Year-end projection with assumptions, Recommendations for budget adjustments.",
+              "duration": "1 hour"
+            },
+            {
+              "step": 6,
+              "tool": "Beautiful.ai or PowerPoint",
+              "action": "Build council presentation: High-level financial summary (1 slide), Key variance explanations (2-3 slides), Year-end projection (1 slide), Recommendations (1 slide). AI formats professionally.",
+              "duration": "1 hour"
+            }
+          ],
+          "outcome": "Quarterly budget reporting reduced from 30-40 hours to 6-8 hours. Analyst spends less time on data compilation and calculation, more time on financial analysis and strategic recommendations. Council receives consistent, professional reports on time every quarter.",
+          "tools": ["Power Automate/Make.com", "Excel/Julius AI", "ChatGPT", "Beautiful.ai/PowerPoint"],
+          "videoUrl": null,
+          "whyTheseTools": "Power Automate integrates natively with government financial systems (Tyler Munis, Oracle, SAP) and is included with Microsoft 365 Government licenses—no additional software cost. Excel/Julius AI handle financial calculations with audit trail requirements. ChatGPT generates narrative explanations in the formal language expected by elected officials while translating complex financial data into plain English. Beautiful.ai creates professional presentations that meet government accessibility standards (ADA compliance). This stack works within government IT security policies since data stays in government-approved cloud environments (Azure Government Cloud)."
+        }
+      ]
+    }
+  ]
+}

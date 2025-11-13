@@ -95,7 +95,7 @@ export default function GettingStarted() {
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-start gap-3 flex-1">
                   <Briefcase className="h-6 w-6 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div>
+                  <div className="w-full">
                     <div className="font-semibold text-blue-900 mb-1">
                       Need to present this to your manager?
                     </div>
@@ -135,11 +135,11 @@ export default function GettingStarted() {
             <Card className="card-lift border-2 border-primary/30 shadow-xl hover:border-primary transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-chart-1"></div>
               <CardHeader className="pb-6">
-                <div className="flex items-start gap-5">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-5 text-center md:text-left">
                   <div className="h-14 w-14 bg-gradient-to-br from-primary to-chart-1 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <MessageSquare className="h-7 w-7 text-white" />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <CardTitle className="text-3xl mb-3 text-foreground font-bold">Your First Conversation with AI</CardTitle>
                     <CardDescription className="text-lg text-muted-foreground">
                       Learn how to talk to your computer like you talk to a friend
@@ -170,21 +170,21 @@ export default function GettingStarted() {
                   <div className="grid gap-4">
                     <div className="flex gap-4 items-start p-4 rounded-lg bg-chart-2/5 border border-chart-2/20 hover:bg-chart-2/10 transition-colors">
                       <CheckCircle2 className="h-6 w-6 text-chart-2 flex-shrink-0 mt-1" />
-                      <div>
+                      <div className="w-full">
                         <p className="font-semibold text-lg text-foreground">Type it out</p>
                         <p className="text-base text-muted-foreground mt-1">Open ChatGPT or Claude and type your request</p>
                       </div>
                     </div>
                     <div className="flex gap-4 items-start p-4 rounded-lg bg-chart-2/5 border border-chart-2/20 hover:bg-chart-2/10 transition-colors">
                       <CheckCircle2 className="h-6 w-6 text-chart-2 flex-shrink-0 mt-1" />
-                      <div>
+                      <div className="w-full">
                         <p className="font-semibold text-lg text-foreground">Use your phone</p>
                         <p className="text-base text-muted-foreground mt-1">Open the ChatGPT app and tap the microphone button</p>
                       </div>
                     </div>
                     <div className="flex gap-4 items-start p-4 rounded-lg bg-chart-2/5 border border-chart-2/20 hover:bg-chart-2/10 transition-colors">
                       <CheckCircle2 className="h-6 w-6 text-chart-2 flex-shrink-0 mt-1" />
-                      <div>
+                      <div className="w-full">
                         <p className="font-semibold text-lg text-foreground">Use voice on your computer</p>
                         <p className="text-base text-muted-foreground mt-1">Tools like Superwhisper let you talk and it types for you</p>
                       </div>
@@ -198,11 +198,11 @@ export default function GettingStarted() {
             <Card className="card-lift border-2 border-accent/30 shadow-xl hover:border-accent transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-chart-3"></div>
               <CardHeader className="pb-6">
-                <div className="flex items-start gap-5">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-5 text-center md:text-left">
                   <div className="h-14 w-14 bg-gradient-to-br from-accent to-chart-3 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Clock className="h-7 w-7 text-white" />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <CardTitle className="text-3xl mb-3 text-foreground font-bold">The 5-Minute Test</CardTitle>
                     <CardDescription className="text-lg text-muted-foreground">
                       Try one simple task right now to see how it works
@@ -264,11 +264,11 @@ export default function GettingStarted() {
             <Card className="card-lift border-2 border-chart-2/30 shadow-xl hover:border-chart-2 transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-chart-2 to-chart-5"></div>
               <CardHeader className="pb-6">
-                <div className="flex items-start gap-5">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-5 text-center md:text-left">
                   <div className="h-14 w-14 bg-gradient-to-br from-chart-2 to-chart-5 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Mic className="h-7 w-7 text-white" />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <CardTitle className="text-3xl mb-3 text-foreground font-bold">Voice vs. Typing: Why Voice Changes Everything</CardTitle>
                     <CardDescription className="text-lg text-muted-foreground">
                       Understand why talking is faster and easier than typing
@@ -341,9 +341,9 @@ export default function GettingStarted() {
 
                 {/* Research-backed stats */}
                 <div className="glass animated-gradient-subtle p-8 rounded-xl border-2 border-accent/30 shadow-lg">
-                  <div className="flex items-start gap-4 mb-6">
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6 text-center md:text-left">
                     <div className="text-4xl">📊</div>
-                    <div>
+                    <div className="w-full">
                       <h4 className="font-bold text-xl text-slate-800 mb-3">Research Shows Voice is Dramatically Faster</h4>
                       <p className="text-slate-700 mb-4">Stanford University study with 32 participants:</p>
                     </div>
@@ -384,11 +384,11 @@ export default function GettingStarted() {
             <Card className="card-lift border-2 border-chart-1/30 shadow-xl hover:border-chart-1 transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-chart-1 to-secondary"></div>
               <CardHeader className="pb-6">
-                <div className="flex items-start gap-5">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-5 text-center md:text-left">
                   <div className="h-14 w-14 bg-gradient-to-br from-chart-1 to-secondary rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Sparkles className="h-7 w-7 text-white" />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <CardTitle className="text-3xl mb-3 text-foreground font-bold">Understanding AI Agents</CardTitle>
                     <CardDescription className="text-lg text-muted-foreground">
                       What they are and how they're different from regular AI
@@ -398,7 +398,7 @@ export default function GettingStarted() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-6">
-                  <div>
+                  <div className="w-full">
                     <h4 className="font-bold text-xl mb-4 text-foreground">Regular AI (like ChatGPT):</h4>
                     <div className="glass bg-muted/50 p-6 rounded-xl border border-muted">
                       <p className="text-foreground/80 text-lg leading-relaxed">
@@ -410,7 +410,7 @@ export default function GettingStarted() {
                     </div>
                   </div>
 
-                  <div>
+                  <div className="w-full">
                     <h4 className="font-bold text-xl mb-4 text-foreground">AI Agents (the new way):</h4>
                     <div className="glass bg-chart-1/10 p-6 rounded-xl border-2 border-chart-1/30 shadow-md">
                       <p className="text-foreground font-semibold mb-4 text-lg">
@@ -466,11 +466,11 @@ export default function GettingStarted() {
             <Card className="card-lift border-2 border-primary/30 shadow-xl hover:border-primary transition-all duration-300 overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-chart-1 to-accent"></div>
               <CardHeader className="pb-6">
-                <div className="flex items-start gap-5">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-5 text-center md:text-left">
                   <div className="h-14 w-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Play className="h-7 w-7 text-white" />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <CardTitle className="text-3xl mb-3 text-foreground font-bold">Your First Agent Task</CardTitle>
                     <CardDescription className="text-lg text-muted-foreground">
                       A complete walkthrough of delegating work to an AI agent
@@ -537,11 +537,11 @@ export default function GettingStarted() {
           <div className="mt-16">
             <Card className="border-2 border-primary/30 shadow-xl bg-gradient-to-br from-primary/5 to-accent/5">
               <CardHeader>
-                <div className="flex items-start gap-5">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-5 text-center md:text-left">
                   <div className="h-14 w-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Lightbulb className="h-7 w-7 text-white" />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <CardTitle className="text-3xl mb-3 text-foreground font-bold">From One Task to Complete Projects</CardTitle>
                     <CardDescription className="text-lg text-muted-foreground">
                       You've learned to delegate single tasks. Now learn to orchestrate complete workflows.
