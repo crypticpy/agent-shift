@@ -252,8 +252,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 
 ## 🙏 Acknowledgments
 
-**City of Austin Public Resource**
-This project is released as a public resource by the City of Austin to advance AI literacy and adoption in government and public sector organizations.
+**Open Source Public Resource**
+This project is released as a public resource to advance AI literacy and adoption across government and public sector organizations.
 
 **Built with AI Agents**
 This project demonstrates AI agent capabilities in production, built collaboratively between human direction and AI execution. It serves as both an educational resource and proof-of-concept for AI-assisted development in government technology projects.
@@ -262,7 +262,7 @@ This project demonstrates AI agent capabilities in production, built collaborati
 - Open-source contribution to the growing agentic AI community
 - Built for public health and government professionals
 - Designed to accelerate responsible AI adoption across public sectors
-- Part of the City of Austin's commitment to transparent, accessible technology
+- Committed to transparent, accessible technology
 
 **Research Sources**
 - 150+ research sources analyzed

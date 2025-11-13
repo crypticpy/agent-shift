@@ -2,7 +2,7 @@
   "name": "ai-agents-catalog",
   "version": "1.0.0",
   "type": "module",
-  "author": "City of Austin",
+  "author": "Agent Shift Project",
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",

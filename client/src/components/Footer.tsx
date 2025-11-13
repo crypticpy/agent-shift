@@ -175,7 +175,7 @@ export default function Footer() {
           {/* Bottom Bar */}
           <div className="border-t border-slate-200 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
             <div className="flex items-center gap-1">
-              <span>© {new Date().getFullYear()} City of Austin - MIT License</span>
+              <span>© {new Date().getFullYear()} Agent Shift - MIT License</span>
             </div>
             <div className="flex flex-wrap items-center gap-3 md:gap-4">
               <Link href="/case-study">
