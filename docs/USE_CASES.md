@@ -1840,5 +1840,5 @@ Teresa leads a team of 4 epidemiologists responsible for investigating disease o
 
 ---
 
-*Last updated: November 2024*
+*Last updated: November 2025*
 *Part of the Agent Shift Documentation Suite*

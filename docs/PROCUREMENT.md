@@ -425,7 +425,7 @@ Payment terms: [ ] Monthly arrears  [ ] Annual prepay  [ ] Quarterly
 **Budget Availability**:
 ```
 Funding Source: [General fund / Grant / IT budget / Department budget]
-Fiscal Year: [FY 2025]
+Fiscal Year: [FY 2026]
 Budget Authority: $XXX,XXX
 Obligation deadline: [Date]
 Multi-year funding: [ ] Yes  [ ] No  (impacts contract length)
@@ -1429,5 +1429,5 @@ Download templates from: [Agent Shift GitHub Repository](../../README.md)
 
 ---
 
-*Last updated: November 2024*
+*Last updated: November 2025*
 *Part of the Agent Shift Documentation Suite*

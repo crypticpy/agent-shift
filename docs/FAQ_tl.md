@@ -1662,5 +1662,5 @@ Costs = Software + Implementation + Training + Maintenance
 
 ---
 
-*Huling na-update: Nobyembre 2024*
+*Huling na-update: Nobyembre 2025*
 *Bahagi ng Agent Shift Documentation Suite*

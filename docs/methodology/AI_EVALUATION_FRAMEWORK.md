@@ -816,7 +816,7 @@ This framework is updated regularly based on:
 - Real-world deployment experiences
 - Emerging best practices
 
-**Current Version:** 1.0 (November 2025)
+**Current Version:** 1.0 (November 2024)
 **Next Update:** Quarterly
 
 ---

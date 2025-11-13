@@ -2,7 +2,7 @@
 
 **The State of Agentic AI in Public Sector: Trends, Use Cases, and Recommendations**
 
-*Research Date: November 2024 | Synthesized from federal/state/local government reports, industry research, and academic studies*
+*Research Date: November 2025 | Synthesized from federal/state/local government reports, industry research, and academic studies*
 
 > **Research Note:** This report analyzes trends in government AI adoption based on publicly available sources. Statistics represent typical patterns observed across multiple sources; specific numbers should be verified against current authoritative sources before citation. See [Bibliography](./BIBLIOGRAPHY.md).
 
@@ -19,7 +19,7 @@
 - Focus areas: citizen services, workflow automation, data-driven decision-making
 
 **Market Landscape:**
-- 35 tools with FedRAMP authorization for federal use (Verified via [FedRAMP Marketplace](../research/BIBLIOGRAPHY.md#10-fedramp-marketplace---authorized-cloud-services), November 2024)
+- 35 tools with FedRAMP authorization for federal use (Verified via [FedRAMP Marketplace](../research/BIBLIOGRAPHY.md#10-fedramp-marketplace---authorized-cloud-services), November 2025)
 - 18 tools with CJIS compliance for law enforcement (Source: [FBI CJIS Security Policy Resource Center](../research/BIBLIOGRAPHY.md#20-fbi-cjis-security-policy-2024))
 - 28 tools with HIPAA compliance for healthcare/public health (Source: Vendor documentation and [HHS HIPAA Guidance](../research/BIBLIOGRAPHY.md#21-hhs-hipaa--ai-guidance-2024))
 - 95 tools with SOC 2 certification for general government use (Based on vendor attestations and independent audits)

@@ -1662,5 +1662,5 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 
 ---
 
-*Dernière mise à jour : Novembre 2024*
+*Dernière mise à jour : Novembre 2025*
 *Partie de la Suite de Documentation Agent Shift*

@@ -2,7 +2,7 @@
 
 **Authoritative Sources Supporting Agent Shift Research and Recommendations**
 
-*Last Updated: November 12, 2025*
+*Last Updated: November 2025*
 
 ---
 
@@ -141,7 +141,7 @@ This bibliography documents the research sources underpinning Agent Shift's:
 **Title:** FedRAMP Authorized Cloud Service Offerings
 **URL:** https://marketplace.fedramp.gov
 **Authority:** General Services Administration
-**Updated:** Continuously (verified November 12, 2025)
+**Updated:** Continuously (verified November 2025)
 
 **Agent Shift Use:** Authoritative source for FedRAMP authorization verification. Validates authorization counts (35+ AI/ML tools authorized as of November 2024). This is the single source of truth for federal cloud security compliance.
 
@@ -216,7 +216,7 @@ This bibliography documents the research sources underpinning Agent Shift's:
 **Title:** OpenAI API Performance & Uptime Specifications
 **URL:** https://platform.openai.com/docs
 **Authority:** OpenAI (vendor documentation)
-**Version:** Current as of November 2024
+**Version:** Current as of November 2025
 
 **Agent Shift Use:** Response time specifications, throughput limits, and API reliability data for LLM integration.
 
@@ -432,8 +432,8 @@ These materials support Agent Shift research and are continuously updated:
 - **Monthly URL Checks:** First Monday of each month
 - **Annual Comprehensive Review:** November (coincides with fiscal planning cycles)
 
-**Last Verification Date:** November 12, 2025
-**Last Comprehensive Review:** November 12, 2025
+**Last Verification Date:** November 2025
+**Last Comprehensive Review:** November 2025
 **Next Scheduled Review:** February 12, 2026
 
 ---

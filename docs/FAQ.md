@@ -525,7 +525,7 @@ Costs = Software + Implementation + Training + Maintenance
 6. **Use on-premises or private cloud** options for highest-sensitivity data
 
 **Government-ready tools**:
-- 35 tools with **FedRAMP** authorization (Verified via [FedRAMP Marketplace](https://marketplace.fedramp.gov), November 2024. Counts change frequently; verify current status before procurement via [official marketplace](../research/BIBLIOGRAPHY.md#10-fedramp-marketplace---authorized-cloud-services))
+- 35 tools with **FedRAMP** authorization (Verified via [FedRAMP Marketplace](https://marketplace.fedramp.gov), November 2025. Counts change frequently; verify current status before procurement via [official marketplace](../research/BIBLIOGRAPHY.md#10-fedramp-marketplace---authorized-cloud-services))
 - 28 tools with **HIPAA** compliance (Source: Vendor documentation and [HHS Office for Civil Rights](../research/BIBLIOGRAPHY.md#21-hhs-hipaa--ai-guidance-2024) guidance)
 - 95 tools with **SOC 2** certification (Based on vendor attestations and independent audits)
 - See [Catalog](../README.md) for filtered lists
@@ -1700,5 +1700,5 @@ Always implement human review workflows for critical decisions. Cost-benefit sti
 
 ---
 
-*Last updated: November 2024*
+*Last updated: November 2025*
 *Part of the Agent Shift Documentation Suite*

@@ -1,4 +1,4 @@
-# Agent Shift Roadmap 2025
+# Agent Shift Roadmap 2026
 
 > **Strategic vision and development priorities for Agent Shift's evolution as a public service platform for AI agent discovery and learning.**
 
@@ -7,11 +7,11 @@
 ## Table of Contents
 
 1. [Vision & Mission](#vision--mission)
-2. [Q1 2025 (Jan-Mar): Foundation & Presentations](#q1-2025-jan-mar-foundation--presentations)
-3. [Q2 2025 (Apr-Jun): Community & Engagement](#q2-2025-apr-jun-community--engagement)
-4. [Q3 2025 (Jul-Sep): Advanced Features](#q3-2025-jul-sep-advanced-features)
-5. [Q4 2025 (Oct-Dec): Scale & Sustainability](#q4-2025-oct-dec-scale--sustainability)
-6. [2026 & Beyond](#2026--beyond)
+2. [Q1 2026 (Jan-Mar): Foundation & Presentations](#q1-2026-jan-mar-foundation--presentations)
+3. [Q2 2026 (Apr-Jun): Community & Engagement](#q2-2026-apr-jun-community--engagement)
+4. [Q3 2026 (Jul-Sep): Advanced Features](#q3-2026-jul-sep-advanced-features)
+5. [Q4 2026 (Oct-Dec): Scale & Sustainability](#q4-2026-oct-dec-scale--sustainability)
+6. [2027 & Beyond](#2027--beyond)
 7. [How to Contribute](#how-to-contribute)
 
 ---
@@ -22,7 +22,7 @@
 
 **Mission**: Accelerate responsible AI adoption by providing transparent, research-backed information that helps organizations transition from "doers" to "orchestrators."
 
-**Success Metrics** (End of 2025):
+**Success Metrics** (End of 2026):
 - 🎯 **100,000+ users** exploring the catalog
 - 🎯 **50+ government agencies** using Agent Shift to guide procurement
 - 🎯 **500+ community contributions** (tool additions, reviews, case studies)
@@ -31,20 +31,18 @@
 
 ---
 
-## Q1 2025 (Jan-Mar): Foundation & Presentations
+## Q1 2026 (Jan-Mar): Foundation & Presentations
 
-**Status**: In Progress
+**Status**: Planning
 
 **Strategic Priority**: Establish credibility through presentations and complete core documentation.
 
 ### Key Deliverables
 
-#### Presentations & Outreach ✅
-- **Nov 16, 2024**: NFBPA presentation introducing Agent Shift
-- **Nov 18, 2024**: Public Health AI Consortium presentation
-- **Jan 2025**: HIMSS presentation proposal (healthcare AI)
-- **Feb 2025**: NASCIO presentation proposal (state CIOs)
-- **Mar 2025**: Regional public health conferences (3-5 events)
+#### Presentations & Outreach
+- **Jan 2026**: HIMSS presentation proposal (healthcare AI)
+- **Feb 2026**: NASCIO presentation proposal (state CIOs)
+- **Mar 2026**: Regional public health conferences (3-5 events)
 
 **Goal**: Establish Agent Shift as thought leader, drive initial traffic
 
@@ -76,7 +74,7 @@
 
 ---
 
-## Q2 2025 (Apr-Jun): Community & Engagement
+## Q2 2026 (Apr-Jun): Community & Engagement
 
 **Strategic Priority**: Build active community and expand content.
 
@@ -134,7 +132,7 @@
 
 ---
 
-## Q3 2025 (Jul-Sep): Advanced Features
+## Q3 2026 (Jul-Sep): Advanced Features
 
 **Strategic Priority**: Add sophisticated features that provide unique value.
 
@@ -182,7 +180,7 @@
 
 ---
 
-## Q4 2025 (Oct-Dec): Scale & Sustainability
+## Q4 2026 (Oct-Dec): Scale & Sustainability
 
 **Strategic Priority**: Achieve sustainable scale and establish long-term funding.
 
@@ -239,7 +237,7 @@
 
 ---
 
-## 2026 & Beyond
+## 2027 & Beyond
 
 ### Strategic Themes
 
@@ -384,14 +382,14 @@ By 2027, Agent Shift aims to be:
 - Market changes and new opportunities
 - Resource availability and constraints
 
-**Latest update**: November 2024
-**Next update**: February 2025
+**Latest update**: November 2025
+**Next update**: Q1 2026
 
 **Provide feedback**: [Roadmap discussion thread](#) or [email us](#)
 
 ---
 
-## Current Status (November 2024)
+## Current Status (November 2025)
 
 ### Completed ✅
 - Phase 1 documentation (8 essential files)
@@ -410,17 +408,17 @@ By 2027, Agent Shift aims to be:
 - SEO optimization
 
 ### Upcoming ⏳
-- Email newsletter launch (Dec 2024)
-- User account system (Q1 2025)
-- Video tutorial series (Q1-Q2 2025)
-- Community contribution system (Q2 2025)
-- API release (Q3 2025)
+- Email newsletter launch (Q4 2025)
+- User account system (Q1 2026)
+- Video tutorial series (Q1-Q2 2026)
+- Community contribution system (Q2 2026)
+- API release (Q3 2026)
 
 ---
 
 ## Milestones
 
-### 2024 Milestones (Completed)
+### 2024-2025 Milestones (Completed)
 - ✅ **Oct 2024**: Agent Shift concept and initial development
 - ✅ **Oct 2024**: Catalog reaches 100 tools
 - ✅ **Oct 2024**: Core user interface complete
@@ -428,32 +426,33 @@ By 2027, Agent Shift aims to be:
 - ✅ **Nov 2024**: All Phase 1 & 2 documentation complete
 - ✅ **Nov 2024**: Public GitHub release
 - ✅ **Nov 2024**: First presentations scheduled
+- ✅ **Nov 2025**: Presentations to NFBPA and Public Health AI Consortium
 
-### 2025 Milestones (Planned)
+### 2026 Milestones (Planned)
 
-**Q1 2025**:
-- 🎯 **Jan 2025**: All Phase 3 documentation complete
-- 🎯 **Jan 2025**: 250+ tools in catalog
-- 🎯 **Feb 2025**: 5,000+ monthly users
-- 🎯 **Mar 2025**: Email newsletter to 500+ subscribers
+**Q1 2026**:
+- 🎯 **Jan 2026**: All Phase 3 documentation complete
+- 🎯 **Jan 2026**: 250+ tools in catalog
+- 🎯 **Feb 2026**: 5,000+ monthly users
+- 🎯 **Mar 2026**: Email newsletter to 500+ subscribers
 
-**Q2 2025**:
-- 🎯 **Apr 2025**: User accounts and personalization live
-- 🎯 **May 2025**: 100+ community contributions
-- 🎯 **Jun 2025**: 20+ video tutorials published
-- 🎯 **Jun 2025**: 10,000+ monthly users
+**Q2 2026**:
+- 🎯 **Apr 2026**: User accounts and personalization live
+- 🎯 **May 2026**: 100+ community contributions
+- 🎯 **Jun 2026**: 20+ video tutorials published
+- 🎯 **Jun 2026**: 10,000+ monthly users
 
-**Q3 2025**:
-- 🎯 **Jul 2025**: AI-powered search launched
-- 🎯 **Aug 2025**: Public API released
-- 🎯 **Sep 2025**: Certification program launched
-- 🎯 **Sep 2025**: 25,000+ monthly users
+**Q3 2026**:
+- 🎯 **Jul 2026**: AI-powered search launched
+- 🎯 **Aug 2026**: Public API released
+- 🎯 **Sep 2026**: Certification program launched
+- 🎯 **Sep 2026**: 25,000+ monthly users
 
-**Q4 2025**:
-- 🎯 **Oct 2025**: Enterprise features available
-- 🎯 **Nov 2025**: Spanish translation complete
-- 🎯 **Dec 2025**: 100+ enterprise subscriptions
-- 🎯 **Dec 2025**: 100,000+ monthly users
+**Q4 2026**:
+- 🎯 **Oct 2026**: Enterprise features available
+- 🎯 **Nov 2026**: Spanish translation complete
+- 🎯 **Dec 2026**: 100+ enterprise subscriptions
+- 🎯 **Dec 2026**: 100,000+ monthly users
 
 ---
 
@@ -519,7 +518,7 @@ By 2027, Agent Shift aims to be:
 - Implementations citing Agent Shift case studies
 - Academic citations of our research
 
-**Targets for End of 2025**:
+**Targets for End of 2026**:
 - 100,000 MAU
 - 500+ community contributions
 - 100+ enterprise subscriptions
@@ -571,5 +570,5 @@ By 2027, Agent Shift aims to be:
 
 ---
 
-*Last updated: November 2024*
+*Last updated: November 2025*
 *Part of the Agent Shift Documentation Suite*
