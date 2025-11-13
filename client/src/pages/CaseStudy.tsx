@@ -340,7 +340,7 @@ export default function CaseStudy() {
                     <div>
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-sm font-medium text-slate-600">Cost</span>
-                        <span className="text-2xl font-bold text-green-600">~$100</span>
+                        <span className="text-2xl font-bold text-green-600">~$300</span>
                       </div>
                       <div className="h-2 bg-green-100 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-green-500 to-emerald-500" style={{ width: '0.1%' }}></div>

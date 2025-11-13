@@ -205,7 +205,7 @@ export default function MakingOf() {
                   <p className="font-bold text-orange-900 text-xl">The Proof of Concept</p>
                 </div>
                 <p className="text-orange-800 font-medium">
-                  One person. Voice only. $250,000 value. Zero code touched.
+                  One person. Voice only. $80-220K value. Zero code touched.
                 </p>
               </div>
             </div>
@@ -886,7 +886,7 @@ export default function MakingOf() {
                     <div className="text-xs text-slate-500 mt-1">Researched and documented</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold text-green-600 mb-1">$250k</div>
+                    <div className="text-4xl font-bold text-green-600 mb-1">$80-220K</div>
                     <div className="text-sm text-slate-600">Estimated value</div>
                     <div className="text-xs text-slate-500 mt-1">Comparable deliverable</div>
                   </div>
@@ -985,7 +985,7 @@ export default function MakingOf() {
                       <div className="flex items-start gap-2">
                         <span className="text-slate-400 mt-1">•</span>
                         <div>
-                          <span className="text-slate-500">$150k-$250k budget</span>
+                          <span className="text-slate-500">$150k-$220k budget</span>
                           <span className="text-slate-400 mx-2">vs</span>
                           <span className="font-medium text-slate-900">Fraction of cost</span>
                         </div>
