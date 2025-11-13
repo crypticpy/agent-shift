@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -20,10 +20,16 @@ const TypewriterText = ({ text, isPlaying, onComplete }: { text: string; isPlayi
 
   useEffect(() => {
     if (!isPlaying) {
-      setDisplayedText("");
+      // Only reset if text is empty (initial state or explicit reset)
+      // This keeps the text visible after typewriter completes
+      if (displayedText === "") {
+        return;
+      }
       return;
     }
 
+    // Reset and start typing from the beginning
+    setDisplayedText("");
     let currentIndex = 0;
     const typingSpeed = 30; // ms per character
 
@@ -74,12 +80,12 @@ export default function WalkingToCarDemo({
     return () => clearInterval(interval);
   }, [isPlaying, totalDuration]);
 
-  // Show summary only when ALL tasks are complete
+  // Show summary when animation reaches exactly 15 seconds (totalDuration)
   useEffect(() => {
-    if (completedTaskCount === tasks.length && !showSummary && !isPlaying) {
+    if (elapsedTime >= totalDuration && !showSummary && !isPlaying) {
       setShowSummary(true);
     }
-  }, [completedTaskCount, tasks.length, showSummary, isPlaying]);
+  }, [elapsedTime, totalDuration, showSummary, isPlaying]);
 
   const formatTime = (ms: number) => {
     const totalSeconds = Math.floor(ms / 1000);
@@ -104,13 +110,13 @@ export default function WalkingToCarDemo({
     setIsPlaying(false);
   };
 
-  const handleTaskComplete = () => {
+  const handleTaskComplete = useCallback(() => {
     setCompletedTaskCount((prev) => prev + 1);
-  };
+  }, []);
 
-  const handleTypewriterComplete = () => {
+  const handleTypewriterComplete = useCallback(() => {
     setTypewriterComplete(true);
-  };
+  }, []);
 
   const progress = Math.min((elapsedTime / totalDuration) * 100, 100);
 
@@ -213,14 +219,14 @@ export default function WalkingToCarDemo({
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="mb-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 border-2 border-blue-200 dark:border-blue-800 rounded-2xl p-4 relative"
+                className="mb-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 border-2 border-blue-200 dark:border-blue-800 rounded-2xl p-4 relative overflow-hidden"
               >
                 <div className="flex items-start gap-3">
                   <span className="text-2xl flex-shrink-0">🎤</span>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <p className="text-xs font-semibold text-blue-900 dark:text-blue-100 mb-1">You said:</p>
-                    <p className="text-sm text-foreground italic leading-relaxed">
-                      "{showSummary ? voiceInput : <TypewriterText text={voiceInput} isPlaying={isPlaying && !typewriterComplete} onComplete={handleTypewriterComplete} />}"
+                    <p className="text-sm text-foreground italic leading-relaxed break-words">
+                      "{typewriterComplete || showSummary ? voiceInput : <TypewriterText text={voiceInput} isPlaying={isPlaying} onComplete={handleTypewriterComplete} />}"
                     </p>
                   </div>
                 </div>
@@ -252,7 +258,7 @@ export default function WalkingToCarDemo({
             {/* Summary */}
             {showSummary && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
                 className="mt-4 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950 dark:to-teal-950 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl p-4"

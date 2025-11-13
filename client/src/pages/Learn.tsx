@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "wouter";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Mic, Zap, Link2, MessageSquare, Briefcase, Lightbulb, CheckCircle2, XCircle, Sparkles, ArrowUp, Wrench, Circle, TrendingUp, Users, Package, DollarSign, FileSearch, Code, Building } from "lucide-react";
+import { Mic, Zap, Link2, MessageSquare, Briefcase, Lightbulb, CheckCircle2, XCircle, Sparkles, ArrowUp, ArrowRight, Wrench, Circle, TrendingUp, Users, Package, DollarSign, FileSearch, Code, Building, AlertCircle, ChevronDown, ChevronUp, Workflow, Github, Calendar, Database, BarChart, Mail, FileSpreadsheet, ArrowDown } from "lucide-react";
 import { Streamdown } from "streamdown";
 import SpeedComparison from "@/components/SpeedComparison";
 import VoiceStatsCards from "@/components/VoiceStatsCards";
@@ -26,6 +27,7 @@ import { AgentTypesComparison } from "@/components/applications/AgentTypesCompar
 import { CrossPlatformWorkflow } from "@/components/applications/CrossPlatformWorkflow";
 import { DailyRoutineIntegration } from "@/components/applications/DailyRoutineIntegration";
 import { AgentCollaborationSetup } from "@/components/applications/AgentCollaborationSetup";
+import { IndustryConnectionPipeline } from "@/components/IndustryConnectionPipeline";
 
 interface LearnContent {
   title: string;
@@ -485,11 +487,14 @@ export default function Learn() {
 
         {/* Regular content paragraphs (skip if mindsetSelfAssessment since it renders its own content) */}
         {section.content && !section.mindsetSelfAssessment && (
-          <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
+          <Card className="border-2 border-orange-300 bg-gradient-to-br from-orange-50 to-amber-50">
             <CardContent className="p-6 space-y-4">
               {section.content.map((paragraph: string, i: number) => (
-                <div key={i} className="text-base text-muted-foreground leading-relaxed">
-                  <Streamdown>{paragraph}</Streamdown>
+                <div key={i} className="flex items-start gap-3">
+                  <AlertCircle className="h-5 w-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                  <div className="text-base text-slate-700 leading-relaxed font-medium">
+                    <Streamdown>{paragraph}</Streamdown>
+                  </div>
                 </div>
               ))}
             </CardContent>
@@ -925,6 +930,15 @@ export default function Learn() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
+              {section.callout.content && (
+                <div className="space-y-3">
+                  {section.callout.content.map((paragraph: string, i: number) => (
+                    <div key={i} className="text-base text-muted-foreground leading-relaxed">
+                      <Streamdown>{paragraph}</Streamdown>
+                    </div>
+                  ))}
+                </div>
+              )}
               {section.callout.steps && (
                 <ol className="space-y-3">
                   {section.callout.steps.map((step: any, i: number) => (
@@ -1047,8 +1061,17 @@ export default function Learn() {
           </div>
         )}
 
-        {/* Use Cases (role-based with icons and recommended setups) */}
-        {section.useCases && section.useCases[0]?.recommendedSetup && (
+        {/* Use Cases (role-based with pipeline visualization) */}
+        {section.useCases && section.useCases[0]?.tools && (
+          <div className="grid md:grid-cols-2 gap-4">
+            {section.useCases.map((useCase: any, i: number) => (
+              <IndustryConnectionPipeline key={i} data={useCase} />
+            ))}
+          </div>
+        )}
+
+        {/* Use Cases (role-based with icons and recommended setups - legacy format) */}
+        {section.useCases && section.useCases[0]?.recommendedSetup && !section.useCases[0]?.tools && (
           <div className="grid md:grid-cols-2 gap-4">
             {section.useCases.map((useCase: any, i: number) => {
               // Map icon names to lucide-react components
@@ -1087,7 +1110,9 @@ export default function Learn() {
                       <p className="text-sm font-semibold text-orange-900 mb-2 flex items-center gap-2">
                         <span className="text-orange-600">🔧</span> Recommended Setup:
                       </p>
-                      <p className="text-sm text-slate-700 leading-relaxed">{useCase.recommendedSetup}</p>
+                      <div className="text-sm text-slate-700 leading-relaxed">
+                        <Streamdown>{useCase.recommendedSetup}</Streamdown>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -1097,7 +1122,7 @@ export default function Learn() {
         )}
 
         {/* Use Cases (simple examples without recommendedSetup) */}
-        {section.useCases && !section.useCases[0]?.recommendedSetup && (
+        {section.useCases && !section.useCases[0]?.recommendedSetup && !section.useCases[0]?.tools && (
           <div className="space-y-4">
             {section.useCases.map((useCase: any, i: number) => (
               <Card key={i} className="border-2 hover:border-primary/30 dark:hover:border-primary/40 transition-all">
@@ -1292,6 +1317,148 @@ export default function Learn() {
         )}
 
         {/* Story */}
+        {/* Navigation Links for Continue Your Learning Journey */}
+        {section.navigationLinks && (
+          <div className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-4">
+              {section.navigationLinks.map((link: any, i: number) => {
+                // Map icon names to components
+                const iconMap: Record<string, any> = {
+                  Mic, Zap, Link2, MessageSquare, Briefcase, Lightbulb
+                };
+                const IconComponent = iconMap[link.icon] || Briefcase;
+                return (
+                  <button
+                    key={i}
+                    onClick={() => {
+                      // Navigate to the specified tab
+                      const newUrl = new URL(window.location.href);
+                      newUrl.searchParams.set('tab', link.targetTab);
+                      window.history.pushState({}, '', newUrl.toString());
+                      setActiveTab(link.targetTab);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="text-left"
+                  >
+                    <Card className="border-2 border-orange-200 hover:border-orange-400 hover:shadow-lg transition-all cursor-pointer h-full">
+                      <CardHeader>
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center">
+                            <IconComponent className="h-6 w-6 text-white" />
+                          </div>
+                          <div className="flex-1">
+                            <CardTitle className="text-lg mb-2">{link.title}</CardTitle>
+                            <CardDescription className="text-sm leading-relaxed">
+                              {link.description}
+                            </CardDescription>
+                          </div>
+                          <ArrowRight className="h-5 w-5 text-orange-500 flex-shrink-0 mt-1" />
+                        </div>
+                      </CardHeader>
+                    </Card>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Self-Assessment Link */}
+            {section.selfAssessmentLink && (
+              <Card className="border-2 border-emerald-200 bg-emerald-50/30">
+                <CardContent className="p-6">
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById(section.selfAssessmentLink.scrollTarget);
+                      if (element) {
+                        const navHeight = 64;
+                        const offset = 16;
+                        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - navHeight - offset;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }}
+                    className="w-full text-left flex items-center justify-between gap-4 group"
+                  >
+                    <div className="flex items-start gap-3 flex-1">
+                      <CheckCircle2 className="h-6 w-6 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <p className="text-base text-slate-700 leading-relaxed">
+                        {section.selfAssessmentLink.text}
+                      </p>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-emerald-600 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+        )}
+
+        {/* Learning Path - Navigation to next steps */}
+        {section.learningPath && (
+          <div className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-4">
+              {section.learningPath.map((pathItem: any, i: number) => (
+                <button
+                  key={i}
+                  onClick={() => {
+                    setActiveTab(pathItem.tab);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="text-left"
+                >
+                  <Card className="border-2 border-orange-200 hover:border-orange-400 hover:shadow-lg transition-all cursor-pointer h-full">
+                    <CardHeader>
+                      <div className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 text-white flex items-center justify-center text-lg font-bold">
+                          {pathItem.step}
+                        </div>
+                        <div className="flex-1">
+                          <CardTitle className="text-lg mb-2">{pathItem.title}</CardTitle>
+                          <CardDescription className="text-sm leading-relaxed">
+                            {pathItem.description}
+                          </CardDescription>
+                        </div>
+                        <ArrowRight className="h-5 w-5 text-orange-500 flex-shrink-0 mt-1" />
+                      </div>
+                    </CardHeader>
+                  </Card>
+                </button>
+              ))}
+            </div>
+
+            {/* Next Action CTA */}
+            {section.nextAction && (
+              <Card className="border-2 border-emerald-300 bg-gradient-to-br from-emerald-50 to-green-50">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3">
+                    <Sparkles className="h-6 w-6 text-emerald-600 flex-shrink-0 mt-0.5" />
+                    <p className="text-base text-slate-700 leading-relaxed">
+                      <strong>Next Action:</strong> {section.nextAction}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Prominent CTA to Workflows page */}
+            <div className="flex justify-center mt-8">
+              <Link href="/workflows">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all"
+                >
+                  <span className="flex items-center gap-2">
+                    Start Designing Workflows
+                    <ArrowRight className="h-5 w-5" />
+                  </span>
+                </Button>
+              </Link>
+            </div>
+          </div>
+        )}
+
         {section.story && (
           <Card className="border-2 border-primary/20 dark:border-primary/30">
             <CardHeader>

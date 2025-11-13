@@ -87,20 +87,6 @@
     {
       "heading": "Connector Tiers: Consumer vs. Enterprise",
       "intro": "Not all connectors are created equal. The connection options available to you depend on your company size, industry, and security requirements. Understanding these tiers helps set realistic expectations for what you can deploy.",
-      "callout": {
-        "title": "Two Worlds of AI Integration",
-        "type": "warning",
-        "content": [
-          "**Consumer/Small Business Tier:** Most AI tools advertise consumer-grade connectors—the kind you can enable with a few clicks and OAuth authentication. These work great for individuals, startups, and small teams. You can sign up for ChatGPT Plus, connect your personal Gmail, and start automating within minutes.",
-          "**Enterprise Tier:** For mid-size to large organizations, especially those in regulated industries (finance, healthcare, government), the consumer approach won't cut it. You likely can't just grab an off-the-shelf AI tool and plug it into your work email, customer database, or financial systems. Here's why:",
-          "• **Security & Compliance:** Your IT and security teams need to vet every integration. Data residency requirements, SOC 2 compliance, HIPAA, GDPR, and internal security policies all come into play.",
-          "• **Procurement Processes:** Enterprise contracts involve legal review, vendor assessments, security questionnaires, and multi-month procurement cycles. You're not swiping a credit card—you're negotiating SLAs and data processing agreements.",
-          "• **Custom Development:** Many enterprise integrations require custom development work. Your internal APIs, legacy systems, and proprietary databases won't have plug-and-play connectors. You'll need developers to build secure bridges between your systems and AI agents.",
-          "• **Team vs. Enterprise Plans:** Most AI platforms offer Team and Enterprise tiers with enhanced security, admin controls, SSO, and audit logs. These aren't optional for regulated industries—they're requirements.",
-          "",
-          "**Bottom Line:** Understanding which tier you're in prevents frustration and sets realistic timelines. An individual can go from zero to working agent in 30 minutes. An enterprise? Plan for 2-6 months."
-        ]
-      },
       "tips": [
         {
           "tip": "Individual/Startup (1-20 people)",
@@ -275,32 +261,89 @@
       "useCases": [
         {
           "scenario": "Marketing Manager",
-          "description": "Typical data sources: Google Analytics, HubSpot, Social media APIs (Twitter, LinkedIn), Google Sheets, Slack",
-          "recommendedSetup": "Make.com connecting GA + HubSpot + Sheets → Claude/ChatGPT for analysis. Use Make.com to pull data from analytics platforms, store in Sheets, then feed to AI for campaign insights.",
+          "description": "Aggregate campaign data from analytics platforms, social media, and CRM to generate AI-powered insights and recommendations.",
+          "difficulty": "Medium",
+          "technicalLevel": "Intermediate",
+          "tools": {
+            "dataSources": [
+              {"name": "Google Analytics", "type": "API", "icon": "BarChart"},
+              {"name": "HubSpot", "type": "Native", "icon": "Mail"},
+              {"name": "LinkedIn API", "type": "API", "icon": "TrendingUp"},
+              {"name": "Google Sheets", "type": "Native", "icon": "FileSpreadsheet"},
+              {"name": "Slack", "type": "Native", "icon": "MessageSquare"}
+            ],
+            "orchestration": {"name": "Make.com", "icon": "Workflow"},
+            "aiAgent": {"name": "Claude", "icon": "Sparkles"}
+          },
           "icon": "TrendingUp"
         },
         {
           "scenario": "Program Manager (Government/Nonprofit)",
-          "description": "Typical data sources: Outlook/Gmail, SharePoint, Airtable/Smartsheet, Zoom (transcripts), Survey tools",
-          "recommendedSetup": "Microsoft Power Automate (for Outlook/SharePoint) + Zapier (for surveys) → ChatGPT API. Use Power Automate for document processing, Zapier for survey analysis.",
+          "description": "Connect project management tools, communication platforms, and survey data for automated reporting and analysis.",
+          "difficulty": "Medium",
+          "technicalLevel": "Intermediate",
+          "tools": {
+            "dataSources": [
+              {"name": "Outlook", "type": "Native", "icon": "Mail"},
+              {"name": "SharePoint", "type": "Native", "icon": "Database"},
+              {"name": "Airtable", "type": "API", "icon": "FileSpreadsheet"},
+              {"name": "Zoom Transcripts", "type": "API", "icon": "MessageSquare"}
+            ],
+            "orchestration": {"name": "Power Automate", "icon": "Workflow"},
+            "aiAgent": {"name": "ChatGPT", "icon": "Sparkles"}
+          },
           "icon": "Users"
         },
         {
           "scenario": "Product Manager (Tech)",
-          "description": "Typical data sources: Jira, Confluence, Slack, Google Drive, GitHub, Mixpanel",
-          "recommendedSetup": "n8n (self-hosted) with API connections to all platforms. Build workflows that aggregate: bug reports (Jira) + team discussions (Slack) + usage data (Mixpanel) → AI generates product insights.",
+          "description": "Aggregate bug reports, team discussions, and usage analytics to generate comprehensive product insights and roadmap recommendations.",
+          "difficulty": "Advanced",
+          "technicalLevel": "Advanced",
+          "tools": {
+            "dataSources": [
+              {"name": "Jira", "type": "API", "icon": "FileSpreadsheet"},
+              {"name": "Confluence", "type": "API", "icon": "Database"},
+              {"name": "Slack", "type": "API", "icon": "MessageSquare"},
+              {"name": "GitHub", "type": "API", "icon": "Github"},
+              {"name": "Mixpanel", "type": "API", "icon": "BarChart"}
+            ],
+            "orchestration": {"name": "n8n (self-hosted)", "icon": "Workflow"},
+            "aiAgent": {"name": "Claude", "icon": "Sparkles"}
+          },
           "icon": "Package"
         },
         {
           "scenario": "Sales Professional",
-          "description": "Typical data sources: Salesforce/HubSpot CRM, Gmail/Outlook, LinkedIn, Calendar, Google Docs",
-          "recommendedSetup": "Native CRM AI (Salesforce Einstein, HubSpot AI) + Claude Desktop for document drafting. Let the CRM's native AI handle contact data, use Claude for proposal/email writing pulling context from Drive.",
+          "description": "Leverage native CRM AI for contact insights combined with Claude for intelligent document drafting and proposal generation.",
+          "difficulty": "Easy",
+          "technicalLevel": "Beginner",
+          "tools": {
+            "dataSources": [
+              {"name": "Salesforce CRM", "type": "Native", "icon": "Database"},
+              {"name": "Gmail", "type": "Native", "icon": "Mail"},
+              {"name": "LinkedIn", "type": "Native", "icon": "TrendingUp"},
+              {"name": "Google Calendar", "type": "Native", "icon": "Calendar"}
+            ],
+            "orchestration": {"name": "Salesforce Einstein", "icon": "Zap"},
+            "aiAgent": {"name": "Claude Desktop", "icon": "Sparkles"}
+          },
           "icon": "DollarSign"
         },
         {
           "scenario": "Researcher / Analyst",
-          "description": "Typical data sources: Zotero/Mendeley, Google Scholar, PDFs, Notion, Python/R notebooks, databases",
-          "recommendedSetup": "Elicit (research-specific AI) for paper analysis + Claude for synthesis. Upload PDFs to Elicit for extraction, feed results to Claude for writing. Technically advanced users: custom MCP server for database access.",
+          "description": "Connect academic databases, reference managers, and custom data sources for AI-assisted literature review and synthesis.",
+          "difficulty": "Advanced",
+          "technicalLevel": "Advanced",
+          "tools": {
+            "dataSources": [
+              {"name": "Zotero", "type": "MCP", "icon": "Database"},
+              {"name": "Google Scholar", "type": "API", "icon": "FileSearch"},
+              {"name": "PDF Library", "type": "MCP", "icon": "FileSpreadsheet"},
+              {"name": "Notion", "type": "API", "icon": "Database"}
+            ],
+            "orchestration": {"name": "Elicit", "icon": "Workflow"},
+            "aiAgent": {"name": "Claude", "icon": "Sparkles"}
+          },
           "icon": "FileSearch"
         }
       ]

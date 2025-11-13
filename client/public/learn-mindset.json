@@ -67,17 +67,10 @@
     },
     {
       "heading": "Orchestration in Action: Before/After Scenarios",
-      "content": [
-        "See exactly how orchestrators approach common work scenarios differently. Compare traditional manual workflows with AI-orchestrated systems across 4 real-world examples.",
-        "**Key Learning:** Notice how orchestrators spend time on design, validation, and strategic decisions—while agents handle data collection, analysis, and content generation."
-      ],
       "beforeAfterScenario": true
     },
     {
       "heading": "The Three Phases: Doer → Delegator → Orchestrator",
-      "content": [
-        "Most professionals progress through three distinct phases as they adopt AI. Understanding where you are helps you identify the next skills to develop."
-      ],
       "phaseExplorer": true,
       "patterns": [
         {
@@ -189,15 +182,23 @@
     },
     {
       "heading": "Apply It: Design Your Own Workflow",
-      "content": [
-        "Ready to put these concepts into practice? Use this workshop to design your first orchestration workflow for a real task you do regularly.",
-        "Input your role and a time-consuming task, and we'll show you how to transform it from manual execution to orchestrated workflow."
-      ],
+      "callout": {
+        "title": "Interactive Workflow Workshop",
+        "steps": [
+          "Ready to put these concepts into practice? Use this workshop to design your first orchestration workflow for a real task you do regularly.",
+          "Input your role and a time-consuming task, and we'll show you how to transform it from manual execution to orchestrated workflow."
+        ]
+      },
       "orchestrationWorkshop": true
     },
     {
       "heading": "The 4-Week Transformation Timeline",
-      "intro": "Track your progression from reactive AI use to strategic orchestration. Each week has clear milestones and measurable outcomes.",
+      "callout": {
+        "title": "Your 4-Week Journey to Orchestration Mastery",
+        "steps": [
+          "Track your progression from reactive AI use to strategic orchestration. Each week has clear milestones and measurable outcomes."
+        ]
+      },
       "weeklyProgressTracker": true,
       "workflows": [
         {
@@ -283,7 +284,7 @@
       "content": [
         "The fear: 'If AI does my work, what's my value?' The reality: AI executes tasks while you focus on what humans do best—strategy, creativity, relationships, and judgment.",
         "**What Orchestration Frees You For:** This isn't about doing less work. It's about doing different work—the high-value work that only you can do.",
-        "**Research Finding:** According to IBM's 2025 AI orchestration study, professionals who adopt orchestration mindsets report increased job satisfaction and career advancement. Why? They spend time on work that leverages uniquely human capabilities instead of repetitive task execution."
+        "**Research Finding:** According to [IBM's 2025 AI orchestration study](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/agentic-ai-operating-model), professionals who adopt orchestration mindsets report increased job satisfaction and career advancement. Why? They spend time on work that leverages uniquely human capabilities instead of repetitive task execution."
       ],
       "benefits": [
         {
@@ -322,13 +323,36 @@
     },
     {
       "heading": "Continue Your Learning Journey",
-      "content": [
-        "**Recommended Next Steps:**",
-        "1. **Explore Voice AI:** Learn how voice-based AI agents enable even more natural orchestration (see Voice Basics tab)",
-        "2. **Study Multi-Agent Patterns:** Dive into advanced chaining and coordination techniques (see Chaining and AI-to-AI tabs)",
-        "3. **See Real Applications:** Explore industry-specific orchestration examples (see Applications tab)",
-        "**Want to assess your orchestration readiness?** Retake the Mindset Self-Assessment (Section 2) to track your progress from Doer to Orchestrator."
-      ]
+      "navigationLinks": [
+        {
+          "title": "Explore Voice AI",
+          "description": "Learn how voice-based AI agents enable even more natural orchestration",
+          "targetTab": "voice-basics",
+          "icon": "Mic"
+        },
+        {
+          "title": "Study Agent Chaining",
+          "description": "Dive into chaining techniques to connect multiple agents",
+          "targetTab": "chaining",
+          "icon": "Link2"
+        },
+        {
+          "title": "Learn AI-to-AI Coordination",
+          "description": "Advanced patterns for multi-agent coordination without human intervention",
+          "targetTab": "ai-to-ai",
+          "icon": "MessageSquare"
+        },
+        {
+          "title": "See Real Applications",
+          "description": "Explore industry-specific orchestration examples and practical implementations",
+          "targetTab": "applications",
+          "icon": "Briefcase"
+        }
+      ],
+      "selfAssessmentLink": {
+        "text": "Want to assess your orchestration readiness? Retake the Mindset Self-Assessment to track your progress from Doer to Orchestrator.",
+        "scrollTarget": "mindset-self-assessment"
+      }
     }
   ]
 }

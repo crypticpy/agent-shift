@@ -25,10 +25,13 @@ interface TaskProgressCardProps {
   onComplete?: () => void;
 }
 
+const CONNECTING_DURATION = 1000; // Show "Connecting..." for 1 second before processing steps
+
 export default function TaskProgressCard({ task, startTime, isPlaying, elapsedTime, onComplete }: TaskProgressCardProps) {
   const [currentStepIndex, setCurrentStepIndex] = useState(-1);
   const [isComplete, setIsComplete] = useState(false);
   const hasCalledOnComplete = useRef(false);
+  const [isConnecting, setIsConnecting] = useState(false);
 
   useEffect(() => {
     if (!isPlaying || elapsedTime < startTime) {
@@ -37,20 +40,32 @@ export default function TaskProgressCard({ task, startTime, isPlaying, elapsedTi
 
     const taskElapsed = elapsedTime - startTime;
 
+    // Show "Connecting..." state for the first CONNECTING_DURATION milliseconds
+    if (taskElapsed < CONNECTING_DURATION) {
+      setIsConnecting(true);
+      setCurrentStepIndex(-1);
+      return;
+    } else {
+      setIsConnecting(false);
+    }
+
+    // Adjust elapsed time to account for connecting phase
+    const stepsElapsed = taskElapsed - CONNECTING_DURATION;
+
     // Calculate which step we should be on based on elapsed time
     let accumulatedTime = 0;
     let targetStepIndex = -1;
 
     for (let i = 0; i < task.steps.length; i++) {
       accumulatedTime += task.steps[i].duration;
-      if (taskElapsed < accumulatedTime) {
+      if (stepsElapsed < accumulatedTime) {
         targetStepIndex = i;
         break;
       }
     }
 
     // If we've gone through all steps, mark as complete
-    if (targetStepIndex === -1 && taskElapsed >= accumulatedTime) {
+    if (targetStepIndex === -1 && stepsElapsed >= accumulatedTime) {
       if (!isComplete) {
         setIsComplete(true);
         setCurrentStepIndex(task.steps.length - 1);
@@ -69,6 +84,7 @@ export default function TaskProgressCard({ task, startTime, isPlaying, elapsedTi
     if (!isPlaying && elapsedTime === 0) {
       setCurrentStepIndex(-1);
       setIsComplete(false);
+      setIsConnecting(false);
       hasCalledOnComplete.current = false;
     }
   }, [isPlaying, elapsedTime]);
@@ -84,7 +100,7 @@ export default function TaskProgressCard({ task, startTime, isPlaying, elapsedTi
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Card className={`border-2 transition-all duration-300 ${
+      <Card className={`border-2 transition-colors duration-300 ${
         isComplete
           ? "border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/30"
           : `border-${task.color}/40 bg-${task.color}/5`
@@ -110,9 +126,19 @@ export default function TaskProgressCard({ task, startTime, isPlaying, elapsedTi
             )}
           </div>
 
-          {/* Steps */}
-          <div className="space-y-1.5 max-h-32 overflow-y-auto">
-            {task.steps.map((step, index) => {
+          {/* Steps or Connecting State */}
+          <div className="space-y-1.5">
+            {isConnecting ? (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="flex items-center gap-2 text-sm text-muted-foreground py-2"
+              >
+                <Loader2 className="h-4 w-4 animate-spin text-primary" />
+                <span className="font-medium">Connecting...</span>
+              </motion.div>
+            ) : (
+              task.steps.map((step, index) => {
               const isCurrentStep = index === currentStepIndex && !isComplete;
               const isPastStep = index < currentStepIndex || isComplete;
               const isFutureStep = index > currentStepIndex && !isComplete;
@@ -120,7 +146,7 @@ export default function TaskProgressCard({ task, startTime, isPlaying, elapsedTi
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0 }}
+                  initial={{ opacity: 1 }}
                   animate={{
                     opacity: isFutureStep ? 0.3 : 1,
                     x: isFutureStep ? -5 : 0
@@ -144,7 +170,8 @@ export default function TaskProgressCard({ task, startTime, isPlaying, elapsedTi
                   <span className="leading-tight">{step.text}</span>
                 </motion.div>
               );
-            })}
+            })
+            )}
           </div>
         </CardContent>
       </Card>
