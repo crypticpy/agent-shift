@@ -574,8 +574,8 @@ The shift is happening. Join us.
 
 **Explore Agent Shift:**
 - [Browse the Catalog](../../README.md)
-- [Read the User Guide](../../USER_GUIDE.md)
-- [View Case Studies](../../CASE_STUDIES.md)
+- [Read the User Guide](.././user-guide.md)
+- [View Case Studies](.././case-studies.md)
 - [Calculate Your ROI](#)
 
 **Join the Community:**
@@ -585,7 +585,7 @@ The shift is happening. Join us.
 - [Events](#) - Workshops, presentations, office hours
 
 **For Organizations:**
-- [Government Implementation Guide](../../GOVERNMENT_GUIDE.md)
+- [Government Implementation Guide](.././government-guide.md)
 - [Consulting Services](#) - Custom implementations and training
 - [Presentations](#) - Available for conferences and workshops
 
@@ -599,6 +599,6 @@ Transitioning the world from doers to orchestrators
 
 *A public service and community gift*
 
-[Get Started](../../QUICKSTART.md) • [Browse Tools](../../README.md) • [Join Community](#)
+[Get Started](.././quickstart.md) • [Browse Tools](../../README.md) • [Join Community](#)
 
 </div>

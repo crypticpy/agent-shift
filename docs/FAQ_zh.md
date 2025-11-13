@@ -37,7 +37,7 @@
 - 编写和审查代码的编程助手
 - 适应变化条件的工作流自动化
 
-**了解更多**: [用户指南](../USER_GUIDE.md) | [AI代理方法论](./methodology/AI_AGENT_METHODOLOGY.md)
+**了解更多**: [用户指南](./user-guide.md) | [AI代理方法论](./methodology/AI_AGENT_METHODOLOGY.md)
 
 ---
 
@@ -110,7 +110,7 @@ AI代理可以处理传统自动化无法应对的细微情况(愤怒的客户�
 
 **经济影响**: 研究表明AI增加经济增长,创造新工作岗位的同时改变现有工作。就像之前的技术转变(计算机、互联网),短期颠覆导致长期就业增长。
 
-**了解更多**: [AI代理方法论](./methodology/AI_AGENT_METHODOLOGY.md) | [案例研究](../CASE_STUDIES.md)
+**了解更多**: [AI代理方法论](./methodology/AI_AGENT_METHODOLOGY.md) | [案例研究](./case-studies.md)
 
 ---
 
@@ -172,8 +172,8 @@ AI代理可以处理传统自动化无法应对的细微情况(愤怒的客户�
 **目标**: 扩展到团队/部门
 
 **资源**:
-- [快速入门指南](../QUICKSTART.md) - 15分钟快速开始
-- [用户指南](../USER_GUIDE.md) - 全面的入门指南
+- [快速入门指南](./quickstart.md) - 15分钟快速开始
+- [用户指南](./user-guide.md) - 全面的入门指南
 - [浏览目录](../README.md) - 查找满足您需求的工具
 
 ---
@@ -209,9 +209,9 @@ AI代理可以处理传统自动化无法应对的细微情况(愤怒的客户�
 - **企业**: 客户服务、知识管理、会议记录
 
 **资源**:
-- [政府指南](../GOVERNMENT_GUIDE.md) - 实施路线图
+- [政府指南](./government-guide.md) - 实施路线图
 - [用例](./USE_CASES.md) - 真实世界示例
-- [案例研究](../CASE_STUDIES.md) - 向他人学习
+- [案例研究](./case-studies.md) - 向他人学习
 
 ---
 
@@ -244,8 +244,8 @@ AI代理可以处理传统自动化无法应对的细微情况(愤怒的客户�
 **学习曲线**: 大多数工具在首次使用后30-60分钟内就能高效使用。掌握需要2-3周的定期使用。
 
 **资源**:
-- [快速入门指南](../QUICKSTART.md) - 无需技术技能
-- [用户指南](../USER_GUIDE.md) - 分步教程
+- [快速入门指南](./quickstart.md) - 无需技术技能
+- [用户指南](./user-guide.md) - 分步教程
 
 ---
 
@@ -321,7 +321,7 @@ AI代理可以处理传统自动化无法应对的细微情况(愤怒的客户�
 - 集成和定制(一次性,$5K-50K+)
 - IT管理(持续,工具成本的5-10%)
 
-**了解更多**: [ROI计算器](../README.md#roi-calculator) | [政府指南](../GOVERNMENT_GUIDE.md#budget)
+**了解更多**: [ROI计算器](../README.md#roi-calculator) | [政府指南](./government-guide.md#budget)
 
 ---
 
@@ -512,7 +512,7 @@ ROI = (收益 - 成本) / 成本 × 100%
 - 95个具有**SOC 2**认证的工具
 - 见[目录](../README.md)查看筛选列表
 
-**了解更多**: [政府指南 - 安全](../GOVERNMENT_GUIDE.md#security) | [评估框架](./methodology/AI_EVALUATION_FRAMEWORK.md#security)
+**了解更多**: [政府指南 - 安全](./government-guide.md#security) | [评估框架](./methodology/AI_EVALUATION_FRAMEWORK.md#security)
 
 ---
 
@@ -603,7 +603,7 @@ ROI = (收益 - 成本) / 成本 × 100%
 
 **咨询您的安全团队**: 每个机构都有不同的要求。
 
-**了解更多**: [政府指南 - 安全](../GOVERNMENT_GUIDE.md#security)
+**了解更多**: [政府指南 - 安全](./government-guide.md#security)
 
 ---
 
@@ -693,9 +693,9 @@ ROI = (收益 - 成本) / 成本 × 100%
 5. **请求**: "我请求$5K进行从[日期]开始的12周试点"
 
 **可使用的资源**:
-- [案例研究](../CASE_STUDIES.md) - 展示类似组织取得的成果
+- [案例研究](./case-studies.md) - 展示类似组织取得的成果
 - [ROI计算器](../README.md#roi-calculator) - 量化您的机会
-- [政府指南](../GOVERNMENT_GUIDE.md) - 解决合规顾虑
+- [政府指南](./government-guide.md) - 解决合规顾虑
 
 ---
 
@@ -753,7 +753,7 @@ ROI = (收益 - 成本) / 成本 × 100%
 - ❌ **忽视抵制**而非解决顾虑
 - ❌ **没有衡量** = 无法展示价值
 
-**了解更多**: [政府指南 - 实施](../GOVERNMENT_GUIDE.md#implementation)
+**了解更多**: [政府指南 - 实施](./government-guide.md#implementation)
 
 ---
 
@@ -825,7 +825,7 @@ ROI = (收益 - 成本) / 成本 × 100%
 - 年度复习培训
 - 持续更新知识库
 
-**了解更多**: [用户指南](../USER_GUIDE.md) | [快速入门指南](../QUICKSTART.md)
+**了解更多**: [用户指南](./user-guide.md) | [快速入门指南](./quickstart.md)
 
 ---
 
@@ -938,7 +938,7 @@ ROI = (收益 - 成本) / 成本 × 100%
 - 加密传输中和静止的数据
 - 审查集成平台的供应商安全
 
-**了解更多**: [政府指南 - 技术要求](../GOVERNMENT_GUIDE.md#technical)
+**了解更多**: [政府指南 - 技术要求](./government-guide.md#technical)
 
 ---
 
@@ -980,7 +980,7 @@ ROI = (收益 - 成本) / 成本 × 100%
 
 **趋势**: 本地选项正在快速改进。开源模型(Llama 3、Mistral)越来越有竞争力。
 
-**了解更多**: [政府指南 - 部署](../GOVERNMENT_GUIDE.md#deployment)
+**了解更多**: [政府指南 - 部署](./government-guide.md#deployment)
 
 ---
 
@@ -1208,7 +1208,7 @@ ROI = (收益 - 成本) / 成本 × 100%
 - 强大的去标识化实践
 - 隐私影响评估
 
-**了解更多**: [政府指南](../GOVERNMENT_GUIDE.md) | [政府AI研究](./research/GOVERNMENT_AI_RESEARCH.md)
+**了解更多**: [政府指南](./government-guide.md) | [政府AI研究](./research/GOVERNMENT_AI_RESEARCH.md)
 
 ---
 
@@ -1276,7 +1276,7 @@ ROI = (收益 - 成本) / 成本 × 100%
 - 初始期限后按月
 - 用于go/no-go决策的评估标准
 
-**了解更多**: [政府指南 - 采购](../GOVERNMENT_GUIDE.md#procurement)
+**了解更多**: [政府指南 - 采购](./government-guide.md#procurement)
 
 ---
 
@@ -1325,7 +1325,7 @@ ROI = (收益 - 成本) / 成本 × 100%
 3. **数据分析**: 公共卫生、绩效管理
 4. **行政效率**: 报告撰写、会议记录、研究
 
-**了解更多**: [案例研究](../CASE_STUDIES.md) | [用例](./USE_CASES.md#government--public-administration-use-cases)
+**了解更多**: [案例研究](./case-studies.md) | [用例](./USE_CASES.md#government--public-administration-use-cases)
 
 ---
 
@@ -1627,10 +1627,10 @@ ROI = (收益 - 成本) / 成本 × 100%
 
 **主要文档**:
 - [Agent Shift目录](../README.md) - 浏览190+AI工具
-- [快速入门指南](../QUICKSTART.md) - 15分钟快速开始
-- [用户指南](../USER_GUIDE.md) - 全面的入门指南
-- [政府指南](../GOVERNMENT_GUIDE.md) - 政府机构实施指南
-- [案例研究](../CASE_STUDIES.md) - 真实世界实施示例
+- [快速入门指南](./quickstart.md) - 15分钟快速开始
+- [用户指南](./user-guide.md) - 全面的入门指南
+- [政府指南](./government-guide.md) - 政府机构实施指南
+- [案例研究](./case-studies.md) - 真实世界实施示例
 
 **第2阶段方法论**:
 - [AI代理方法论](./methodology/AI_AGENT_METHODOLOGY.md) - Agent Shift如何用AI构建

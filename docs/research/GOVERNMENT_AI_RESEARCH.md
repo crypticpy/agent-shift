@@ -655,8 +655,8 @@ This research aims to help you answer that question.
 
 **User Documentation:**
 - [Main Catalog](../../README.md) - Browse 190+ AI tools
-- [Government Guide](../../GOVERNMENT_GUIDE.md) - Implementation guidance
-- [Case Studies](../../CASE_STUDIES.md) - Real-world examples
+- [Government Guide](.././government-guide.md) - Implementation guidance
+- [Case Studies](.././case-studies.md) - Real-world examples
 
 ### Research Sources
 
@@ -689,6 +689,6 @@ This report synthesizes 45+ sources including:
 
 **Accelerating Responsible AI Adoption in Government**
 
-[Browse Tools](../../README.md) • [Calculate ROI](#) • [Get Started](../../QUICKSTART.md)
+[Browse Tools](../../README.md) • [Calculate ROI](#) • [Get Started](.././quickstart.md)
 
 </div>

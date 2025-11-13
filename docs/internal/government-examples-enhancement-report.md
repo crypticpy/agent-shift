@@ -68,7 +68,7 @@ This report documents enhancements made to five core documentation files, adding
 
 ---
 
-### 2. `/CASE_STUDIES.md` - Detailed Case Study Documentation
+### 2../case-studies.md` - Detailed Case Study Documentation
 
 #### Case Study 2: Public Health Disease Surveillance Automation
 
@@ -252,7 +252,7 @@ All examples validated for:
    - Estimated readers affected: 500+ per month (high-traffic learning resource)
    - Enhancement scope: Full context + metrics + implementation details + costs
 
-2. **`/CASE_STUDIES.md`**
+2. *./case-studies.md`**
    - Sections enhanced: Case Study 2 (Disease Surveillance) - Organization profile, Results, Public Health Outcomes, Epidemiologist Impact
    - Estimated readers: 200+ per month (decision-makers researching AI value)
    - Enhancement scope: Detailed metrics, documented outcomes, implementation examples

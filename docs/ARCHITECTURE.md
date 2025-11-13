@@ -903,7 +903,7 @@ const response = await fetch('/api/v1/tools?category=conversational-ai');
 
 ### Core Documentation
 - **[README.md](../README.md)** - Project overview, mission, features
-- **[QUICKSTART.md](../QUICKSTART.md)** - Developer setup and first steps
+- **[QUICKSTART.md](./quickstart.md)** - Developer setup and first steps
 - **[CONTRIBUTING.md](../CONTRIBUTING.md)** - How to contribute code
 
 ### Technical Documentation
@@ -912,10 +912,10 @@ const response = await fetch('/api/v1/tools?category=conversational-ai');
 - **[API_REFERENCE.md](./API_REFERENCE.md)** - (Future) REST/GraphQL API docs
 
 ### User & Domain Documentation
-- **[USER_GUIDE.md](../USER_GUIDE.md)** - Non-technical user walkthrough
+- **[USER_GUIDE.md](./user-guide.md)** - Non-technical user walkthrough
 - **[USE_CASES.md](./USE_CASES.md)** - Real-world applications
 - **[FAQ.md](./FAQ.md)** - Frequently asked questions
-- **[GOVERNMENT_GUIDE.md](../GOVERNMENT_GUIDE.md)** - Government deployment
+- **[GOVERNMENT_GUIDE.md](./government-guide.md)** - Government deployment
 - **[COMPLIANCE.md](./COMPLIANCE.md)** - Security and regulatory
 
 ### Research & Methodology
@@ -967,9 +967,9 @@ pnpm format   # Format code with Prettier
 - [Project Setup](../CLAUDE.md) - Development environment and commands
 
 **User & Implementation Guides**:
-- [Quickstart Guide](../QUICKSTART.md) - Get started in 15 minutes
-- [User Guide](../USER_GUIDE.md) - Comprehensive user documentation
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Government deployment guidance
+- [Quickstart Guide](./quickstart.md) - Get started in 15 minutes
+- [User Guide](./user-guide.md) - Comprehensive user documentation
+- [Government Guide](./government-guide.md) - Government deployment guidance
 
 **Phase 2 Methodology**:
 - [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md) - How Agent Shift was built with AI

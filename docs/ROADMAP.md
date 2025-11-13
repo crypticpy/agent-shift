@@ -554,14 +554,14 @@ By 2027, Agent Shift aims to be:
 - [Government AI Research](./research/GOVERNMENT_AI_RESEARCH.md) - Research backing our focus
 
 **User Guides**:
-- [Quickstart Guide](../QUICKSTART.md) - Get started in 15 minutes
-- [User Guide](../USER_GUIDE.md) - Comprehensive getting started
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Implementation for agencies
+- [Quickstart Guide](./quickstart.md) - Get started in 15 minutes
+- [User Guide](./user-guide.md) - Comprehensive getting started
+- [Government Guide](./government-guide.md) - Implementation for agencies
 - [FAQ](./FAQ.md) - Common questions answered
 
 **Use Cases & ROI**:
 - [Use Cases](./USE_CASES.md) - Real-world applications
-- [Case Studies](../CASE_STUDIES.md) - Implementation examples
+- [Case Studies](./case-studies.md) - Implementation examples
 - [ROI Calculator](../README.md#roi-calculator) - Calculate your value
 
 **Community**:

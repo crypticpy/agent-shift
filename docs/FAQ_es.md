@@ -37,7 +37,7 @@ Los **agentes de IA** son aplicaciones de software que utilizan inteligencia art
 - Un asistente de programación que escribe y revisa código
 - Una automatización de flujo de trabajo que se adapta a condiciones cambiantes
 
-**Más información**: [Guía del Usuario](../USER_GUIDE.md) | [Metodología de Agentes de IA](./methodology/AI_AGENT_METHODOLOGY.md)
+**Más información**: [Guía del Usuario](./user-guide.md) | [Metodología de Agentes de IA](./methodology/AI_AGENT_METHODOLOGY.md)
 
 ---
 
@@ -110,7 +110,7 @@ El agente de IA puede manejar situaciones matizadas (cliente enojado, solicitud 
 
 **Impacto económico**: Los estudios muestran que la IA aumenta el crecimiento económico, creando nuevos empleos mientras transforma los existentes. Como cambios tecnológicos previos (computadoras, internet), la disrupción a corto plazo conduce al crecimiento de empleos a largo plazo.
 
-**Más información**: [Metodología de Agentes de IA](./methodology/AI_AGENT_METHODOLOGY.md) | [Estudios de Caso](../CASE_STUDIES.md)
+**Más información**: [Metodología de Agentes de IA](./methodology/AI_AGENT_METHODOLOGY.md) | [Estudios de Caso](./case-studies.md)
 
 ---
 
@@ -172,8 +172,8 @@ El agente de IA puede manejar situaciones matizadas (cliente enojado, solicitud 
 **Objetivo**: Escalar a equipo/departamento
 
 **Recursos**:
-- [Guía de Inicio Rápido](../QUICKSTART.md) - Comience en 15 minutos
-- [Guía del Usuario](../USER_GUIDE.md) - Guía completa para empezar
+- [Guía de Inicio Rápido](./quickstart.md) - Comience en 15 minutos
+- [Guía del Usuario](./user-guide.md) - Guía completa para empezar
 - [Navegar Catálogo](../README.md) - Encuentre herramientas para sus necesidades
 
 ---
@@ -209,9 +209,9 @@ El agente de IA puede manejar situaciones matizadas (cliente enojado, solicitud 
 - **Empresa**: Servicio al cliente, gestión de conocimiento, notas de reuniones
 
 **Recursos**:
-- [Guía Gubernamental](../GOVERNMENT_GUIDE.md) - Hoja de ruta de implementación
+- [Guía Gubernamental](./government-guide.md) - Hoja de ruta de implementación
 - [Casos de Uso](./USE_CASES.md) - Ejemplos del mundo real
-- [Estudios de Caso](../CASE_STUDIES.md) - Aprenda de otros
+- [Estudios de Caso](./case-studies.md) - Aprenda de otros
 
 ---
 
@@ -244,8 +244,8 @@ El agente de IA puede manejar situaciones matizadas (cliente enojado, solicitud 
 **Curva de aprendizaje**: La mayoría de las herramientas pueden usarse productivamente dentro de 30-60 minutos del primer uso. La maestría toma 2-3 semanas de uso regular.
 
 **Recursos**:
-- [Guía de Inicio Rápido](../QUICKSTART.md) - No se necesitan habilidades técnicas
-- [Guía del Usuario](../USER_GUIDE.md) - Tutoriales paso a paso
+- [Guía de Inicio Rápido](./quickstart.md) - No se necesitan habilidades técnicas
+- [Guía del Usuario](./user-guide.md) - Tutoriales paso a paso
 
 ---
 
@@ -321,7 +321,7 @@ El agente de IA puede manejar situaciones matizadas (cliente enojado, solicitud 
 - Integración y personalización (único, $5K-50K+)
 - Administración de TI (continuo, 5-10% de costos de herramientas)
 
-**Más información**: [Calculadora de ROI](../README.md#roi-calculator) | [Guía Gubernamental](../GOVERNMENT_GUIDE.md#budget)
+**Más información**: [Calculadora de ROI](../README.md#roi-calculator) | [Guía Gubernamental](./government-guide.md#budget)
 
 ---
 
@@ -512,7 +512,7 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 - 95 herramientas con certificación **SOC 2**
 - Ver [Catálogo](../README.md) para listas filtradas
 
-**Más información**: [Guía Gubernamental - Seguridad](../GOVERNMENT_GUIDE.md#security) | [Marco de Evaluación](./methodology/AI_EVALUATION_FRAMEWORK.md#security)
+**Más información**: [Guía Gubernamental - Seguridad](./government-guide.md#security) | [Marco de Evaluación](./methodology/AI_EVALUATION_FRAMEWORK.md#security)
 
 ---
 
@@ -603,7 +603,7 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 
 **Consulte a su equipo de seguridad**: Cada agencia tiene requisitos diferentes.
 
-**Más información**: [Guía Gubernamental - Seguridad](../GOVERNMENT_GUIDE.md#security)
+**Más información**: [Guía Gubernamental - Seguridad](./government-guide.md#security)
 
 ---
 
@@ -693,9 +693,9 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 5. **Solicitud**: "Solicito $5K para un piloto de 12 semanas comenzando [fecha]"
 
 **Recursos a usar**:
-- [Estudios de Caso](../CASE_STUDIES.md) - Muestre lo que lograron organizaciones similares
+- [Estudios de Caso](./case-studies.md) - Muestre lo que lograron organizaciones similares
 - [Calculadora de ROI](../README.md#roi-calculator) - Cuantifique su oportunidad
-- [Guía Gubernamental](../GOVERNMENT_GUIDE.md) - Aborde preocupaciones de cumplimiento
+- [Guía Gubernamental](./government-guide.md) - Aborde preocupaciones de cumplimiento
 
 ---
 
@@ -753,7 +753,7 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 - ❌ **Ignorar resistencia** en lugar de abordar preocupaciones
 - ❌ **Sin medición** = sin capacidad de demostrar valor
 
-**Más información**: [Guía Gubernamental - Implementación](../GOVERNMENT_GUIDE.md#implementation)
+**Más información**: [Guía Gubernamental - Implementación](./government-guide.md#implementation)
 
 ---
 
@@ -825,7 +825,7 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 - Capacitación de actualización anual
 - Actualizaciones continuas a la base de conocimientos
 
-**Más información**: [Guía del Usuario](../USER_GUIDE.md) | [Guía de Inicio Rápido](../QUICKSTART.md)
+**Más información**: [Guía del Usuario](./user-guide.md) | [Guía de Inicio Rápido](./quickstart.md)
 
 ---
 
@@ -938,7 +938,7 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 - Cifre datos en tránsito y en reposo
 - Revise seguridad del proveedor para plataformas de integración
 
-**Más información**: [Guía Gubernamental - Requisitos Técnicos](../GOVERNMENT_GUIDE.md#technical)
+**Más información**: [Guía Gubernamental - Requisitos Técnicos](./government-guide.md#technical)
 
 ---
 
@@ -980,7 +980,7 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 
 **Tendencia**: Opciones en instalaciones mejorando rápidamente. Modelos de código abierto (Llama 3, Mistral) cada vez más competitivos con ofertas comerciales.
 
-**Más información**: [Guía Gubernamental - Despliegue](../GOVERNMENT_GUIDE.md#deployment)
+**Más información**: [Guía Gubernamental - Despliegue](./government-guide.md#deployment)
 
 ---
 
@@ -1208,7 +1208,7 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 - Prácticas fuertes de desidentificación
 - Evaluaciones de impacto de privacidad
 
-**Más información**: [Guía Gubernamental](../GOVERNMENT_GUIDE.md) | [Investigación de IA Gubernamental](./research/GOVERNMENT_AI_RESEARCH.md)
+**Más información**: [Guía Gubernamental](./government-guide.md) | [Investigación de IA Gubernamental](./research/GOVERNMENT_AI_RESEARCH.md)
 
 ---
 
@@ -1276,7 +1276,7 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 - Mes a mes después del término inicial
 - Criterios de evaluación para decisión de continuar/no continuar
 
-**Más información**: [Guía Gubernamental - Adquisiciones](../GOVERNMENT_GUIDE.md#procurement)
+**Más información**: [Guía Gubernamental - Adquisiciones](./government-guide.md#procurement)
 
 ---
 
@@ -1325,7 +1325,7 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 3. **Análisis de datos**: Salud pública, gestión de rendimiento
 4. **Eficiencia administrativa**: Redacción de informes, notas de reuniones, investigación
 
-**Más información**: [Estudios de Caso](../CASE_STUDIES.md) | [Casos de Uso](./USE_CASES.md#government--public-administration-use-cases)
+**Más información**: [Estudios de Caso](./case-studies.md) | [Casos de Uso](./USE_CASES.md#government--public-administration-use-cases)
 
 ---
 
@@ -1627,10 +1627,10 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 
 **Documentación Principal**:
 - [Catálogo de Agent Shift](../README.md) - Navegue 190+ herramientas de IA
-- [Guía de Inicio Rápido](../QUICKSTART.md) - Comience en 15 minutos
-- [Guía del Usuario](../USER_GUIDE.md) - Guía completa para empezar
-- [Guía Gubernamental](../GOVERNMENT_GUIDE.md) - Guía de implementación para agencias gubernamentales
-- [Estudios de Caso](../CASE_STUDIES.md) - Ejemplos de implementación del mundo real
+- [Guía de Inicio Rápido](./quickstart.md) - Comience en 15 minutos
+- [Guía del Usuario](./user-guide.md) - Guía completa para empezar
+- [Guía Gubernamental](./government-guide.md) - Guía de implementación para agencias gubernamentales
+- [Estudios de Caso](./case-studies.md) - Ejemplos de implementación del mundo real
 
 **Metodología Fase 2**:
 - [Metodología de Agentes de IA](./methodology/AI_AGENT_METHODOLOGY.md) - Cómo se construyó Agent Shift con IA

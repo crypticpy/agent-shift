@@ -122,7 +122,7 @@ TO:   "Organization: Based on real-world government disease surveillance workflo
 
 And update GOVERNMENT_GUIDE.md line 1409 reference to clarify:
 ```
-"Case Study: See [Disease Surveillance Patterns](../CASE_STUDIES.md#case-study-2) 
+"Case Study: See [Disease Surveillance Patterns](./case-studies.md#case-study-2) 
 for architectural patterns from public health implementations"
 ```
 
@@ -233,7 +233,7 @@ ICD-10 taxonomy. Accuracy varies significantly by domain.
 
 | Document | Reference | Details |
 |----------|-----------|---------|
-| **USE_CASES.md** | Line 88 | "Case Study: See [Utah Department of Health](../CASE_STUDIES.md#utah-health-surveillance) implementation details" |
+| **USE_CASES.md** | Line 88 | "Case Study: See [Utah Department of Health](./case-studies.md#utah-health-surveillance) implementation details" |
 | **CASE_STUDIES.md** | Line 87 | "Organization: Metropolitan Public Health Department (anonymized)" |
 | **FAQ.md** | Line 1309-1312 | Lists "Utah: Disease surveillance and epidemiology" |
 | **Government AI Research.md** | Line 317 | Lists "Disease Surveillance (Public Health) 95%" as source "Agent Shift Case Study" |
@@ -243,8 +243,8 @@ ICD-10 taxonomy. Accuracy varies significantly by domain.
 **RECOMMENDATION:**
 1. **USE_CASES.md Line 88:** Change
 ```
-FROM: "See [Utah Department of Health](../CASE_STUDIES.md#utah-health-surveillance) implementation details"
-TO:   "See [Disease Surveillance Case Study](../CASE_STUDIES.md#case-study-2-public-health-disease-surveillance-automation)"
+FROM: "See [Utah Department of Health](./case-studies.md#utah-health-surveillance) implementation details"
+TO:   "See [Disease Surveillance Case Study](./case-studies.md#case-study-2-public-health-disease-surveillance-automation)"
 ```
 
 2. **Add clarity** to CASE_STUDIES.md line 87:
@@ -390,8 +390,8 @@ TO:   "**Time Saved:** 95% reduction (40 hrs/week → 2 hrs/week oversight)
 
 **2. USE_CASES.md Line 88**
 ```
-FROM: "Case Study: See [Utah Department of Health](../CASE_STUDIES.md#utah-health-surveillance) implementation details."
-TO:   "Case Study: See [Disease Surveillance Case Study](../CASE_STUDIES.md#case-study-2-public-health-disease-surveillance-automation) for similar implementations."
+FROM: "Case Study: See [Utah Department of Health](./case-studies.md#utah-health-surveillance) implementation details."
+TO:   "Case Study: See [Disease Surveillance Case Study](./case-studies.md#case-study-2-public-health-disease-surveillance-automation) for similar implementations."
 ```
 
 **3. CASE_STUDIES.md Line 87**

@@ -754,7 +754,7 @@ Filter by "Open Source" in the catalog to see self-hosted options.
 4. Propose a pilot project with measurable outcomes
 5. Share case studies from similar organizations
 
-See our [Government Guide](./GOVERNMENT_GUIDE.md) for procurement guidance.
+See our [Government Guide]./government-guide.md) for procurement guidance.
 
 **Q: Will AI agents replace jobs?**
 **A:** Our focus is on augmentation, not replacement:
@@ -850,9 +850,9 @@ A series of steps to accomplish a task or process. AI agents can automate multi-
 ### Documentation & Resources
 
 **On Agent Shift:**
-- [Quick Start Guide](./QUICKSTART.md) - Get started in 5-10 minutes
-- [Case Studies](./CASE_STUDIES.md) - Real-world examples
-- [Government Guide](./GOVERNMENT_GUIDE.md) - Government-specific guidance
+- [Quick Start Guide]./quickstart.md) - Get started in 5-10 minutes
+- [Case Studies]./case-studies.md) - Real-world examples
+- [Government Guide]./government-guide.md) - Government-specific guidance
 - [Technical Documentation](./docs/ARCHITECTURE.md) - For technical staff
 
 **External Resources:**

@@ -1636,7 +1636,7 @@ Following California's lead, many U.S. states have enacted comprehensive privacy
 
 #### Step 2: Define Your Requirements
 
-**Functional Requirements**: What the tool must do (see [GOVERNMENT_GUIDE.md](../GOVERNMENT_GUIDE.md))
+**Functional Requirements**: What the tool must do (see [GOVERNMENT_GUIDE.md](./government-guide.md))
 
 **Non-Functional Requirements - Compliance:**
 
@@ -2995,7 +2995,7 @@ c) Proof: Vendor shall provide certificates of insurance naming Agency as additi
 - [Government AI Research](./research/GOVERNMENT_AI_RESEARCH.md) - Research on government adoption
 
 **Core Documentation:**
-- [Government Implementation Guide](../GOVERNMENT_GUIDE.md) - Comprehensive deployment guide
+- [Government Implementation Guide](./government-guide.md) - Comprehensive deployment guide
 - [Use Cases](./USE_CASES.md) - Industry-specific applications
 - [FAQ](./FAQ.md) - Frequently asked questions
 - [Roadmap](./ROADMAP.md) - Future plans and features
@@ -3076,7 +3076,7 @@ Compliance is the foundation of responsible AI adoption in government. This guid
 ### Next Steps
 
 **If you are just starting:**
-1. Read [Government Implementation Guide](../GOVERNMENT_GUIDE.md) for deployment guidance
+1. Read [Government Implementation Guide](./government-guide.md) for deployment guidance
 2. Classify your data and determine compliance requirements
 3. Use [AI Agent Catalog](../README.md) filters to find compliant tools
 4. Develop policies and governance framework
@@ -3155,7 +3155,7 @@ When evaluating any AI tool:
 
 **Government & Procurement Resources**:
 - [Procurement Guide](./PROCUREMENT.md) - How to acquire AI tools compliantly
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Implementation for government agencies
+- [Government Guide](./government-guide.md) - Implementation for government agencies
 - [Use Cases](./USE_CASES.md) - Compliance requirements by use case
 - [FAQ](./FAQ.md) - Common compliance questions answered
 
@@ -3167,8 +3167,8 @@ When evaluating any AI tool:
 
 **User Resources**:
 - [Main Catalog](../README.md) - Browse 190+ AI tools with compliance filters
-- [Quickstart Guide](../QUICKSTART.md) - Get started in 15 minutes
-- [Case Studies](../CASE_STUDIES.md) - Real-world compliant implementations
+- [Quickstart Guide](./quickstart.md) - Get started in 15 minutes
+- [Case Studies](./case-studies.md) - Real-world compliant implementations
 
 ---
 
@@ -3176,7 +3176,7 @@ When evaluating any AI tool:
 
 **Questions or Feedback?**
 
-[Browse Tools](../README.md) • [Get Started](../QUICKSTART.md) • [Community](https://github.com) • [Contact Us](#)
+[Browse Tools](../README.md) • [Get Started](./quickstart.md) • [Community](https://github.com) • [Contact Us](#)
 
 **Building Compliant, Secure, and Trustworthy AI in Government**
 

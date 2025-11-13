@@ -85,7 +85,7 @@ Agent Shift is a **public service** and **community gift** that demonstrates the
 3. **Try a workflow**: Start with our 5-minute quick-win workflows
 4. **Calculate your ROI**: Use our calculator to quantify benefits
 
-📖 **[Full User Guide →](./USER_GUIDE.md)**
+📖 **[Full User Guide →](./docs/user-guide.md)**
 
 ### For Developers
 
@@ -105,7 +105,7 @@ pnpm dev
 # 4. Open browser to http://localhost:3000
 ```
 
-📖 **[Full Developer Guide →](./QUICKSTART.md)**
+📖 **[Full Developer Guide →](./docs/quickstart.md)**
 
 ---
 
@@ -136,45 +136,45 @@ pnpm dev
 
 ## 📖 Documentation
 
+> **📁 Complete Documentation Index:** See [docs/README.md](./docs/README.md) for the full documentation catalog
+
 <table>
   <tr>
     <td width="50%">
       <h3>🎯 For Users</h3>
       <ul>
-        <li><a href="./USER_GUIDE.md">User Guide</a> - Non-technical walkthrough</li>
-        <li><a href="./QUICKSTART.md">Quick Start</a> - Get up and running in 5 minutes</li>
-        <li><a href="./docs/USE_CASES.md">Use Cases</a> - Real-world applications</li>
-        <li><a href="./docs/FAQ.md">FAQ</a> - Common questions answered</li>
+        <li><a href="./docs/user-guide.md">User Guide</a> - Non-technical walkthrough</li>
+        <li><a href="./docs/quickstart.md">Quick Start</a> - Get up and running in 5 minutes</li>
+        <li><a href="./docs/government-guide.md">Government Guide</a> - Deployment for gov environments</li>
+        <li><a href="./docs/case-studies.md">Case Studies</a> - Success stories</li>
       </ul>
     </td>
     <td width="50%">
       <h3>👩‍💻 For Developers</h3>
       <ul>
         <li><a href="./CONTRIBUTING.md">Contributing</a> - How to contribute</li>
-        <li><a href="./docs/ARCHITECTURE.md">Architecture</a> - System design & patterns</li>
-        <li><a href="./docs/COMPONENT_LIBRARY.md">Component Library</a> - UI components reference</li>
-        <li><a href="./docs/DEPLOYMENT.md">Deployment</a> - Production deployment guide</li>
+        <li><a href="./CLAUDE.md">Claude Code Guide</a> - AI collaboration documentation</li>
+        <li><a href="./docs/internal/implementation-summary.md">Implementation Summary</a> - Performance optimizations</li>
+        <li><a href="./docs/internal/">Internal Docs</a> - Development tracking & reports</li>
       </ul>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <h3>🏛️ For Government & Public Health</h3>
+      <h3>🎤 Presentation Materials</h3>
       <ul>
-        <li><a href="./GOVERNMENT_GUIDE.md">Government Guide</a> - Deployment for gov environments</li>
-        <li><a href="./docs/COMPLIANCE.md">Compliance</a> - Security & regulatory info</li>
-        <li><a href="./docs/PROCUREMENT.md">Procurement</a> - Acquisition guidance</li>
-        <li><a href="./CASE_STUDIES.md">Case Studies</a> - Success stories</li>
+        <li><a href="./docs/presentations/compliance-quick-guide.md">Compliance Quick Guide</a> - FedRAMP, HIPAA, CJIS, SOC 2</li>
+        <li><a href="./docs/presentations/roi-quick-reference.md">ROI Quick Reference</a> - ROI calculations and examples</li>
+        <li><a href="./docs/presentations/getting-started.md">Getting Started</a> - 5-step deployment guide</li>
+        <li><a href="./docs/presentations/faq-one-pager.md">FAQ One-Pager</a> - 10 most common questions</li>
       </ul>
     </td>
     <td width="50%">
-      <h3>📚 Research & Methodology</h3>
+      <h3>📚 Research & Quality</h3>
       <ul>
-        <li><a href="./docs/methodology/AI_AGENT_METHODOLOGY.md">AI Agent Methodology</a> - How this was built with AI</li>
-        <li><a href="./docs/methodology/AI_EVALUATION_FRAMEWORK.md">AI Evaluation Framework</a> - Tool assessment criteria</li>
-        <li><a href="./docs/methodology/ROI_CALCULATOR_METHODOLOGY.md">ROI Calculator Methodology</a> - Research-validated ROI calculations</li>
-        <li><a href="./docs/research/GOVERNMENT_AI_RESEARCH.md">Government AI Research</a> - Government sector analysis</li>
-        <li><a href="./docs/brand/BRAND_STORY.md">Brand Story</a> - Mission, values & vision</li>
+        <li><a href="./docs/research/fact-check-audit-report.md">Fact Check Audit</a> - Cross-document consistency audit</li>
+        <li><a href="./docs/research/fact-check-executive-summary.md">Fact Check Summary</a> - Executive summary</li>
+        <li><a href="./docs/internal/enhancement-inventory.md">Enhancement Inventory</a> - Government examples enhancements</li>
       </ul>
     </td>
   </tr>

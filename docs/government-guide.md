@@ -1568,9 +1568,9 @@ DRP-007: The vendor shall execute a Business Associate Agreement (if HIPAA appli
 
 **Agent Shift Resources:**
 - [Main Catalog](./README.md) - Browse 190+ AI tools
-- [User Guide](./USER_GUIDE.md) - Non-technical user guide
-- [Case Studies](./CASE_STUDIES.md) - Real-world examples
-- [Quick Start](./QUICKSTART.md) - Get started fast
+- [User Guide]./user-guide.md) - Non-technical user guide
+- [Case Studies]./case-studies.md) - Real-world examples
+- [Quick Start]./quickstart.md) - Get started fast
 
 ---
 

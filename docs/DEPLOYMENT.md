@@ -918,9 +918,9 @@ If deploying to government environments:
 - [CLAUDE.md](../CLAUDE.md) - Project setup and commands
 
 **User & Implementation Guides**:
-- [QUICKSTART.md](../QUICKSTART.md) - Fast onboarding (5-10 minutes)
-- [USER_GUIDE.md](../USER_GUIDE.md) - Comprehensive user documentation
-- [GOVERNMENT_GUIDE.md](../GOVERNMENT_GUIDE.md) - Government-specific deployment
+- [QUICKSTART.md](./quickstart.md) - Fast onboarding (5-10 minutes)
+- [USER_GUIDE.md](./user-guide.md) - Comprehensive user documentation
+- [GOVERNMENT_GUIDE.md](./government-guide.md) - Government-specific deployment
 
 **Government & Compliance**:
 - [COMPLIANCE.md](./COMPLIANCE.md) - Security and regulatory requirements

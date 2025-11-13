@@ -1403,7 +1403,7 @@ Download templates from: [Agent Shift GitHub Repository](../../README.md)
 - [Use Cases](./USE_CASES.md) - Real-world AI applications by sector
 - [Compliance Guide](./COMPLIANCE.md) - Detailed compliance frameworks
 - [FAQ](./FAQ.md) - Common procurement questions answered
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Implementation guidance
+- [Government Guide](./government-guide.md) - Implementation guidance
 - [AI Evaluation Framework](./methodology/AI_EVALUATION_FRAMEWORK.md) - Tool assessment criteria
 - [ROI Calculator](../README.md#roi-calculator) - Calculate business case
 

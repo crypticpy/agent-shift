@@ -887,8 +887,8 @@ export function ComponentName(props) {
 - [Framer Motion](https://www.framer.com/motion/) - Animation library
 
 **User & Implementation Guides**:
-- [Quickstart Guide](../QUICKSTART.md) - Get started in 15 minutes
-- [User Guide](../USER_GUIDE.md) - Comprehensive user documentation
+- [Quickstart Guide](./quickstart.md) - Get started in 15 minutes
+- [User Guide](./user-guide.md) - Comprehensive user documentation
 
 **Phase 2 Methodology**:
 - [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md) - How Agent Shift was built

@@ -102,7 +102,7 @@ This document showcases **real-world use cases** where AI agents are delivering 
 - Training and change management: $5K-8K
 - **Year 1 Total**: $38K-52K | **Ongoing**: $18K-24K/year
 
-**Case Study**: See [Disease Surveillance Case Study](../CASE_STUDIES.md#case-study-2-public-health-disease-surveillance-automation) implementation details (composite example based on 3-5 real implementations).
+**Case Study**: See [Disease Surveillance Case Study](./case-studies.md#case-study-2-public-health-disease-surveillance-automation) implementation details (composite example based on 3-5 real implementations).
 
 **Compliance**: FedRAMP Moderate, HIPAA compliant tools required. HIPAA Business Associate Agreements needed for all vendors handling PHI.
 
@@ -349,7 +349,7 @@ Marcus manages vaccine distribution and inventory tracking for 200 enrolled vacc
 - **Faster policy response**: Evidence-informed decisions made more rapidly
 - **ROI**: 550% over 3 years
 
-**Case Study**: See [CDC Rapid Review Team](../CASE_STUDIES.md#cdc-rapid-reviews) implementation.
+**Case Study**: See [CDC Rapid Review Team](./case-studies.md#cdc-rapid-reviews) implementation.
 
 **Compliance**: Maintains audit trails for regulatory submissions
 
@@ -835,7 +835,7 @@ Teresa leads a team of 4 epidemiologists responsible for investigating disease o
 - Training and change management: $10K-15K
 - **Year 1 Total**: $70K-105K | **Ongoing**: $35K-50K/year
 
-**Case Study**: See [Department of Motor Vehicles](../CASE_STUDIES.md#dmv-virtual-assistant) implementation (composite example from 5 municipal 311 implementations).
+**Case Study**: See [Department of Motor Vehicles](./case-studies.md#dmv-virtual-assistant) implementation (composite example from 5 municipal 311 implementations).
 
 **Compliance**: FedRAMP Moderate (if federal), SOC 2 Type II required, WCAG 2.1 AA accessibility standards mandatory. Data residency in US required for many jurisdictions.
 
@@ -1124,7 +1124,7 @@ Teresa leads a team of 4 epidemiologists responsible for investigating disease o
 - **25% higher CSAT scores**: Faster resolution and 24/7 availability
 - **ROI**: 420% over 3 years
 
-**Case Study**: See [Tech Company Support Transformation](../CASE_STUDIES.md#enterprise-support-ai) implementation.
+**Case Study**: See [Tech Company Support Transformation](./case-studies.md#enterprise-support-ai) implementation.
 
 ---
 
@@ -1670,7 +1670,7 @@ Teresa leads a team of 4 epidemiologists responsible for investigating disease o
 **Resources**:
 - [Browse Agent Shift Catalog](../README.md) - 190+ tools rated and filtered
 - [Evaluation Framework](./docs/methodology/AI_EVALUATION_FRAMEWORK.md) - Assessment methodology
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Compliance considerations
+- [Government Guide](./government-guide.md) - Compliance considerations
 
 **Action**: Identify 1-2 tools per use case, run trials.
 
@@ -1705,8 +1705,8 @@ Teresa leads a team of 4 epidemiologists responsible for investigating disease o
 - [ ] Communicate results to leadership
 
 **Resources**:
-- [Government Implementation Guide](../GOVERNMENT_GUIDE.md)
-- [Case Studies](../CASE_STUDIES.md) - Learn from others
+- [Government Implementation Guide](./government-guide.md)
+- [Case Studies](./case-studies.md) - Learn from others
 
 ---
 
@@ -1761,7 +1761,7 @@ Teresa leads a team of 4 epidemiologists responsible for investigating disease o
 1. **Review use cases relevant to your organization** in this document
 2. **Calculate potential ROI** using the [ROI Calculator](../README.md#roi-calculator)
 3. **Browse the catalog** to identify [suitable tools](../README.md)
-4. **Read case studies** from [similar organizations](../CASE_STUDIES.md)
+4. **Read case studies** from [similar organizations](./case-studies.md)
 
 **Within 30 Days**:
 1. **Form AI task force** with representatives from IT, operations, HR, legal
@@ -1770,7 +1770,7 @@ Teresa leads a team of 4 epidemiologists responsible for investigating disease o
 4. **Secure budget** for pilot phase (typically $10K-50K for 3-6 month pilot)
 
 **Resources**:
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Implementation roadmap for government agencies
+- [Government Guide](./government-guide.md) - Implementation roadmap for government agencies
 - [Business Case Template](../README.md#business-case) - Justify investment to leadership
 - [Compliance Guide](../README.md#compliance) - Address security and regulatory requirements
 
@@ -1791,7 +1791,7 @@ Teresa leads a team of 4 epidemiologists responsible for investigating disease o
 4. **Set up measurement framework** to track results
 
 **Resources**:
-- [User Guide](../USER_GUIDE.md) - Getting started with AI agents
+- [User Guide](./user-guide.md) - Getting started with AI agents
 - [Tool Catalog](../README.md) - Browse and filter 190+ tools
 - [Workflows](../README.md#workflows) - Pre-built examples to adapt
 
@@ -1829,10 +1829,10 @@ Teresa leads a team of 4 epidemiologists responsible for investigating disease o
 
 **User Documentation**:
 - [Main Catalog](../README.md) - Browse 190+ AI tools
-- [User Guide](../USER_GUIDE.md) - Getting started guide
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Implementation guidance for government agencies
-- [Case Studies](../CASE_STUDIES.md) - Real-world implementation examples
-- [Quickstart Guide](../QUICKSTART.md) - Get started in 15 minutes
+- [User Guide](./user-guide.md) - Getting started guide
+- [Government Guide](./government-guide.md) - Implementation guidance for government agencies
+- [Case Studies](./case-studies.md) - Real-world implementation examples
+- [Quickstart Guide](./quickstart.md) - Get started in 15 minutes
 
 ---
 

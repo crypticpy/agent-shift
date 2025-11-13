@@ -885,7 +885,7 @@ The future of government services increasingly relies on AI agents. Choosing wis
 
 **Related Resources:**
 - [Agent Shift Catalog](../../README.md) - Browse evaluated tools
-- [Government Guide](../../GOVERNMENT_GUIDE.md) - Implementation guidance
+- [Government Guide](.././government-guide.md) - Implementation guidance
 
 ---
 

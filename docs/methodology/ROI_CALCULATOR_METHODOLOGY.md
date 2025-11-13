@@ -705,8 +705,8 @@ Note: Modest ROI, but frees analyst for higher-value work
 - [Evaluation Framework](./AI_EVALUATION_FRAMEWORK.md) - Tool assessment
 
 **Related Resources:**
-- [Case Studies](../../CASE_STUDIES.md) - Real-world ROI examples
-- [Government Guide](../../GOVERNMENT_GUIDE.md) - Implementation guidance
+- [Case Studies](.././case-studies.md) - Real-world ROI examples
+- [Government Guide](.././government-guide.md) - Implementation guidance
 
 ---
 
@@ -714,6 +714,6 @@ Note: Modest ROI, but frees analyst for higher-value work
 
 **Building Credible Business Cases for AI Agent Adoption**
 
-[Calculate ROI](#) • [Browse Tools](../../README.md) • [Get Started](../../QUICKSTART.md)
+[Calculate ROI](#) • [Browse Tools](../../README.md) • [Get Started](.././quickstart.md)
 
 </div>

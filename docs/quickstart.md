@@ -262,10 +262,10 @@ pnpm start
 4. **Join our community** - GitHub Discussions
 
 **Dive Deeper:**
-- [User Guide](./USER_GUIDE.md) - Comprehensive walkthrough
+- [User Guide]./user-guide.md) - Comprehensive walkthrough
 - [Use Cases](./docs/USE_CASES.md) - Real-world applications
 - [FAQ](./docs/FAQ.md) - Common questions
-- [Government Guide](./GOVERNMENT_GUIDE.md) - Gov-specific guidance
+- [Government Guide]./government-guide.md) - Gov-specific guidance
 
 **Get Help:**
 - [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
@@ -455,13 +455,13 @@ NODE_OPTIONS="--max-old-space-size=4096" pnpm build
 
 **Can't find what you're looking for?**
 
-- 📖 [Full User Guide](./USER_GUIDE.md)
+- 📖 [Full User Guide]./user-guide.md)
 - 💬 [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
 - 🐛 [Report an Issue](https://github.com/crypticpy/agent-shift/issues)
 - 📧 [Contact Us](mailto:support@agentshift.dev)
 
 **For Government & Public Health:**
-- 🏛️ [Government Guide](./GOVERNMENT_GUIDE.md)
+- 🏛️ [Government Guide]./government-guide.md)
 - 📋 [Compliance Documentation](./docs/COMPLIANCE.md)
 - 💼 [Procurement Guidance](./docs/PROCUREMENT.md)
 

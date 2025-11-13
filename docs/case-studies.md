@@ -791,8 +791,8 @@ except AIServiceError:
 
 ### Getting Started Resources
 
-- [User Guide](./USER_GUIDE.md) - Step-by-step implementation guidance
-- [Government Guide](./GOVERNMENT_GUIDE.md) - Government-specific considerations
+- [User Guide]./user-guide.md) - Step-by-step implementation guidance
+- [Government Guide]./government-guide.md) - Government-specific considerations
 - [Technical Documentation](./docs/ARCHITECTURE.md) - System design patterns
 - [Community Forum](https://github.com/crypticpy/agent-shift/discussions) - Connect with other implementers
 

@@ -37,7 +37,7 @@ Les **agents IA** (AI agents) sont des applications logicielles qui utilisent l'
 - Un assistant de codage qui écrit et révise du code
 - Une automatisation de flux de travail qui s'adapte aux conditions changeantes
 
-**En savoir plus** : [Guide de l'Utilisateur](../USER_GUIDE.md) | [Méthodologie des Agents IA](./methodology/AI_AGENT_METHODOLOGY.md)
+**En savoir plus** : [Guide de l'Utilisateur](./user-guide.md) | [Méthodologie des Agents IA](./methodology/AI_AGENT_METHODOLOGY.md)
 
 ---
 
@@ -110,7 +110,7 @@ L'agent IA peut gérer des situations nuancées (client en colère, demande inha
 
 **Impact économique** : Les études montrent que l'IA augmente la croissance économique, créant de nouveaux emplois tout en transformant ceux existants. Comme les changements technologiques précédents (ordinateurs, internet), la disruption à court terme mène à la croissance de l'emploi à long terme.
 
-**En savoir plus** : [Méthodologie des Agents IA](./methodology/AI_AGENT_METHODOLOGY.md) | [Études de Cas](../CASE_STUDIES.md)
+**En savoir plus** : [Méthodologie des Agents IA](./methodology/AI_AGENT_METHODOLOGY.md) | [Études de Cas](./case-studies.md)
 
 ---
 
@@ -172,8 +172,8 @@ L'agent IA peut gérer des situations nuancées (client en colère, demande inha
 **Objectif** : Étendre à l'équipe/département
 
 **Ressources** :
-- [Guide de Démarrage Rapide](../QUICKSTART.md) - Commencer en 15 minutes
-- [Guide de l'Utilisateur](../USER_GUIDE.md) - Guide complet de démarrage
+- [Guide de Démarrage Rapide](./quickstart.md) - Commencer en 15 minutes
+- [Guide de l'Utilisateur](./user-guide.md) - Guide complet de démarrage
 - [Parcourir le Catalogue](../README.md) - Trouver des outils pour vos besoins
 
 ---
@@ -209,9 +209,9 @@ L'agent IA peut gérer des situations nuancées (client en colère, demande inha
 - **Entreprise** : Service client, gestion des connaissances, notes de réunion
 
 **Ressources** :
-- [Guide Gouvernemental](../GOVERNMENT_GUIDE.md) - Feuille de route de mise en œuvre
+- [Guide Gouvernemental](./government-guide.md) - Feuille de route de mise en œuvre
 - [Cas d'Usage](./USE_CASES.md) - Exemples concrets
-- [Études de Cas](../CASE_STUDIES.md) - Apprendre des autres
+- [Études de Cas](./case-studies.md) - Apprendre des autres
 
 ---
 
@@ -244,8 +244,8 @@ L'agent IA peut gérer des situations nuancées (client en colère, demande inha
 **Courbe d'apprentissage** : La plupart des outils peuvent être utilisés de manière productive dans les 30-60 minutes de première utilisation. La maîtrise prend 2-3 semaines d'utilisation régulière.
 
 **Ressources** :
-- [Guide de Démarrage Rapide](../QUICKSTART.md) - Aucune compétence technique nécessaire
-- [Guide de l'Utilisateur](../USER_GUIDE.md) - Tutoriels étape par étape
+- [Guide de Démarrage Rapide](./quickstart.md) - Aucune compétence technique nécessaire
+- [Guide de l'Utilisateur](./user-guide.md) - Tutoriels étape par étape
 
 ---
 
@@ -321,7 +321,7 @@ L'agent IA peut gérer des situations nuancées (client en colère, demande inha
 - Intégration et personnalisation (ponctuel, 5K-50K+)
 - Administration IT (continu, 5-10% des coûts d'outils)
 
-**En savoir plus** : [Calculateur de Retour sur Investissement](../README.md#roi-calculator) | [Guide Gouvernemental](../GOVERNMENT_GUIDE.md#budget)
+**En savoir plus** : [Calculateur de Retour sur Investissement](../README.md#roi-calculator) | [Guide Gouvernemental](./government-guide.md#budget)
 
 ---
 
@@ -512,7 +512,7 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 - 95 outils avec certification **SOC 2**
 - Voir [Catalogue](../README.md) pour les listes filtrées
 
-**En savoir plus** : [Guide Gouvernemental - Sécurité](../GOVERNMENT_GUIDE.md#security) | [Cadre d'Évaluation](./methodology/AI_EVALUATION_FRAMEWORK.md#security)
+**En savoir plus** : [Guide Gouvernemental - Sécurité](./government-guide.md#security) | [Cadre d'Évaluation](./methodology/AI_EVALUATION_FRAMEWORK.md#security)
 
 ---
 
@@ -603,7 +603,7 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 
 **Consulter votre équipe de sécurité** : Chaque agence a des exigences différentes.
 
-**En savoir plus** : [Guide Gouvernemental - Sécurité](../GOVERNMENT_GUIDE.md#security)
+**En savoir plus** : [Guide Gouvernemental - Sécurité](./government-guide.md#security)
 
 ---
 
@@ -693,9 +693,9 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 5. **Demande** : "Je demande 5K$ pour un pilote de 12 semaines commençant le [date]"
 
 **Ressources à utiliser** :
-- [Études de Cas](../CASE_STUDIES.md) - Montrer ce que des organisations similaires ont accompli
+- [Études de Cas](./case-studies.md) - Montrer ce que des organisations similaires ont accompli
 - [Calculateur de Retour sur Investissement](../README.md#roi-calculator) - Quantifier votre opportunité
-- [Guide Gouvernemental](../GOVERNMENT_GUIDE.md) - Répondre aux préoccupations de conformité
+- [Guide Gouvernemental](./government-guide.md) - Répondre aux préoccupations de conformité
 
 ---
 
@@ -753,7 +753,7 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 - ❌ **Ignorer la résistance** au lieu de répondre aux préoccupations
 - ❌ **Aucune mesure** = aucune capacité à démontrer la valeur
 
-**En savoir plus** : [Guide Gouvernemental - Mise en Œuvre](../GOVERNMENT_GUIDE.md#implementation)
+**En savoir plus** : [Guide Gouvernemental - Mise en Œuvre](./government-guide.md#implementation)
 
 ---
 
@@ -825,7 +825,7 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 - Formation de recyclage annuelle
 - Mises à jour continues de la base de connaissances
 
-**En savoir plus** : [Guide de l'Utilisateur](../USER_GUIDE.md) | [Guide de Démarrage Rapide](../QUICKSTART.md)
+**En savoir plus** : [Guide de l'Utilisateur](./user-guide.md) | [Guide de Démarrage Rapide](./quickstart.md)
 
 ---
 
@@ -938,7 +938,7 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 - Chiffrer les données en transit et au repos
 - Réviser la sécurité du fournisseur pour les plateformes d'intégration
 
-**En savoir plus** : [Guide Gouvernemental - Exigences Techniques](../GOVERNMENT_GUIDE.md#technical)
+**En savoir plus** : [Guide Gouvernemental - Exigences Techniques](./government-guide.md#technical)
 
 ---
 
@@ -980,7 +980,7 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 
 **Tendance** : Les options sur site s'améliorent rapidement. Les modèles open source (Llama 3, Mistral) sont de plus en plus compétitifs avec les offres commerciales.
 
-**En savoir plus** : [Guide Gouvernemental - Déploiement](../GOVERNMENT_GUIDE.md#deployment)
+**En savoir plus** : [Guide Gouvernemental - Déploiement](./government-guide.md#deployment)
 
 ---
 
@@ -1208,7 +1208,7 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 - Pratiques de dé-identification solides
 - Évaluations d'impact sur la confidentialité
 
-**En savoir plus** : [Guide Gouvernemental](../GOVERNMENT_GUIDE.md) | [Recherche IA Gouvernementale](./research/GOVERNMENT_AI_RESEARCH.md)
+**En savoir plus** : [Guide Gouvernemental](./government-guide.md) | [Recherche IA Gouvernementale](./research/GOVERNMENT_AI_RESEARCH.md)
 
 ---
 
@@ -1276,7 +1276,7 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 - Mois par mois après la durée initiale
 - Critères d'évaluation pour la décision go/no-go
 
-**En savoir plus** : [Guide Gouvernemental - Achats](../GOVERNMENT_GUIDE.md#procurement)
+**En savoir plus** : [Guide Gouvernemental - Achats](./government-guide.md#procurement)
 
 ---
 
@@ -1325,7 +1325,7 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 3. **Analyse de données** : Santé publique, gestion de la performance
 4. **Efficacité administrative** : Rédaction de rapports, notes de réunion, recherche
 
-**En savoir plus** : [Études de Cas](../CASE_STUDIES.md) | [Cas d'Usage](./USE_CASES.md#government--public-administration-use-cases)
+**En savoir plus** : [Études de Cas](./case-studies.md) | [Cas d'Usage](./USE_CASES.md#government--public-administration-use-cases)
 
 ---
 
@@ -1627,10 +1627,10 @@ ROI sur 3 ans = (983K$ - 40,6K$) / 40,6K$ = 2 321% (!)
 
 **Documentation Principale** :
 - [Catalogue Agent Shift](../README.md) - Parcourir 190+ outils IA
-- [Guide de Démarrage Rapide](../QUICKSTART.md) - Commencer en 15 minutes
-- [Guide de l'Utilisateur](../USER_GUIDE.md) - Guide complet de démarrage
-- [Guide Gouvernemental](../GOVERNMENT_GUIDE.md) - Guide de mise en œuvre pour les agences gouvernementales
-- [Études de Cas](../CASE_STUDIES.md) - Exemples de mise en œuvre concrets
+- [Guide de Démarrage Rapide](./quickstart.md) - Commencer en 15 minutes
+- [Guide de l'Utilisateur](./user-guide.md) - Guide complet de démarrage
+- [Guide Gouvernemental](./government-guide.md) - Guide de mise en œuvre pour les agences gouvernementales
+- [Études de Cas](./case-studies.md) - Exemples de mise en œuvre concrets
 
 **Méthodologie Phase 2** :
 - [Méthodologie des Agents IA](./methodology/AI_AGENT_METHODOLOGY.md) - Comment Agent Shift a été construit avec l'IA

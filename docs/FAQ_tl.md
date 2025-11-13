@@ -37,7 +37,7 @@ Ang **mga AI agents** ay mga software application na gumagamit ng artificial int
 - Isang coding assistant na nagsusulat at nagrereview ng code
 - Isang workflow automation na nag-aadapt sa mga nagbabagong kondisyon
 
-**Matuto pa**: [User Guide](../USER_GUIDE.md) | [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md)
+**Matuto pa**: [User Guide](./user-guide.md) | [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md)
 
 ---
 
@@ -110,7 +110,7 @@ Ang AI agent ay kayang hawakan ang mga nuanced na sitwasyon (galit na customer, 
 
 **Economic impact**: Ang mga pag-aaral ay nagpapakita na ang AI ay nagpapataas ng economic growth, lumilikha ng mga bagong trabaho habang binabago ang mga umiiral. Tulad ng mga nakaraang technology shift (computers, internet), ang short-term disruption ay humahantong sa long-term job growth.
 
-**Matuto pa**: [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md) | [Case Studies](../CASE_STUDIES.md)
+**Matuto pa**: [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md) | [Case Studies](./case-studies.md)
 
 ---
 
@@ -172,8 +172,8 @@ Ang AI agent ay kayang hawakan ang mga nuanced na sitwasyon (galit na customer, 
 **Layunin**: Mag-scale sa team/departamento
 
 **Mga Resources**:
-- [Quickstart Guide](../QUICKSTART.md) - Magsimula sa 15 minuto
-- [User Guide](../USER_GUIDE.md) - Komprehensibong gabay sa pagsisimula
+- [Quickstart Guide](./quickstart.md) - Magsimula sa 15 minuto
+- [User Guide](./user-guide.md) - Komprehensibong gabay sa pagsisimula
 - [Browse Catalog](../README.md) - Maghanap ng mga tools para sa inyong mga pangangailangan
 
 ---
@@ -209,9 +209,9 @@ Ang AI agent ay kayang hawakan ang mga nuanced na sitwasyon (galit na customer, 
 - **Enterprise**: Customer service, knowledge management, meeting notes
 
 **Mga Resources**:
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Implementation roadmap
+- [Government Guide](./government-guide.md) - Implementation roadmap
 - [Use Cases](./USE_CASES.md) - Mga tunay na halimbawa
-- [Case Studies](../CASE_STUDIES.md) - Matuto mula sa iba
+- [Case Studies](./case-studies.md) - Matuto mula sa iba
 
 ---
 
@@ -244,8 +244,8 @@ Ang AI agent ay kayang hawakan ang mga nuanced na sitwasyon (galit na customer, 
 **Learning curve**: Karamihan sa mga tools ay maaaring gamitin nang produktibo sa loob ng 30-60 minuto ng unang paggamit. Ang mastery ay tumatagal ng 2-3 linggong regular na paggamit.
 
 **Mga Resources**:
-- [Quickstart Guide](../QUICKSTART.md) - Walang kinakailangang mga teknikal na kasanayan
-- [User Guide](../USER_GUIDE.md) - Step-by-step tutorials
+- [Quickstart Guide](./quickstart.md) - Walang kinakailangang mga teknikal na kasanayan
+- [User Guide](./user-guide.md) - Step-by-step tutorials
 
 ---
 
@@ -321,7 +321,7 @@ Ang AI agent ay kayang hawakan ang mga nuanced na sitwasyon (galit na customer, 
 - Integration at customization (one-time, $5K-50K+)
 - IT administration (ongoing, 5-10% ng mga gastos sa tools)
 
-**Matuto pa**: [ROI Calculator](../README.md#roi-calculator) | [Government Guide](../GOVERNMENT_GUIDE.md#budget)
+**Matuto pa**: [ROI Calculator](../README.md#roi-calculator) | [Government Guide](./government-guide.md#budget)
 
 ---
 
@@ -512,7 +512,7 @@ Costs = Software + Implementation + Training + Maintenance
 - 95 tools na may **SOC 2** certification
 - Tingnan ang [Catalog](../README.md) para sa mga filtered lists
 
-**Matuto pa**: [Government Guide - Security](../GOVERNMENT_GUIDE.md#security) | [Evaluation Framework](./methodology/AI_EVALUATION_FRAMEWORK.md#security)
+**Matuto pa**: [Government Guide - Security](./government-guide.md#security) | [Evaluation Framework](./methodology/AI_EVALUATION_FRAMEWORK.md#security)
 
 ---
 
@@ -603,7 +603,7 @@ Costs = Software + Implementation + Training + Maintenance
 
 **Kumonsulta sa inyong security team**: Bawat ahensya ay may iba't ibang mga requirement.
 
-**Matuto pa**: [Government Guide - Security](../GOVERNMENT_GUIDE.md#security)
+**Matuto pa**: [Government Guide - Security](./government-guide.md#security)
 
 ---
 
@@ -693,9 +693,9 @@ Costs = Software + Implementation + Training + Maintenance
 5. **Hiling**: "Humihiling ako ng $5K para sa 12-linggong pilot na nagsisimula sa [petsa]"
 
 **Mga resources na gagamitin**:
-- [Case Studies](../CASE_STUDIES.md) - Ipakita kung ano ang nakamit ng katulad na mga organisasyon
+- [Case Studies](./case-studies.md) - Ipakita kung ano ang nakamit ng katulad na mga organisasyon
 - [ROI Calculator](../README.md#roi-calculator) - I-quantify ang inyong oportunidad
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Tugunan ang mga alalahanin sa compliance
+- [Government Guide](./government-guide.md) - Tugunan ang mga alalahanin sa compliance
 
 ---
 
@@ -753,7 +753,7 @@ Costs = Software + Implementation + Training + Maintenance
 - ❌ **Pag-ignore sa resistance** sa halip na tugunan ang mga alalahanin
 - ❌ **Walang sukatan** = walang kakayahang ipakita ang halaga
 
-**Matuto pa**: [Government Guide - Implementation](../GOVERNMENT_GUIDE.md#implementation)
+**Matuto pa**: [Government Guide - Implementation](./government-guide.md#implementation)
 
 ---
 
@@ -825,7 +825,7 @@ Costs = Software + Implementation + Training + Maintenance
 - Taunan na refresher training
 - Patuloy na mga update sa knowledge base
 
-**Matuto pa**: [User Guide](../USER_GUIDE.md) | [Quickstart Guide](../QUICKSTART.md)
+**Matuto pa**: [User Guide](./user-guide.md) | [Quickstart Guide](./quickstart.md)
 
 ---
 
@@ -938,7 +938,7 @@ Costs = Software + Implementation + Training + Maintenance
 - I-encrypt ang data in transit at at rest
 - Suriin ang vendor security para sa mga integration platforms
 
-**Matuto pa**: [Government Guide - Technical Requirements](../GOVERNMENT_GUIDE.md#technical)
+**Matuto pa**: [Government Guide - Technical Requirements](./government-guide.md#technical)
 
 ---
 
@@ -980,7 +980,7 @@ Costs = Software + Implementation + Training + Maintenance
 
 **Trend**: Ang mga on-premises options ay bumubuti nang mabilis. Ang mga open-source models (Llama 3, Mistral) ay lumalaking competitive sa mga commercial offerings.
 
-**Matuto pa**: [Government Guide - Deployment](../GOVERNMENT_GUIDE.md#deployment)
+**Matuto pa**: [Government Guide - Deployment](./government-guide.md#deployment)
 
 ---
 
@@ -1208,7 +1208,7 @@ Costs = Software + Implementation + Training + Maintenance
 - Matatag na de-identification practices
 - Privacy impact assessments
 
-**Matuto pa**: [Government Guide](../GOVERNMENT_GUIDE.md) | [Government AI Research](./research/GOVERNMENT_AI_RESEARCH.md)
+**Matuto pa**: [Government Guide](./government-guide.md) | [Government AI Research](./research/GOVERNMENT_AI_RESEARCH.md)
 
 ---
 
@@ -1276,7 +1276,7 @@ Costs = Software + Implementation + Training + Maintenance
 - Month-to-month pagkatapos ng initial term
 - Evaluation criteria para sa go/no-go decision
 
-**Matuto pa**: [Government Guide - Procurement](../GOVERNMENT_GUIDE.md#procurement)
+**Matuto pa**: [Government Guide - Procurement](./government-guide.md#procurement)
 
 ---
 
@@ -1325,7 +1325,7 @@ Costs = Software + Implementation + Training + Maintenance
 3. **Data analysis**: Public health, performance management
 4. **Administrative efficiency**: Report writing, meeting notes, pananaliksik
 
-**Matuto pa**: [Case Studies](../CASE_STUDIES.md) | [Use Cases](./USE_CASES.md#government--public-administration-use-cases)
+**Matuto pa**: [Case Studies](./case-studies.md) | [Use Cases](./USE_CASES.md#government--public-administration-use-cases)
 
 ---
 
@@ -1627,10 +1627,10 @@ Costs = Software + Implementation + Training + Maintenance
 
 **Pangunahing Dokumentasyon**:
 - [Agent Shift Catalog](../README.md) - Mag-browse ng 190+ AI tools
-- [Quickstart Guide](../QUICKSTART.md) - Magsimula sa 15 minuto
-- [User Guide](../USER_GUIDE.md) - Komprehensibong gabay sa pagsisimula
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Implementation guide para sa government agencies
-- [Case Studies](../CASE_STUDIES.md) - Mga tunay na halimbawa ng pagpapatupad
+- [Quickstart Guide](./quickstart.md) - Magsimula sa 15 minuto
+- [User Guide](./user-guide.md) - Komprehensibong gabay sa pagsisimula
+- [Government Guide](./government-guide.md) - Implementation guide para sa government agencies
+- [Case Studies](./case-studies.md) - Mga tunay na halimbawa ng pagpapatupad
 
 **Phase 2 Methodology**:
 - [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md) - Kung paano ginawa ang Agent Shift gamit ang AI

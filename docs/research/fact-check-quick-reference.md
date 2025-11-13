@@ -15,8 +15,8 @@
 ---
 
 ## CORRECTION #2: USE_CASES.md Line 88
-**Current:** "Case Study: See [Utah Department of Health](../CASE_STUDIES.md#utah-health-surveillance) implementation details."  
-**Change To:** "Case Study: See [Disease Surveillance Case Study](../CASE_STUDIES.md#case-study-2-public-health-disease-surveillance-automation) for similar implementations."  
+**Current:** "Case Study: See [Utah Department of Health](./case-studies.md#utah-health-surveillance) implementation details."  
+**Change To:** "Case Study: See [Disease Surveillance Case Study](./case-studies.md#case-study-2-public-health-disease-surveillance-automation) for similar implementations."  
 **Why:** Fixes broken internal link and matches CASE_STUDIES.md naming  
 **Impact:** HIGH - Prevents credibility hit if audience verifies the reference
 

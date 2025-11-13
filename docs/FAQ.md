@@ -37,7 +37,7 @@
 - A coding assistant that writes and reviews code
 - A workflow automation that adapts to changing conditions
 
-**Learn more**: [User Guide](../USER_GUIDE.md) | [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md)
+**Learn more**: [User Guide](./user-guide.md) | [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md)
 
 ---
 
@@ -110,7 +110,7 @@ The AI agent can handle nuanced situations (angry customer, unusual request, mul
 
 **Economic impact**: Studies show AI increases economic growth, creating new jobs while transforming existing ones. Like previous technology shifts (computers, internet), short-term disruption leads to long-term job growth.
 
-**Learn more**: [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md) | [Case Studies](../CASE_STUDIES.md)
+**Learn more**: [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md) | [Case Studies](./case-studies.md)
 
 ---
 
@@ -172,8 +172,8 @@ The AI agent can handle nuanced situations (angry customer, unusual request, mul
 **Goal**: Scale to team/department
 
 **Resources**:
-- [Quickstart Guide](../QUICKSTART.md) - Get started in 15 minutes
-- [User Guide](../USER_GUIDE.md) - Comprehensive getting started guide
+- [Quickstart Guide](./quickstart.md) - Get started in 15 minutes
+- [User Guide](./user-guide.md) - Comprehensive getting started guide
 - [Browse Catalog](../README.md) - Find tools for your needs
 
 ---
@@ -209,9 +209,9 @@ The AI agent can handle nuanced situations (angry customer, unusual request, mul
 - **Enterprise**: Customer service, knowledge management, meeting notes
 
 **Resources**:
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Implementation roadmap
+- [Government Guide](./government-guide.md) - Implementation roadmap
 - [Use Cases](./USE_CASES.md) - Real-world examples
-- [Case Studies](../CASE_STUDIES.md) - Learn from others
+- [Case Studies](./case-studies.md) - Learn from others
 
 ---
 
@@ -244,8 +244,8 @@ The AI agent can handle nuanced situations (angry customer, unusual request, mul
 **Learning curve**: Most tools can be used productively within 30-60 minutes of first use. Mastery takes 2-3 weeks of regular use.
 
 **Resources**:
-- [Quickstart Guide](../QUICKSTART.md) - No technical skills needed
-- [User Guide](../USER_GUIDE.md) - Step-by-step tutorials
+- [Quickstart Guide](./quickstart.md) - No technical skills needed
+- [User Guide](./user-guide.md) - Step-by-step tutorials
 
 ---
 
@@ -321,7 +321,7 @@ The AI agent can handle nuanced situations (angry customer, unusual request, mul
 - Integration and customization (one-time, $5K-50K+)
 - IT administration (ongoing, 5-10% of tool costs)
 
-**Learn more**: [ROI Calculator](../README.md#roi-calculator) | [Government Guide](../GOVERNMENT_GUIDE.md#budget)
+**Learn more**: [ROI Calculator](../README.md#roi-calculator) | [Government Guide](./government-guide.md#budget)
 
 ---
 
@@ -530,7 +530,7 @@ Costs = Software + Implementation + Training + Maintenance
 - 95 tools with **SOC 2** certification (Based on vendor attestations and independent audits)
 - See [Catalog](../README.md) for filtered lists
 
-**Learn more**: [Government Guide - Security](../GOVERNMENT_GUIDE.md#security) | [Evaluation Framework](./methodology/AI_EVALUATION_FRAMEWORK.md#security)
+**Learn more**: [Government Guide - Security](./government-guide.md#security) | [Evaluation Framework](./methodology/AI_EVALUATION_FRAMEWORK.md#security)
 
 ---
 
@@ -621,7 +621,7 @@ Costs = Software + Implementation + Training + Maintenance
 
 **Consult your security team**: Every agency has different requirements.
 
-**Learn more**: [Government Guide - Security](../GOVERNMENT_GUIDE.md#security)
+**Learn more**: [Government Guide - Security](./government-guide.md#security)
 
 ---
 
@@ -711,9 +711,9 @@ Costs = Software + Implementation + Training + Maintenance
 5. **Ask**: "I request $5K for a 12-week pilot starting [date]"
 
 **Resources to use**:
-- [Case Studies](../CASE_STUDIES.md) - Show what similar organizations achieved
+- [Case Studies](./case-studies.md) - Show what similar organizations achieved
 - [ROI Calculator](../README.md#roi-calculator) - Quantify your opportunity
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Address compliance concerns
+- [Government Guide](./government-guide.md) - Address compliance concerns
 
 ---
 
@@ -771,7 +771,7 @@ Costs = Software + Implementation + Training + Maintenance
 - ❌ **Ignoring resistance** instead of addressing concerns
 - ❌ **No measurement** = no ability to demonstrate value
 
-**Learn more**: [Government Guide - Implementation](../GOVERNMENT_GUIDE.md#implementation)
+**Learn more**: [Government Guide - Implementation](./government-guide.md#implementation)
 
 ---
 
@@ -843,7 +843,7 @@ Costs = Software + Implementation + Training + Maintenance
 - Annual refresher training
 - Continuous updates to knowledge base
 
-**Learn more**: [User Guide](../USER_GUIDE.md) | [Quickstart Guide](../QUICKSTART.md)
+**Learn more**: [User Guide](./user-guide.md) | [Quickstart Guide](./quickstart.md)
 
 ---
 
@@ -956,7 +956,7 @@ Costs = Software + Implementation + Training + Maintenance
 - Encrypt data in transit and at rest
 - Review vendor security for integration platforms
 
-**Learn more**: [Government Guide - Technical Requirements](../GOVERNMENT_GUIDE.md#technical)
+**Learn more**: [Government Guide - Technical Requirements](./government-guide.md#technical)
 
 ---
 
@@ -998,7 +998,7 @@ Costs = Software + Implementation + Training + Maintenance
 
 **Trend**: On-premises options improving rapidly. Open-source models (Llama 3, Mistral) increasingly competitive with commercial offerings.
 
-**Learn more**: [Government Guide - Deployment](../GOVERNMENT_GUIDE.md#deployment)
+**Learn more**: [Government Guide - Deployment](./government-guide.md#deployment)
 
 ---
 
@@ -1226,7 +1226,7 @@ Costs = Software + Implementation + Training + Maintenance
 - Strong de-identification practices
 - Privacy impact assessments
 
-**Learn more**: [Government Guide](../GOVERNMENT_GUIDE.md) | [Government AI Research](./research/GOVERNMENT_AI_RESEARCH.md)
+**Learn more**: [Government Guide](./government-guide.md) | [Government AI Research](./research/GOVERNMENT_AI_RESEARCH.md)
 
 ---
 
@@ -1294,7 +1294,7 @@ Costs = Software + Implementation + Training + Maintenance
 - Month-to-month after initial term
 - Evaluation criteria for go/no-go decision
 
-**Learn more**: [Government Guide - Procurement](../GOVERNMENT_GUIDE.md#procurement)
+**Learn more**: [Government Guide - Procurement](./government-guide.md#procurement)
 
 ---
 
@@ -1360,7 +1360,7 @@ Costs = Software + Implementation + Training + Maintenance
 - **Months 5-6**: Pilot operation, measurement, refinement
 - **Months 7+**: Scale to additional departments/use cases
 
-**Learn more**: [Case Studies](../CASE_STUDIES.md) | [Use Cases](./USE_CASES.md#government--public-administration-use-cases) | [Government Implementation Guide](../GOVERNMENT_GUIDE.md)
+**Learn more**: [Case Studies](./case-studies.md) | [Use Cases](./USE_CASES.md#government--public-administration-use-cases) | [Government Implementation Guide](./government-guide.md)
 
 ---
 
@@ -1665,10 +1665,10 @@ Always implement human review workflows for critical decisions. Cost-benefit sti
 
 **Main Documentation**:
 - [Agent Shift Catalog](../README.md) - Browse 190+ AI tools
-- [Quickstart Guide](../QUICKSTART.md) - Get started in 15 minutes
-- [User Guide](../USER_GUIDE.md) - Comprehensive getting started guide
-- [Government Guide](../GOVERNMENT_GUIDE.md) - Implementation guide for government agencies
-- [Case Studies](../CASE_STUDIES.md) - Real-world implementation examples
+- [Quickstart Guide](./quickstart.md) - Get started in 15 minutes
+- [User Guide](./user-guide.md) - Comprehensive getting started guide
+- [Government Guide](./government-guide.md) - Implementation guide for government agencies
+- [Case Studies](./case-studies.md) - Real-world implementation examples
 
 **Phase 2 Methodology**:
 - [AI Agent Methodology](./methodology/AI_AGENT_METHODOLOGY.md) - How Agent Shift was built with AI

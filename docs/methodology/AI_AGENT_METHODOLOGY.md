@@ -1224,9 +1224,9 @@ Please provide:
 
 **User Documentation:**
 - [Agent Shift GitHub Repository](../../README.md)
-- [User Guide](../../USER_GUIDE.md)
-- [Government Guide](../../GOVERNMENT_GUIDE.md)
-- [Case Studies](../../CASE_STUDIES.md)
+- [User Guide](.././user-guide.md)
+- [Government Guide](.././government-guide.md)
+- [Case Studies](.././case-studies.md)
 
 **Tools Used:**
 - [Claude Code](https://claude.ai/code) - AI coding assistant
@@ -1274,6 +1274,6 @@ This methodology is reproducible for similar projects. Start with clear requirem
 
 **Demonstrating AI Agent Quality Through Transparent Methodology**
 
-[View Project](../../README.md) • [Read Case Studies](../../CASE_STUDIES.md) • [Join Community](#)
+[View Project](../../README.md) • [Read Case Studies](.././case-studies.md) • [Join Community](#)
 
 </div>
