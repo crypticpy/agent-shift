@@ -2,7 +2,9 @@
 
 **The State of Agentic AI in Public Sector: Trends, Use Cases, and Recommendations**
 
-*Research Date: November 2025 | Sources: 45+ government and industry publications*
+*Research Date: November 2024 | Synthesized from federal/state/local government reports, industry research, and academic studies*
+
+> **Research Note:** This report analyzes trends in government AI adoption based on publicly available sources. Statistics represent typical patterns observed across multiple sources; specific numbers should be verified against current authoritative sources before citation. See [Bibliography](./BIBLIOGRAPHY.md).
 
 ---
 
@@ -677,9 +679,9 @@ This report synthesizes 45+ sources including:
 - [Suggest additional topics](#)
 
 **Connect with Community:**
-- [GitHub Discussions](https://github.com/yourusername/agent-shift/discussions)
-- [Newsletter Signup](#)
-- [Community Events](#)
+- [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
+- [Newsletter Signup](mailto:support@agentshift.dev)
+- [Community Events](https://github.com/crypticpy/agent-shift/discussions)
 
 ---
 

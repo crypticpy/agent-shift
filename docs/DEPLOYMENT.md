@@ -53,7 +53,7 @@ Complete deployment instructions for Agent Shift - the AI agents platform transi
 
 ```bash
 # Clone from GitHub
-git clone https://github.com/yourusername/agent-shift.git
+git clone https://github.com/crypticpy/agent-shift.git
 cd agent-shift/ai-agents-catalog
 
 # Or if already in the directory
@@ -320,7 +320,7 @@ sudo apt-get install -y nodejs
 npm install -g pnpm
 
 # 3. Clone repository
-git clone https://github.com/yourusername/agent-shift.git
+git clone https://github.com/crypticpy/agent-shift.git
 cd agent-shift/ai-agents-catalog
 
 # 4. Install dependencies

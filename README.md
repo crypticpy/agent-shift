@@ -11,7 +11,7 @@
 [![React](https://img.shields.io/badge/React-18-blue)](https://react.dev/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 
-[Live Demo](#) • [Documentation](#documentation) • [Getting Started](./QUICKSTART.md) • [Use Cases](./docs/USE_CASES.md)
+[Live Demo](https://agent-shift.vercel.app) • [Documentation](#documentation) • [Getting Started](./QUICKSTART.md) • [Use Cases](./docs/USE_CASES.md)
 
 </div>
 
@@ -80,7 +80,7 @@ Agent Shift is a **public service** and **community gift** that demonstrates the
 
 ### For Non-Technical Users
 
-1. **Visit the live site**: [Add your deployed URL here]
+1. **Visit the live site**: [agent-shift.vercel.app](https://agent-shift.vercel.app)
 2. **Browse the catalog**: Explore 190+ AI tools by category
 3. **Try a workflow**: Start with our 5-minute quick-win workflows
 4. **Calculate your ROI**: Use our calculator to quantify benefits
@@ -93,7 +93,7 @@ Agent Shift is a **public service** and **community gift** that demonstrates the
 # Prerequisites: Node.js 18+, pnpm 8+
 
 # 1. Clone the repository
-git clone https://github.com/yourusername/agent-shift.git
+git clone https://github.com/crypticpy/agent-shift.git
 cd agent-shift/ai-agents-catalog
 
 # 2. Install dependencies
@@ -270,8 +270,8 @@ This project is a demonstration of AI agent capabilities, built collaboratively 
 
 ## 📫 Contact & Community
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/yourusername/agent-shift/issues)
-- **GitHub Discussions**: [Join community conversations](https://github.com/yourusername/agent-shift/discussions)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/crypticpy/agent-shift/issues)
+- **GitHub Discussions**: [Join community conversations](https://github.com/crypticpy/agent-shift/discussions)
 - **Presentations**: Available for NFBPA and public health conferences
 - **Consulting**: Custom implementations and training available
 
@@ -311,6 +311,6 @@ If you find this project helpful, please consider giving it a star! It helps oth
 
 **Agent Shift** - Transitioning the world from doers to orchestrators
 
-Built with ❤️ by humans and AI agents • [Website](#) • [Documentation](#) • [Community](#)
+Built with ❤️ by humans and AI agents • [Website](https://agent-shift.vercel.app) • [Documentation](./README.md) • [Community](https://github.com/crypticpy/agent-shift/discussions)
 
 </div>

@@ -1589,7 +1589,7 @@ Implementing AI agents in government requires careful attention to compliance, s
 3. Build business case using templates in this guide
 4. Engage stakeholders (IT, security, legal)
 5. Start with a pilot project
-6. Join our [community](#) for peer support
+6. Join our [community](https://github.com/crypticpy/agent-shift/discussions) for peer support
 
 ---
 
@@ -1597,6 +1597,6 @@ Implementing AI agents in government requires careful attention to compliance, s
 
 **Questions? Need Help?**
 
-[GitHub Discussions](#) • [Contact Us](#) • [Consulting Services](#)
+[GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions) • [Contact Us](mailto:support@agentshift.dev) • [Consulting Services](mailto:support@agentshift.dev)
 
 </div>

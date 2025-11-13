@@ -30,12 +30,12 @@ This project adheres to a Code of Conduct that all contributors are expected to 
 ### Reporting Bugs
 
 **Before submitting a bug report:**
-- Check the [existing issues](https://github.com/yourusername/agent-shift/issues) to avoid duplicates
+- Check the [existing issues](https://github.com/crypticpy/agent-shift/issues) to avoid duplicates
 - Verify the bug exists in the latest version
 - Collect information about your environment (browser, OS, Node version)
 
 **Submitting a bug report:**
-1. Open a [new issue](https://github.com/yourusername/agent-shift/issues/new)
+1. Open a [new issue](https://github.com/crypticpy/agent-shift/issues/new)
 2. Use the bug report template
 3. Include:
    - Clear, descriptive title
@@ -65,11 +65,11 @@ Error: TypeError: Cannot read property 'split' of undefined
 ### Suggesting Features
 
 We love new ideas! Before suggesting a feature:
-- Check [existing issues](https://github.com/yourusername/agent-shift/issues) and [discussions](https://github.com/yourusername/agent-shift/discussions) for similar suggestions
+- Check [existing issues](https://github.com/crypticpy/agent-shift/issues) and [discussions](https://github.com/crypticpy/agent-shift/discussions) for similar suggestions
 - Consider if the feature fits Agent Shift's mission (educational platform for agentic AI)
 
 **Submitting a feature request:**
-1. Open a [new discussion](https://github.com/yourusername/agent-shift/discussions/new) in the "Ideas" category
+1. Open a [new discussion](https://github.com/crypticpy/agent-shift/discussions/new) in the "Ideas" category
 2. Include:
    - Clear description of the feature
    - Why it's valuable (use case)
@@ -160,7 +160,7 @@ We welcome code contributions! Areas where you can help:
 - Refactoring
 
 **Before you start coding:**
-1. Check [existing issues](https://github.com/yourusername/agent-shift/issues) for "good first issue" or "help wanted" labels
+1. Check [existing issues](https://github.com/crypticpy/agent-shift/issues) for "good first issue" or "help wanted" labels
 2. Comment on the issue to indicate you're working on it
 3. For new features, open a discussion first to validate the approach
 
@@ -189,7 +189,7 @@ We welcome code contributions! Areas where you can help:
 
 3. **Add upstream remote** (to sync with main repository)
    ```bash
-   git remote add upstream https://github.com/yourusername/agent-shift.git
+   git remote add upstream https://github.com/crypticpy/agent-shift.git
    ```
 
 4. **Install dependencies**
@@ -545,19 +545,19 @@ function filterTools(tools: Tool[], filter: ToolFilter): Tool[] {
 - Ask questions
 - Share ideas
 - Show off projects built with Agent Shift
-- [Start a discussion](https://github.com/yourusername/agent-shift/discussions)
+- [Start a discussion](https://github.com/crypticpy/agent-shift/discussions)
 
 **GitHub Issues**
 - Bug reports
 - Feature requests (after discussion)
-- [View issues](https://github.com/yourusername/agent-shift/issues)
+- [View issues](https://github.com/crypticpy/agent-shift/issues)
 
 ### Getting Help
 
 **Stuck on something?**
 1. Check [documentation](./README.md) and [User Guide](./USER_GUIDE.md)
-2. Search [existing issues](https://github.com/yourusername/agent-shift/issues) and [discussions](https://github.com/yourusername/agent-shift/discussions)
-3. Ask in [GitHub Discussions](https://github.com/yourusername/agent-shift/discussions)
+2. Search [existing issues](https://github.com/crypticpy/agent-shift/issues) and [discussions](https://github.com/crypticpy/agent-shift/discussions)
+3. Ask in [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
 4. Tag maintainers if urgent (but please be patient—we're volunteers!)
 
 ### Recognition
@@ -570,7 +570,7 @@ function filterTools(tools: Tool[], filter: ToolFilter): Tool[] {
 ### Maintainers
 
 Current maintainers:
-- @yourusername - Project lead
+- @crypticpy - Project lead
 
 Interested in becoming a maintainer? Start by making consistent, high-quality contributions, then reach out!
 
@@ -598,8 +598,8 @@ Interested in becoming a maintainer? Start by making consistent, high-quality co
 
 If you have questions not covered here, please:
 1. Check the [FAQ](./docs/FAQ.md)
-2. Ask in [GitHub Discussions](https://github.com/yourusername/agent-shift/discussions)
-3. Open an [issue](https://github.com/yourusername/agent-shift/issues/new)
+2. Ask in [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
+3. Open an [issue](https://github.com/crypticpy/agent-shift/issues/new)
 
 ---
 
@@ -610,6 +610,6 @@ If you have questions not covered here, please:
 Your contributions help public health, government, and enterprise professionals
 discover and adopt agentic AI workflows.
 
-[View Project](./README.md) • [Join Discussions](#) • [Report Issues](#)
+[View Project](./README.md) • [Join Discussions](https://github.com/crypticpy/agent-shift/discussions) • [Report Issues](https://github.com/crypticpy/agent-shift/issues)
 
 </div>

@@ -1655,10 +1655,10 @@ ROI a 3 años = ($983K - $40.6K) / $40.6K = 2,321% (!)
 **¿No puede encontrar su respuesta?**
 1. **Busque en este FAQ**: Use Ctrl+F (Windows) o Cmd+F (Mac)
 2. **Verifique documentación relacionada**: Enlaces proporcionados a lo largo de este FAQ
-3. **Pregunte a la comunidad**: [Discusiones de GitHub](#)
-4. **Contáctenos**: [Formulario de contacto](#) o correo [hello@agentshift.org](#)
+3. **Pregunte a la comunidad**: [Discusiones de GitHub](https://github.com/crypticpy/agent-shift/discussions)
+4. **Contáctenos**: [Email](mailto:support@agentshift.dev)
 
-**Sugiera una adición al FAQ**: Abra un issue en [GitHub](#) con su pregunta.
+**Sugiera una adición al FAQ**: Abra un issue en [GitHub](https://github.com/crypticpy/agent-shift/issues) con su pregunta.
 
 ---
 

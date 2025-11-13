@@ -4,6 +4,8 @@
 
 *Based on 150+ research sources, case studies, and real-world deployments*
 
+> **Research Disclaimer:** This methodology synthesizes findings from government reports, industry analyst research, academic studies, and vendor documentation. ROI projections represent typical outcomes based on conservative assumptions; individual results vary significantly. See [Bibliography](../research/BIBLIOGRAPHY.md) for detailed sourcing.
+
 ---
 
 ## Table of Contents

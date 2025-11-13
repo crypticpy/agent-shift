@@ -863,9 +863,9 @@ A series of steps to accomplish a task or process. AI agents can automate multi-
 ### Community & Support
 
 **Get Answers:**
-- [GitHub Discussions](https://github.com/yourusername/agent-shift/discussions) - Ask questions, share experiences
+- [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions) - Ask questions, share experiences
 - [FAQ](#frequently-asked-questions) - Common questions answered
-- [Contact Us](#) - Direct support for urgent issues
+- [Contact Us](mailto:support@agentshift.dev) - Direct support for urgent issues
 
 **Share Your Experience:**
 - Post success stories in GitHub Discussions
@@ -886,7 +886,7 @@ A series of steps to accomplish a task or process. AI agents can automate multi-
 - Public Health AI Consortium events
 - Custom workshops for your organization
 
-📧 [Contact us](#) to discuss your needs
+📧 [Contact us](mailto:support@agentshift.dev) to discuss your needs
 
 ---
 
@@ -894,6 +894,6 @@ A series of steps to accomplish a task or process. AI agents can automate multi-
 
 **Ready to get started?**
 
-[Browse AI Tools Catalog](./README.md) • [Calculate Your ROI](#) • [Join Community](#)
+[Browse AI Tools Catalog](./README.md) • [Calculate Your ROI](./README.md#roi-calculator) • [Join Community](https://github.com/crypticpy/agent-shift/discussions)
 
 </div>

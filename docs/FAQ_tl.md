@@ -1655,10 +1655,10 @@ Costs = Software + Implementation + Training + Maintenance
 **Hindi ninyo mahanap ang inyong sagot?**
 1. **Maghanap sa FAQ na ito**: Gamitin ang Ctrl+F (Windows) o Cmd+F (Mac)
 2. **Suriin ang kaugnay na dokumentasyon**: Mga links na ibinigay sa buong FAQ na ito
-3. **Magtanong sa komunidad**: [GitHub Discussions](#)
-4. **Makipag-ugnayan sa amin**: [Contact form](#) o email [hello@agentshift.org](#)
+3. **Magtanong sa komunidad**: [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
+4. **Makipag-ugnayan sa amin**: [Email](mailto:support@agentshift.dev)
 
-**Mag-suggest ng FAQ addition**: Magbukas ng issue sa [GitHub](#) na may inyong tanong.
+**Mag-suggest ng FAQ addition**: Magbukas ng issue sa [GitHub](https://github.com/crypticpy/agent-shift/issues) na may inyong tanong.
 
 ---
 

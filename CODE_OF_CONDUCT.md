@@ -59,9 +59,9 @@ Community leaders have the right and responsibility to remove, edit, or reject c
 
 If you experience or witness unacceptable behavior, or have any other concerns, please report it by:
 
-1. **Email**: [conduct@agentshift.com] (replace with actual email)
+1. **Email**: [conduct@agentshift.dev](mailto:conduct@agentshift.dev)
 2. **GitHub**: Direct message to maintainers
-3. **Anonymous form**: [Link to anonymous reporting form] (if available)
+3. **GitHub Discussions**: Report in [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
 
 All reports will be handled with discretion.
 
@@ -113,7 +113,7 @@ Community leaders will follow these guidelines in determining consequences for v
 
 If you believe an enforcement action was made in error, you may appeal by:
 
-1. Contacting the community leaders at [conduct@agentshift.com]
+1. Contacting the community leaders at [conduct@agentshift.dev](mailto:conduct@agentshift.dev)
 2. Providing a clear explanation of why you believe the action was in error
 3. Including any relevant supporting information
 
@@ -157,8 +157,8 @@ We will work with you to address accessibility concerns promptly.
 
 If you have questions about this Code of Conduct, please:
 
-* Open a discussion in [GitHub Discussions](https://github.com/yourusername/agent-shift/discussions)
-* Email us at [conduct@agentshift.com]
+* Open a discussion in [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
+* Email us at [conduct@agentshift.dev](mailto:conduct@agentshift.dev)
 
 ---
 

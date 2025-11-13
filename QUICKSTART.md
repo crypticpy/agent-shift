@@ -32,7 +32,7 @@ This guide provides fast onboarding for both non-technical users and developers.
 ### Step 1: Access the Platform
 
 **Option A: Visit the Live Site**
-- Navigate to [your-deployed-url.com]
+- Navigate to [agent-shift.vercel.app](https://agent-shift.vercel.app)
 - No installation required
 - Works on any modern browser
 
@@ -111,7 +111,7 @@ git --version   # Any recent version
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/agent-shift.git
+git clone https://github.com/crypticpy/agent-shift.git
 
 # Navigate to the project directory
 cd agent-shift/ai-agents-catalog
@@ -268,9 +268,9 @@ pnpm start
 - [Government Guide](./GOVERNMENT_GUIDE.md) - Gov-specific guidance
 
 **Get Help:**
-- [GitHub Discussions](https://github.com/yourusername/agent-shift/discussions)
-- [Report an issue](https://github.com/yourusername/agent-shift/issues)
-- [Contact us](#) for consulting
+- [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
+- [Report an issue](https://github.com/crypticpy/agent-shift/issues)
+- [Contact us](mailto:support@agentshift.dev) for consulting
 
 ### For Developers
 
@@ -305,8 +305,8 @@ pnpm check && pnpm build  # Pre-commit checks
 
 **Get Help:**
 - Read [CLAUDE.md](./CLAUDE.md) - Project overview for AI assistants
-- [GitHub Issues](https://github.com/yourusername/agent-shift/issues) - Bug reports
-- [GitHub Discussions](https://github.com/yourusername/agent-shift/discussions) - Questions
+- [GitHub Issues](https://github.com/crypticpy/agent-shift/issues) - Bug reports
+- [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions) - Questions
 
 ---
 
@@ -410,8 +410,8 @@ NODE_OPTIONS="--max-old-space-size=4096" pnpm build
 
 ### Ways to Contribute
 
-- **Report bugs** - [Create an issue](https://github.com/yourusername/agent-shift/issues/new)
-- **Suggest features** - [Start a discussion](https://github.com/yourusername/agent-shift/discussions)
+- **Report bugs** - [Create an issue](https://github.com/crypticpy/agent-shift/issues/new)
+- **Suggest features** - [Start a discussion](https://github.com/crypticpy/agent-shift/discussions)
 - **Improve docs** - Submit a PR with documentation improvements
 - **Add workflows** - Share your AI workflows with the community
 - **Spread the word** - Star the repo, share on social media
@@ -419,8 +419,8 @@ NODE_OPTIONS="--max-old-space-size=4096" pnpm build
 ### Community
 
 - **GitHub Discussions** - Ask questions, share ideas
-- **Discord** - Real-time chat with the community [Coming Soon]
-- **Newsletter** - Monthly updates on new tools and workflows [Coming Soon]
+- **Discord** - Real-time chat with the community (coming soon)
+- **Newsletter** - Monthly updates on new tools and workflows (coming soon)
 
 ---
 
@@ -456,9 +456,9 @@ NODE_OPTIONS="--max-old-space-size=4096" pnpm build
 **Can't find what you're looking for?**
 
 - 📖 [Full User Guide](./USER_GUIDE.md)
-- 💬 [GitHub Discussions](https://github.com/yourusername/agent-shift/discussions)
-- 🐛 [Report an Issue](https://github.com/yourusername/agent-shift/issues)
-- 📧 [Contact Us](#)
+- 💬 [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
+- 🐛 [Report an Issue](https://github.com/crypticpy/agent-shift/issues)
+- 📧 [Contact Us](mailto:support@agentshift.dev)
 
 **For Government & Public Health:**
 - 🏛️ [Government Guide](./GOVERNMENT_GUIDE.md)
@@ -471,6 +471,6 @@ NODE_OPTIONS="--max-old-space-size=4096" pnpm build
 
 **You're all set! 🎉**
 
-Return to [README](./README.md) • Browse [Documentation](#) • Join [Community](#)
+Return to [README](./README.md) • Browse [Documentation](./README.md) • Join [Community](https://github.com/crypticpy/agent-shift/discussions)
 
 </div>

@@ -12,7 +12,18 @@ This document showcases AI agent capabilities through detailed case studies, wit
 2. [Public Health Disease Surveillance](#case-study-2-public-health-disease-surveillance-automation)
 3. [Emergency Response Coordination](#case-study-3-emergency-response-coordination-system)
 4. [Government Workflow Automation](#case-study-4-government-document-automation)
-5. [Lessons Learned & Best Practices](#lessons-learned)
+5. [Case Study Disclaimer](#case-study-disclaimer)
+6. [Lessons Learned & Best Practices](#lessons-learned)
+
+---
+
+## Case Study Disclaimer
+
+**Case Study 1 (Agent Shift Development):** Describes the actual development of this platform. All metrics are verifiable via project repository and development logs.
+
+**Case Studies 2-4 (Disease Surveillance, Emergency Response, Document Automation):** These are composite case studies synthesizing outcomes from multiple real implementations, industry research, and technical specifications. They represent typical results achievable with proper implementation; individual agency outcomes vary significantly based on use case complexity, data quality, user adoption, and organizational maturity.
+
+For case study validation methodology, see [AI Agent Methodology](./docs/methodology/AI_AGENT_METHODOLOGY.md).
 
 ---
 
@@ -84,7 +95,7 @@ This document showcases AI agent capabilities through detailed case studies, wit
 
 ### Automating Disease Surveillance with AI Agents
 
-**Organization:** Metropolitan Public Health Department (anonymized)
+**Organization:** Public Health Department (composite example based on multiple real implementations)
 **Challenge:** Manual disease surveillance required 40+ hours/week of epidemiologist time to aggregate data from multiple sources, identify patterns, and generate reports.
 
 **Background:**
@@ -765,7 +776,7 @@ except AIServiceError:
 - [User Guide](./USER_GUIDE.md) - Step-by-step implementation guidance
 - [Government Guide](./GOVERNMENT_GUIDE.md) - Government-specific considerations
 - [Technical Documentation](./docs/ARCHITECTURE.md) - System design patterns
-- [Community Forum](#) - Connect with other implementers
+- [Community Forum](https://github.com/crypticpy/agent-shift/discussions) - Connect with other implementers
 
 ---
 
@@ -786,7 +797,7 @@ We offer:
 - Government technology summits
 - Custom workshops for your organization
 
-📧 [Contact us](#) to discuss your needs
+📧 [Contact us](mailto:support@agentshift.dev) to discuss your needs
 
 ---
 
@@ -794,6 +805,6 @@ We offer:
 
 **Built with AI Agents** • Demonstrating Quality Through Action
 
-[View Catalog](./README.md) • [Browse Tools](#) • [Join Community](#)
+[View Catalog](./README.md) • [Browse Tools](./README.md) • [Join Community](https://github.com/crypticpy/agent-shift/discussions)
 
 </div>

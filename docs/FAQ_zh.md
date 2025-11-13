@@ -1655,10 +1655,10 @@ ROI = (收益 - 成本) / 成本 × 100%
 **找不到答案?**
 1. **搜索此FAQ**: 使用Ctrl+F (Windows)或Cmd+F (Mac)
 2. **查看相关文档**: 本FAQ中提供的链接
-3. **询问社区**: [GitHub讨论](#)
-4. **联系我们**: [联系表单](#)或电子邮件[hello@agentshift.org](#)
+3. **询问社区**: [GitHub讨论](https://github.com/crypticpy/agent-shift/discussions)
+4. **联系我们**: [邮件](mailto:support@agentshift.dev)
 
-**建议添加FAQ**: 在[GitHub](#)上提交问题并附上您的问题。
+**建议添加FAQ**: 在[GitHub](https://github.com/crypticpy/agent-shift/issues)上提交问题并附上您的问题。
 
 ---
 

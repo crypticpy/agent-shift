@@ -85,7 +85,7 @@ This document showcases **real-world use cases** where AI agents are delivering 
 - **300 staff hours saved monthly**: Automated data collection and initial analysis
 - **ROI**: 420% over 3 years (see [ROI Calculator](../README.md#roi-calculator))
 
-**Case Study**: See [Utah Department of Health](../CASE_STUDIES.md#utah-health-surveillance) implementation details.
+**Case Study**: See [Disease Surveillance Case Study](../CASE_STUDIES.md#case-study-2-public-health-disease-surveillance-automation) implementation details.
 
 **Compliance**: FedRAMP Moderate, HIPAA compliant tools recommended.
 

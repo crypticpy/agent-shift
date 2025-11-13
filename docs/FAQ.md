@@ -327,7 +327,19 @@ The AI agent can handle nuanced situations (angry customer, unusual request, mul
 
 ### What's the typical ROI?
 
-**Short answer**: 300-600% over 3 years for most use cases.
+**Short answer:** Estimated 300-600% ROI over 3 years (typical range). Specific examples:
+- **Disease Surveillance:** 300-400% ROI (high time savings, moderate implementation cost)
+- **Citizen Services Automation:** 390-500% ROI (high-volume workload absorption)
+- **Grant Writing:** 350-400% ROI (specialized writing automation)
+- **Document Processing:** 200-300% ROI (higher implementation costs)
+
+**Important Disclaimer:** These are modeled projections, not guarantees. Actual ROI varies significantly based on:
+- Use case selection and complexity
+- Implementation quality and user adoption
+- Organizational change management effectiveness
+- How saved time is redirected (to valuable work vs. not utilized)
+
+Use our [ROI Calculator](../README.md#roi-calculator) for customized projections with your specific parameters. See detailed [ROI Calculator Methodology](./methodology/ROI_CALCULATOR_METHODOLOGY.md) for assumptions and research basis.
 
 **ROI formula**:
 ```
@@ -364,9 +376,13 @@ Costs = Software + Implementation + Training + Maintenance
 - **Compounding**: Benefits grow as adoption increases and processes optimize
 
 **Conservative assumptions built in**:
-- Only 50-60% time savings (actual often 70-80%)
+- Conservative business case estimates: 50-60% time savings
+- Typical actual results: 70-80% time savings
+- Optimistic scenarios: 85-95% time savings
 - Learning curve (Year 1 at 62.5% of target)
 - Costs include training and implementation, not just software
+
+**Important note:** We recommend using conservative estimates (50-60%) for procurement justification; actual results often exceed projections by 20-40%.
 
 **Learn more**: [ROI Calculator Methodology](./methodology/ROI_CALCULATOR_METHODOLOGY.md) | [Calculate Your ROI](../README.md#roi-calculator)
 
@@ -1501,9 +1517,12 @@ Costs = Software + Implementation + Training + Maintenance
 - ✅ Transparent communication about mistakes
 
 **Appropriate expectations**:
-- AI is 90-95% accurate, not 100%
-- Errors should be caught by human review
-- Cost-benefit still strongly positive (60% time savings with 5% error rate requiring 10% review time = 50% net savings)
+AI accuracy varies by domain and task complexity:
+- **Disease classification/medical coding:** 95-99% (structured data, clear taxonomies)
+- **General writing and summarization:** 85-95% (requires human review)
+- **Complex judgment and decision-making:** 70-85% (significant oversight needed)
+
+Always implement human review workflows for critical decisions. Cost-benefit still strongly positive (60% time savings with 5% error rate requiring 10% review time = 50% net savings)
 
 **Bottom line**: Use AI to accelerate work, but maintain human accountability and verification.
 
@@ -1644,7 +1663,7 @@ Costs = Software + Implementation + Training + Maintenance
 - [ROI Calculator](../README.md#roi-calculator) - Calculate your potential return
 
 **Community**:
-- [GitHub Discussions](#) - Ask questions, share experiences
+- [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions) - Ask questions, share experiences
 - [Contributing Guide](../CONTRIBUTING.md) - How to contribute to Agent Shift
 - [Code of Conduct](../CODE_OF_CONDUCT.md) - Community standards
 
@@ -1655,10 +1674,10 @@ Costs = Software + Implementation + Training + Maintenance
 **Can't find your answer?**
 1. **Search this FAQ**: Use Ctrl+F (Windows) or Cmd+F (Mac)
 2. **Check related documentation**: Links provided throughout this FAQ
-3. **Ask the community**: [GitHub Discussions](#)
-4. **Contact us**: [Contact form](#) or email [hello@agentshift.org](#)
+3. **Ask the community**: [GitHub Discussions](https://github.com/crypticpy/agent-shift/discussions)
+4. **Contact us**: [Email support](mailto:support@agentshift.dev)
 
-**Suggest a FAQ addition**: Open an issue on [GitHub](#) with your question.
+**Suggest a FAQ addition**: Open an issue on [GitHub](https://github.com/crypticpy/agent-shift/issues) with your question.
 
 ---
 

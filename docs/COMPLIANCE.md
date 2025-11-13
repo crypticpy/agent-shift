@@ -28,6 +28,85 @@
 
 ---
 
+## Executive Summary (Quick Start Guide)
+
+**For busy decision-makers:** This document is comprehensive (3,100+ lines). Jump directly to your need:
+- 🏛️ **Federal procurement?** → [FedRAMP Authorization](#fedramp-federal-risk-and-authorization-management-program)
+- 🏥 **Healthcare/Public Health?** → [HIPAA Compliance](#hipaa-health-insurance-portability-and-accountability-act)
+- 👮 **Law Enforcement?** → [CJIS Compliance](#cjis-criminal-justice-information-services)
+- 📊 **General government use?** → [SOC 2 Certification](#soc-2-type-ii-service-organization-control)
+- 📋 **Quick comparison table?** → [Jump to comparison](#compliance-comparison-matrix)
+
+### Quick Compliance Lookup
+
+| Your Agency Type | Required Certifications | Tools Available | Typical Timeline |
+|------------------|------------------------|-----------------|------------------|
+| **Federal agencies** (FedRAMP mandate) | FedRAMP Moderate or High | 35 authorized tools | 2-4 months procurement |
+| **Healthcare/Public Health** (HIPAA data) | HIPAA + Business Associate Agreement | 28 compliant tools | 4-8 weeks |
+| **Law Enforcement** (CJIS data) | CJIS compliance + state requirements | 18 certified tools | 3-6 months |
+| **State/Local government** (general use) | SOC 2 Type II (minimum) | 95 certified tools | 2-4 weeks pilot |
+
+### Decision Guide: "Which certification do I need?"
+
+**Answer these questions:**
+
+1. **Do you handle federal data or require federal interoperability?**
+   - YES → You need FedRAMP authorization
+   - NO → Continue to question 2
+
+2. **Do you handle protected health information (patient records, medical data)?**
+   - YES → You need HIPAA compliance + BAA
+   - NO → Continue to question 3
+
+3. **Do you handle criminal justice information (arrest records, fingerprints, etc.)?**
+   - YES → You need CJIS compliance (verify state-specific requirements)
+   - NO → Continue to question 4
+
+4. **For general government use (no special data types):**
+   - Minimum: SOC 2 Type II certification
+   - Recommended: StateRAMP or FedRAMP for higher security needs
+
+### Top 5 Compliance Mistakes to Avoid
+
+1. **Assuming FedRAMP covers HIPAA** - They're different frameworks with different requirements. Healthcare agencies may need BOTH.
+
+2. **Skipping the Business Associate Agreement (BAA)** - HIPAA requires signed BAA before any patient data touches the system. No exceptions.
+
+3. **Not checking state-specific CJIS requirements** - FBI CJIS is federal baseline; your state may have additional requirements.
+
+4. **Overlooking data residency requirements** - Some certifications require data stored only in US data centers. Verify before procurement.
+
+5. **Failing to verify current certification status** - Certifications expire. Check vendor documentation and official registries (FedRAMP Marketplace, etc.) before finalizing contracts.
+
+### Quick Reference: Certification Costs & Timelines
+
+| Certification | Vendor Cost (Typical) | Your Timeline | Renewal Frequency |
+|---------------|----------------------|---------------|-------------------|
+| **FedRAMP** | High (vendor invested $1-3M) | 2-4 months procurement | Annual assessment |
+| **HIPAA** | Moderate (infrastructure + BAA) | 4-8 weeks | Ongoing (no expiration) |
+| **CJIS** | Moderate to High | 3-6 months | Annual recertification |
+| **SOC 2** | Low to Moderate | 2-4 weeks | Annual audit |
+
+### Common Questions
+
+**Q: Can I use non-certified tools for pilot programs?**
+A: Depends on data type. For non-sensitive pilots (no PII, no HIPAA, no CJIS), you may have flexibility. Always consult your legal/compliance team. Once handling production data, certifications required.
+
+**Q: Do free/consumer AI tools (ChatGPT, Claude, etc.) meet government requirements?**
+A: Consumer versions typically do NOT. Enterprise versions of these tools may have FedRAMP/HIPAA certifications. See the Tool Catalog for government-ready options.
+
+**Q: How do I verify a vendor's certification?**
+A:
+- FedRAMP: Check [marketplace.fedramp.gov](https://marketplace.fedramp.gov)
+- HIPAA: Request Business Associate Agreement and security documentation
+- CJIS: Request CJIS Security Addendum and verification letter
+- SOC 2: Request current SOC 2 Type II report (should be <12 months old)
+
+**Q: What if I need multiple certifications?**
+A: Some tools have multiple certifications (e.g., FedRAMP + HIPAA). See our [Compliance Comparison Matrix](#compliance-comparison-matrix) for tools meeting multiple requirements.
+
+---
+
 ## Overview
 
 Compliance is not optional for government AI deployments—it is the foundation upon which responsible, secure, and trustworthy AI systems are built. This guide provides government decision-makers, IT administrators, procurement officers, and security teams with comprehensive information about the compliance landscape for AI agents and agentic AI tools.
