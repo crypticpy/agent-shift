@@ -6,6 +6,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { HelpCircle, Shield, Settings, Users, Search, ChevronDown, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { WatercolorDrops } from "@/components/WatercolorDrops";
+import { Streamdown } from "streamdown";
 
 interface RelatedLink {
   text: string;
@@ -264,8 +265,8 @@ export default function FAQ() {
                         <CardContent className="pt-0">
                           <div className="pl-13">
                             <div className="prose prose-slate max-w-none">
-                              <div className="text-slate-700 leading-relaxed whitespace-pre-line">
-                                {question.answer}
+                              <div className="text-slate-700 leading-relaxed">
+                                <Streamdown>{question.answer}</Streamdown>
                               </div>
                             </div>
 
