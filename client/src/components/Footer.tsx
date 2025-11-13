@@ -90,6 +90,54 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Behind the Build - Featured Showcase Section */}
+      <div id="behind-the-build" className="border-t border-slate-200 bg-gradient-to-br from-slate-50 to-white">
+        <div className="container mx-auto px-4 py-10">
+          <h4 className="text-center text-sm font-semibold text-slate-500 mb-6 uppercase tracking-wide">
+            Behind the Build
+          </h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {/* The Numbers Card */}
+            <Link href="/case-study">
+              <a className="block group">
+                <div className="glass border-2 border-orange-200 hover:border-orange-400 p-6 rounded-lg card-lift h-full transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      <Sparkles className="h-10 w-10 text-orange-600" />
+                    </div>
+                    <h5 className="text-xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
+                      The Numbers
+                    </h5>
+                  </div>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    See the real ROI and time savings from this voice-orchestrated project. Explore the detailed breakdown of value created through AI collaboration.
+                  </p>
+                </div>
+              </a>
+            </Link>
+
+            {/* Making the Sausage Card */}
+            <Link href="/making-of">
+              <a className="block group">
+                <div className="glass border-2 border-amber-200 hover:border-teal-400 p-6 rounded-lg card-lift h-full transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-gradient-to-br from-amber-100 to-teal-100 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      <Building2 className="h-10 w-10 text-teal-600" />
+                    </div>
+                    <h5 className="text-xl font-bold text-slate-900 group-hover:text-teal-600 transition-colors">
+                      Making the Sausage
+                    </h5>
+                  </div>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    Discover how this entire platform was built using voice and AI agents. Learn the methodology, tools, and workflows behind the scenes.
+                  </p>
+                </div>
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer Content */}
       <div className="glass border-t border-slate-200">
         <div className="container mx-auto px-4 py-12">
@@ -178,21 +226,14 @@ export default function Footer() {
               <span>© {new Date().getFullYear()} Agent Shift - MIT License</span>
             </div>
             <div className="flex flex-wrap items-center gap-3 md:gap-4">
-              <Link href="/case-study">
-                <a className="text-xs text-orange-600 hover:text-orange-700 font-medium transition-colors hover:underline flex items-center gap-1">
-                  <Sparkles className="h-3 w-3" />
-                  The Numbers
-                </a>
-              </Link>
+              <a
+                href="#behind-the-build"
+                className="text-xs text-slate-500 hover:text-orange-600 transition-colors flex items-center gap-1 group"
+              >
+                <span>Explore the Build</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
               <span className="text-xs text-slate-300 hidden md:inline">•</span>
-              <Link href="/making-of">
-                <a className="text-xs text-amber-600 hover:text-amber-700 font-medium transition-colors hover:underline flex items-center gap-1">
-                  <Building2 className="h-3 w-3" />
-                  Making the Sausage
-                </a>
-              </Link>
-              <span className="text-xs text-slate-300 hidden md:inline">•</span>
-              <span className="text-xs">MIT License</span>
               <span className="text-xs opacity-60">From Do to Orchestrate</span>
             </div>
           </div>
