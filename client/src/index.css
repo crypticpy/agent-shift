@@ -164,7 +164,7 @@
       oklch(0.95 0.08 35 / 12%),
       transparent 70%
     );
-    animation: chameleonWash 90s ease-in-out infinite;
+    animation: chameleonWash 450s ease-in-out infinite;
     pointer-events: none;
     z-index: 0;
   }
@@ -197,7 +197,7 @@
   }
 
   .dark body::before {
-    animation: chameleonWashDark 90s ease-in-out infinite;
+    animation: chameleonWashDark 450s ease-in-out infinite;
   }
 
   @keyframes chameleonWashDark {
@@ -352,7 +352,7 @@
       oklch(0.65 0.24 150)   /* Vibrant Green */
     );
     background-size: 400% 400%;
-    animation: gradientShift 31.2s ease infinite;
+    animation: gradientShift 156s ease infinite;
   }
 
   /* Subtle gradient for cards */
@@ -362,7 +362,7 @@
       oklch(0.62 0.16 155 / 6%)   /* Subtle Teal */
     );
     background-size: 200% 200%;
-    animation: gradientShift 90s ease infinite;
+    animation: gradientShift 450s ease infinite;
   }
 
   @keyframes gradientShift {
@@ -778,7 +778,7 @@
 
   /* Orb 1 Animation: Figure-8 pattern with scale pulse */
   .floating-orb-1 {
-    animation: orbFloat1 6s ease-in-out infinite;
+    animation: orbFloat1 30s ease-in-out infinite;
   }
 
   @keyframes orbFloat1 {
@@ -810,7 +810,7 @@
 
   /* Orb 2 Animation: Spiral drift with rotation */
   .floating-orb-2 {
-    animation: orbFloat2 8s ease-in-out infinite;
+    animation: orbFloat2 40s ease-in-out infinite;
   }
 
   @keyframes orbFloat2 {
@@ -830,7 +830,7 @@
 
   /* Orb 3 Animation: BREATHING/PULSING (Green orb) - scale 0.8 → 1.3 → 0.8 */
   .floating-orb-3 {
-    animation: orbFloat3 7s ease-in-out infinite;
+    animation: orbFloat3 35s ease-in-out infinite;
   }
 
   @keyframes orbFloat3 {
@@ -844,7 +844,7 @@
 
   /* Orb 4 Animation: Random waypoint drift */
   .floating-orb-4 {
-    animation: orbFloat4 9s ease-in-out infinite;
+    animation: orbFloat4 45s ease-in-out infinite;
   }
 
   @keyframes orbFloat4 {
@@ -867,7 +867,7 @@
 
   /* Orb 5 Animation: Circular orbital motion */
   .floating-orb-5 {
-    animation: orbFloat5 10s linear infinite;
+    animation: orbFloat5 50s linear infinite;
   }
 
   @keyframes orbFloat5 {
@@ -929,7 +929,7 @@
 .hero-color-cycle {
   position: relative;
   background: linear-gradient(135deg, var(--hero-color-1), var(--hero-color-2));
-  animation: heroColorMorph 75s ease-in-out infinite;
+  animation: heroColorMorph 375s ease-in-out infinite;
 }
 
 @keyframes heroColorMorph {

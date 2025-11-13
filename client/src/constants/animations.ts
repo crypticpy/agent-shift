@@ -52,7 +52,7 @@ export const INTERSECTION_DELAYS = {
  */
 export const COLOR_CYCLING = {
   /** Full cycle duration (ms) */
-  CYCLE_TIME: 37500,
+  CYCLE_TIME: 187500,
   /** Starting hue (degrees) */
   START_HUE: 35,
   /** Minimum hue change to trigger update (degrees) */
