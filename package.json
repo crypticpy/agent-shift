@@ -2,6 +2,7 @@
   "name": "ai-agents-catalog",
   "version": "1.0.0",
   "type": "module",
+  "author": "City of Austin",
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",

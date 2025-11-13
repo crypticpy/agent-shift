@@ -107,16 +107,6 @@ export default function Footer() {
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
                 Stop Doing. Start Talking. Your complete catalog and learning platform for AI agents.
               </p>
-              <div className="space-y-2 text-sm text-slate-600">
-                <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-amber-500" />
-                  <span className="font-medium">Above Earth Productions</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Building2 className="h-4 w-4 text-teal-500" />
-                  <span>City of Austin</span>
-                </div>
-              </div>
             </div>
 
             {/* Quick Links */}
@@ -185,8 +175,7 @@ export default function Footer() {
           {/* Bottom Bar */}
           <div className="border-t border-slate-200 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
             <div className="flex items-center gap-1">
-              <span>© {new Date().getFullYear()} Above Earth Productions</span>
-              <Heart className="h-3 w-3 text-red-400 inline" />
+              <span>© {new Date().getFullYear()} City of Austin - MIT License</span>
             </div>
             <div className="flex flex-wrap items-center gap-3 md:gap-4">
               <Link href="/case-study">
