@@ -896,7 +896,7 @@ Week 4: Evaluation & Decision
 - ✅ Vendor support responsive (<24 hours)
 
 **POC Costs**:
-- Most vendors offer free 30-day trials (leverage this)
+- Most vendors offer free 30-day trials (use these to test thoroughly)
 - For paid POC, negotiate cap (e.g., $5K-10K max, credited toward contract if selected)
 - Include POC costs in RFP pricing schedule
 

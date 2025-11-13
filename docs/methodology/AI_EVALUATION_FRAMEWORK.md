@@ -38,7 +38,7 @@ With 190+ AI tools in our catalog and hundreds more emerging monthly, decision-m
 
 **For Procurement:**
 - Government-specific requirements checklist
-- Contract negotiation leverage
+- Contract negotiation guidance
 - Due diligence framework
 
 ### How This Framework Was Developed

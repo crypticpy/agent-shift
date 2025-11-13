@@ -415,7 +415,8 @@ Cooperative purchasing program for state and local governments.
 - ✅ Leverages collective buying power
 - ✅ Competitive solicitation already completed
 - ✅ Available to all 50 states and thousands of local governments
-- ✅ Significant cost savings (10-30% typical)
+- ✅ Significant cost savings (10-30% typical; NASPO ValuePoint cooperative purchasing analysis)
+- ✅ Pre-competed contracts save 6-12 months in procurement timeline
 
 **AI-Relevant Contracts:**
 - Cloud Solutions
@@ -1216,6 +1217,9 @@ Active Users: 87 / 100 licenses
 | **Budget overruns** | Medium | Medium | Clear pricing, usage monitoring, cost alerts |
 | **Staff resistance** | Low | High | Change management, training, executive sponsorship |
 | **Integration failure** | Medium | Low | Thorough testing, phased rollout, vendor support |
+| **AI Security & Bias** | Medium-High | Medium | NIST AI Risk Management Framework implementation, bias testing, human-in-loop oversight |
+
+*AI security and governance considerations should follow [NIST AI Risk Management Framework](./docs/research/BIBLIOGRAPHY.md#18-nist-ai-risk-management-framework-2024) (January 2023, updated 2024) for managing risks in AI systems.*
 
 ### Incident Response
 

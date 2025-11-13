@@ -39,7 +39,7 @@ Most AI vendors provide inflated ROI estimates:
 - ❌ Based on best-case scenarios, not typical outcomes
 
 **Our Approach:**
-- ✅ Conservative estimates (50-60% time savings typical)
+- ✅ Conservative estimates (50-60% time savings typical; based on [McKinsey Global Institute analysis](../research/BIBLIOGRAPHY.md#1-mckinsey-global-institute-2023) showing 40% average time savings on writing tasks and [BCG study of 12,800 knowledge workers](../research/BIBLIOGRAPHY.md#2-boston-consulting-group-2023) showing 40% writing task savings and 25% analytical task savings)
 - ✅ Research-backed assumptions
 - ✅ Includes all costs (software, implementation, training, maintenance)
 - ✅ Accounts for implementation time and learning curve
@@ -131,6 +131,7 @@ Loaded Labor Cost = Base Salary + Benefits + Overhead
 
 Typical Multiplier: 1.4-1.6× base salary
 Government Average: 1.5× base salary
+(Source: [U.S. Bureau of Labor Statistics, "Employer Costs for Employee Compensation," Q2 2024](../research/BIBLIOGRAPHY.md#11-us-bureau-of-labor-statistics-2024): benefits represent 30-32% of total compensation; adding overhead yields 1.4-1.6x multiplier)
 
 Example Calculation:
 - Base Salary: $70,000/year

@@ -247,7 +247,7 @@ FedRAMP is a government-wide program that provides a standardized approach to se
 3. **Authorization** (3-6 months): Agency ATO or JAB P-ATO
 4. **Continuous Monitoring**: Ongoing security assessments and reporting
 
-**Typical Timeline**: 12-18 months from start to authorization
+**Typical Timeline**: 6-12 months initial authorization, though timelines vary by authorization level and agency sponsor. (Source: [FedRAMP.gov - Developing a Roadmap](https://www.fedramp.gov/developing-a-roadmap/); see [Bibliography](./research/BIBLIOGRAPHY.md#22-fedramp-program) for additional context)
 
 **Typical Cost for Vendors**: $250,000 - $1,000,000+
 
@@ -279,7 +279,7 @@ FedRAMP is a government-wide program that provides a standardized approach to se
 
 **Advantages:**
 - Pre-vetted security controls
-- Reusable authorization (other agencies can leverage)
+- Reusable authorization (other agencies can use existing approvals)
 - Regular security audits
 - Standardized risk assessment
 
@@ -319,7 +319,7 @@ FedRAMP is a government-wide program that provides a standardized approach to se
 
 #### What It Is
 
-HIPAA is federal legislation that establishes national standards to protect sensitive patient health information from being disclosed without the patient's consent or knowledge.
+HIPAA is federal legislation that establishes national standards to protect sensitive patient health information from being disclosed without the patient's consent or knowledge. (Source: [HHS Office for Civil Rights HIPAA Guidance](./research/BIBLIOGRAPHY.md#21-hhs-hipaa--ai-guidance-2024), updated 2024)
 
 **Established**: 1996 (HIPAA), 2009 (HITECH Act expansion)
 
@@ -624,7 +624,7 @@ remediate any exceptions or findings within 90 days and provide written status t
 
 #### What It Is
 
-CJIS is the FBI's security policy that establishes minimum security requirements for access to Criminal Justice Information (CJI), including criminal history records, fingerprints, and law enforcement data.
+CJIS is the FBI's security policy that establishes minimum security requirements for access to Criminal Justice Information (CJI), including criminal history records, fingerprints, and law enforcement data. (Source: [FBI CJIS Security Policy Resource Center](./research/BIBLIOGRAPHY.md#20-fbi-cjis-security-policy-2024). Note: State-specific requirements may apply beyond federal baseline.)
 
 **Established**: 1992 (FBI CJIS Division), updated regularly
 
