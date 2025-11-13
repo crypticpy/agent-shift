@@ -164,7 +164,7 @@
       oklch(0.95 0.08 35 / 12%),
       transparent 70%
     );
-    animation: chameleonWash 18s ease-in-out infinite;
+    animation: chameleonWash 90s ease-in-out infinite;
     pointer-events: none;
     z-index: 0;
   }
@@ -197,7 +197,7 @@
   }
 
   .dark body::before {
-    animation: chameleonWashDark 18s ease-in-out infinite;
+    animation: chameleonWashDark 90s ease-in-out infinite;
   }
 
   @keyframes chameleonWashDark {
@@ -362,7 +362,7 @@
       oklch(0.62 0.16 155 / 6%)   /* Subtle Teal */
     );
     background-size: 200% 200%;
-    animation: gradientShift 20s ease infinite;
+    animation: gradientShift 90s ease infinite;
   }
 
   @keyframes gradientShift {

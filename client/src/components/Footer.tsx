@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="relative mt-auto">
       {/* Voice-Built Claim Banner - The Showstopper */}
-      <div className="relative overflow-hidden py-12 bg-gradient-to-r from-[#FF6B35] via-[#FFC107] via-[#10B981] to-[#14B8A6]" style={{ backgroundSize: '400% 400%', animation: 'gradientShift 31.2s ease infinite' }}>
+      <div className="relative overflow-hidden py-12 bg-gradient-to-r from-[#FF6B35] via-[#FFC107] via-[#10B981] to-[#14B8A6]" style={{ backgroundSize: '400% 400%', animation: 'gradientShift 90s ease infinite' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 hover:bg-white/30 transition-all duration-200">
