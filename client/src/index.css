@@ -929,7 +929,7 @@
 .hero-color-cycle {
   position: relative;
   background: linear-gradient(135deg, var(--hero-color-1), var(--hero-color-2));
-  animation: heroColorMorph 375s ease-in-out infinite;
+  animation: heroColorMorph 75s ease-in-out infinite;
 }
 
 @keyframes heroColorMorph {
