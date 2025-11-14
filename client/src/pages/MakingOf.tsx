@@ -35,7 +35,7 @@ export default function MakingOf() {
       color: "orange",
       icon: Mic2,
       usage: "Primary voice-to-text interface. Running Haiku underneath to translate natural speech into better-aligned AI prompts. Used for 100% of voice input across all platforms.",
-      verdict: "⭐ Essential - The universal interface layer"
+      verdict: "Essential - The universal interface layer"
     },
     {
       name: "Kimi K2",
@@ -43,8 +43,8 @@ export default function MakingOf() {
       category: "Research & Intelligence",
       color: "purple",
       icon: Search,
-      usage: "Lightning-fast web browsing for gathering raw data from multiple sites simultaneously. Paired with Minimax for the research duo. Created detailed briefing documents and won 'best briefings' in platform competition.",
-      verdict: "⭐⭐ Exceptionally fast data gathering"
+      usage: "Web browsing for gathering raw data from multiple sites simultaneously. Paired with Minimax for the research duo. Created detailed briefing documents and won 'best briefings' in platform competition.",
+      verdict: "Fast and reliable for data gathering"
     },
     {
       name: "ChatGPT Pro",
@@ -53,7 +53,7 @@ export default function MakingOf() {
       color: "green",
       icon: Lightbulb,
       usage: "Supplementary research and validation when needed. Used as backup to the Minimax/Kimi K2 research duo.",
-      verdict: "⭐ Good backup option"
+      verdict: "Solid backup option"
     },
     {
       name: "Manus",
@@ -61,8 +61,8 @@ export default function MakingOf() {
       category: "Design Platform",
       color: "blue",
       icon: Palette,
-      usage: "Primary design platform with excellent visual sense, web search, and real-time VM preview. Won 'best design' but hit Git/publishing issues that forced a pivot.",
-      verdict: "⭐ Great design, but platform lock-in risk"
+      usage: "Primary design platform with strong visual sense, web search, and real-time VM preview. Won 'best design' but hit Git/publishing issues that forced a pivot.",
+      verdict: "Strong design capabilities, platform lock-in risk"
     },
     {
       name: "Minimax Agent",
@@ -70,8 +70,8 @@ export default function MakingOf() {
       category: "Research & Writing",
       color: "amber",
       icon: Brain,
-      usage: "Powerful researcher and writer. Paired with Kimi K2 for the research duo - synthesized raw data into structured tables and detailed output. Cost-effective at scale: <$1 for 100+ high-quality results.",
-      verdict: "⭐⭐⭐ Outstanding for bulk research at low cost"
+      usage: "Research and writing workhorse. Paired with Kimi K2 for the research duo - synthesized raw data into structured tables and detailed output. Cost-effective at scale: <$1 for 100+ high-quality results.",
+      verdict: "Best value for bulk research work"
     },
     {
       name: "OK Computer (Kimi)",
@@ -80,7 +80,7 @@ export default function MakingOf() {
       color: "teal",
       icon: Brain,
       usage: "Third option in design platform competition. Evaluated alongside Manus and Minimax for initial design direction.",
-      verdict: "⭐ Solid alternative approach"
+      verdict: "Viable alternative approach"
     },
     {
       name: "Claude Code CLI",
@@ -89,7 +89,7 @@ export default function MakingOf() {
       color: "orange",
       icon: Code,
       usage: "Primary development platform for 90% of the 355+ prompts. Running 4-6 concurrent instances with Sonnet 4.5 and GLM 4.6 models. Models specialized by task and critiquing each other.",
-      verdict: "⭐⭐⭐ Essential - The orchestration hub"
+      verdict: "Essential - The orchestration hub"
     },
     {
       name: "Claude Sonnet 4.5",
@@ -98,7 +98,7 @@ export default function MakingOf() {
       color: "purple",
       icon: Zap,
       usage: "Primary AI model for code generation, architecture decisions, and complex implementations. Multiple instances running simultaneously.",
-      verdict: "⭐⭐⭐ Powerhouse for code quality"
+      verdict: "Top tier for code quality"
     },
     {
       name: "GLM 4.6",
@@ -107,7 +107,7 @@ export default function MakingOf() {
       color: "blue",
       icon: Brain,
       usage: "Secondary model integrated with Claude Code. Used for specific tasks and cross-validation of approaches.",
-      verdict: "⭐ Good for specialized tasks"
+      verdict: "Useful for specialized tasks"
     },
     {
       name: "Haiku (Claude)",
@@ -116,7 +116,7 @@ export default function MakingOf() {
       color: "green",
       icon: MessageSquare,
       usage: "Embedded in SuperWhisper to translate natural speech into better-aligned AI prompts. The invisible layer making voice orchestration smoother.",
-      verdict: "⭐ Perfect for voice enhancement"
+      verdict: "Ideal for voice enhancement"
     }
   ];
 
@@ -170,33 +170,31 @@ export default function MakingOf() {
 
             <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
               <p>
-                After two years of public sector AI work, including building apps, training teams, and shaping policy, a pattern emerged.
-                People often ask for demonstrations, wanting to see what's truly possible, as it's difficult to grasp what AI can and can't do.
-                Another trend emerged, where most people treat AI like Google, using it only when they're stuck or want to get an answer.
-                Many people lack exposure to understand the full capabilities of AI and that it's powerful enough now to be a <strong>full-time collaborator</strong>.
-                That shift in thinking changes everything.
+                After two years of public sector AI work—building apps, training teams, shaping policy—a pattern kept repeating.
+                People would ask for demonstrations. They wanted to see what AI could actually do because it's hard to grasp from descriptions alone.
+                Most people were treating AI like Google: type a question when stuck, get an answer, move on.
+                They didn't realize AI has gotten powerful enough to work alongside you all day as a <strong>full-time collaborator</strong>.
+                Once you make that shift in your head, everything changes.
               </p>
 
               <p>
-                Demonstrating that level of collaboration is also tricky in government and public sector environments. One agency has Azure.
-                Another uses Google Workspace. A third is locked into legacy systems. Security requirements mean the latest tools
-                lag by months or even a year. Vendors are also bad about lock-in and customizing everything. So anything shown
-                in Azure may not directly translate to the rest of the world. Half the audience will struggle to replicate it.
-                The challenge: find something with <strong>fewer barriers</strong>, less complexity, lower risk—and
-                make it work across different platforms.
+                But showing that kind of collaboration in government? Tricky. One agency runs Azure, another's on Google Workspace,
+                a third is stuck with legacy systems. Security requirements mean the latest tools are six months to a year behind.
+                Vendors love their lock-in and custom implementations. Show something in Azure and half your audience can't replicate it.
+                The real challenge: find something with <strong>fewer barriers</strong>, less complexity, lower risk—something that works
+                across platforms without vendor dependency.
               </p>
 
               <p>
-                Then came the question: What if <strong>one person, working entirely through voice conversations with AI</strong>,
-                could build something that might typically require a full team and significant funding? No typing. No touching code.
-                No looking at the code. Just orchestration—talking, guiding, collaborating.
+                That's when the idea hit: What if <strong>one person, using only voice conversations with AI</strong>,
+                could build something that normally takes a full team and serious budget? No typing. No touching code.
+                Not even looking at the code. Just orchestration—talking, guiding, collaborating.
               </p>
 
               <p>
-                Is it possible to build an entire website with interactive modules and advanced functionality, full copywriting,
-                editing, and review, using the exact methods being taught—voice orchestration, agent collaboration, and zero manual coding?
-                Let the asset itself be the proof. After test runs demonstrated how quickly agents could research, scrape data, and
-                assemble content, the path was clear: <strong>this is what people need to see</strong>—
+                Could you build an entire website—interactive modules, advanced features, full copywriting, editing, review—using only
+                voice orchestration and AI collaboration? No manual coding at all? After some test runs showed how fast agents could
+                research, scrape data, and assemble content, the answer was obvious: <strong>this is what people need to see</strong>.
               </p>
 
               <div className="bg-gradient-to-r from-orange-100 to-amber-100 border-l-4 border-orange-500 p-6 rounded-lg my-8">
@@ -238,28 +236,28 @@ export default function MakingOf() {
                     <span className="text-sm bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">Foundation</span>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    Before writing any code, data was needed. Lots of it. 190+ AI tools don't research themselves.
-                    The challenge: gather high-quality data at scale without breaking the bank.
+                    Before any code got written, we needed data. Lots of it. 190+ AI tools don't research themselves.
+                    The goal: gather quality data at scale without spending a fortune.
                   </p>
                   <Card className="border-2 border-purple-200 mb-4">
                     <CardContent className="pt-6">
                       <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
                         <Brain className="h-5 w-5 text-purple-600" />
-                        The Dynamic Duo
+                        The Research Pair
                       </h4>
                       <div className="grid md:grid-cols-2 gap-4 mb-4">
                         <div className="bg-purple-50 p-4 rounded-lg">
                           <h5 className="font-semibold text-purple-900 mb-2">Minimax Agent</h5>
-                          <p className="text-sm text-slate-600">Powerful researcher and writer. Excellent at producing structured, high-quality output.</p>
+                          <p className="text-sm text-slate-600">Handles research and writing. Produces structured, high-quality output consistently.</p>
                         </div>
                         <div className="bg-blue-50 p-4 rounded-lg">
                           <h5 className="font-semibold text-blue-900 mb-2">Kimi K2</h5>
-                          <p className="text-sm text-slate-600">Lightning-fast web browsing. Fast at gathering information from many sites simultaneously.</p>
+                          <p className="text-sm text-slate-600">Handles web browsing. Pulls information from multiple sites at once without breaking a sweat.</p>
                         </div>
                       </div>
                       <p className="text-sm text-slate-600 mb-3">
-                        These two worked in tandem: Kimi K2 would rapidly gather raw data from across the web,
-                        Minimax would synthesize it into structured tables and detailed briefings.
+                        They worked in tandem: Kimi K2 scraped raw data across the web,
+                        Minimax turned it into structured tables and detailed briefings.
                       </p>
                       <div className="bg-green-50 border-l-4 border-green-500 p-3 rounded text-sm">
                         <p className="font-medium text-green-900 mb-1">GPT Pro as Backup</p>
@@ -272,11 +270,11 @@ export default function MakingOf() {
                     <CardContent className="pt-6">
                       <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
                         <DollarSign className="h-5 w-5 text-green-600" />
-                        The Cost Equation
+                        Why These Tools
                       </h4>
                       <p className="text-sm text-slate-700 mb-4">
-                        The goal was to create <strong>tables of structured data</strong> on 190+ tools. The approach required volume,
-                        quality, and speed—but at a sustainable cost.
+                        The task: create <strong>structured data tables</strong> for 190+ tools. That meant volume,
+                        quality, and speed—without blowing the budget.
                       </p>
 
                       <div className="space-y-3 mb-4">
@@ -291,7 +289,7 @@ export default function MakingOf() {
                               <div className="text-xs text-slate-600">100+ results</div>
                             </div>
                           </div>
-                          <div className="text-xs text-slate-600">High quality, structured output, lightning fast</div>
+                          <div className="text-xs text-slate-600">High quality, structured output, fast execution</div>
                         </div>
 
                         <div className="bg-white p-3 rounded-lg border border-red-200">
@@ -310,28 +308,28 @@ export default function MakingOf() {
                       </div>
 
                       <div className="bg-slate-50 p-4 rounded-lg">
-                        <h5 className="font-semibold text-slate-900 mb-2 text-sm">Why Other Tools Weren't Used</h5>
+                        <h5 className="font-semibold text-slate-900 mb-2 text-sm">Why Not Other Tools</h5>
                         <ul className="space-y-2 text-xs text-slate-600">
                           <li className="flex items-start gap-2">
                             <span className="text-slate-400">•</span>
-                            <span><strong>Claude:</strong> Excellent at research and distilling, but very expensive and slow for bulk data gathering</span>
+                            <span><strong>Claude:</strong> Great at research and synthesis, but expensive and slow for bulk data work</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-slate-400">•</span>
-                            <span><strong>Google (Gemini):</strong> Can research many sources, but not optimized for raw, structured data output</span>
+                            <span><strong>Google (Gemini):</strong> Can research multiple sources, but not built for raw structured data output</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-slate-400">•</span>
-                            <span><strong>Other Western APIs:</strong> Cost-prohibitive for the required scale (190+ tools × multiple data points)</span>
+                            <span><strong>Other Western APIs:</strong> Too expensive at this scale (190+ tools × multiple data points)</span>
                           </li>
                         </ul>
                       </div>
 
                       <div className="mt-4 pt-4 border-t border-green-200">
                         <p className="text-sm text-slate-700">
-                          <strong>The verdict:</strong> Open-source Chinese models (Minimax, Kimi K2) offered the best cost-to-quality ratio
-                          for bulk research tasks. This isn't a quality judgment—it's economics. When you need to process hundreds of data points,
-                          cost efficiency becomes critical.
+                          <strong>Bottom line:</strong> Chinese open-source models (Minimax, Kimi K2) had the best cost-to-quality ratio
+                          for bulk research. Not a quality judgment—just economics. When you're processing hundreds of data points,
+                          cost efficiency matters.
                         </p>
                       </div>
                     </CardContent>
@@ -354,8 +352,8 @@ export default function MakingOf() {
                     <span className="text-sm bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-medium">Design Wars</span>
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">
-                    With research complete, great web design was needed. Instead of picking one platform, a competition was run.
-                    <strong>AI models were configured to judge each other's work</strong>.
+                    Research done. Now we needed good web design. Instead of picking one platform up front, we ran a competition
+                    and <strong>had AI models judge each other's work</strong>.
                   </p>
 
                   <Card className="border-2 border-amber-200 mb-4">
@@ -459,8 +457,8 @@ export default function MakingOf() {
                   <div className="mt-4 bg-slate-50 border-l-4 border-amber-500 p-4 rounded">
                     <p className="text-sm text-slate-700">
                       <strong>Why this matters:</strong> Having models critique models removed human bias from the design selection.
-                      The process focused on orchestrating an objective evaluation based on design principles, not picking favorites.
-                      This is orchestration at its finest: using AI to make AI better.
+                      The process focused on objective evaluation based on design principles, not personal preferences.
+                      Using AI to make AI better—that's the real power of orchestration.
                     </p>
                   </div>
                 </div>
@@ -530,8 +528,8 @@ export default function MakingOf() {
                         </div>
                       </div>
                       <div className="bg-slate-50 border-l-4 border-slate-400 p-4 rounded text-sm text-slate-700">
-                        <strong>Context:</strong> Manus is pushing the limits of what's possible with browser-based development environments.
-                        Features like integrated VS Code and live VM previews are bleeding edge. And bleeding edge means occasional bleeding.
+                        <strong>Context:</strong> Manus is pushing what's possible with browser-based dev environments.
+                        Features like integrated VS Code and live VM previews are cutting-edge tech. And cutting-edge tech sometimes breaks.
                       </div>
                     </CardContent>
                   </Card>
@@ -718,20 +716,19 @@ export default function MakingOf() {
                           <div className="space-y-3 text-sm text-slate-700">
                             <p className="leading-relaxed">
                               Once <strong>SuperWhisper was piped directly into Claude Code CLI</strong>, the quality of the
-                              design and code <strong>shot up dramatically</strong>. It's genuinely hard to express how much faster
-                              things started moving.
+                              design and code <strong>shot up dramatically</strong>. The speed difference was impossible to miss.
                             </p>
                             <p className="leading-relaxed">
-                              There's a <strong>definite difference</strong> between open models and Claude—and even ChatGPT—when it
-                              comes to design and front-end work. <strong>Complete night and day</strong>, especially for technical
-                              aspects like particle systems, interactive modules, and complex UI orchestration.
+                              There's a clear difference between open models and Claude—and even ChatGPT—when it
+                              comes to design and front-end work. Night and day, especially for technical
+                              work like particle systems, interactive modules, and complex UI orchestration.
                             </p>
                             <p className="leading-relaxed">
-                              While tools like Codex are highly capable at solving hard technical problems, this project didn't have
-                              super advanced algorithmic challenges. It was about <strong>interaction, communication, and speed</strong>.
+                              Tools like Codex are strong at solving hard technical problems, but this project wasn't about
+                              advanced algorithms. It was about <strong>interaction, communication, and speed</strong>.
                             </p>
                             <p className="leading-relaxed font-semibold text-purple-900">
-                              Once the workflow shifted to Sonnet, everything changed.
+                              Once we shifted to Sonnet, everything changed.
                             </p>
                           </div>
                         </div>

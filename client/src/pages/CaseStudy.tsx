@@ -67,11 +67,11 @@ export default function CaseStudy() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The Challenge: Build a Production-Ready Platform
+              The Challenge: Build a Real Platform
             </h2>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              We needed a complete web application to demonstrate the power of AI agent orchestration.
-              Not a prototype. Not a proof of concept. A real, production-quality platform with:
+              We needed a complete web application to show what AI agent orchestration could do.
+              Not a prototype. Not a proof of concept. A real platform with:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -90,15 +90,15 @@ export default function CaseStudy() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Advanced animations: particles, gradients, effects</span>
+                      <span>Particle systems, gradient animations, visual effects</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Interactive tools: filters, search, calculators</span>
+                      <span>Working filters, search, and calculators</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>Fully responsive across all devices</span>
+                      <span>Responsive design across devices</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -164,7 +164,7 @@ export default function CaseStudy() {
                   </div>
                   <h3 className="font-semibold text-lg mb-2">1. Speak</h3>
                   <p className="text-sm text-slate-600">
-                    Natural language prompts via SuperWhisper voice-to-text
+                    Plain speech prompts via SuperWhisper voice-to-text
                   </p>
                 </CardContent>
               </Card>
@@ -410,11 +410,11 @@ export default function CaseStudy() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The Output: Production-Quality Platform
+              The Output: What Got Built
             </h2>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-              What you're looking at right now is the result. Every page. Every animation. Every line of code.
-              All orchestrated through conversation.
+              You're looking at the result right now. Every page. Every animation. Every line of code.
+              All created through conversation.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -459,11 +459,11 @@ export default function CaseStudy() {
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-1.5 w-1.5 bg-green-600 rounded-full"></div>
-                    <span>Advanced animations & effects</span>
+                    <span>Animations and visual effects</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-1.5 w-1.5 bg-green-600 rounded-full"></div>
-                    <span>Interactive tools & calculators</span>
+                    <span>Working tools and calculators</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-1.5 w-1.5 bg-green-600 rounded-full"></div>
@@ -475,11 +475,11 @@ export default function CaseStudy() {
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-1.5 w-1.5 bg-green-600 rounded-full"></div>
-                    <span>Fully responsive design</span>
+                    <span>Mobile and desktop support</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="h-1.5 w-1.5 bg-green-600 rounded-full"></div>
-                    <span>SEO-optimized structure</span>
+                    <span>Clean page structure</span>
                   </div>
                 </div>
               </div>
@@ -496,13 +496,13 @@ export default function CaseStudy() {
               The Real Insight
             </h2>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              This isn't about replacing developers. It's about <strong className="text-slate-900">amplifying human creativity</strong> and
-              freeing us from the mechanical parts of development.
+              This isn't about replacing developers. It's about <strong className="text-slate-900">freeing creative energy</strong> by
+              automating the mechanical parts of development.
             </p>
 
             <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl mb-8">
               <blockquote className="text-2xl md:text-3xl font-bold text-slate-900 leading-relaxed mb-4">
-                "I spoke ~23,000 words and generated 42,000 lines of production code—while doing other things."
+                "I spoke ~23,000 words and generated 42,000 lines of code—while doing other things."
               </blockquote>
               <p className="text-slate-600">
                 This is the future of software development. Not typing. <strong className="text-slate-900">Orchestrating</strong>.
@@ -512,9 +512,9 @@ export default function CaseStudy() {
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="p-6 bg-slate-50 rounded-xl">
                 <Mic2 className="h-8 w-8 text-orange-600 mb-3" />
-                <h3 className="font-semibold text-lg mb-2">Natural Communication</h3>
+                <h3 className="font-semibold text-lg mb-2">Just Talk</h3>
                 <p className="text-sm text-slate-600">
-                  Describe what you want in plain English. No need to translate ideas into syntax.
+                  Describe what you want in plain English. No translating ideas into syntax.
                 </p>
               </div>
               <div className="p-6 bg-slate-50 rounded-xl">
