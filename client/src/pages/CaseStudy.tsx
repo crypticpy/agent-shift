@@ -15,7 +15,8 @@ import {
   Sparkles,
   MessageSquare,
   FileCode,
-  BarChart3
+  BarChart3,
+  Brain
 } from "lucide-react";
 
 export default function CaseStudy() {
@@ -67,11 +68,21 @@ export default function CaseStudy() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The Challenge: Build a Real Platform
+              The Challenge: Beyond Toy Demos
             </h2>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              We needed a complete web application to show what AI agent orchestration could do.
-              Not a prototype. Not a proof of concept. A real platform with:
+              How do you showcase what AI can do today? How do you communicate the true effectiveness of AI agents?
+            </p>
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+              Everyone and their dog has built a snake game with AI. YouTubers build pool simulations.
+              Toy demos that get a few likes and disappear. But what about a <strong className="text-slate-900">complete web application</strong>?
+              An e-learning platform with <strong className="text-slate-900">staying power</strong>?
+              A real asset for the community—not just a proof of concept?
+            </p>
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+              That was the challenge. Build something that would actually matter to organizations.
+              Something with real utility that could stand on its own after launch. Not a temporary test.
+              Not a one-off demo. <strong className="text-slate-900">A real platform.</strong> That meant:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -150,10 +161,19 @@ export default function CaseStudy() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The Approach: Voice-Orchestrated Development
+              The Approach: An Orchestra, Not a Soloist
             </h2>
+            <p className="text-xl text-slate-600 mb-4 leading-relaxed">
+              This wasn't about one AI showing off. It wasn't about finding the single "best" model and using it for everything.
+            </p>
+            <p className="text-xl text-slate-600 mb-4 leading-relaxed">
+              It was about using <strong className="text-slate-900">six AI models as a team</strong>—each flexing their muscle at what they do best.
+              Research specialists. Design experts. Code generators. Each shining in their domain.
+            </p>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-              Instead of typing code, we spoke our vision into reality using a radical new workflow.
+              But here's the real insight: While these AIs have fantastic skillsets, the <strong className="text-slate-900">power unlocks when you put
+              a person in the middle</strong>. Human orchestration through voice + multiple AI specialists = results
+              you can't get any other way.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -324,6 +344,16 @@ export default function CaseStudy() {
                     <Mic2 className="h-6 w-6 text-green-600" />
                     Our Approach
                   </h3>
+
+                  <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded mb-6">
+                    <p className="text-sm font-semibold text-purple-900 flex items-center gap-2">
+                      <Brain className="h-4 w-4" />
+                      6 AI Models Working in Parallel
+                    </p>
+                    <p className="text-xs text-slate-600 mt-1">
+                      Multiple specialized models collaborating as a team, orchestrated through voice
+                    </p>
+                  </div>
 
                   <div className="space-y-4">
                     <div>
