@@ -48,28 +48,28 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-coral-100 text-coral-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="h-4 w-4" />
-            Stop Doing. Start Talking.
+            Free Learning Portal • Stop Doing. Start Talking.
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-            From{" "}
+            Learn to Transform{" "}
             <span className="bg-gradient-to-r from-slate-600 to-slate-800 bg-clip-text text-transparent">
-              Doer
+              Busy Work
             </span>
-            {" "}to{" "}
+            {" "}into{" "}
             <span className="animated-gradient bg-gradient-to-r from-[#FF6B35] via-[#FFC107] via-[#10B981] to-[#14B8A6] bg-clip-text text-transparent">
-              Orchestrator
+              Creative Thinking
             </span>
           </h1>
 
           <p className="text-xl text-slate-600 mb-4 max-w-2xl mx-auto leading-relaxed">
-            <span className="font-semibold text-orange-600">Ideas strike anytime.</span> Capture and act on them now—through conversation with intelligent agents.
+            Master <span className="font-semibold text-orange-600">voice-first AI collaboration</span>—the methodology that lets you turn ideas into action through conversation, not clicking.
           </p>
           <p className="text-lg text-slate-600 mb-4 max-w-2xl mx-auto">
-            Voice-first collaboration that transforms busywork into creative thinking.
+            This free learning portal teaches you how to orchestrate AI agents while keeping your hands on strategic work.
           </p>
           <p className="text-sm text-slate-500 mb-8 max-w-2xl mx-auto italic">
-            Your best thinking happens during walks, while reading, in moments of insight.
+            Your best thinking happens during walks, while reading, in moments of insight—now you can act on it instantly.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -79,18 +79,18 @@ export default function Index() {
                 className="relative text-lg px-8 py-6 bg-gradient-to-r from-accent/90 to-accent hover:from-accent hover:to-accent/80 text-white rounded-lg font-semibold card-lift overflow-hidden"
                 onClick={handleBurst}
               >
-                Get Started
+                Start Learning
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link href="/workflows">
+            <Link href="/learn">
               <Button
                 size="lg"
                 variant="outline"
                 className="relative text-lg px-8 py-6 border-2 border-accent rounded-lg font-semibold hover:border-accent/80 hover:bg-accent/10 card-lift overflow-hidden"
                 onClick={handleBurst}
               >
-                View Workflows
+                Explore Lessons
               </Button>
             </Link>
           </div>
@@ -115,8 +115,8 @@ export default function Index() {
             </div>
           </div>
           <p className="text-xs text-slate-500 text-center mt-4 max-w-3xl mx-auto">
-            *Based on McKinsey research showing 60-70% of work activities can be automated with generative AI (2023),
-            Stanford study confirming voice interaction is 3× faster than typing for knowledge work (2016).
+            *Research-backed methodology taught through this portal: McKinsey (2023) on AI automation potential,
+            Stanford (2016) on voice interaction speed advantages.
           </p>
           </div>
         </div>
