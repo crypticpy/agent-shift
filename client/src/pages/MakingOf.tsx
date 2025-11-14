@@ -165,21 +165,21 @@ export default function MakingOf() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The Genesis: From Question to Experiment
+              Can we do it?... Should we do it?
             </h2>
 
             <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
               <p>
                 After two years of public sector AI work—building apps, training teams, shaping policy—a pattern kept repeating.
                 People would ask for demonstrations. They wanted to see what AI could actually do because it's hard to grasp from descriptions alone.
-                Most people were treating AI like Google: type a question when stuck, get an answer, move on.
-                They didn't realize AI has gotten powerful enough to work alongside you all day as a <strong>full-time collaborator</strong>.
-                Once you make that shift in your head, everything changes.
+                Most people treat AI like Google. Type a question, get an answer, move on.
+                There aren't many people that have realized AI's become powerful enough to work alongside you as a <strong>full-time collaborator</strong>.
+                It really is a significant change. Once you make that shift in your head, it's all different.
               </p>
 
               <p>
-                But showing that kind of collaboration in government? Tricky. One agency runs Azure, another's on Google Workspace,
-                a third is stuck with legacy systems. Security requirements mean the latest tools are six months to a year behind.
+                But showing that kind of collaboration? One agency runs Azure, another's on Google. A third's AWS.
+                Security requirements mean the latest tools are six months to a year behind.
                 Vendors love their lock-in and custom implementations. Show something in Azure and half your audience can't replicate it.
                 The real challenge: find something with <strong>fewer barriers</strong>, less complexity, lower risk—something that works
                 across platforms without vendor dependency.
