@@ -82,10 +82,10 @@ export default function CaseStudy() {
               A real asset for the community. Not just a proof of concept. An e-learning platform.
               A complete web application that actually helps people.
             </p>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+            <p className="text-xl text-slate-600 mb-12 leading-relaxed">
               Yes. That's it. That was the challenge. Build something that would actually matter.
               Something with real utility that could stand on its own.
-              Not an ephemeral demo. <strong className="text-slate-900">A real platform.</strong> That meant:
+              Not an ephemeral demo. <strong className="text-slate-900">A real platform.</strong>
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -177,12 +177,15 @@ export default function CaseStudy() {
               But they needed coordination. Direction. A <strong className="text-slate-900">conductor</strong>.
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-              That's when the orchestra begins to perform. One human conducting through voice. Stream-of-consciousness
-              decision making. Multitasking across work streams. Six models working simultaneously on different parts of the project.
+              That's when the orchestra began to perform. A human conversing, conducting through stream-of-consciousness voice,
+              collaborative decision-making. Multitasking across work streams.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              Different models working simultaneously, each on a different part of the project. And even sometimes
+              collaborating and discussing the same part.
             </p>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-              It took experimentation to find this formula. But once it clicked?
-              The ensemble could really sing.
+              It evolved through experimentation. But once it clicked? The ensemble could really sing.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">
