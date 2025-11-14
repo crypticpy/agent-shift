@@ -456,7 +456,7 @@ export default function CaseStudy() {
             </p>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed">
               Voice to a prompt. Straight to the command line. Sometimes six instances of Claude Code running simultaneously.
-              Multiple web browsers. <strong className="text-slate-900">No traditional tools. No special services.</strong> This is about as close to pure AI orchestration as it gets.
+              Multiple web browsers. <strong className="text-slate-900">No traditional tools.</strong>
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -538,19 +538,47 @@ export default function CaseStudy() {
               What This Actually Means
             </h2>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-              This isn't about replacing developers.
+              Wait. What?
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-              It's about <strong className="text-slate-900">freeing ourselves from traditional tools and their wrappers</strong>.
-              The models are strong enough now. They can truly take on the burden.
+              That's kind of crazy.
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-              You focus on the vision. The strategy. The coordination. The thinking.
+              Yes. It is a little crazy. And not everybody would go to these extremes or want to.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              This wasn't about proving that developers are replaceable or that people's jobs are at risk.
+              It's an exercise in <strong className="text-slate-900">showing that things are changing</strong>.
+              That all those CEOs aren't just blowing smoke. There is a shift.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              An <strong className="text-slate-900">agentic shift</strong> is coming. In fact, it's here right now.
+              Yes. Agents are in the room with us now.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              But that's not a bad thing.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              We can free ourselves from those traditional tools and their wrappers.
+              Many of them needed to go away a long time ago anyway. Now we can work on our own terms.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              You can focus on the vision and the strategy, the coordination, the thinking.
+              <strong className="text-slate-900">You're literally speaking things into existence now.</strong>
             </p>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+              And once you learn how to wield this power, you'll be able to explore areas of your own creativity
+              and improve processes. And drive meaningful results that change things for the better.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               Will this shake things up? Absolutely. There's space for that conversation.
-              But here's what it means right now: With the right skillsets—and a little knowledge about whatever you're building—anyone can do this.
-              AI has reached the point where it can <strong className="text-slate-900">truly scale human work</strong>.
+            </p>
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+              But the reality is that as of today, AI has reached the point where it can truly scale human work.
+              It still requires the human to be involved, which is a good thing. But they can scale your work.
+            </p>
+            <p className="text-xl text-slate-600 mb-4 leading-relaxed">
+              It's proven by:
             </p>
 
             <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl mb-8">
@@ -565,14 +593,8 @@ export default function CaseStudy() {
               </p>
             </div>
 
-            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-              Shake off the broken processes. The ancient tools.
-            </p>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              Skills that were previously beyond your scope? <strong className="text-slate-900">Now accessible</strong>.
-            </p>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-              You become the conductor of your own dreams. That's the shift.
+              <strong className="text-slate-900">The agent shift.</strong>
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 text-left">
