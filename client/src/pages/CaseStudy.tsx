@@ -540,10 +540,17 @@ export default function CaseStudy() {
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               This isn't about replacing developers.
             </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              It's about <strong className="text-slate-900">freeing ourselves from traditional tools and their wrappers</strong>.
+              The models are strong enough now. They can truly take on the burden.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              You focus on the vision. The strategy. The coordination. The thinking.
+            </p>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              It's about <strong className="text-slate-900">freeing you from the mechanical parts</strong>.
-              The typing. The syntax. The repetitive patterns. Let AI handle that.
-              You focus on the thinking.
+              Will this shake things up? Absolutely. There's space for that conversation.
+              But here's what it means right now: With the right skillsets—and a little knowledge about whatever you're building—anyone can do this.
+              AI has reached the point where it can <strong className="text-slate-900">truly scale human work</strong>.
             </p>
 
             <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl mb-8">
@@ -557,6 +564,16 @@ export default function CaseStudy() {
                 <strong className="text-slate-900">That's today.</strong>
               </p>
             </div>
+
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              Shake off the broken processes. The ancient tools.
+            </p>
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+              Skills that were previously beyond your scope? <strong className="text-slate-900">Now accessible</strong>.
+            </p>
+            <p className="text-xl text-slate-600 mb-12 leading-relaxed">
+              You become the conductor of your own dreams. That's the shift.
+            </p>
 
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="p-6 bg-slate-50 rounded-xl">
