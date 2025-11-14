@@ -171,16 +171,18 @@ export default function CaseStudy() {
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               It was about <strong className="text-slate-900">six AI models working as a team</strong>.
-              Research specialists pulling data. Design experts crafting layouts. Code generators building features.
-              Each one doing what it does best.
+              Research specialists. Design experts. Code generators. Each one with incredible skillsets.
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-              An orchestra, not a soloist.
+              But they needed coordination. Direction. A <strong className="text-slate-900">conductor</strong>.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              That's when the orchestra begins to perform. One human conducting through voice. Stream-of-consciousness
+              decision making. Multitasking across work streams. Six models working simultaneously on different parts of the project.
             </p>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-              Here's what matters: While these AIs have incredible skillsets, the <strong className="text-slate-900">power unlocks when you put
-              a person in the middle</strong>. One human. Voice commands. Six AI specialists.
-              That's the formula.
+              It took experimentation to find this formula. But once it clicked?
+              The ensemble could really sing.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -352,16 +354,6 @@ export default function CaseStudy() {
                     Our Approach
                   </h3>
 
-                  <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded mb-6">
-                    <p className="text-sm font-semibold text-purple-900 flex items-center gap-2">
-                      <Brain className="h-4 w-4" />
-                      6 AI Models Working in Parallel
-                    </p>
-                    <p className="text-xs text-slate-600 mt-1">
-                      Multiple specialized models collaborating as a team, orchestrated through voice
-                    </p>
-                  </div>
-
                   <div className="space-y-4">
                     <div>
                       <div className="flex items-center justify-between mb-2">
@@ -455,9 +447,16 @@ export default function CaseStudy() {
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               Not vapor. Not a prototype collecting dust.
             </p>
-            <p className="text-xl text-slate-600 mb-12 leading-relaxed">
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               <strong className="text-slate-900">Real code. Real features. Real platform.</strong> You're using it right now.
-              Every page. Every animation. Every line. All created through conversation.
+              Every page. Every animation. Every line. All created through conversation—speech to AI, sometimes AI to AI.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              No IDEs. No editors. No design software. No Canvas applications.
+            </p>
+            <p className="text-xl text-slate-600 mb-12 leading-relaxed">
+              Voice to a prompt. Straight to the command line. Sometimes six instances of Claude Code running simultaneously.
+              Multiple web browsers. <strong className="text-slate-900">No traditional tools. No special services.</strong> This is about as close to pure AI orchestration as it gets.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
