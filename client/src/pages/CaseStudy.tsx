@@ -538,16 +538,13 @@ export default function CaseStudy() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              What This Actually Means
-            </h2>
-            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               Wait. What?
-            </p>
+            </h2>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               That's kind of crazy.
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-              Yes. It is a little crazy. And not everybody would go to these extremes or want to.
+              Yes. It is a little crazy.
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               This wasn't about proving that developers are replaceable or that people's jobs are at risk.
@@ -556,28 +553,28 @@ export default function CaseStudy() {
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               An <strong className="text-slate-900">agentic shift</strong> is coming. In fact, it's here right now.
-              Yes. Agents are in the room with us now.
+              Yes. Agents are in the room with us.
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               But that's not a bad thing.
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               We can free ourselves from those traditional tools and their wrappers.
-              Many of them needed to go away a long time ago anyway. Now we can work on our own terms.
+              Many of them needed to go away a long time ago. Now we can work on our own terms.
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-              You can focus on the vision and the strategy, the coordination, the thinking.
+              Focus on the vision and the strategy, the coordination, the thinking.
               <strong className="text-slate-900">You're literally speaking things into existence now.</strong>
             </p>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              And once you learn how to wield this power, you'll be able to explore areas of your own creativity
-              and improve processes. And drive meaningful results that change things for the better.
+              And once you learn how to wield this skill, you'll be able to explore areas of your own creativity
+              and improve processes.
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               Will this shake things up? Absolutely. There's space for that conversation.
             </p>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              But the reality is that as of today, AI has reached the point where it can truly scale human work.
+              As of today, AI has reached the point where it can truly scale human work.
               It still requires the human to be involved, which is a good thing. But they can scale your work.
             </p>
             <p className="text-xl text-slate-600 mb-4 leading-relaxed">
