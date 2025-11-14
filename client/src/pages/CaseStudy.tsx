@@ -182,7 +182,7 @@ export default function CaseStudy() {
             </p>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               Different models working simultaneously, each on a different part of the project. And even sometimes
-              collaborating and discussing the same part.
+              collaborating and discussing with each other.
             </p>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed">
               It evolved through experimentation. But once it clicked? The ensemble could really sing.
