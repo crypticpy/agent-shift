@@ -68,21 +68,24 @@ export default function CaseStudy() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The Challenge: Beyond Toy Demos
+              The Challenge
             </h2>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              How do you showcase what AI can do today? How do you communicate the true effectiveness of AI agents?
+              How do you communicate the true capabilities of today's AI agents?
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              Not another snake game. Definitely not another pool simulation. Not a 3D anything.
+              Probably not another Product Hunt dime-a-dozen SaaS.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              What about something with <strong className="text-slate-900">staying power</strong>?
+              A real asset for the community. Not just a proof of concept. An e-learning platform.
+              A complete web application that actually helps people.
             </p>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              Everyone and their dog has built a snake game with AI. YouTubers build pool simulations.
-              Toy demos that get a few likes and disappear. But what about a <strong className="text-slate-900">complete web application</strong>?
-              An e-learning platform with <strong className="text-slate-900">staying power</strong>?
-              A real asset for the community—not just a proof of concept?
-            </p>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              That was the challenge. Build something that would actually matter to organizations.
-              Something with real utility that could stand on its own after launch. Not a temporary test.
-              Not a one-off demo. <strong className="text-slate-900">A real platform.</strong> That meant:
+              Yes. That's it. That was the challenge. Build something that would actually matter.
+              Something with real utility that could stand on its own.
+              Not an ephemeral demo. <strong className="text-slate-900">A real platform.</strong> That meant:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -161,19 +164,23 @@ export default function CaseStudy() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The Approach: An Orchestra, Not a Soloist
+              The Approach
             </h2>
-            <p className="text-xl text-slate-600 mb-4 leading-relaxed">
-              This wasn't about one AI showing off. It wasn't about finding the single "best" model and using it for everything.
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              This wasn't about one AI showing off. Not about crowning a winner and using it for everything.
             </p>
-            <p className="text-xl text-slate-600 mb-4 leading-relaxed">
-              It was about using <strong className="text-slate-900">six AI models as a team</strong>—each flexing their muscle at what they do best.
-              Research specialists. Design experts. Code generators. Each shining in their domain.
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              It was about <strong className="text-slate-900">six AI models working as a team</strong>.
+              Research specialists pulling data. Design experts crafting layouts. Code generators building features.
+              Each one doing what it does best.
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              An orchestra, not a soloist.
             </p>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-              But here's the real insight: While these AIs have fantastic skillsets, the <strong className="text-slate-900">power unlocks when you put
-              a person in the middle</strong>. Human orchestration through voice + multiple AI specialists = results
-              you can't get any other way.
+              Here's what matters: While these AIs have incredible skillsets, the <strong className="text-slate-900">power unlocks when you put
+              a person in the middle</strong>. One human. Voice commands. Six AI specialists.
+              That's the formula.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -440,11 +447,17 @@ export default function CaseStudy() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The Output: What Got Built
+              The Output
             </h2>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              What actually shipped?
+            </p>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              Not vapor. Not a prototype collecting dust.
+            </p>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-              You're looking at the result right now. Every page. Every animation. Every line of code.
-              All created through conversation.
+              <strong className="text-slate-900">Real code. Real features. Real platform.</strong> You're using it right now.
+              Every page. Every animation. Every line. All created through conversation.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -523,19 +536,26 @@ export default function CaseStudy() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              The Real Insight
+              What This Actually Means
             </h2>
+            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+              This isn't about replacing developers.
+            </p>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              This isn't about replacing developers. It's about <strong className="text-slate-900">freeing creative energy</strong> by
-              automating the mechanical parts of development.
+              It's about <strong className="text-slate-900">freeing you from the mechanical parts</strong>.
+              The typing. The syntax. The repetitive patterns. Let AI handle that.
+              You focus on the thinking.
             </p>
 
             <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl mb-8">
               <blockquote className="text-2xl md:text-3xl font-bold text-slate-900 leading-relaxed mb-4">
-                "I spoke ~23,000 words and generated 42,000 lines of code—while doing other things."
+                "23,000 words spoken. 42,000 lines of code generated. While doing other things."
               </blockquote>
-              <p className="text-slate-600">
-                This is the future of software development. Not typing. <strong className="text-slate-900">Orchestrating</strong>.
+              <p className="text-slate-600 text-lg">
+                That's not the future of software development.
+              </p>
+              <p className="text-slate-600 text-lg">
+                <strong className="text-slate-900">That's today.</strong>
               </p>
             </div>
 
