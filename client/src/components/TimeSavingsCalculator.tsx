@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useParticleBurst } from '@/hooks/useParticleBurst';
 import { useComplementaryColors } from '@/hooks/useComplementaryColors';
 
@@ -91,9 +92,12 @@ const applicationScenarios: ApplicationScenario[] = [
   }
 ];
 
+type FrequencyPeriod = 'daily' | 'weekly' | 'monthly';
+
 export default function TimeSavingsCalculator() {
   const [selectedScenario, setSelectedScenario] = useState<ApplicationScenario | null>(null);
-  const [frequency, setFrequency] = useState<number>(1); // times per week
+  const [frequency, setFrequency] = useState<number>(1); // times per period
+  const [frequencyPeriod, setFrequencyPeriod] = useState<FrequencyPeriod>('weekly');
   const [timeSavedPerWeek, setTimeSavedPerWeek] = useState<number | null>(null);
   const [timeSavedPerMonth, setTimeSavedPerMonth] = useState<number | null>(null);
   const [timeSavedPerYear, setTimeSavedPerYear] = useState<number | null>(null);
@@ -105,8 +109,16 @@ export default function TimeSavingsCalculator() {
   const calculateSavings = () => {
     if (!selectedScenario) return;
 
-    const baseTime = selectedScenario.baseTime * frequency;
-    const aiTime = selectedScenario.aiTime * frequency;
+    // Convert frequency to weekly equivalent
+    let weeklyFrequency = frequency;
+    if (frequencyPeriod === 'daily') {
+      weeklyFrequency = frequency * 7;
+    } else if (frequencyPeriod === 'monthly') {
+      weeklyFrequency = frequency / 4.33;
+    }
+
+    const baseTime = selectedScenario.baseTime * weeklyFrequency;
+    const aiTime = selectedScenario.aiTime * weeklyFrequency;
     const weeklySavings = baseTime - aiTime;
     const monthlySavings = weeklySavings * 4.33;
     const yearlySavings = weeklySavings * 52;
@@ -205,8 +217,21 @@ export default function TimeSavingsCalculator() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
+              <label className="text-sm font-medium text-slate-700">Frequency Period</label>
+              <Select value={frequencyPeriod} onValueChange={(value) => setFrequencyPeriod(value as FrequencyPeriod)}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select period" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="daily">Daily</SelectItem>
+                  <SelectItem value="weekly">Weekly</SelectItem>
+                  <SelectItem value="monthly">Monthly</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-2">
               <div className="flex justify-between text-sm text-slate-600">
-                <span>Times per week:</span>
+                <span>Times per {frequencyPeriod === 'daily' ? 'day' : frequencyPeriod === 'weekly' ? 'week' : 'month'}:</span>
                 <span className="font-bold" style={{ color: `oklch(0.55 0.2 ${particleHue})` }}>
                   {frequency}
                 </span>
@@ -336,7 +361,7 @@ export default function TimeSavingsCalculator() {
                           color: `oklch(0.35 0.1 ${complementDark})`
                         }}
                       >
-                        Before: {formatHours(selectedScenario.baseTime * frequency)}
+                        Before: {formatHours(selectedScenario.baseTime * (frequencyPeriod === 'daily' ? frequency * 7 : frequencyPeriod === 'monthly' ? frequency / 4.33 : frequency))}/week
                       </Badge>
                       <Badge
                         variant="secondary"
@@ -345,7 +370,7 @@ export default function TimeSavingsCalculator() {
                           color: `oklch(0.35 0.1 ${complementDark})`
                         }}
                       >
-                        After: {formatHours(selectedScenario.aiTime * frequency)}
+                        After: {formatHours(selectedScenario.aiTime * (frequencyPeriod === 'daily' ? frequency * 7 : frequencyPeriod === 'monthly' ? frequency / 4.33 : frequency))}/week
                       </Badge>
                     </div>
                   </div>

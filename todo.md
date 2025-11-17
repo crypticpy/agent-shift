@@ -321,7 +321,7 @@
 
 ### Calculator Page Polish
 - [x] Form layout is functional and clear
-- [ ] Future: Add dropdown for frequency
+- [x] Future: Add dropdown for frequency
 - [ ] Future: Enhance result visualization
 
 ### Resources Page Polish
