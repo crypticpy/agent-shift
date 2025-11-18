@@ -818,12 +818,12 @@ export default function Learn() {
             {section.steps.map((step: any, i: number) => (
               <Card key={i} className="border-2 border-orange-200 hover:border-orange-300 transition-all shadow-md">
                 <CardHeader>
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex items-start gap-3 flex-1">
+                  <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start flex-1 w-full">
                       <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 text-white flex items-center justify-center text-lg font-bold shadow-md">
                         {i + 1}
                       </div>
-                      <div className="flex-1">
+                      <div className="flex-1 text-center sm:text-left w-full">
                         <CardTitle className="text-lg mb-2">{step.step}</CardTitle>
                         <CardDescription className="text-base leading-relaxed">{step.description}</CardDescription>
                       </div>
