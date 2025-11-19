@@ -7,8 +7,14 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import { CursorGlow } from "./components/CursorGlow";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
+
+// Lazy-load analytics components to minimize impact on initial page load
+const Analytics = lazy(() =>
+  import("@vercel/analytics/react").then(mod => ({ default: mod.Analytics }))
+);
+const SpeedInsights = lazy(() =>
+  import("@vercel/speed-insights/react").then(mod => ({ default: mod.SpeedInsights }))
+);
 
 // Lazy-loaded page components for code splitting
 // This reduces initial bundle size by 60-70%
@@ -38,6 +44,22 @@ function PageLoadingFallback() {
         <p className="text-foreground font-medium">Loading...</p>
       </div>
     </div>
+  );
+}
+
+// Production-only analytics wrapper
+// Only loads analytics components in production to avoid polluting dev/staging data
+function ProductionAnalytics() {
+  // Only render in production builds
+  if (!import.meta.env.PROD) {
+    return null;
+  }
+
+  return (
+    <Suspense fallback={null}>
+      <Analytics />
+      <SpeedInsights />
+    </Suspense>
   );
 }
 
@@ -89,8 +111,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Analytics />
-          <SpeedInsights />
+          <ProductionAnalytics />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
