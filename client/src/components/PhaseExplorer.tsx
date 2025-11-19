@@ -142,7 +142,7 @@ export default function PhaseExplorer() {
                     <div className={`h-14 w-14 ${colors.icon} rounded-lg flex items-center justify-center flex-shrink-0`}>
                       <Icon className="h-7 w-7" />
                     </div>
-                    <div className="flex-1 w-full">
+                    <div className="flex-1">
                       <CardTitle className="text-2xl mb-2">{currentPhase.title}</CardTitle>
                       <CardDescription className="text-base italic">
                         "{currentPhase.mindset}"
@@ -253,7 +253,7 @@ export default function PhaseExplorer() {
                     <div className={`h-10 w-10 ${phaseColors.icon} rounded-lg flex items-center justify-center flex-shrink-0`}>
                       <PhaseIcon className="h-5 w-5" />
                     </div>
-                    <div className="flex-1 w-full">
+                    <div className="flex-1">
                       <h4 className="font-semibold mb-1">{phase.title}</h4>
                       <p className="text-sm text-slate-600 italic">"{phase.mindset}"</p>
                     </div>

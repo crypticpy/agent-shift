@@ -765,7 +765,7 @@ function CategorySection({ category, onToolSelect }: { category: Category; onToo
         <div className="bg-primary/10 p-4 rounded-xl group-hover:bg-accent/20 transition-colors">
           <IconComponent className="h-8 w-8 text-primary group-hover:text-accent transition-colors" />
         </div>
-        <div className="flex-1 w-full">
+        <div className="flex-1">
           <div className="flex flex-wrap items-center gap-3 mb-3 justify-center md:justify-start">
             <h3 className="text-3xl font-bold text-foreground">{category.name}</h3>
             <Badge className={getRelevanceBadgeColor(category.government_relevance)}>

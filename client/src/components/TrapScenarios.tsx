@@ -220,7 +220,7 @@ export default function TrapScenarios() {
                 <div className="h-12 w-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <AlertTriangle className="h-6 w-6" />
                 </div>
-                <div className="flex-1 w-full">
+                <div className="flex-1">
                   <CardTitle className="text-xl">{scenario.title}</CardTitle>
                   <CardDescription className="mt-2 text-base">
                     {scenario.situation}

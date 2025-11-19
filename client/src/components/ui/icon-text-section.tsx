@@ -40,7 +40,7 @@ export function IconTextSection({
       </div>
 
       {/* Text content - full width on mobile */}
-      <div className="flex-1 text-center md:text-left w-full">
+      <div className="flex-1 text-center md:text-left">
         {typeof title === 'string' ? (
           <h3 className={cn(titleClassName, "mb-2")}>{title}</h3>
         ) : (
