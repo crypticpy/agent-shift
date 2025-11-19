@@ -190,12 +190,12 @@ export default function TechniqueCards() {
                     <Icon className="h-6 w-6" />
                   </div>
                   <div className="flex-1 w-full">
-                    <div className="flex items-start justify-between">
+                    <div className="flex items-start justify-between gap-3">
                       <h4 className="font-semibold text-lg text-slate-900">{technique.name}</h4>
                       {isExpanded ? (
-                        <ChevronUp className="h-5 w-5 text-slate-400 flex-shrink-0" />
+                        <ChevronUp className="h-5 w-5 text-slate-400 flex-shrink-0 mt-0.5" />
                       ) : (
-                        <ChevronDown className="h-5 w-5 text-slate-400 flex-shrink-0" />
+                        <ChevronDown className="h-5 w-5 text-slate-400 flex-shrink-0 mt-0.5" />
                       )}
                     </div>
                     <p className="text-sm text-slate-600 mt-1">{technique.shortDesc}</p>

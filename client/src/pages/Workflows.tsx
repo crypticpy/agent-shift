@@ -844,9 +844,9 @@ export default function Workflows() {
                                   {index + 1}
                                 </div>
                                 <div className="flex-1">
-                                  <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
+                                  <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between mb-3">
                                     <h5 className="font-bold text-base md:text-lg lg:text-xl text-slate-900">{step.title}</h5>
-                                    <Badge variant="outline" className="flex items-center gap-1.5 border-accent/30 text-slate-900 text-xs md:text-sm">
+                                    <Badge variant="outline" className="flex items-center gap-1.5 border-accent/30 text-slate-900 text-xs md:text-sm flex-shrink-0">
                                       <Clock className="h-3.5 w-3.5" />
                                       {step.time}
                                     </Badge>

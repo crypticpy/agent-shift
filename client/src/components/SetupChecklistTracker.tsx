@@ -114,9 +114,9 @@ Generated: ${new Date().toLocaleDateString()}`;
 
       {/* Overall Progress Bar */}
       <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg p-4 border-2 border-orange-200">
-        <div className="flex items-center justify-between mb-2">
+        <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:justify-between mb-2">
           <span className="text-sm font-medium text-slate-700">Setup Progress</span>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <Badge variant="outline" className="text-orange-700 border-orange-300">
               {totalCompleted}/{totalTasks} completed
             </Badge>
@@ -183,7 +183,7 @@ Generated: ${new Date().toLocaleDateString()}`;
                   <span className={`block ${isCompleted ? 'text-slate-500 line-through' : 'text-slate-700 font-medium'}`}>
                     {item.task}
                   </span>
-                  <div className="flex items-center gap-2 mt-1">
+                  <div className="flex flex-wrap items-center gap-2 mt-1">
                     <span className="text-xs text-slate-500 flex items-center gap-1">
                       <Clock className="h-3 w-3" />
                       {item.timeEstimate}

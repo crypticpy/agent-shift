@@ -270,13 +270,15 @@ export default function EnhancedWorkflowCard({
             <IconComponent className="h-7 w-7" />
           </div>
           <div className="flex-1 w-full">
-            <div className="flex items-center gap-3 flex-wrap mb-2 justify-center md:justify-start">
+            <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:gap-3 mb-2">
               <CardTitle className="text-2xl">{title}</CardTitle>
-              <Badge className={`${colors.badge} text-white`}>{difficulty}</Badge>
-              <Badge variant="outline" className="flex items-center gap-1">
-                <Clock className="h-3 w-3" />
-                Setup: {estimatedSetupTime}
-              </Badge>
+              <div className="flex items-center gap-2 flex-wrap justify-center">
+                <Badge className={`${colors.badge} text-white`}>{difficulty}</Badge>
+                <Badge variant="outline" className="flex items-center gap-1">
+                  <Clock className="h-3 w-3" />
+                  Setup: {estimatedSetupTime}
+                </Badge>
+              </div>
             </div>
           </div>
         </div>
@@ -523,9 +525,9 @@ export default function EnhancedWorkflowCard({
                   {step.step}
                 </div>
                 <div className="flex-1">
-                  <div className="flex items-center justify-between mb-1">
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
                     <h5 className="font-semibold text-slate-900">{step.tool}</h5>
-                    <Badge variant="outline" className="text-xs">
+                    <Badge variant="outline" className="text-xs flex-shrink-0">
                       {step.duration}
                     </Badge>
                   </div>
