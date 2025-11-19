@@ -89,8 +89,14 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Analytics />
-          <SpeedInsights />
+          {/* Analytics components positioned outside Router to mount once at startup */}
+          {/* Only load in production to avoid polluting dev/staging data */}
+          {import.meta.env.PROD && (
+            <>
+              <Analytics />
+              <SpeedInsights />
+            </>
+          )}
           <Router />
         </TooltipProvider>
       </ThemeProvider>
