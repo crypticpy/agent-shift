@@ -54,7 +54,7 @@ export default function UseCaseFilters({
 
       {/* Filters Container */}
       <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
-        <div className="flex flex-col md:flex-row gap-4 flex-1 w-full md:w-auto">
+        <div className="flex flex-col md:flex-row gap-4 flex-1">
           {/* Category Filter */}
           <div className="flex flex-col gap-2">
             <label className="text-xs font-semibold text-slate-600 uppercase tracking-wide flex items-center gap-2">

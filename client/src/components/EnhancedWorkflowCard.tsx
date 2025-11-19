@@ -269,7 +269,7 @@ export default function EnhancedWorkflowCard({
           <div className={`h-14 w-14 ${colors.icon} rounded-lg flex items-center justify-center flex-shrink-0`}>
             <IconComponent className="h-7 w-7" />
           </div>
-          <div className="flex-1 w-full">
+          <div className="flex-1">
             <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:gap-3 mb-2">
               <CardTitle className="text-2xl">{title}</CardTitle>
               <div className="flex items-center gap-2 flex-wrap justify-center">

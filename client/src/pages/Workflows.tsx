@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ResponsiveCardLayout, ResponsiveButtonGroup } from "@/components/ui/responsive-card-layout";
 import { Link } from "wouter";
 import {
   Clock,
@@ -600,9 +601,9 @@ export default function Workflows() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="glass card-lift p-8 rounded-2xl border-2 border-blue-200/50 bg-white/80 backdrop-blur-sm">
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-6 text-center md:text-left">
+              <ResponsiveCardLayout gap="4" className="mb-6">
                 <div className="text-4xl">💡</div>
-                <div className="w-full">
+                <div className="flex-1">
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Understanding "Agents" in These Workflows</h3>
                   <p className="text-lg text-slate-700 mb-4 leading-relaxed">
                     When we say "Agent 1," "Agent 2," etc., we're talking about <span className="font-semibold text-slate-900">functional roles</span>, not different tools.
@@ -611,7 +612,7 @@ export default function Workflows() {
                     Think of it like this: The same AI tool can play different roles depending on what you ask it to do.
                   </p>
                 </div>
-              </div>
+              </ResponsiveCardLayout>
 
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="bg-gradient-to-br from-blue-50 to-white p-5 rounded-xl border border-blue-200">
@@ -659,7 +660,7 @@ export default function Workflows() {
         <div className="max-w-6xl mx-auto">
           {/* Callout to Use Cases */}
           <div ref={calloutRef} className="glass card-lift p-6 md:p-8 rounded-2xl mb-12 border border-primary/20 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
+            <ResponsiveCardLayout gap="6">
               <div
                 className="h-14 w-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg"
                 style={{
@@ -689,7 +690,7 @@ export default function Workflows() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </ResponsiveCardLayout>
           </div>
 
           {/* Filter Tabs */}
@@ -844,10 +845,10 @@ export default function Workflows() {
                                   {index + 1}
                                 </div>
                                 <div className="flex-1">
-                                  <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between mb-3">
+                                  <div className="flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between mb-3">
                                     <h5 className="font-bold text-base md:text-lg lg:text-xl text-slate-900">{step.title}</h5>
-                                    <Badge variant="outline" className="flex items-center gap-1.5 border-accent/30 text-slate-900 text-xs md:text-sm flex-shrink-0">
-                                      <Clock className="h-3.5 w-3.5" />
+                                    <Badge variant="outline" className="flex items-center gap-1.5 border-accent/30 text-slate-900 text-xs md:text-sm max-w-[140px] truncate">
+                                      <Clock className="h-3.5 w-3.5 flex-shrink-0" />
                                       {step.time}
                                     </Badge>
                                   </div>
@@ -910,7 +911,7 @@ export default function Workflows() {
               <p className="text-lg md:text-xl mb-8 opacity-95 max-w-2xl mx-auto">
                 See exactly how much time and money these workflows can save you
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ResponsiveButtonGroup>
                 <Link href="/guidance">
                   <Button
                     size="lg"
@@ -934,7 +935,7 @@ export default function Workflows() {
                     Browse AI Tools
                   </Button>
                 </Link>
-              </div>
+              </ResponsiveButtonGroup>
             </div>
           </div>
         </div>

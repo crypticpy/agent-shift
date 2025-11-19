@@ -66,7 +66,7 @@ export function NavigationDropdown({ label, items, isActive }: NavigationDropdow
                     <div className="h-10 w-10 bg-gradient-to-br from-primary/10 to-chart-1/10 group-hover/item:from-primary/20 group-hover/item:to-chart-1/20 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors">
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="flex-1 w-full">
+                    <div className="flex-1">
                       <div className="font-semibold text-slate-900 group-hover/item:text-primary mb-0.5 transition-colors">
                         {item.label}
                       </div>

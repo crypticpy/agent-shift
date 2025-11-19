@@ -189,7 +189,7 @@ export default function TechniqueCards() {
                   <div className={`h-12 w-12 ${colors.icon} rounded-lg flex items-center justify-center flex-shrink-0`}>
                     <Icon className="h-6 w-6" />
                   </div>
-                  <div className="flex-1 w-full">
+                  <div className="flex-1">
                     <div className="flex items-start justify-between gap-3">
                       <h4 className="font-semibold text-lg text-slate-900">{technique.name}</h4>
                       {isExpanded ? (
