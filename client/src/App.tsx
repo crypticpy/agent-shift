@@ -7,6 +7,8 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import { CursorGlow } from "./components/CursorGlow";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // Lazy-loaded page components for code splitting
 // This reduces initial bundle size by 60-70%
@@ -87,6 +89,8 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
+          <Analytics />
+          <SpeedInsights />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
