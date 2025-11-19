@@ -1,41 +1,55 @@
-import { ReactNode, Children, cloneElement, isValidElement } from "react";
+import React from "react";
 import { cn } from "@/lib/utils";
 
 interface ResponsiveButtonGroupProps {
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
+  /**
+   * Breakpoint at which to switch from column to row layout.
+   * Default is "sm" (earlier breakpoint than ResponsiveCardLayout) because
+   * button groups typically need to stack on mobile and go horizontal sooner.
+   * @default "sm"
+   */
+  breakpoint?: "sm" | "md" | "lg";
+  /**
+   * Gap size between buttons
+   * @default "4"
+   */
+  gap?: "2" | "3" | "4" | "5" | "6";
 }
 
 /**
- * Responsive button group component
+ * ResponsiveButtonGroup - A specialized layout for button groups
  *
- * Mobile (<768px): Buttons stack vertically, full width
- * Desktop (≥768px): Buttons align horizontally, auto width
+ * Handles the common pattern for CTA button groups:
+ * - Column layout on mobile, row layout on small+ screens
+ * - Centered horizontally
  *
- * Automatically applies w-full md:w-auto to all button children
+ * Example usage:
+ * ```tsx
+ * <ResponsiveButtonGroup>
+ *   <Button>Primary Action</Button>
+ *   <Button variant="outline">Secondary Action</Button>
+ * </ResponsiveButtonGroup>
+ * ```
  */
 export function ResponsiveButtonGroup({
   children,
   className,
+  breakpoint = "sm",
+  gap = "4",
 }: ResponsiveButtonGroupProps) {
-  // Clone children and add responsive width classes
-  const responsiveChildren = Children.map(children, (child) => {
-    if (isValidElement(child)) {
-      // Add responsive width classes to each button
-      return cloneElement(child, {
-        ...child.props,
-        className: cn(
-          child.props.className,
-          "w-full md:w-auto"
-        ),
-      } as any);
-    }
-    return child;
-  });
-
   return (
-    <div className={cn("flex flex-col md:flex-row gap-3", className)}>
-      {responsiveChildren}
+    <div
+      className={cn(
+        "flex flex-col",
+        `${breakpoint}:flex-row`,
+        `gap-${gap}`,
+        "justify-center",
+        className
+      )}
+    >
+      {children}
     </div>
   );
 }
